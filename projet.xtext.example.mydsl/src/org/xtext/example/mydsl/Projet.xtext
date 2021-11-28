@@ -13,13 +13,18 @@ enum Etat returns Etat:
 	| inter = 'i'
 ;
 
+enum Bool returns Bool:
+	TRUE = 'true'
+	| FALSE = 'false'
+;
+
 ElementsJeu: Territoire | Personne | Explorateur | Connaissance | Objet | Chemin;
 
 Place: Lieu | Chemin;
 
 Avantage: Connaissance | Objet;
 
-Territoire: 'territoire {'
+Territoire: 'territoire' '{'
 	lieux += Lieu+
 	chemins += Chemin+
 '}'
@@ -30,46 +35,47 @@ Lieu: 'lieu' nom = ID '{'
 '}'
 ;
 
-Chemin: 'chemin {'
+Chemin: 'chemin' '{'
 	'de' pred = [Lieu]
     'vers' succ = [Lieu]
-	'visible' visible = BOOL
-	'obligatoire' obligatoire = BOOL
-	'ouvert' ouvert = BOOL
+	'visible' visible = Bool
+	'obligatoire' obligatoire = Bool
+	'ouvert' ouvert = Bool
 '}'
 ;
 
 Personne: 'personne' nom = ID '{'
-	'visible' visible = BOOL
-	'actif' actif = BOOL
-	'obligatoire' obligatoire = BOOL	
+	'visible' visible = Bool
+	'actif' actif = Bool
+	'obligatoire' obligatoire = Bool	
 	'interactions' interactions += Interaction*
 '}'
 ;
 
-Explorateur: 'explorateur {'
+Explorateur: 'explorateur' '{'
 	'localisation' place = Place
-	'objets possedes' objets = Objet*
-	'connaissances possedes' connaissances = Connaissance*
+	'objets' 'possedes' objets = Objet*
+	'connaissances' 'possedes' connaissances = Connaissance*
+	'taille' 'disponible' tailleDispo = INT
 '}'
 ;
 
-Connaissance: 'connaissance {'
-	'visible' visible = BOOL
-	'actif' actif = BOOL
+Connaissance: 'connaissance' '{'
+	'visible' visible = Bool
+	'actif' actif = Bool
 '}'
 ;
 
-Objet: 'objet {' 
-	'visible' visible = BOOL
-	'actif' actif = BOOL
+Objet: 'objet' '{' 
+	'visible' visible = Bool
+	'actif' actif = Bool
 	'quantite' qte = INT
 	'taille' taille = INT 
-	'transformable' transformable = BOOL
+	'transformable' transformable = Bool
 '}'
 ;
 
-Interaction : 'interaction {'
+Interaction : 'interaction' '{'
 	'question' question = STRING
 	'choix' choix += Choix+
 '}'
@@ -81,13 +87,13 @@ Choix: 'choix' numero = INT '{'
 '}'
 ;
 
-Condition: 'condition {'
-	'connaissances requises' connaissancesRequises += Connaissance*
-	'objets requis' objetsRequis += Objet*
+Condition: 'condition' '{'
+	'connaissances' 'requises' connaissancesRequises += Connaissance*
+	'objets' 'requis' objetsRequis += Objet*
 '}'
 ;
 
-Recompense: 'recompense {'
+Recompense: 'recompense' '{'
 	'avantage' avantage += Avantage*
 '}'
 ;
