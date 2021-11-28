@@ -2,8 +2,92 @@ grammar org.xtext.example.mydsl.Projet with org.eclipse.xtext.common.Terminals
 
 generate projet "http://www.xtext.org/example/mydsl/Projet"
 
-Model:
-	greetings+=Greeting*;
-	
-Greeting:
-	'Hello' name=ID '!';
+Jeu: 'jeu' nom = ID '{'
+	elementsjeu += ElementsJeu*
+'}'
+;
+
+enum Etat returns Etat:
+	depart = 'd'
+	| fin = 'f'
+	| inter = 'i'
+;
+
+ElementsJeu: Territoire | Personne | Explorateur | Connaissance | Objet | Chemin;
+
+Place: Lieu | Chemin;
+
+Avantage: Connaissance | Objet;
+
+Territoire: 'territoire {'
+	lieux += Lieu+
+	chemins += Chemin+
+'}'
+;
+
+Lieu: 'lieu' nom = ID '{'
+	'etat' etat = Etat
+'}'
+;
+
+Chemin: 'chemin {'
+	'de' pred = [Lieu]
+    'vers' succ = [Lieu]
+	'visible' visible = BOOL
+	'obligatoire' obligatoire = BOOL
+	'ouvert' ouvert = BOOL
+'}'
+;
+
+Personne: 'personne' nom = ID '{'
+	'visible' visible = BOOL
+	'actif' actif = BOOL
+	'obligatoire' obligatoire = BOOL	
+	'interactions' interactions += Interaction*
+'}'
+;
+
+Explorateur: 'explorateur {'
+	'localisation' place = Place
+	'objets possedes' objets = Objet*
+	'connaissances possedes' connaissances = Connaissance*
+'}'
+;
+
+Connaissance: 'connaissance {'
+	'visible' visible = BOOL
+	'actif' actif = BOOL
+'}'
+;
+
+Objet: 'objet {' 
+	'visible' visible = BOOL
+	'actif' actif = BOOL
+	'quantite' qte = INT
+	'taille' taille = INT 
+	'transformable' transformable = BOOL
+'}'
+;
+
+Interaction : 'interaction {'
+	'question' question = STRING
+	'choix' choix += Choix+
+'}'
+;
+
+Choix: 'choix' numero = INT '{'
+	'reponse' reponse = STRING
+	'recompense' recompense = Recompense
+'}'
+;
+
+Condition: 'condition {'
+	'connaissances requises' connaissancesRequises += Connaissance*
+	'objets requis' objetsRequis += Objet*
+'}'
+;
+
+Recompense: 'recompense {'
+	'avantage' avantage += Avantage*
+'}'
+;
