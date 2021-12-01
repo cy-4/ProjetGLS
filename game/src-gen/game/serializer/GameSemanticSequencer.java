@@ -15,7 +15,6 @@ import game.game.Jeu;
 import game.game.Lieu;
 import game.game.Objet;
 import game.game.Personne;
-import game.game.Recompense;
 import game.game.Territoire;
 import game.services.GameGrammarAccess;
 import java.util.Set;
@@ -40,7 +39,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		EPackage epackage = semanticObject.eClass().getEPackage();
 		ParserRule rule = context.getParserRule();
 		Action action = context.getAssignedAction();
-		Set<Parameter> parameters = context.getEnabledBooleanParameters();
+		Iterable<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == GamePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
 			case GamePackage.CHEMIN:
@@ -73,9 +72,6 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case GamePackage.PERSONNE:
 				sequence_Personne(context, (Personne) semanticObject); 
 				return; 
-			case GamePackage.RECOMPENSE:
-				sequence_Recompense(context, (Recompense) semanticObject); 
-				return; 
 			case GamePackage.TERRITOIRE:
 				sequence_Territoire(context, (Territoire) semanticObject); 
 				return; 
@@ -91,10 +87,19 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Chemin returns Chemin
 	 *
 	 * Constraint:
-	 *     (pred=[Lieu|ID] succ=[Lieu|ID] visible=BOOL obligatoire=BOOL ouvert=BOOL)
+	 *     (
+	 *         name=ID 
+	 *         pred=[Lieu|ID] 
+	 *         succ=[Lieu|ID] 
+	 *         visible=Condition 
+	 *         obligatoire=BOOL 
+	 *         ouvert=BOOL
+	 *     )
 	 */
 	protected void sequence_Chemin(ISerializationContext context, Chemin semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME));
 			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.CHEMIN__PRED) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.CHEMIN__PRED));
 			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.CHEMIN__SUCC) == ValueTransient.YES)
@@ -107,11 +112,12 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.CHEMIN__OUVERT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getCheminAccess().getPredLieuIDTerminalRuleCall_3_0_1(), semanticObject.eGet(GamePackage.Literals.CHEMIN__PRED, false));
-		feeder.accept(grammarAccess.getCheminAccess().getSuccLieuIDTerminalRuleCall_5_0_1(), semanticObject.eGet(GamePackage.Literals.CHEMIN__SUCC, false));
-		feeder.accept(grammarAccess.getCheminAccess().getVisibleBOOLTerminalRuleCall_7_0(), semanticObject.isVisible());
-		feeder.accept(grammarAccess.getCheminAccess().getObligatoireBOOLTerminalRuleCall_9_0(), semanticObject.isObligatoire());
-		feeder.accept(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_11_0(), semanticObject.isOuvert());
+		feeder.accept(grammarAccess.getCheminAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getCheminAccess().getPredLieuIDTerminalRuleCall_4_0_1(), semanticObject.eGet(GamePackage.Literals.CHEMIN__PRED, false));
+		feeder.accept(grammarAccess.getCheminAccess().getSuccLieuIDTerminalRuleCall_6_0_1(), semanticObject.eGet(GamePackage.Literals.CHEMIN__SUCC, false));
+		feeder.accept(grammarAccess.getCheminAccess().getVisibleConditionParserRuleCall_8_0(), semanticObject.getVisible());
+		feeder.accept(grammarAccess.getCheminAccess().getObligatoireBOOLTerminalRuleCall_10_0(), semanticObject.isObligatoire());
+		feeder.accept(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0(), semanticObject.isOuvert());
 		feeder.finish();
 	}
 	
@@ -121,22 +127,10 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Choix returns Choix
 	 *
 	 * Constraint:
-	 *     (numero=INT reponse=STRING recompense=Recompense)
+	 *     (numero=INT reponse=STRING (qte+=INT avantage+=[Avantage|ID])*)
 	 */
 	protected void sequence_Choix(ISerializationContext context, Choix semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.CHOIX__NUMERO) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.CHOIX__NUMERO));
-			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.CHOIX__REPONSE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.CHOIX__REPONSE));
-			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.CHOIX__RECOMPENSE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.CHOIX__RECOMPENSE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getChoixAccess().getNumeroINTTerminalRuleCall_1_0(), semanticObject.getNumero());
-		feeder.accept(grammarAccess.getChoixAccess().getReponseSTRINGTerminalRuleCall_4_0(), semanticObject.getReponse());
-		feeder.accept(grammarAccess.getChoixAccess().getRecompenseRecompenseParserRuleCall_6_0(), semanticObject.getRecompense());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -145,7 +139,11 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Condition returns Condition
 	 *
 	 * Constraint:
-	 *     (connaissancesRequises+=Connaissance* objetsRequis+=Objet*)
+	 *     (
+	 *         name=ID 
+	 *         (connaissancesRequises+=[Connaissance|ID]+ | connaissancesInterdites+=[Connaissance|ID]+)? 
+	 *         (objetsRequis+=[Objet|ID]+ | objetsInterdits+=[Objet|ID]+)?
+	 *     )
 	 */
 	protected void sequence_Condition(ISerializationContext context, Condition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -159,18 +157,21 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Connaissance returns Connaissance
 	 *
 	 * Constraint:
-	 *     (visible=BOOL actif=BOOL)
+	 *     (name=ID visible=Condition actif=Condition)
 	 */
 	protected void sequence_Connaissance(ISerializationContext context, Connaissance semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME));
 			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.AVANTAGE__VISIBLE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.AVANTAGE__VISIBLE));
 			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.AVANTAGE__ACTIF) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.AVANTAGE__ACTIF));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getConnaissanceAccess().getVisibleBOOLTerminalRuleCall_3_0(), semanticObject.isVisible());
-		feeder.accept(grammarAccess.getConnaissanceAccess().getActifBOOLTerminalRuleCall_5_0(), semanticObject.isActif());
+		feeder.accept(grammarAccess.getConnaissanceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getConnaissanceAccess().getVisibleConditionParserRuleCall_4_0(), semanticObject.getVisible());
+		feeder.accept(grammarAccess.getConnaissanceAccess().getActifConditionParserRuleCall_6_0(), semanticObject.getActif());
 		feeder.finish();
 	}
 	
@@ -180,7 +181,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Explorateur returns Explorateur
 	 *
 	 * Constraint:
-	 *     (place=Place tailleDispo=INT objets=Objet* connaissances=Connaissance*)
+	 *     (place=[Place|ID] tailleDispo=INT objets+=Objet* connaissances+=Connaissance*)
 	 */
 	protected void sequence_Explorateur(ISerializationContext context, Explorateur semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -204,7 +205,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Jeu returns Jeu
 	 *
 	 * Constraint:
-	 *     (nom=ID territoire=Territoire explorateur=Explorateur elementsjeu+=ElementsJeu*)
+	 *     (name=ID territoire=Territoire explorateur=Explorateur elementsjeu+=ElementsJeu*)
 	 */
 	protected void sequence_Jeu(ISerializationContext context, Jeu semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -218,17 +219,17 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Lieu returns Lieu
 	 *
 	 * Constraint:
-	 *     (nom=ID nature=Nature)
+	 *     (name=ID nature=Nature)
 	 */
 	protected void sequence_Lieu(ISerializationContext context, Lieu semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.LIEU__NOM) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.LIEU__NOM));
+			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME));
 			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.LIEU__NATURE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.LIEU__NATURE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getLieuAccess().getNomIDTerminalRuleCall_1_0(), semanticObject.getNom());
+		feeder.accept(grammarAccess.getLieuAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getLieuAccess().getNatureNatureEnumRuleCall_3_0(), semanticObject.getNature());
 		feeder.finish();
 	}
@@ -241,10 +242,19 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Objet returns Objet
 	 *
 	 * Constraint:
-	 *     (visible=BOOL actif=BOOL qte=INT taille=INT transformable=BOOL)
+	 *     (
+	 *         name=ID 
+	 *         visible=Condition 
+	 *         actif=Condition 
+	 *         qte=INT 
+	 *         taille=INT 
+	 *         transformable=BOOL
+	 *     )
 	 */
 	protected void sequence_Objet(ISerializationContext context, Objet semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.ELEMENTS_JEU__NAME));
 			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.AVANTAGE__VISIBLE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.AVANTAGE__VISIBLE));
 			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.AVANTAGE__ACTIF) == ValueTransient.YES)
@@ -257,11 +267,12 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.OBJET__TRANSFORMABLE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getObjetAccess().getVisibleBOOLTerminalRuleCall_3_0(), semanticObject.isVisible());
-		feeder.accept(grammarAccess.getObjetAccess().getActifBOOLTerminalRuleCall_5_0(), semanticObject.isActif());
-		feeder.accept(grammarAccess.getObjetAccess().getQteINTTerminalRuleCall_7_0(), semanticObject.getQte());
-		feeder.accept(grammarAccess.getObjetAccess().getTailleINTTerminalRuleCall_9_0(), semanticObject.getTaille());
-		feeder.accept(grammarAccess.getObjetAccess().getTransformableBOOLTerminalRuleCall_11_0(), semanticObject.isTransformable());
+		feeder.accept(grammarAccess.getObjetAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getObjetAccess().getVisibleConditionParserRuleCall_4_0(), semanticObject.getVisible());
+		feeder.accept(grammarAccess.getObjetAccess().getActifConditionParserRuleCall_6_0(), semanticObject.getActif());
+		feeder.accept(grammarAccess.getObjetAccess().getQteINTTerminalRuleCall_8_0(), semanticObject.getQte());
+		feeder.accept(grammarAccess.getObjetAccess().getTailleINTTerminalRuleCall_10_0(), semanticObject.getTaille());
+		feeder.accept(grammarAccess.getObjetAccess().getTransformableBOOLTerminalRuleCall_12_0(), semanticObject.isTransformable());
 		feeder.finish();
 	}
 	
@@ -272,21 +283,16 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Personne returns Personne
 	 *
 	 * Constraint:
-	 *     (nom=ID visible=BOOL actif=BOOL obligatoire=BOOL interactions+=Interaction*)
+	 *     (
+	 *         name=ID 
+	 *         place=[Place|ID] 
+	 *         visible=Condition 
+	 *         actif=Condition 
+	 *         obligatoire=BOOL 
+	 *         interactions+=Interaction*
+	 *     )
 	 */
 	protected void sequence_Personne(ISerializationContext context, Personne semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Recompense returns Recompense
-	 *
-	 * Constraint:
-	 *     avantage+=Avantage+
-	 */
-	protected void sequence_Recompense(ISerializationContext context, Recompense semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

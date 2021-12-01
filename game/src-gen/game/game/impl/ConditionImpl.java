@@ -10,17 +10,16 @@ import game.game.Objet;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,8 +29,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link game.game.impl.ConditionImpl#getName <em>Name</em>}</li>
  *   <li>{@link game.game.impl.ConditionImpl#getConnaissancesRequises <em>Connaissances Requises</em>}</li>
+ *   <li>{@link game.game.impl.ConditionImpl#getConnaissancesInterdites <em>Connaissances Interdites</em>}</li>
  *   <li>{@link game.game.impl.ConditionImpl#getObjetsRequis <em>Objets Requis</em>}</li>
+ *   <li>{@link game.game.impl.ConditionImpl#getObjetsInterdits <em>Objets Interdits</em>}</li>
  * </ul>
  *
  * @generated
@@ -39,7 +41,27 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ConditionImpl extends MinimalEObjectImpl.Container implements Condition
 {
   /**
-   * The cached value of the '{@link #getConnaissancesRequises() <em>Connaissances Requises</em>}' containment reference list.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getConnaissancesRequises() <em>Connaissances Requises</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getConnaissancesRequises()
@@ -49,7 +71,17 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
   protected EList<Connaissance> connaissancesRequises;
 
   /**
-   * The cached value of the '{@link #getObjetsRequis() <em>Objets Requis</em>}' containment reference list.
+   * The cached value of the '{@link #getConnaissancesInterdites() <em>Connaissances Interdites</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConnaissancesInterdites()
+   * @generated
+   * @ordered
+   */
+  protected EList<Connaissance> connaissancesInterdites;
+
+  /**
+   * The cached value of the '{@link #getObjetsRequis() <em>Objets Requis</em>}' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getObjetsRequis()
@@ -57,6 +89,16 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
    * @ordered
    */
   protected EList<Objet> objetsRequis;
+
+  /**
+   * The cached value of the '{@link #getObjetsInterdits() <em>Objets Interdits</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getObjetsInterdits()
+   * @generated
+   * @ordered
+   */
+  protected EList<Objet> objetsInterdits;
 
   /**
    * <!-- begin-user-doc -->
@@ -85,13 +127,53 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
    * @generated
    */
   @Override
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EList<Connaissance> getConnaissancesRequises()
   {
     if (connaissancesRequises == null)
     {
-      connaissancesRequises = new EObjectContainmentEList<Connaissance>(Connaissance.class, this, GamePackage.CONDITION__CONNAISSANCES_REQUISES);
+      connaissancesRequises = new EObjectResolvingEList<Connaissance>(Connaissance.class, this, GamePackage.CONDITION__CONNAISSANCES_REQUISES);
     }
     return connaissancesRequises;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<Connaissance> getConnaissancesInterdites()
+  {
+    if (connaissancesInterdites == null)
+    {
+      connaissancesInterdites = new EObjectResolvingEList<Connaissance>(Connaissance.class, this, GamePackage.CONDITION__CONNAISSANCES_INTERDITES);
+    }
+    return connaissancesInterdites;
   }
 
   /**
@@ -104,7 +186,7 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
   {
     if (objetsRequis == null)
     {
-      objetsRequis = new EObjectContainmentEList<Objet>(Objet.class, this, GamePackage.CONDITION__OBJETS_REQUIS);
+      objetsRequis = new EObjectResolvingEList<Objet>(Objet.class, this, GamePackage.CONDITION__OBJETS_REQUIS);
     }
     return objetsRequis;
   }
@@ -115,16 +197,13 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
    * @generated
    */
   @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public EList<Objet> getObjetsInterdits()
   {
-    switch (featureID)
+    if (objetsInterdits == null)
     {
-      case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
-        return ((InternalEList<?>)getConnaissancesRequises()).basicRemove(otherEnd, msgs);
-      case GamePackage.CONDITION__OBJETS_REQUIS:
-        return ((InternalEList<?>)getObjetsRequis()).basicRemove(otherEnd, msgs);
+      objetsInterdits = new EObjectResolvingEList<Objet>(Objet.class, this, GamePackage.CONDITION__OBJETS_INTERDITS);
     }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return objetsInterdits;
   }
 
   /**
@@ -137,10 +216,16 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
   {
     switch (featureID)
     {
+      case GamePackage.CONDITION__NAME:
+        return getName();
       case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
         return getConnaissancesRequises();
+      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
+        return getConnaissancesInterdites();
       case GamePackage.CONDITION__OBJETS_REQUIS:
         return getObjetsRequis();
+      case GamePackage.CONDITION__OBJETS_INTERDITS:
+        return getObjetsInterdits();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -156,13 +241,24 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
   {
     switch (featureID)
     {
+      case GamePackage.CONDITION__NAME:
+        setName((String)newValue);
+        return;
       case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
         getConnaissancesRequises().clear();
         getConnaissancesRequises().addAll((Collection<? extends Connaissance>)newValue);
         return;
+      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
+        getConnaissancesInterdites().clear();
+        getConnaissancesInterdites().addAll((Collection<? extends Connaissance>)newValue);
+        return;
       case GamePackage.CONDITION__OBJETS_REQUIS:
         getObjetsRequis().clear();
         getObjetsRequis().addAll((Collection<? extends Objet>)newValue);
+        return;
+      case GamePackage.CONDITION__OBJETS_INTERDITS:
+        getObjetsInterdits().clear();
+        getObjetsInterdits().addAll((Collection<? extends Objet>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -178,11 +274,20 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
   {
     switch (featureID)
     {
+      case GamePackage.CONDITION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
         getConnaissancesRequises().clear();
         return;
+      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
+        getConnaissancesInterdites().clear();
+        return;
       case GamePackage.CONDITION__OBJETS_REQUIS:
         getObjetsRequis().clear();
+        return;
+      case GamePackage.CONDITION__OBJETS_INTERDITS:
+        getObjetsInterdits().clear();
         return;
     }
     super.eUnset(featureID);
@@ -198,12 +303,35 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
   {
     switch (featureID)
     {
+      case GamePackage.CONDITION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
         return connaissancesRequises != null && !connaissancesRequises.isEmpty();
+      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
+        return connaissancesInterdites != null && !connaissancesInterdites.isEmpty();
       case GamePackage.CONDITION__OBJETS_REQUIS:
         return objetsRequis != null && !objetsRequis.isEmpty();
+      case GamePackage.CONDITION__OBJETS_INTERDITS:
+        return objetsInterdits != null && !objetsInterdits.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //ConditionImpl

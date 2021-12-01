@@ -4,11 +4,14 @@
 package game.game.impl;
 
 import game.game.Avantage;
+import game.game.Condition;
 import game.game.GamePackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -20,8 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.AvantageImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link game.game.impl.AvantageImpl#isActif <em>Actif</em>}</li>
+ *   <li>{@link game.game.impl.AvantageImpl#getVisible <em>Visible</em>}</li>
+ *   <li>{@link game.game.impl.AvantageImpl#getActif <em>Actif</em>}</li>
  * </ul>
  *
  * @generated
@@ -29,44 +32,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class AvantageImpl extends ElementsJeuImpl implements Avantage
 {
   /**
-   * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
+   * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isVisible()
+   * @see #getVisible()
    * @generated
    * @ordered
    */
-  protected static final boolean VISIBLE_EDEFAULT = false;
+  protected Condition visible;
 
   /**
-   * The cached value of the '{@link #isVisible() <em>Visible</em>}' attribute.
+   * The cached value of the '{@link #getActif() <em>Actif</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isVisible()
+   * @see #getActif()
    * @generated
    * @ordered
    */
-  protected boolean visible = VISIBLE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isActif() <em>Actif</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isActif()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean ACTIF_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isActif() <em>Actif</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isActif()
-   * @generated
-   * @ordered
-   */
-  protected boolean actif = ACTIF_EDEFAULT;
+  protected Condition actif;
 
   /**
    * <!-- begin-user-doc -->
@@ -95,7 +78,7 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
    * @generated
    */
   @Override
-  public boolean isVisible()
+  public Condition getVisible()
   {
     return visible;
   }
@@ -105,13 +88,16 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setVisible(boolean newVisible)
+  public NotificationChain basicSetVisible(Condition newVisible, NotificationChain msgs)
   {
-    boolean oldVisible = visible;
+    Condition oldVisible = visible;
     visible = newVisible;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__VISIBLE, oldVisible, visible));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__VISIBLE, oldVisible, newVisible);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -120,7 +106,29 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
    * @generated
    */
   @Override
-  public boolean isActif()
+  public void setVisible(Condition newVisible)
+  {
+    if (newVisible != visible)
+    {
+      NotificationChain msgs = null;
+      if (visible != null)
+        msgs = ((InternalEObject)visible).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__VISIBLE, null, msgs);
+      if (newVisible != null)
+        msgs = ((InternalEObject)newVisible).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__VISIBLE, null, msgs);
+      msgs = basicSetVisible(newVisible, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__VISIBLE, newVisible, newVisible));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Condition getActif()
   {
     return actif;
   }
@@ -130,13 +138,56 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setActif(boolean newActif)
+  public NotificationChain basicSetActif(Condition newActif, NotificationChain msgs)
   {
-    boolean oldActif = actif;
+    Condition oldActif = actif;
     actif = newActif;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__ACTIF, oldActif, actif));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__ACTIF, oldActif, newActif);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setActif(Condition newActif)
+  {
+    if (newActif != actif)
+    {
+      NotificationChain msgs = null;
+      if (actif != null)
+        msgs = ((InternalEObject)actif).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__ACTIF, null, msgs);
+      if (newActif != null)
+        msgs = ((InternalEObject)newActif).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__ACTIF, null, msgs);
+      msgs = basicSetActif(newActif, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__ACTIF, newActif, newActif));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GamePackage.AVANTAGE__VISIBLE:
+        return basicSetVisible(null, msgs);
+      case GamePackage.AVANTAGE__ACTIF:
+        return basicSetActif(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -150,9 +201,9 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
     switch (featureID)
     {
       case GamePackage.AVANTAGE__VISIBLE:
-        return isVisible();
+        return getVisible();
       case GamePackage.AVANTAGE__ACTIF:
-        return isActif();
+        return getActif();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -168,10 +219,10 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
     switch (featureID)
     {
       case GamePackage.AVANTAGE__VISIBLE:
-        setVisible((Boolean)newValue);
+        setVisible((Condition)newValue);
         return;
       case GamePackage.AVANTAGE__ACTIF:
-        setActif((Boolean)newValue);
+        setActif((Condition)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -188,10 +239,10 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
     switch (featureID)
     {
       case GamePackage.AVANTAGE__VISIBLE:
-        setVisible(VISIBLE_EDEFAULT);
+        setVisible((Condition)null);
         return;
       case GamePackage.AVANTAGE__ACTIF:
-        setActif(ACTIF_EDEFAULT);
+        setActif((Condition)null);
         return;
     }
     super.eUnset(featureID);
@@ -208,30 +259,11 @@ public class AvantageImpl extends ElementsJeuImpl implements Avantage
     switch (featureID)
     {
       case GamePackage.AVANTAGE__VISIBLE:
-        return visible != VISIBLE_EDEFAULT;
+        return visible != null;
       case GamePackage.AVANTAGE__ACTIF:
-        return actif != ACTIF_EDEFAULT;
+        return actif != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (visible: ");
-    result.append(visible);
-    result.append(", actif: ");
-    result.append(actif);
-    result.append(')');
-    return result.toString();
   }
 
 } //AvantageImpl

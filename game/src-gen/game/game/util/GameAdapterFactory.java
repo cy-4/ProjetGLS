@@ -146,11 +146,6 @@ public class GameAdapterFactory extends AdapterFactoryImpl
         return createConditionAdapter();
       }
       @Override
-      public Adapter caseRecompense(Recompense object)
-      {
-        return createRecompenseAdapter();
-      }
-      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -378,21 +373,6 @@ public class GameAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createConditionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link game.game.Recompense <em>Recompense</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Recompense
-   * @generated
-   */
-  public Adapter createRecompenseAdapter()
   {
     return null;
   }

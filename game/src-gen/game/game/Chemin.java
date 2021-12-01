@@ -15,7 +15,7 @@ package game.game;
  * <ul>
  *   <li>{@link game.game.Chemin#getPred <em>Pred</em>}</li>
  *   <li>{@link game.game.Chemin#getSucc <em>Succ</em>}</li>
- *   <li>{@link game.game.Chemin#isVisible <em>Visible</em>}</li>
+ *   <li>{@link game.game.Chemin#getVisible <em>Visible</em>}</li>
  *   <li>{@link game.game.Chemin#isObligatoire <em>Obligatoire</em>}</li>
  *   <li>{@link game.game.Chemin#isOuvert <em>Ouvert</em>}</li>
  * </ul>
@@ -71,26 +71,26 @@ public interface Chemin extends Place
   void setSucc(Lieu value);
 
   /**
-   * Returns the value of the '<em><b>Visible</b></em>' attribute.
+   * Returns the value of the '<em><b>Visible</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Visible</em>' attribute.
-   * @see #setVisible(boolean)
+   * @return the value of the '<em>Visible</em>' containment reference.
+   * @see #setVisible(Condition)
    * @see game.game.GamePackage#getChemin_Visible()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  boolean isVisible();
+  Condition getVisible();
 
   /**
-   * Sets the value of the '{@link game.game.Chemin#isVisible <em>Visible</em>}' attribute.
+   * Sets the value of the '{@link game.game.Chemin#getVisible <em>Visible</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Visible</em>' attribute.
-   * @see #isVisible()
+   * @param value the new value of the '<em>Visible</em>' containment reference.
+   * @see #getVisible()
    * @generated
    */
-  void setVisible(boolean value);
+  void setVisible(Condition value);
 
   /**
    * Returns the value of the '<em><b>Obligatoire</b></em>' attribute.

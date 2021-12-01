@@ -3,9 +3,11 @@
  */
 package game.game.impl;
 
+import game.game.Condition;
 import game.game.GamePackage;
 import game.game.Interaction;
 import game.game.Personne;
+import game.game.Place;
 
 import java.util.Collection;
 
@@ -30,9 +32,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.PersonneImpl#getNom <em>Nom</em>}</li>
- *   <li>{@link game.game.impl.PersonneImpl#isVisible <em>Visible</em>}</li>
- *   <li>{@link game.game.impl.PersonneImpl#isActif <em>Actif</em>}</li>
+ *   <li>{@link game.game.impl.PersonneImpl#getPlace <em>Place</em>}</li>
+ *   <li>{@link game.game.impl.PersonneImpl#getVisible <em>Visible</em>}</li>
+ *   <li>{@link game.game.impl.PersonneImpl#getActif <em>Actif</em>}</li>
  *   <li>{@link game.game.impl.PersonneImpl#isObligatoire <em>Obligatoire</em>}</li>
  *   <li>{@link game.game.impl.PersonneImpl#getInteractions <em>Interactions</em>}</li>
  * </ul>
@@ -42,64 +44,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class PersonneImpl extends ElementsJeuImpl implements Personne
 {
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getPlace() <em>Place</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getPlace()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
+  protected Place place;
 
   /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getVisible()
    * @generated
    * @ordered
    */
-  protected String nom = NOM_EDEFAULT;
+  protected Condition visible;
 
   /**
-   * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
+   * The cached value of the '{@link #getActif() <em>Actif</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isVisible()
+   * @see #getActif()
    * @generated
    * @ordered
    */
-  protected static final boolean VISIBLE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isVisible() <em>Visible</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isVisible()
-   * @generated
-   * @ordered
-   */
-  protected boolean visible = VISIBLE_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #isActif() <em>Actif</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isActif()
-   * @generated
-   * @ordered
-   */
-  protected static final boolean ACTIF_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isActif() <em>Actif</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isActif()
-   * @generated
-   * @ordered
-   */
-  protected boolean actif = ACTIF_EDEFAULT;
+  protected Condition actif;
 
   /**
    * The default value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
@@ -158,9 +130,29 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
    * @generated
    */
   @Override
-  public String getNom()
+  public Place getPlace()
   {
-    return nom;
+    if (place != null && place.eIsProxy())
+    {
+      InternalEObject oldPlace = (InternalEObject)place;
+      place = (Place)eResolveProxy(oldPlace);
+      if (place != oldPlace)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.PERSONNE__PLACE, oldPlace, place));
+      }
+    }
+    return place;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Place basicGetPlace()
+  {
+    return place;
   }
 
   /**
@@ -169,12 +161,12 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
    * @generated
    */
   @Override
-  public void setNom(String newNom)
+  public void setPlace(Place newPlace)
   {
-    String oldNom = nom;
-    nom = newNom;
+    Place oldPlace = place;
+    place = newPlace;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__NOM, oldNom, nom));
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__PLACE, oldPlace, place));
   }
 
   /**
@@ -183,7 +175,7 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
    * @generated
    */
   @Override
-  public boolean isVisible()
+  public Condition getVisible()
   {
     return visible;
   }
@@ -193,13 +185,16 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setVisible(boolean newVisible)
+  public NotificationChain basicSetVisible(Condition newVisible, NotificationChain msgs)
   {
-    boolean oldVisible = visible;
+    Condition oldVisible = visible;
     visible = newVisible;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__VISIBLE, oldVisible, visible));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__VISIBLE, oldVisible, newVisible);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -208,7 +203,29 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
    * @generated
    */
   @Override
-  public boolean isActif()
+  public void setVisible(Condition newVisible)
+  {
+    if (newVisible != visible)
+    {
+      NotificationChain msgs = null;
+      if (visible != null)
+        msgs = ((InternalEObject)visible).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__VISIBLE, null, msgs);
+      if (newVisible != null)
+        msgs = ((InternalEObject)newVisible).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__VISIBLE, null, msgs);
+      msgs = basicSetVisible(newVisible, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__VISIBLE, newVisible, newVisible));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Condition getActif()
   {
     return actif;
   }
@@ -218,13 +235,38 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setActif(boolean newActif)
+  public NotificationChain basicSetActif(Condition newActif, NotificationChain msgs)
   {
-    boolean oldActif = actif;
+    Condition oldActif = actif;
     actif = newActif;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__ACTIF, oldActif, actif));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__ACTIF, oldActif, newActif);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setActif(Condition newActif)
+  {
+    if (newActif != actif)
+    {
+      NotificationChain msgs = null;
+      if (actif != null)
+        msgs = ((InternalEObject)actif).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__ACTIF, null, msgs);
+      if (newActif != null)
+        msgs = ((InternalEObject)newActif).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__ACTIF, null, msgs);
+      msgs = basicSetActif(newActif, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__ACTIF, newActif, newActif));
   }
 
   /**
@@ -277,6 +319,10 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
   {
     switch (featureID)
     {
+      case GamePackage.PERSONNE__VISIBLE:
+        return basicSetVisible(null, msgs);
+      case GamePackage.PERSONNE__ACTIF:
+        return basicSetActif(null, msgs);
       case GamePackage.PERSONNE__INTERACTIONS:
         return ((InternalEList<?>)getInteractions()).basicRemove(otherEnd, msgs);
     }
@@ -293,12 +339,13 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
   {
     switch (featureID)
     {
-      case GamePackage.PERSONNE__NOM:
-        return getNom();
+      case GamePackage.PERSONNE__PLACE:
+        if (resolve) return getPlace();
+        return basicGetPlace();
       case GamePackage.PERSONNE__VISIBLE:
-        return isVisible();
+        return getVisible();
       case GamePackage.PERSONNE__ACTIF:
-        return isActif();
+        return getActif();
       case GamePackage.PERSONNE__OBLIGATOIRE:
         return isObligatoire();
       case GamePackage.PERSONNE__INTERACTIONS:
@@ -318,14 +365,14 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
   {
     switch (featureID)
     {
-      case GamePackage.PERSONNE__NOM:
-        setNom((String)newValue);
+      case GamePackage.PERSONNE__PLACE:
+        setPlace((Place)newValue);
         return;
       case GamePackage.PERSONNE__VISIBLE:
-        setVisible((Boolean)newValue);
+        setVisible((Condition)newValue);
         return;
       case GamePackage.PERSONNE__ACTIF:
-        setActif((Boolean)newValue);
+        setActif((Condition)newValue);
         return;
       case GamePackage.PERSONNE__OBLIGATOIRE:
         setObligatoire((Boolean)newValue);
@@ -348,14 +395,14 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
   {
     switch (featureID)
     {
-      case GamePackage.PERSONNE__NOM:
-        setNom(NOM_EDEFAULT);
+      case GamePackage.PERSONNE__PLACE:
+        setPlace((Place)null);
         return;
       case GamePackage.PERSONNE__VISIBLE:
-        setVisible(VISIBLE_EDEFAULT);
+        setVisible((Condition)null);
         return;
       case GamePackage.PERSONNE__ACTIF:
-        setActif(ACTIF_EDEFAULT);
+        setActif((Condition)null);
         return;
       case GamePackage.PERSONNE__OBLIGATOIRE:
         setObligatoire(OBLIGATOIRE_EDEFAULT);
@@ -377,12 +424,12 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
   {
     switch (featureID)
     {
-      case GamePackage.PERSONNE__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+      case GamePackage.PERSONNE__PLACE:
+        return place != null;
       case GamePackage.PERSONNE__VISIBLE:
-        return visible != VISIBLE_EDEFAULT;
+        return visible != null;
       case GamePackage.PERSONNE__ACTIF:
-        return actif != ACTIF_EDEFAULT;
+        return actif != null;
       case GamePackage.PERSONNE__OBLIGATOIRE:
         return obligatoire != OBLIGATOIRE_EDEFAULT;
       case GamePackage.PERSONNE__INTERACTIONS:
@@ -402,13 +449,7 @@ public class PersonneImpl extends ElementsJeuImpl implements Personne
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
-    result.append(", visible: ");
-    result.append(visible);
-    result.append(", actif: ");
-    result.append(actif);
-    result.append(", obligatoire: ");
+    result.append(" (obligatoire: ");
     result.append(obligatoire);
     result.append(')');
     return result.toString();

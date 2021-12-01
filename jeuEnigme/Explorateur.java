@@ -5,9 +5,12 @@ import java.util.*;
 public class Explorateur {
 	
 	private Place position;
+	
 	private HashMap <String, Objet> inventaire;
-	private int capacite;
+	
 	private HashMap <String, Connaissance> competences;
+
+	private int capacite;
 
 	public Explorateur(Place place, int capacite) {
 		this.position = place;

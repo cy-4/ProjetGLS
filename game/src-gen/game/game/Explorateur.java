@@ -3,6 +3,8 @@
  */
 package game.game;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -27,22 +29,22 @@ import org.eclipse.emf.ecore.EObject;
 public interface Explorateur extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Place</b></em>' containment reference.
+   * Returns the value of the '<em><b>Place</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Place</em>' containment reference.
+   * @return the value of the '<em>Place</em>' reference.
    * @see #setPlace(Place)
    * @see game.game.GamePackage#getExplorateur_Place()
-   * @model containment="true"
+   * @model
    * @generated
    */
   Place getPlace();
 
   /**
-   * Sets the value of the '{@link game.game.Explorateur#getPlace <em>Place</em>}' containment reference.
+   * Sets the value of the '{@link game.game.Explorateur#getPlace <em>Place</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Place</em>' containment reference.
+   * @param value the new value of the '<em>Place</em>' reference.
    * @see #getPlace()
    * @generated
    */
@@ -71,47 +73,27 @@ public interface Explorateur extends EObject
   void setTailleDispo(int value);
 
   /**
-   * Returns the value of the '<em><b>Objets</b></em>' containment reference.
+   * Returns the value of the '<em><b>Objets</b></em>' containment reference list.
+   * The list contents are of type {@link game.game.Objet}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Objets</em>' containment reference.
-   * @see #setObjets(Objet)
+   * @return the value of the '<em>Objets</em>' containment reference list.
    * @see game.game.GamePackage#getExplorateur_Objets()
    * @model containment="true"
    * @generated
    */
-  Objet getObjets();
+  EList<Objet> getObjets();
 
   /**
-   * Sets the value of the '{@link game.game.Explorateur#getObjets <em>Objets</em>}' containment reference.
+   * Returns the value of the '<em><b>Connaissances</b></em>' containment reference list.
+   * The list contents are of type {@link game.game.Connaissance}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Objets</em>' containment reference.
-   * @see #getObjets()
-   * @generated
-   */
-  void setObjets(Objet value);
-
-  /**
-   * Returns the value of the '<em><b>Connaissances</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Connaissances</em>' containment reference.
-   * @see #setConnaissances(Connaissance)
+   * @return the value of the '<em>Connaissances</em>' containment reference list.
    * @see game.game.GamePackage#getExplorateur_Connaissances()
    * @model containment="true"
    * @generated
    */
-  Connaissance getConnaissances();
-
-  /**
-   * Sets the value of the '{@link game.game.Explorateur#getConnaissances <em>Connaissances</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Connaissances</em>' containment reference.
-   * @see #getConnaissances()
-   * @generated
-   */
-  void setConnaissances(Connaissance value);
+  EList<Connaissance> getConnaissances();
 
 } // Explorateur

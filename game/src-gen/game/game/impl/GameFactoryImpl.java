@@ -80,7 +80,6 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory
       case GamePackage.INTERACTION: return createInteraction();
       case GamePackage.CHOIX: return createChoix();
       case GamePackage.CONDITION: return createCondition();
-      case GamePackage.RECOMPENSE: return createRecompense();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -286,18 +285,6 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory
   {
     ConditionImpl condition = new ConditionImpl();
     return condition;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Recompense createRecompense()
-  {
-    RecompenseImpl recompense = new RecompenseImpl();
-    return recompense;
   }
 
   /**

@@ -13,8 +13,8 @@ package game.game;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link game.game.Avantage#isVisible <em>Visible</em>}</li>
- *   <li>{@link game.game.Avantage#isActif <em>Actif</em>}</li>
+ *   <li>{@link game.game.Avantage#getVisible <em>Visible</em>}</li>
+ *   <li>{@link game.game.Avantage#getActif <em>Actif</em>}</li>
  * </ul>
  *
  * @see game.game.GamePackage#getAvantage()
@@ -24,47 +24,47 @@ package game.game;
 public interface Avantage extends ElementsJeu
 {
   /**
-   * Returns the value of the '<em><b>Visible</b></em>' attribute.
+   * Returns the value of the '<em><b>Visible</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Visible</em>' attribute.
-   * @see #setVisible(boolean)
+   * @return the value of the '<em>Visible</em>' containment reference.
+   * @see #setVisible(Condition)
    * @see game.game.GamePackage#getAvantage_Visible()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  boolean isVisible();
+  Condition getVisible();
 
   /**
-   * Sets the value of the '{@link game.game.Avantage#isVisible <em>Visible</em>}' attribute.
+   * Sets the value of the '{@link game.game.Avantage#getVisible <em>Visible</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Visible</em>' attribute.
-   * @see #isVisible()
+   * @param value the new value of the '<em>Visible</em>' containment reference.
+   * @see #getVisible()
    * @generated
    */
-  void setVisible(boolean value);
+  void setVisible(Condition value);
 
   /**
-   * Returns the value of the '<em><b>Actif</b></em>' attribute.
+   * Returns the value of the '<em><b>Actif</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Actif</em>' attribute.
-   * @see #setActif(boolean)
+   * @return the value of the '<em>Actif</em>' containment reference.
+   * @see #setActif(Condition)
    * @see game.game.GamePackage#getAvantage_Actif()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  boolean isActif();
+  Condition getActif();
 
   /**
-   * Sets the value of the '{@link game.game.Avantage#isActif <em>Actif</em>}' attribute.
+   * Sets the value of the '{@link game.game.Avantage#getActif <em>Actif</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Actif</em>' attribute.
-   * @see #isActif()
+   * @param value the new value of the '<em>Actif</em>' containment reference.
+   * @see #getActif()
    * @generated
    */
-  void setActif(boolean value);
+  void setActif(Condition value);
 
 } // Avantage

@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.LieuImpl#getNom <em>Nom</em>}</li>
  *   <li>{@link game.game.impl.LieuImpl#getNature <em>Nature</em>}</li>
  * </ul>
  *
@@ -29,26 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class LieuImpl extends PlaceImpl implements Lieu
 {
-  /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNom()
-   * @generated
-   * @ordered
-   */
-  protected static final String NOM_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getNom()
-   * @generated
-   * @ordered
-   */
-  protected String nom = NOM_EDEFAULT;
-
   /**
    * The default value of the '{@link #getNature() <em>Nature</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -96,31 +75,6 @@ public class LieuImpl extends PlaceImpl implements Lieu
    * @generated
    */
   @Override
-  public String getNom()
-  {
-    return nom;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setNom(String newNom)
-  {
-    String oldNom = nom;
-    nom = newNom;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.LIEU__NOM, oldNom, nom));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public Nature getNature()
   {
     return nature;
@@ -150,8 +104,6 @@ public class LieuImpl extends PlaceImpl implements Lieu
   {
     switch (featureID)
     {
-      case GamePackage.LIEU__NOM:
-        return getNom();
       case GamePackage.LIEU__NATURE:
         return getNature();
     }
@@ -168,9 +120,6 @@ public class LieuImpl extends PlaceImpl implements Lieu
   {
     switch (featureID)
     {
-      case GamePackage.LIEU__NOM:
-        setNom((String)newValue);
-        return;
       case GamePackage.LIEU__NATURE:
         setNature((Nature)newValue);
         return;
@@ -188,9 +137,6 @@ public class LieuImpl extends PlaceImpl implements Lieu
   {
     switch (featureID)
     {
-      case GamePackage.LIEU__NOM:
-        setNom(NOM_EDEFAULT);
-        return;
       case GamePackage.LIEU__NATURE:
         setNature(NATURE_EDEFAULT);
         return;
@@ -208,8 +154,6 @@ public class LieuImpl extends PlaceImpl implements Lieu
   {
     switch (featureID)
     {
-      case GamePackage.LIEU__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
       case GamePackage.LIEU__NATURE:
         return nature != NATURE_EDEFAULT;
     }
@@ -227,9 +171,7 @@ public class LieuImpl extends PlaceImpl implements Lieu
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
-    result.append(", nature: ");
+    result.append(" (nature: ");
     result.append(nature);
     result.append(')');
     return result.toString();

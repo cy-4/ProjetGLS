@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalGameLexer extends Lexer {
+    public static final int T__50=50;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
@@ -20,7 +21,8 @@ public class InternalGameLexer extends Lexer {
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
-    public static final int RULE_ID=4;
+    public static final int T__51=51;
+    public static final int RULE_ID=5;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -48,10 +50,13 @@ public class InternalGameLexer extends Lexer {
     public static final int T__32=32;
     public static final int RULE_WS=10;
     public static final int RULE_ANY_OTHER=11;
-    public static final int RULE_BOOL=5;
+    public static final int RULE_BOOL=4;
+    public static final int T__48=48;
+    public static final int T__49=49;
     public static final int T__44=44;
     public static final int T__45=45;
     public static final int T__46=46;
+    public static final int T__47=47;
     public static final int T__40=40;
     public static final int T__41=41;
     public static final int T__42=42;
@@ -75,10 +80,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:11:7: ( 'depart' )
-            // InternalGame.g:11:9: 'depart'
+            // InternalGame.g:11:7: ( 'consomme' )
+            // InternalGame.g:11:9: 'consomme'
             {
-            match("depart"); 
+            match("consomme"); 
 
 
             }
@@ -96,10 +101,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:12:7: ( 'fin' )
-            // InternalGame.g:12:9: 'fin'
+            // InternalGame.g:12:7: ( 'donne' )
+            // InternalGame.g:12:9: 'donne'
             {
-            match("fin"); 
+            match("donne"); 
 
 
             }
@@ -117,10 +122,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:13:7: ( 'intermediaire' )
-            // InternalGame.g:13:9: 'intermediaire'
+            // InternalGame.g:13:7: ( 'depart' )
+            // InternalGame.g:13:9: 'depart'
             {
-            match("intermediaire"); 
+            match("depart"); 
 
 
             }
@@ -138,10 +143,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:14:7: ( 'jeu' )
-            // InternalGame.g:14:9: 'jeu'
+            // InternalGame.g:14:7: ( 'fin' )
+            // InternalGame.g:14:9: 'fin'
             {
-            match("jeu"); 
+            match("fin"); 
 
 
             }
@@ -159,10 +164,11 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:15:7: ( '{' )
-            // InternalGame.g:15:9: '{'
+            // InternalGame.g:15:7: ( 'intermediaire' )
+            // InternalGame.g:15:9: 'intermediaire'
             {
-            match('{'); 
+            match("intermediaire"); 
+
 
             }
 
@@ -179,10 +185,11 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:16:7: ( '}' )
-            // InternalGame.g:16:9: '}'
+            // InternalGame.g:16:7: ( 'jeu' )
+            // InternalGame.g:16:9: 'jeu'
             {
-            match('}'); 
+            match("jeu"); 
+
 
             }
 
@@ -199,11 +206,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:17:7: ( 'territoire' )
-            // InternalGame.g:17:9: 'territoire'
+            // InternalGame.g:17:7: ( '{' )
+            // InternalGame.g:17:9: '{'
             {
-            match("territoire"); 
-
+            match('{'); 
 
             }
 
@@ -220,11 +226,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:18:7: ( 'lieu' )
-            // InternalGame.g:18:9: 'lieu'
+            // InternalGame.g:18:7: ( '}' )
+            // InternalGame.g:18:9: '}'
             {
-            match("lieu"); 
-
+            match('}'); 
 
             }
 
@@ -241,10 +246,11 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:19:7: ( ':' )
-            // InternalGame.g:19:9: ':'
+            // InternalGame.g:19:7: ( 'territoire' )
+            // InternalGame.g:19:9: 'territoire'
             {
-            match(':'); 
+            match("territoire"); 
+
 
             }
 
@@ -261,10 +267,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:20:7: ( 'chemin' )
-            // InternalGame.g:20:9: 'chemin'
+            // InternalGame.g:20:7: ( 'lieu' )
+            // InternalGame.g:20:9: 'lieu'
             {
-            match("chemin"); 
+            match("lieu"); 
 
 
             }
@@ -282,11 +288,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:21:7: ( 'de' )
-            // InternalGame.g:21:9: 'de'
+            // InternalGame.g:21:7: ( ':' )
+            // InternalGame.g:21:9: ':'
             {
-            match("de"); 
-
+            match(':'); 
 
             }
 
@@ -303,10 +308,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:22:7: ( 'vers' )
-            // InternalGame.g:22:9: 'vers'
+            // InternalGame.g:22:7: ( 'chemin' )
+            // InternalGame.g:22:9: 'chemin'
             {
-            match("vers"); 
+            match("chemin"); 
 
 
             }
@@ -324,10 +329,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:23:7: ( 'visible' )
-            // InternalGame.g:23:9: 'visible'
+            // InternalGame.g:23:7: ( 'de' )
+            // InternalGame.g:23:9: 'de'
             {
-            match("visible"); 
+            match("de"); 
 
 
             }
@@ -345,10 +350,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:24:7: ( 'obligatoire' )
-            // InternalGame.g:24:9: 'obligatoire'
+            // InternalGame.g:24:7: ( 'vers' )
+            // InternalGame.g:24:9: 'vers'
             {
-            match("obligatoire"); 
+            match("vers"); 
 
 
             }
@@ -366,10 +371,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:25:7: ( 'ouvert' )
-            // InternalGame.g:25:9: 'ouvert'
+            // InternalGame.g:25:7: ( 'visible' )
+            // InternalGame.g:25:9: 'visible'
             {
-            match("ouvert"); 
+            match("visible"); 
 
 
             }
@@ -387,10 +392,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:26:7: ( 'personne' )
-            // InternalGame.g:26:9: 'personne'
+            // InternalGame.g:26:7: ( 'obligatoire' )
+            // InternalGame.g:26:9: 'obligatoire'
             {
-            match("personne"); 
+            match("obligatoire"); 
 
 
             }
@@ -408,10 +413,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:27:7: ( 'actif' )
-            // InternalGame.g:27:9: 'actif'
+            // InternalGame.g:27:7: ( 'ouvert' )
+            // InternalGame.g:27:9: 'ouvert'
             {
-            match("actif"); 
+            match("ouvert"); 
 
 
             }
@@ -429,10 +434,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:28:7: ( 'interactions' )
-            // InternalGame.g:28:9: 'interactions'
+            // InternalGame.g:28:7: ( 'personne' )
+            // InternalGame.g:28:9: 'personne'
             {
-            match("interactions"); 
+            match("personne"); 
 
 
             }
@@ -450,10 +455,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:29:7: ( 'explorateur' )
-            // InternalGame.g:29:9: 'explorateur'
+            // InternalGame.g:29:7: ( 'localisation' )
+            // InternalGame.g:29:9: 'localisation'
             {
-            match("explorateur"); 
+            match("localisation"); 
 
 
             }
@@ -471,10 +476,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:30:7: ( 'localisation' )
-            // InternalGame.g:30:9: 'localisation'
+            // InternalGame.g:30:7: ( 'actif' )
+            // InternalGame.g:30:9: 'actif'
             {
-            match("localisation"); 
+            match("actif"); 
 
 
             }
@@ -492,10 +497,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:31:7: ( 'taille' )
-            // InternalGame.g:31:9: 'taille'
+            // InternalGame.g:31:7: ( 'interactions' )
+            // InternalGame.g:31:9: 'interactions'
             {
-            match("taille"); 
+            match("interactions"); 
 
 
             }
@@ -513,10 +518,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:32:7: ( 'disponible' )
-            // InternalGame.g:32:9: 'disponible'
+            // InternalGame.g:32:7: ( 'explorateur' )
+            // InternalGame.g:32:9: 'explorateur'
             {
-            match("disponible"); 
+            match("explorateur"); 
 
 
             }
@@ -534,10 +539,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:33:7: ( 'objets' )
-            // InternalGame.g:33:9: 'objets'
+            // InternalGame.g:33:7: ( 'taille' )
+            // InternalGame.g:33:9: 'taille'
             {
-            match("objets"); 
+            match("taille"); 
 
 
             }
@@ -555,10 +560,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:34:7: ( 'possedes' )
-            // InternalGame.g:34:9: 'possedes'
+            // InternalGame.g:34:7: ( 'disponible' )
+            // InternalGame.g:34:9: 'disponible'
             {
-            match("possedes"); 
+            match("disponible"); 
 
 
             }
@@ -576,10 +581,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:35:7: ( 'connaissances' )
-            // InternalGame.g:35:9: 'connaissances'
+            // InternalGame.g:35:7: ( 'objets' )
+            // InternalGame.g:35:9: 'objets'
             {
-            match("connaissances"); 
+            match("objets"); 
 
 
             }
@@ -597,10 +602,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:36:7: ( 'connaissance' )
-            // InternalGame.g:36:9: 'connaissance'
+            // InternalGame.g:36:7: ( 'possedes' )
+            // InternalGame.g:36:9: 'possedes'
             {
-            match("connaissance"); 
+            match("possedes"); 
 
 
             }
@@ -618,10 +623,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:37:7: ( 'objet' )
-            // InternalGame.g:37:9: 'objet'
+            // InternalGame.g:37:7: ( 'connaissances' )
+            // InternalGame.g:37:9: 'connaissances'
             {
-            match("objet"); 
+            match("connaissances"); 
 
 
             }
@@ -639,10 +644,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:38:7: ( 'quantite' )
-            // InternalGame.g:38:9: 'quantite'
+            // InternalGame.g:38:7: ( 'connaissance' )
+            // InternalGame.g:38:9: 'connaissance'
             {
-            match("quantite"); 
+            match("connaissance"); 
 
 
             }
@@ -660,10 +665,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:39:7: ( 'transformable' )
-            // InternalGame.g:39:9: 'transformable'
+            // InternalGame.g:39:7: ( 'objet' )
+            // InternalGame.g:39:9: 'objet'
             {
-            match("transformable"); 
+            match("objet"); 
 
 
             }
@@ -681,10 +686,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:40:7: ( 'interaction' )
-            // InternalGame.g:40:9: 'interaction'
+            // InternalGame.g:40:7: ( 'quantite' )
+            // InternalGame.g:40:9: 'quantite'
             {
-            match("interaction"); 
+            match("quantite"); 
 
 
             }
@@ -702,10 +707,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__42;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:41:7: ( 'question' )
-            // InternalGame.g:41:9: 'question'
+            // InternalGame.g:41:7: ( 'transformable' )
+            // InternalGame.g:41:9: 'transformable'
             {
-            match("question"); 
+            match("transformable"); 
 
 
             }
@@ -723,10 +728,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__43;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:42:7: ( 'choix' )
-            // InternalGame.g:42:9: 'choix'
+            // InternalGame.g:42:7: ( 'interaction' )
+            // InternalGame.g:42:9: 'interaction'
             {
-            match("choix"); 
+            match("interaction"); 
 
 
             }
@@ -744,10 +749,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__44;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:43:7: ( 'reponse' )
-            // InternalGame.g:43:9: 'reponse'
+            // InternalGame.g:43:7: ( 'question' )
+            // InternalGame.g:43:9: 'question'
             {
-            match("reponse"); 
+            match("question"); 
 
 
             }
@@ -765,10 +770,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__45;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:44:7: ( 'recompense' )
-            // InternalGame.g:44:9: 'recompense'
+            // InternalGame.g:44:7: ( 'choix' )
+            // InternalGame.g:44:9: 'choix'
             {
-            match("recompense"); 
+            match("choix"); 
 
 
             }
@@ -786,10 +791,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = T__46;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:45:7: ( 'avantage' )
-            // InternalGame.g:45:9: 'avantage'
+            // InternalGame.g:45:7: ( 'reponse' )
+            // InternalGame.g:45:9: 'reponse'
             {
-            match("avantage"); 
+            match("reponse"); 
 
 
             }
@@ -802,15 +807,120 @@ public class InternalGameLexer extends Lexer {
     }
     // $ANTLR end "T__46"
 
+    // $ANTLR start "T__47"
+    public final void mT__47() throws RecognitionException {
+        try {
+            int _type = T__47;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalGame.g:46:7: ( 'condition' )
+            // InternalGame.g:46:9: 'condition'
+            {
+            match("condition"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__47"
+
+    // $ANTLR start "T__48"
+    public final void mT__48() throws RecognitionException {
+        try {
+            int _type = T__48;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalGame.g:47:7: ( 'requises' )
+            // InternalGame.g:47:9: 'requises'
+            {
+            match("requises"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__48"
+
+    // $ANTLR start "T__49"
+    public final void mT__49() throws RecognitionException {
+        try {
+            int _type = T__49;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalGame.g:48:7: ( 'interdites' )
+            // InternalGame.g:48:9: 'interdites'
+            {
+            match("interdites"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__49"
+
+    // $ANTLR start "T__50"
+    public final void mT__50() throws RecognitionException {
+        try {
+            int _type = T__50;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalGame.g:49:7: ( 'requis' )
+            // InternalGame.g:49:9: 'requis'
+            {
+            match("requis"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__50"
+
+    // $ANTLR start "T__51"
+    public final void mT__51() throws RecognitionException {
+        try {
+            int _type = T__51;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalGame.g:50:7: ( 'interdits' )
+            // InternalGame.g:50:9: 'interdits'
+            {
+            match("interdits"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__51"
+
     // $ANTLR start "RULE_BOOL"
     public final void mRULE_BOOL() throws RecognitionException {
         try {
             int _type = RULE_BOOL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3584:11: ( ( 'true' | 'false' ) )
-            // InternalGame.g:3584:13: ( 'true' | 'false' )
+            // InternalGame.g:4398:11: ( ( 'true' | 'false' ) )
+            // InternalGame.g:4398:13: ( 'true' | 'false' )
             {
-            // InternalGame.g:3584:13: ( 'true' | 'false' )
+            // InternalGame.g:4398:13: ( 'true' | 'false' )
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -828,7 +938,7 @@ public class InternalGameLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalGame.g:3584:14: 'true'
+                    // InternalGame.g:4398:14: 'true'
                     {
                     match("true"); 
 
@@ -836,7 +946,7 @@ public class InternalGameLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalGame.g:3584:21: 'false'
+                    // InternalGame.g:4398:21: 'false'
                     {
                     match("false"); 
 
@@ -862,10 +972,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3586:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalGame.g:3586:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalGame.g:4400:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalGame.g:4400:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalGame.g:3586:11: ( '^' )?
+            // InternalGame.g:4400:11: ( '^' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -874,7 +984,7 @@ public class InternalGameLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // InternalGame.g:3586:11: '^'
+                    // InternalGame.g:4400:11: '^'
                     {
                     match('^'); 
 
@@ -892,7 +1002,7 @@ public class InternalGameLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalGame.g:3586:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalGame.g:4400:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop3:
             do {
                 int alt3=2;
@@ -941,10 +1051,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3588:10: ( ( '0' .. '9' )+ )
-            // InternalGame.g:3588:12: ( '0' .. '9' )+
+            // InternalGame.g:4402:10: ( ( '0' .. '9' )+ )
+            // InternalGame.g:4402:12: ( '0' .. '9' )+
             {
-            // InternalGame.g:3588:12: ( '0' .. '9' )+
+            // InternalGame.g:4402:12: ( '0' .. '9' )+
             int cnt4=0;
             loop4:
             do {
@@ -958,7 +1068,7 @@ public class InternalGameLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalGame.g:3588:13: '0' .. '9'
+            	    // InternalGame.g:4402:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -990,10 +1100,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3590:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalGame.g:3590:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalGame.g:4404:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalGame.g:4404:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalGame.g:3590:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalGame.g:4404:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1011,10 +1121,10 @@ public class InternalGameLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalGame.g:3590:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalGame.g:4404:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalGame.g:3590:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalGame.g:4404:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -1030,7 +1140,7 @@ public class InternalGameLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalGame.g:3590:21: '\\\\' .
+                    	    // InternalGame.g:4404:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1038,7 +1148,7 @@ public class InternalGameLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalGame.g:3590:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalGame.g:4404:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1063,10 +1173,10 @@ public class InternalGameLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalGame.g:3590:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalGame.g:4404:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalGame.g:3590:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalGame.g:4404:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -1082,7 +1192,7 @@ public class InternalGameLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // InternalGame.g:3590:54: '\\\\' .
+                    	    // InternalGame.g:4404:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -1090,7 +1200,7 @@ public class InternalGameLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalGame.g:3590:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalGame.g:4404:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -1133,12 +1243,12 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3592:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalGame.g:3592:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalGame.g:4406:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalGame.g:4406:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalGame.g:3592:24: ( options {greedy=false; } : . )*
+            // InternalGame.g:4406:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -1163,7 +1273,7 @@ public class InternalGameLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalGame.g:3592:52: .
+            	    // InternalGame.g:4406:52: .
             	    {
             	    matchAny(); 
 
@@ -1193,12 +1303,12 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3594:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalGame.g:3594:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalGame.g:4408:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalGame.g:4408:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalGame.g:3594:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalGame.g:4408:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1211,7 +1321,7 @@ public class InternalGameLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // InternalGame.g:3594:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalGame.g:4408:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1231,7 +1341,7 @@ public class InternalGameLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalGame.g:3594:40: ( ( '\\r' )? '\\n' )?
+            // InternalGame.g:4408:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1240,9 +1350,9 @@ public class InternalGameLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalGame.g:3594:41: ( '\\r' )? '\\n'
+                    // InternalGame.g:4408:41: ( '\\r' )? '\\n'
                     {
-                    // InternalGame.g:3594:41: ( '\\r' )?
+                    // InternalGame.g:4408:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1251,7 +1361,7 @@ public class InternalGameLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // InternalGame.g:3594:41: '\\r'
+                            // InternalGame.g:4408:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1283,10 +1393,10 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3596:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalGame.g:3596:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalGame.g:4410:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalGame.g:4410:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalGame.g:3596:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalGame.g:4410:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1340,8 +1450,8 @@ public class InternalGameLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalGame.g:3598:16: ( . )
-            // InternalGame.g:3598:18: .
+            // InternalGame.g:4412:16: ( . )
+            // InternalGame.g:4412:18: .
             {
             matchAny(); 
 
@@ -1356,8 +1466,8 @@ public class InternalGameLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalGame.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=43;
+        // InternalGame.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=48;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
@@ -1606,56 +1716,91 @@ public class InternalGameLexer extends Lexer {
                 }
                 break;
             case 36 :
-                // InternalGame.g:1:220: RULE_BOOL
+                // InternalGame.g:1:220: T__47
+                {
+                mT__47(); 
+
+                }
+                break;
+            case 37 :
+                // InternalGame.g:1:226: T__48
+                {
+                mT__48(); 
+
+                }
+                break;
+            case 38 :
+                // InternalGame.g:1:232: T__49
+                {
+                mT__49(); 
+
+                }
+                break;
+            case 39 :
+                // InternalGame.g:1:238: T__50
+                {
+                mT__50(); 
+
+                }
+                break;
+            case 40 :
+                // InternalGame.g:1:244: T__51
+                {
+                mT__51(); 
+
+                }
+                break;
+            case 41 :
+                // InternalGame.g:1:250: RULE_BOOL
                 {
                 mRULE_BOOL(); 
 
                 }
                 break;
-            case 37 :
-                // InternalGame.g:1:230: RULE_ID
+            case 42 :
+                // InternalGame.g:1:260: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 38 :
-                // InternalGame.g:1:238: RULE_INT
+            case 43 :
+                // InternalGame.g:1:268: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 39 :
-                // InternalGame.g:1:247: RULE_STRING
+            case 44 :
+                // InternalGame.g:1:277: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 40 :
-                // InternalGame.g:1:259: RULE_ML_COMMENT
+            case 45 :
+                // InternalGame.g:1:289: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 41 :
-                // InternalGame.g:1:275: RULE_SL_COMMENT
+            case 46 :
+                // InternalGame.g:1:305: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 42 :
-                // InternalGame.g:1:291: RULE_WS
+            case 47 :
+                // InternalGame.g:1:321: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 43 :
-                // InternalGame.g:1:299: RULE_ANY_OTHER
+            case 48 :
+                // InternalGame.g:1:329: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1669,33 +1814,33 @@ public class InternalGameLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\4\34\2\uffff\2\34\1\uffff\10\34\1\31\2\uffff\3\31\2\uffff\1\74\1\34\1\uffff\4\34\2\uffff\5\34\1\uffff\15\34\5\uffff\1\34\1\uffff\1\34\1\133\2\34\1\136\31\34\1\uffff\2\34\1\uffff\3\34\1\175\1\176\4\34\1\u0083\17\34\1\175\4\34\2\uffff\2\34\1\u009a\1\34\1\uffff\2\34\1\u009f\3\34\1\u00a3\6\34\1\u00aa\4\34\1\u00af\2\34\1\u00b2\1\uffff\3\34\1\u00b6\1\uffff\1\u00b7\2\34\1\uffff\6\34\1\uffff\4\34\1\uffff\2\34\1\uffff\1\34\1\u00c7\1\34\2\uffff\6\34\1\u00cf\10\34\1\uffff\1\34\1\u00d9\1\u00da\1\u00db\1\34\1\u00dd\1\u00de\1\uffff\11\34\3\uffff\1\34\2\uffff\1\34\1\u00ea\2\34\1\u00ed\5\34\1\u00f3\1\uffff\1\34\1\u00f6\1\uffff\3\34\1\u00fa\1\u00fb\1\uffff\1\34\1\u00fd\1\uffff\1\34\1\u00ff\1\u0101\2\uffff\1\u0102\1\uffff\1\u0103\1\uffff\1\u0104\4\uffff";
+        "\1\uffff\5\34\2\uffff\2\34\1\uffff\7\34\1\31\2\uffff\3\31\2\uffff\2\34\1\uffff\1\34\1\100\5\34\2\uffff\5\34\1\uffff\12\34\5\uffff\5\34\1\uffff\1\34\1\141\2\34\1\144\33\34\1\uffff\2\34\1\uffff\3\34\1\u0085\1\u0086\1\34\1\u0088\20\34\1\u0099\1\u009a\2\34\1\u0085\4\34\2\uffff\1\34\1\uffff\2\34\1\u00a7\3\34\1\u00ab\10\34\1\u00b4\2\uffff\1\u00b5\5\34\1\u00bb\4\34\1\u00c0\1\uffff\1\u00c1\2\34\1\uffff\4\34\1\u00c9\3\34\2\uffff\5\34\1\uffff\2\34\1\u00d4\1\34\2\uffff\5\34\1\u00db\1\34\1\uffff\1\u00dd\11\34\1\uffff\1\34\1\u00e9\1\u00ea\1\34\1\u00ec\1\u00ed\1\uffff\1\u00ee\1\uffff\1\34\1\u00f0\4\34\1\u00f5\4\34\2\uffff\1\34\3\uffff\1\34\1\uffff\1\u00fc\2\34\1\u00ff\1\uffff\1\u0100\5\34\1\uffff\1\34\1\u0108\2\uffff\2\34\1\u010b\1\u010c\1\u010e\1\34\1\u0110\1\uffff\1\34\1\u0112\2\uffff\1\u0113\1\uffff\1\u0114\1\uffff\1\u0115\4\uffff";
     static final String DFA13_eofS =
-        "\u0105\uffff";
+        "\u0116\uffff";
     static final String DFA13_minS =
-        "\1\0\1\145\1\141\1\156\1\145\2\uffff\1\141\1\151\1\uffff\1\150\1\145\1\142\1\145\1\143\1\170\1\165\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\60\1\163\1\uffff\1\156\1\154\1\164\1\165\2\uffff\1\162\1\151\1\141\1\145\1\143\1\uffff\1\145\1\156\1\162\1\163\1\152\1\166\1\162\1\163\1\164\1\141\1\160\1\141\1\143\5\uffff\1\141\1\uffff\1\160\1\60\1\163\1\145\1\60\1\162\1\154\1\156\1\145\1\165\1\141\1\155\1\151\1\156\1\163\2\151\2\145\2\163\1\151\1\156\1\154\1\156\1\163\2\157\1\162\1\157\1\uffff\1\145\1\162\1\uffff\1\151\1\154\1\163\2\60\1\154\1\151\1\170\1\141\1\60\1\142\1\147\1\164\1\162\1\157\1\145\1\146\1\164\1\157\2\164\1\156\1\155\1\164\1\156\1\60\1\141\1\164\1\145\1\146\2\uffff\1\151\1\156\1\60\1\151\1\uffff\1\154\1\141\1\60\1\164\1\156\1\144\1\60\1\141\1\162\2\151\1\163\1\160\1\60\1\151\1\145\1\143\1\157\1\60\1\157\1\163\1\60\1\uffff\1\163\1\145\1\164\1\60\1\uffff\1\60\1\156\1\145\1\uffff\1\147\1\141\1\164\1\157\2\145\1\uffff\1\142\1\144\1\164\1\151\1\uffff\1\162\1\141\1\uffff\1\163\1\60\1\157\2\uffff\1\145\1\163\1\145\1\164\1\145\1\156\1\60\1\156\1\154\2\151\1\162\1\155\1\164\1\141\1\uffff\1\151\3\60\1\145\2\60\1\uffff\1\163\1\145\1\141\1\157\1\145\1\141\1\151\1\156\1\162\3\uffff\1\165\2\uffff\1\145\1\60\1\151\1\156\1\60\1\142\1\157\1\143\1\145\1\162\1\60\1\uffff\1\162\1\60\1\uffff\1\154\1\156\1\145\2\60\1\uffff\1\145\1\60\1\uffff\1\145\2\60\2\uffff\1\60\1\uffff\1\60\1\uffff\1\60\4\uffff";
+        "\1\0\1\150\1\145\1\141\1\156\1\145\2\uffff\1\141\1\151\1\uffff\1\145\1\142\1\145\1\143\1\170\1\165\1\145\1\101\2\uffff\2\0\1\52\2\uffff\1\156\1\145\1\uffff\1\156\1\60\1\163\1\156\1\154\1\164\1\165\2\uffff\1\162\1\151\1\141\1\145\1\143\1\uffff\1\162\1\163\1\152\1\166\1\162\1\163\1\164\1\160\1\141\1\160\5\uffff\1\144\1\155\1\151\1\156\1\141\1\uffff\1\160\1\60\1\163\1\145\1\60\1\162\1\154\1\156\1\145\1\165\1\141\1\163\2\151\2\145\2\163\1\151\1\154\1\156\1\163\1\157\1\165\1\157\1\141\2\151\1\170\1\145\1\162\1\157\1\uffff\1\145\1\162\1\uffff\1\151\1\154\1\163\2\60\1\154\1\60\1\142\1\147\1\164\1\162\1\157\1\145\1\146\1\157\2\164\1\156\1\151\1\155\1\151\1\164\1\156\2\60\1\164\1\156\1\60\1\141\1\164\1\145\1\146\2\uffff\1\151\1\uffff\1\154\1\141\1\60\1\164\1\156\1\144\1\60\1\162\2\151\2\163\1\155\1\163\1\151\1\60\2\uffff\1\60\1\151\1\145\1\143\1\151\1\157\1\60\1\157\1\163\1\145\1\164\1\60\1\uffff\1\60\1\156\1\145\1\uffff\1\141\1\164\1\157\1\145\1\60\1\145\1\163\1\157\2\uffff\1\142\1\144\2\164\1\151\1\uffff\1\162\1\141\1\60\1\157\2\uffff\1\145\1\163\1\164\1\145\1\156\1\60\1\163\1\uffff\1\60\1\141\1\156\1\154\2\151\1\145\1\162\1\155\1\164\1\uffff\1\151\2\60\1\145\2\60\1\uffff\1\60\1\uffff\1\156\1\60\1\145\1\141\1\157\1\163\1\60\1\145\1\141\1\151\1\162\2\uffff\1\165\3\uffff\1\143\1\uffff\1\60\1\151\1\156\1\60\1\uffff\1\60\1\142\1\157\1\145\1\162\1\145\1\uffff\1\162\1\60\2\uffff\1\154\1\156\3\60\1\145\1\60\1\uffff\1\145\1\60\2\uffff\1\60\1\uffff\1\60\1\uffff\1\60\4\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\2\151\1\156\1\145\2\uffff\1\162\1\157\1\uffff\1\157\1\151\1\165\1\157\1\166\1\170\1\165\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\172\1\163\1\uffff\1\156\1\154\1\164\1\165\2\uffff\1\162\1\151\1\165\1\145\1\143\1\uffff\1\157\1\156\1\162\1\163\1\154\1\166\1\162\1\163\1\164\1\141\1\160\1\145\1\160\5\uffff\1\141\1\uffff\1\160\1\172\1\163\1\145\1\172\1\162\1\154\1\156\1\145\1\165\1\141\1\155\1\151\1\156\1\163\2\151\2\145\2\163\1\151\1\156\1\154\1\156\1\163\2\157\1\162\1\157\1\uffff\1\145\1\162\1\uffff\1\151\1\154\1\163\2\172\1\154\1\151\1\170\1\141\1\172\1\142\1\147\1\164\1\162\1\157\1\145\1\146\1\164\1\157\2\164\1\156\1\155\1\164\1\156\1\172\1\155\1\164\1\145\1\146\2\uffff\1\151\1\156\1\172\1\151\1\uffff\1\154\1\141\1\172\1\164\1\156\1\144\1\172\1\141\1\162\2\151\1\163\1\160\1\172\1\151\1\145\1\143\1\157\1\172\1\157\1\163\1\172\1\uffff\1\163\1\145\1\164\1\172\1\uffff\1\172\1\156\1\145\1\uffff\1\147\1\141\1\164\1\157\2\145\1\uffff\1\142\1\144\1\164\1\151\1\uffff\1\162\1\141\1\uffff\1\163\1\172\1\157\2\uffff\1\145\1\163\1\145\1\164\1\145\1\156\1\172\1\156\1\154\2\151\1\162\1\155\1\164\1\141\1\uffff\1\151\3\172\1\145\2\172\1\uffff\1\163\1\145\1\141\1\157\1\145\1\141\1\151\1\156\1\162\3\uffff\1\165\2\uffff\1\145\1\172\1\151\1\156\1\172\1\142\1\157\1\143\1\145\1\162\1\172\1\uffff\1\162\1\172\1\uffff\1\154\1\156\1\145\2\172\1\uffff\1\145\1\172\1\uffff\1\145\2\172\2\uffff\1\172\1\uffff\1\172\1\uffff\1\172\4\uffff";
+        "\1\uffff\2\157\1\151\1\156\1\145\2\uffff\1\162\1\157\1\uffff\1\151\1\165\1\157\1\143\1\170\1\165\1\145\1\172\2\uffff\2\uffff\1\57\2\uffff\1\156\1\157\1\uffff\1\156\1\172\1\163\1\156\1\154\1\164\1\165\2\uffff\1\162\1\151\1\165\1\145\1\143\1\uffff\1\162\1\163\1\154\1\166\1\162\1\163\1\164\1\160\1\145\1\161\5\uffff\1\163\1\155\1\151\1\156\1\141\1\uffff\1\160\1\172\1\163\1\145\1\172\1\162\1\154\1\156\1\145\1\165\1\141\1\163\2\151\2\145\2\163\1\151\1\154\1\156\1\163\1\157\1\165\1\157\1\141\2\151\1\170\1\145\1\162\1\157\1\uffff\1\145\1\162\1\uffff\1\151\1\154\1\163\2\172\1\154\1\172\1\142\1\147\1\164\1\162\1\157\1\145\1\146\1\157\2\164\1\156\1\151\1\155\1\151\1\164\1\156\2\172\1\164\1\156\1\172\1\155\1\164\1\145\1\146\2\uffff\1\151\1\uffff\1\154\1\141\1\172\1\164\1\156\1\144\1\172\1\162\2\151\2\163\1\155\1\163\1\151\1\172\2\uffff\1\172\1\151\1\145\1\143\1\151\1\157\1\172\1\157\1\163\1\145\1\164\1\172\1\uffff\1\172\1\156\1\145\1\uffff\1\141\1\164\1\157\1\145\1\172\1\145\1\163\1\157\2\uffff\1\142\1\144\2\164\1\151\1\uffff\1\162\1\141\1\172\1\157\2\uffff\1\145\1\163\1\164\1\145\1\156\1\172\1\163\1\uffff\1\172\1\141\1\156\1\154\2\151\1\163\1\162\1\155\1\164\1\uffff\1\151\2\172\1\145\2\172\1\uffff\1\172\1\uffff\1\156\1\172\1\145\1\141\1\157\1\163\1\172\1\145\1\141\1\151\1\162\2\uffff\1\165\3\uffff\1\143\1\uffff\1\172\1\151\1\156\1\172\1\uffff\1\172\1\142\1\157\1\145\1\162\1\145\1\uffff\1\162\1\172\2\uffff\1\154\1\156\3\172\1\145\1\172\1\uffff\1\145\1\172\2\uffff\1\172\1\uffff\1\172\1\uffff\1\172\4\uffff";
     static final String DFA13_acceptS =
-        "\5\uffff\1\5\1\6\2\uffff\1\11\11\uffff\1\45\1\46\3\uffff\1\52\1\53\2\uffff\1\45\4\uffff\1\5\1\6\5\uffff\1\11\15\uffff\1\46\1\47\1\50\1\51\1\52\1\uffff\1\13\36\uffff\1\2\2\uffff\1\4\36\uffff\1\44\1\10\4\uffff\1\14\26\uffff\1\40\4\uffff\1\33\3\uffff\1\21\6\uffff\1\1\4\uffff\1\25\2\uffff\1\12\3\uffff\1\27\1\17\17\uffff\1\15\7\uffff\1\41\11\uffff\1\20\1\30\1\43\1\uffff\1\34\1\37\13\uffff\1\26\2\uffff\1\7\5\uffff\1\42\2\uffff\1\36\3\uffff\1\16\1\23\1\uffff\1\22\1\uffff\1\24\1\uffff\1\32\1\3\1\35\1\31";
+        "\6\uffff\1\7\1\10\2\uffff\1\13\10\uffff\1\52\1\53\3\uffff\1\57\1\60\2\uffff\1\52\7\uffff\1\7\1\10\5\uffff\1\13\12\uffff\1\53\1\54\1\55\1\56\1\57\5\uffff\1\15\40\uffff\1\4\2\uffff\1\6\40\uffff\1\51\1\12\1\uffff\1\16\20\uffff\1\42\1\2\14\uffff\1\35\3\uffff\1\24\10\uffff\1\14\1\3\5\uffff\1\27\4\uffff\1\31\1\21\7\uffff\1\47\12\uffff\1\17\6\uffff\1\43\1\uffff\1\1\13\uffff\1\22\1\32\1\uffff\1\36\1\41\1\45\1\uffff\1\44\4\uffff\1\50\6\uffff\1\30\2\uffff\1\46\1\11\7\uffff\1\40\2\uffff\1\20\1\26\1\uffff\1\34\1\uffff\1\25\1\uffff\1\23\1\33\1\5\1\37";
     static final String DFA13_specialS =
-        "\1\2\24\uffff\1\0\1\1\u00ee\uffff}>";
+        "\1\2\24\uffff\1\0\1\1\u00ff\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\7\31\1\27\12\24\1\11\6\31\32\23\3\31\1\22\1\23\1\31\1\16\1\23\1\12\1\1\1\17\1\2\2\23\1\3\1\4\1\23\1\10\2\23\1\14\1\15\1\20\1\21\1\23\1\7\1\23\1\13\4\23\1\5\1\31\1\6\uff82\31",
-            "\1\32\3\uffff\1\33",
-            "\1\36\7\uffff\1\35",
-            "\1\37",
-            "\1\40",
+            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\4\31\1\26\7\31\1\27\12\24\1\12\6\31\32\23\3\31\1\22\1\23\1\31\1\16\1\23\1\1\1\2\1\17\1\3\2\23\1\4\1\5\1\23\1\11\2\23\1\14\1\15\1\20\1\21\1\23\1\10\1\23\1\13\4\23\1\6\1\31\1\7\uff82\31",
+            "\1\33\6\uffff\1\32",
+            "\1\36\3\uffff\1\37\5\uffff\1\35",
+            "\1\41\7\uffff\1\40",
+            "\1\42",
+            "\1\43",
             "",
             "",
-            "\1\44\3\uffff\1\43\14\uffff\1\45",
-            "\1\46\5\uffff\1\47",
+            "\1\47\3\uffff\1\46\14\uffff\1\50",
+            "\1\51\5\uffff\1\52",
             "",
-            "\1\51\6\uffff\1\52",
-            "\1\53\3\uffff\1\54",
-            "\1\55\22\uffff\1\56",
-            "\1\57\11\uffff\1\60",
-            "\1\61\22\uffff\1\62",
+            "\1\54\3\uffff\1\55",
+            "\1\56\22\uffff\1\57",
+            "\1\60\11\uffff\1\61",
+            "\1\62",
             "\1\63",
             "\1\64",
             "\1\65",
@@ -1707,52 +1852,50 @@ public class InternalGameLexer extends Lexer {
             "\1\70\4\uffff\1\71",
             "",
             "",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\17\34\1\73\12\34",
-            "\1\75",
+            "\1\73",
+            "\1\74\11\uffff\1\75",
             "",
             "\1\76",
-            "\1\77",
-            "\1\100",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\17\34\1\77\12\34",
             "\1\101",
-            "",
-            "",
             "\1\102",
             "\1\103",
-            "\1\104\23\uffff\1\105",
+            "\1\104",
+            "\1\105",
+            "",
+            "",
             "\1\106",
             "\1\107",
-            "",
-            "\1\110\11\uffff\1\111",
+            "\1\110\23\uffff\1\111",
             "\1\112",
             "\1\113",
+            "",
             "\1\114",
-            "\1\116\1\uffff\1\115",
-            "\1\117",
+            "\1\115",
+            "\1\117\1\uffff\1\116",
             "\1\120",
             "\1\121",
             "\1\122",
             "\1\123",
             "\1\124",
             "\1\125\3\uffff\1\126",
-            "\1\130\14\uffff\1\127",
+            "\1\127\1\130",
             "",
             "",
             "",
             "",
             "",
-            "\1\131",
-            "",
-            "\1\132",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\133\11\uffff\1\132\4\uffff\1\131",
             "\1\134",
             "\1\135",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\136",
             "\1\137",
+            "",
             "\1\140",
-            "\1\141",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\142",
             "\1\143",
-            "\1\144",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\145",
             "\1\146",
             "\1\147",
@@ -1772,25 +1915,25 @@ public class InternalGameLexer extends Lexer {
             "\1\165",
             "\1\166",
             "\1\167",
-            "",
             "\1\170",
             "\1\171",
-            "",
             "\1\172",
             "\1\173",
             "\1\174",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\175",
+            "\1\176",
             "\1\177",
+            "",
             "\1\u0080",
             "\1\u0081",
+            "",
             "\1\u0082",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u0083",
             "\1\u0084",
-            "\1\u0085",
-            "\1\u0086",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u0087",
-            "\1\u0088",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u0089",
             "\1\u008a",
             "\1\u008b",
@@ -1801,136 +1944,155 @@ public class InternalGameLexer extends Lexer {
             "\1\u0090",
             "\1\u0091",
             "\1\u0092",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\u0094\13\uffff\1\u0093",
+            "\1\u0093",
+            "\1\u0094",
             "\1\u0095",
             "\1\u0096",
             "\1\u0097",
-            "",
-            "",
             "\1\u0098",
-            "\1\u0099",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u009b",
-            "",
             "\1\u009c",
-            "\1\u009d",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\u009e\7\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u009e\2\uffff\1\u009f\10\uffff\1\u009d",
             "\1\u00a0",
             "\1\u00a1",
             "\1\u00a2",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
+            "",
+            "\1\u00a3",
+            "",
             "\1\u00a4",
             "\1\u00a5",
-            "\1\u00a6",
-            "\1\u00a7",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\u00a6\7\34",
             "\1\u00a8",
             "\1\u00a9",
+            "\1\u00aa",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\u00ab",
             "\1\u00ac",
             "\1\u00ad",
             "\1\u00ae",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00af",
             "\1\u00b0",
             "\1\u00b1",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "",
+            "\1\u00b2",
             "\1\u00b3",
-            "\1\u00b4",
-            "\1\u00b5",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
+            "",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00b6",
+            "\1\u00b7",
             "\1\u00b8",
             "\1\u00b9",
-            "",
             "\1\u00ba",
-            "\1\u00bb",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u00bc",
             "\1\u00bd",
             "\1\u00be",
             "\1\u00bf",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
-            "\1\u00c0",
-            "\1\u00c1",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u00c2",
             "\1\u00c3",
             "",
             "\1\u00c4",
             "\1\u00c5",
-            "",
             "\1\u00c6",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\u00c8",
-            "",
-            "",
-            "\1\u00c9",
+            "\1\u00c7",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\4\34\1\u00c8\25\34",
             "\1\u00ca",
             "\1\u00cb",
             "\1\u00cc",
+            "",
+            "",
             "\1\u00cd",
             "\1\u00ce",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00cf",
             "\1\u00d0",
             "\1\u00d1",
+            "",
             "\1\u00d2",
             "\1\u00d3",
-            "\1\u00d4",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u00d5",
+            "",
+            "",
             "\1\u00d6",
             "\1\u00d7",
-            "",
             "\1\u00d8",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00d9",
+            "\1\u00da",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u00dc",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00de",
             "\1\u00df",
             "\1\u00e0",
             "\1\u00e1",
             "\1\u00e2",
-            "\1\u00e3",
-            "\1\u00e4",
+            "\1\u00e3\15\uffff\1\u00e4",
             "\1\u00e5",
             "\1\u00e6",
             "\1\u00e7",
             "",
-            "",
-            "",
             "\1\u00e8",
-            "",
-            "",
-            "\1\u00e9",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u00eb",
-            "\1\u00ec",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\1\u00ee",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
             "\1\u00ef",
-            "\1\u00f0",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "\1\u00f1",
             "\1\u00f2",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "",
+            "\1\u00f3",
             "\1\u00f4",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\u00f5\7\34",
-            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00f6",
             "\1\u00f7",
             "\1\u00f8",
             "\1\u00f9",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
-            "\1\u00fc",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
+            "\1\u00fa",
+            "",
+            "",
+            "",
+            "\1\u00fb",
+            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u00fd",
             "\1\u00fe",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
-            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\u0100\7\34",
+            "",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\u0101",
+            "\1\u0102",
+            "\1\u0103",
+            "\1\u0104",
+            "\1\u0105",
+            "",
+            "\1\u0106",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\u0107\7\34",
+            "",
+            "",
+            "\1\u0109",
+            "\1\u010a",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\22\34\1\u010d\7\34",
+            "\1\u010f",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
+            "\1\u0111",
+            "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
             "",
             "",
             "\12\34\7\uffff\32\34\4\uffff\1\34\1\uffff\32\34",
@@ -1974,7 +2136,7 @@ public class InternalGameLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | T__51 | RULE_BOOL | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -2004,25 +2166,25 @@ public class InternalGameLexer extends Lexer {
                         int LA13_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA13_0=='d') ) {s = 1;}
+                        if ( (LA13_0=='c') ) {s = 1;}
 
-                        else if ( (LA13_0=='f') ) {s = 2;}
+                        else if ( (LA13_0=='d') ) {s = 2;}
 
-                        else if ( (LA13_0=='i') ) {s = 3;}
+                        else if ( (LA13_0=='f') ) {s = 3;}
 
-                        else if ( (LA13_0=='j') ) {s = 4;}
+                        else if ( (LA13_0=='i') ) {s = 4;}
 
-                        else if ( (LA13_0=='{') ) {s = 5;}
+                        else if ( (LA13_0=='j') ) {s = 5;}
 
-                        else if ( (LA13_0=='}') ) {s = 6;}
+                        else if ( (LA13_0=='{') ) {s = 6;}
 
-                        else if ( (LA13_0=='t') ) {s = 7;}
+                        else if ( (LA13_0=='}') ) {s = 7;}
 
-                        else if ( (LA13_0=='l') ) {s = 8;}
+                        else if ( (LA13_0=='t') ) {s = 8;}
 
-                        else if ( (LA13_0==':') ) {s = 9;}
+                        else if ( (LA13_0=='l') ) {s = 9;}
 
-                        else if ( (LA13_0=='c') ) {s = 10;}
+                        else if ( (LA13_0==':') ) {s = 10;}
 
                         else if ( (LA13_0=='v') ) {s = 11;}
 

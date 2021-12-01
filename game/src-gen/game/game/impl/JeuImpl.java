@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.JeuImpl#getNom <em>Nom</em>}</li>
+ *   <li>{@link game.game.impl.JeuImpl#getName <em>Name</em>}</li>
  *   <li>{@link game.game.impl.JeuImpl#getTerritoire <em>Territoire</em>}</li>
  *   <li>{@link game.game.impl.JeuImpl#getExplorateur <em>Explorateur</em>}</li>
  *   <li>{@link game.game.impl.JeuImpl#getElementsjeu <em>Elementsjeu</em>}</li>
@@ -44,24 +44,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
 {
   /**
-   * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String NOM_EDEFAULT = null;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNom() <em>Nom</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNom()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected String nom = NOM_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getTerritoire() <em>Territoire</em>}' containment reference.
@@ -120,9 +120,9 @@ public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
    * @generated
    */
   @Override
-  public String getNom()
+  public String getName()
   {
-    return nom;
+    return name;
   }
 
   /**
@@ -131,12 +131,12 @@ public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
    * @generated
    */
   @Override
-  public void setNom(String newNom)
+  public void setName(String newName)
   {
-    String oldNom = nom;
-    nom = newNom;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__NOM, oldNom, nom));
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__NAME, oldName, name));
   }
 
   /**
@@ -284,8 +284,8 @@ public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
   {
     switch (featureID)
     {
-      case GamePackage.JEU__NOM:
-        return getNom();
+      case GamePackage.JEU__NAME:
+        return getName();
       case GamePackage.JEU__TERRITOIRE:
         return getTerritoire();
       case GamePackage.JEU__EXPLORATEUR:
@@ -307,8 +307,8 @@ public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
   {
     switch (featureID)
     {
-      case GamePackage.JEU__NOM:
-        setNom((String)newValue);
+      case GamePackage.JEU__NAME:
+        setName((String)newValue);
         return;
       case GamePackage.JEU__TERRITOIRE:
         setTerritoire((Territoire)newValue);
@@ -334,8 +334,8 @@ public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
   {
     switch (featureID)
     {
-      case GamePackage.JEU__NOM:
-        setNom(NOM_EDEFAULT);
+      case GamePackage.JEU__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case GamePackage.JEU__TERRITOIRE:
         setTerritoire((Territoire)null);
@@ -360,8 +360,8 @@ public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
   {
     switch (featureID)
     {
-      case GamePackage.JEU__NOM:
-        return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
+      case GamePackage.JEU__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GamePackage.JEU__TERRITOIRE:
         return territoire != null;
       case GamePackage.JEU__EXPLORATEUR:
@@ -383,8 +383,8 @@ public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (nom: ");
-    result.append(nom);
+    result.append(" (name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

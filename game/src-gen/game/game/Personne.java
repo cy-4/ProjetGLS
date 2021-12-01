@@ -14,9 +14,9 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link game.game.Personne#getNom <em>Nom</em>}</li>
- *   <li>{@link game.game.Personne#isVisible <em>Visible</em>}</li>
- *   <li>{@link game.game.Personne#isActif <em>Actif</em>}</li>
+ *   <li>{@link game.game.Personne#getPlace <em>Place</em>}</li>
+ *   <li>{@link game.game.Personne#getVisible <em>Visible</em>}</li>
+ *   <li>{@link game.game.Personne#getActif <em>Actif</em>}</li>
  *   <li>{@link game.game.Personne#isObligatoire <em>Obligatoire</em>}</li>
  *   <li>{@link game.game.Personne#getInteractions <em>Interactions</em>}</li>
  * </ul>
@@ -28,70 +28,70 @@ import org.eclipse.emf.common.util.EList;
 public interface Personne extends ElementsJeu
 {
   /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
+   * Returns the value of the '<em><b>Place</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see game.game.GamePackage#getPersonne_Nom()
+   * @return the value of the '<em>Place</em>' reference.
+   * @see #setPlace(Place)
+   * @see game.game.GamePackage#getPersonne_Place()
    * @model
    * @generated
    */
-  String getNom();
+  Place getPlace();
 
   /**
-   * Sets the value of the '{@link game.game.Personne#getNom <em>Nom</em>}' attribute.
+   * Sets the value of the '{@link game.game.Personne#getPlace <em>Place</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
+   * @param value the new value of the '<em>Place</em>' reference.
+   * @see #getPlace()
    * @generated
    */
-  void setNom(String value);
+  void setPlace(Place value);
 
   /**
-   * Returns the value of the '<em><b>Visible</b></em>' attribute.
+   * Returns the value of the '<em><b>Visible</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Visible</em>' attribute.
-   * @see #setVisible(boolean)
+   * @return the value of the '<em>Visible</em>' containment reference.
+   * @see #setVisible(Condition)
    * @see game.game.GamePackage#getPersonne_Visible()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  boolean isVisible();
+  Condition getVisible();
 
   /**
-   * Sets the value of the '{@link game.game.Personne#isVisible <em>Visible</em>}' attribute.
+   * Sets the value of the '{@link game.game.Personne#getVisible <em>Visible</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Visible</em>' attribute.
-   * @see #isVisible()
+   * @param value the new value of the '<em>Visible</em>' containment reference.
+   * @see #getVisible()
    * @generated
    */
-  void setVisible(boolean value);
+  void setVisible(Condition value);
 
   /**
-   * Returns the value of the '<em><b>Actif</b></em>' attribute.
+   * Returns the value of the '<em><b>Actif</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Actif</em>' attribute.
-   * @see #setActif(boolean)
+   * @return the value of the '<em>Actif</em>' containment reference.
+   * @see #setActif(Condition)
    * @see game.game.GamePackage#getPersonne_Actif()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  boolean isActif();
+  Condition getActif();
 
   /**
-   * Sets the value of the '{@link game.game.Personne#isActif <em>Actif</em>}' attribute.
+   * Sets the value of the '{@link game.game.Personne#getActif <em>Actif</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Actif</em>' attribute.
-   * @see #isActif()
+   * @param value the new value of the '<em>Actif</em>' containment reference.
+   * @see #getActif()
    * @generated
    */
-  void setActif(boolean value);
+  void setActif(Condition value);
 
   /**
    * Returns the value of the '<em><b>Obligatoire</b></em>' attribute.

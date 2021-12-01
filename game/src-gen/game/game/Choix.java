@@ -3,6 +3,8 @@
  */
 package game.game;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link game.game.Choix#getNumero <em>Numero</em>}</li>
  *   <li>{@link game.game.Choix#getReponse <em>Reponse</em>}</li>
- *   <li>{@link game.game.Choix#getRecompense <em>Recompense</em>}</li>
+ *   <li>{@link game.game.Choix#getQte <em>Qte</em>}</li>
+ *   <li>{@link game.game.Choix#getAvantage <em>Avantage</em>}</li>
  * </ul>
  *
  * @see game.game.GamePackage#getChoix()
@@ -70,25 +73,27 @@ public interface Choix extends EObject
   void setReponse(String value);
 
   /**
-   * Returns the value of the '<em><b>Recompense</b></em>' containment reference.
+   * Returns the value of the '<em><b>Qte</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.Integer}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Recompense</em>' containment reference.
-   * @see #setRecompense(Recompense)
-   * @see game.game.GamePackage#getChoix_Recompense()
-   * @model containment="true"
+   * @return the value of the '<em>Qte</em>' attribute list.
+   * @see game.game.GamePackage#getChoix_Qte()
+   * @model unique="false"
    * @generated
    */
-  Recompense getRecompense();
+  EList<Integer> getQte();
 
   /**
-   * Sets the value of the '{@link game.game.Choix#getRecompense <em>Recompense</em>}' containment reference.
+   * Returns the value of the '<em><b>Avantage</b></em>' reference list.
+   * The list contents are of type {@link game.game.Avantage}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Recompense</em>' containment reference.
-   * @see #getRecompense()
+   * @return the value of the '<em>Avantage</em>' reference list.
+   * @see game.game.GamePackage#getChoix_Avantage()
+   * @model
    * @generated
    */
-  void setRecompense(Recompense value);
+  EList<Avantage> getAvantage();
 
 } // Choix

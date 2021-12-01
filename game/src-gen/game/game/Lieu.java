@@ -13,7 +13,6 @@ package game.game;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link game.game.Lieu#getNom <em>Nom</em>}</li>
  *   <li>{@link game.game.Lieu#getNature <em>Nature</em>}</li>
  * </ul>
  *
@@ -23,28 +22,6 @@ package game.game;
  */
 public interface Lieu extends Place
 {
-  /**
-   * Returns the value of the '<em><b>Nom</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Nom</em>' attribute.
-   * @see #setNom(String)
-   * @see game.game.GamePackage#getLieu_Nom()
-   * @model
-   * @generated
-   */
-  String getNom();
-
-  /**
-   * Sets the value of the '{@link game.game.Lieu#getNom <em>Nom</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nom</em>' attribute.
-   * @see #getNom()
-   * @generated
-   */
-  void setNom(String value);
-
   /**
    * Returns the value of the '<em><b>Nature</b></em>' attribute.
    * The literals are from the enumeration {@link game.game.Nature}.

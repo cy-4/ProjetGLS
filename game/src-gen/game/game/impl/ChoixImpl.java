@@ -3,18 +3,23 @@
  */
 package game.game.impl;
 
+import game.game.Avantage;
 import game.game.Choix;
 import game.game.GamePackage;
-import game.game.Recompense;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +31,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link game.game.impl.ChoixImpl#getNumero <em>Numero</em>}</li>
  *   <li>{@link game.game.impl.ChoixImpl#getReponse <em>Reponse</em>}</li>
- *   <li>{@link game.game.impl.ChoixImpl#getRecompense <em>Recompense</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#getQte <em>Qte</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#getAvantage <em>Avantage</em>}</li>
  * </ul>
  *
  * @generated
@@ -74,14 +80,24 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
   protected String reponse = REPONSE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getRecompense() <em>Recompense</em>}' containment reference.
+   * The cached value of the '{@link #getQte() <em>Qte</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRecompense()
+   * @see #getQte()
    * @generated
    * @ordered
    */
-  protected Recompense recompense;
+  protected EList<Integer> qte;
+
+  /**
+   * The cached value of the '{@link #getAvantage() <em>Avantage</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAvantage()
+   * @generated
+   * @ordered
+   */
+  protected EList<Avantage> avantage;
 
   /**
    * <!-- begin-user-doc -->
@@ -160,26 +176,13 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
    * @generated
    */
   @Override
-  public Recompense getRecompense()
+  public EList<Integer> getQte()
   {
-    return recompense;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRecompense(Recompense newRecompense, NotificationChain msgs)
-  {
-    Recompense oldRecompense = recompense;
-    recompense = newRecompense;
-    if (eNotificationRequired())
+    if (qte == null)
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__RECOMPENSE, oldRecompense, newRecompense);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
+      qte = new EDataTypeEList<Integer>(Integer.class, this, GamePackage.CHOIX__QTE);
     }
-    return msgs;
+    return qte;
   }
 
   /**
@@ -188,36 +191,13 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
    * @generated
    */
   @Override
-  public void setRecompense(Recompense newRecompense)
+  public EList<Avantage> getAvantage()
   {
-    if (newRecompense != recompense)
+    if (avantage == null)
     {
-      NotificationChain msgs = null;
-      if (recompense != null)
-        msgs = ((InternalEObject)recompense).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHOIX__RECOMPENSE, null, msgs);
-      if (newRecompense != null)
-        msgs = ((InternalEObject)newRecompense).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHOIX__RECOMPENSE, null, msgs);
-      msgs = basicSetRecompense(newRecompense, msgs);
-      if (msgs != null) msgs.dispatch();
+      avantage = new EObjectResolvingEList<Avantage>(Avantage.class, this, GamePackage.CHOIX__AVANTAGE);
     }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__RECOMPENSE, newRecompense, newRecompense));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
-  {
-    switch (featureID)
-    {
-      case GamePackage.CHOIX__RECOMPENSE:
-        return basicSetRecompense(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    return avantage;
   }
 
   /**
@@ -234,8 +214,10 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
         return getNumero();
       case GamePackage.CHOIX__REPONSE:
         return getReponse();
-      case GamePackage.CHOIX__RECOMPENSE:
-        return getRecompense();
+      case GamePackage.CHOIX__QTE:
+        return getQte();
+      case GamePackage.CHOIX__AVANTAGE:
+        return getAvantage();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -245,6 +227,7 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -256,8 +239,13 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
       case GamePackage.CHOIX__REPONSE:
         setReponse((String)newValue);
         return;
-      case GamePackage.CHOIX__RECOMPENSE:
-        setRecompense((Recompense)newValue);
+      case GamePackage.CHOIX__QTE:
+        getQte().clear();
+        getQte().addAll((Collection<? extends Integer>)newValue);
+        return;
+      case GamePackage.CHOIX__AVANTAGE:
+        getAvantage().clear();
+        getAvantage().addAll((Collection<? extends Avantage>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -279,8 +267,11 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
       case GamePackage.CHOIX__REPONSE:
         setReponse(REPONSE_EDEFAULT);
         return;
-      case GamePackage.CHOIX__RECOMPENSE:
-        setRecompense((Recompense)null);
+      case GamePackage.CHOIX__QTE:
+        getQte().clear();
+        return;
+      case GamePackage.CHOIX__AVANTAGE:
+        getAvantage().clear();
         return;
     }
     super.eUnset(featureID);
@@ -300,8 +291,10 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
         return numero != NUMERO_EDEFAULT;
       case GamePackage.CHOIX__REPONSE:
         return REPONSE_EDEFAULT == null ? reponse != null : !REPONSE_EDEFAULT.equals(reponse);
-      case GamePackage.CHOIX__RECOMPENSE:
-        return recompense != null;
+      case GamePackage.CHOIX__QTE:
+        return qte != null && !qte.isEmpty();
+      case GamePackage.CHOIX__AVANTAGE:
+        return avantage != null && !avantage.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -321,6 +314,8 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
     result.append(numero);
     result.append(", reponse: ");
     result.append(reponse);
+    result.append(", qte: ");
+    result.append(qte);
     result.append(')');
     return result.toString();
   }

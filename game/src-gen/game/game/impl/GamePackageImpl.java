@@ -19,7 +19,6 @@ import game.game.Nature;
 import game.game.Objet;
 import game.game.Personne;
 import game.game.Place;
-import game.game.Recompense;
 import game.game.Territoire;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -141,13 +140,6 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass recompenseEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EEnum natureEEnum = null;
 
   /**
@@ -230,7 +222,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getJeu_Nom()
+  public EAttribute getJeu_Name()
   {
     return (EAttribute)jeuEClass.getEStructuralFeatures().get(0);
   }
@@ -285,6 +277,17 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
+  public EAttribute getElementsJeu_Name()
+  {
+    return (EAttribute)elementsJeuEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getPlace()
   {
     return placeEClass;
@@ -307,9 +310,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getAvantage_Visible()
+  public EReference getAvantage_Visible()
   {
-    return (EAttribute)avantageEClass.getEStructuralFeatures().get(0);
+    return (EReference)avantageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -318,9 +321,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getAvantage_Actif()
+  public EReference getAvantage_Actif()
   {
-    return (EAttribute)avantageEClass.getEStructuralFeatures().get(1);
+    return (EReference)avantageEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -362,20 +365,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getLieu_Nom()
-  {
-    return (EAttribute)lieuEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EAttribute getLieu_Nature()
   {
-    return (EAttribute)lieuEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)lieuEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -417,9 +409,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getChemin_Visible()
+  public EReference getChemin_Visible()
   {
-    return (EAttribute)cheminEClass.getEStructuralFeatures().get(2);
+    return (EReference)cheminEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -461,9 +453,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getPersonne_Nom()
+  public EReference getPersonne_Place()
   {
-    return (EAttribute)personneEClass.getEStructuralFeatures().get(0);
+    return (EReference)personneEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -472,9 +464,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getPersonne_Visible()
+  public EReference getPersonne_Visible()
   {
-    return (EAttribute)personneEClass.getEStructuralFeatures().get(1);
+    return (EReference)personneEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -483,9 +475,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getPersonne_Actif()
+  public EReference getPersonne_Actif()
   {
-    return (EAttribute)personneEClass.getEStructuralFeatures().get(2);
+    return (EReference)personneEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -692,9 +684,20 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EReference getChoix_Recompense()
+  public EAttribute getChoix_Qte()
   {
-    return (EReference)choixEClass.getEStructuralFeatures().get(2);
+    return (EAttribute)choixEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getChoix_Avantage()
+  {
+    return (EReference)choixEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -714,9 +717,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EReference getCondition_ConnaissancesRequises()
+  public EAttribute getCondition_Name()
   {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)conditionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -725,7 +728,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EReference getCondition_ObjetsRequis()
+  public EReference getCondition_ConnaissancesRequises()
   {
     return (EReference)conditionEClass.getEStructuralFeatures().get(1);
   }
@@ -736,9 +739,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EClass getRecompense()
+  public EReference getCondition_ConnaissancesInterdites()
   {
-    return recompenseEClass;
+    return (EReference)conditionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -747,9 +750,20 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EReference getRecompense_Avantage()
+  public EReference getCondition_ObjetsRequis()
   {
-    return (EReference)recompenseEClass.getEStructuralFeatures().get(0);
+    return (EReference)conditionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCondition_ObjetsInterdits()
+  {
+    return (EReference)conditionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -795,37 +809,37 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
 
     // Create classes and their features
     jeuEClass = createEClass(JEU);
-    createEAttribute(jeuEClass, JEU__NOM);
+    createEAttribute(jeuEClass, JEU__NAME);
     createEReference(jeuEClass, JEU__TERRITOIRE);
     createEReference(jeuEClass, JEU__EXPLORATEUR);
     createEReference(jeuEClass, JEU__ELEMENTSJEU);
 
     elementsJeuEClass = createEClass(ELEMENTS_JEU);
+    createEAttribute(elementsJeuEClass, ELEMENTS_JEU__NAME);
 
     placeEClass = createEClass(PLACE);
 
     avantageEClass = createEClass(AVANTAGE);
-    createEAttribute(avantageEClass, AVANTAGE__VISIBLE);
-    createEAttribute(avantageEClass, AVANTAGE__ACTIF);
+    createEReference(avantageEClass, AVANTAGE__VISIBLE);
+    createEReference(avantageEClass, AVANTAGE__ACTIF);
 
     territoireEClass = createEClass(TERRITOIRE);
     createEReference(territoireEClass, TERRITOIRE__PLACES);
 
     lieuEClass = createEClass(LIEU);
-    createEAttribute(lieuEClass, LIEU__NOM);
     createEAttribute(lieuEClass, LIEU__NATURE);
 
     cheminEClass = createEClass(CHEMIN);
     createEReference(cheminEClass, CHEMIN__PRED);
     createEReference(cheminEClass, CHEMIN__SUCC);
-    createEAttribute(cheminEClass, CHEMIN__VISIBLE);
+    createEReference(cheminEClass, CHEMIN__VISIBLE);
     createEAttribute(cheminEClass, CHEMIN__OBLIGATOIRE);
     createEAttribute(cheminEClass, CHEMIN__OUVERT);
 
     personneEClass = createEClass(PERSONNE);
-    createEAttribute(personneEClass, PERSONNE__NOM);
-    createEAttribute(personneEClass, PERSONNE__VISIBLE);
-    createEAttribute(personneEClass, PERSONNE__ACTIF);
+    createEReference(personneEClass, PERSONNE__PLACE);
+    createEReference(personneEClass, PERSONNE__VISIBLE);
+    createEReference(personneEClass, PERSONNE__ACTIF);
     createEAttribute(personneEClass, PERSONNE__OBLIGATOIRE);
     createEReference(personneEClass, PERSONNE__INTERACTIONS);
 
@@ -849,14 +863,15 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     choixEClass = createEClass(CHOIX);
     createEAttribute(choixEClass, CHOIX__NUMERO);
     createEAttribute(choixEClass, CHOIX__REPONSE);
-    createEReference(choixEClass, CHOIX__RECOMPENSE);
+    createEAttribute(choixEClass, CHOIX__QTE);
+    createEReference(choixEClass, CHOIX__AVANTAGE);
 
     conditionEClass = createEClass(CONDITION);
+    createEAttribute(conditionEClass, CONDITION__NAME);
     createEReference(conditionEClass, CONDITION__CONNAISSANCES_REQUISES);
+    createEReference(conditionEClass, CONDITION__CONNAISSANCES_INTERDITES);
     createEReference(conditionEClass, CONDITION__OBJETS_REQUIS);
-
-    recompenseEClass = createEClass(RECOMPENSE);
-    createEReference(recompenseEClass, RECOMPENSE__AVANTAGE);
+    createEReference(conditionEClass, CONDITION__OBJETS_INTERDITS);
 
     // Create enums
     natureEEnum = createEEnum(NATURE);
@@ -901,45 +916,45 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
 
     // Initialize classes and features; add operations and parameters
     initEClass(jeuEClass, Jeu.class, "Jeu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getJeu_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getJeu_Name(), ecorePackage.getEString(), "name", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getJeu_Territoire(), this.getTerritoire(), null, "territoire", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getJeu_Explorateur(), this.getExplorateur(), null, "explorateur", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getJeu_Elementsjeu(), this.getElementsJeu(), null, "elementsjeu", null, 0, -1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(elementsJeuEClass, ElementsJeu.class, "ElementsJeu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getElementsJeu_Name(), ecorePackage.getEString(), "name", null, 0, 1, ElementsJeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(avantageEClass, Avantage.class, "Avantage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAvantage_Visible(), ecorePackage.getEBoolean(), "visible", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAvantage_Actif(), ecorePackage.getEBoolean(), "actif", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAvantage_Visible(), this.getCondition(), null, "visible", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAvantage_Actif(), this.getCondition(), null, "actif", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(territoireEClass, Territoire.class, "Territoire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTerritoire_Places(), this.getPlace(), null, "places", null, 0, -1, Territoire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(lieuEClass, Lieu.class, "Lieu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLieu_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, Lieu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getLieu_Nature(), this.getNature(), "nature", null, 0, 1, Lieu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(cheminEClass, Chemin.class, "Chemin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getChemin_Pred(), this.getLieu(), null, "pred", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChemin_Succ(), this.getLieu(), null, "succ", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChemin_Visible(), ecorePackage.getEBoolean(), "visible", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChemin_Visible(), this.getCondition(), null, "visible", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemin_Obligatoire(), ecorePackage.getEBoolean(), "obligatoire", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemin_Ouvert(), ecorePackage.getEBoolean(), "ouvert", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(personneEClass, Personne.class, "Personne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getPersonne_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPersonne_Visible(), ecorePackage.getEBoolean(), "visible", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPersonne_Actif(), ecorePackage.getEBoolean(), "actif", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPersonne_Place(), this.getPlace(), null, "place", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPersonne_Visible(), this.getCondition(), null, "visible", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getPersonne_Actif(), this.getCondition(), null, "actif", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getPersonne_Obligatoire(), ecorePackage.getEBoolean(), "obligatoire", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getPersonne_Interactions(), this.getInteraction(), null, "interactions", null, 0, -1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(explorateurEClass, Explorateur.class, "Explorateur", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExplorateur_Place(), this.getPlace(), null, "place", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExplorateur_Place(), this.getPlace(), null, "place", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExplorateur_TailleDispo(), ecorePackage.getEInt(), "tailleDispo", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExplorateur_Objets(), this.getObjet(), null, "objets", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExplorateur_Connaissances(), this.getConnaissance(), null, "connaissances", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExplorateur_Objets(), this.getObjet(), null, "objets", null, 0, -1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExplorateur_Connaissances(), this.getConnaissance(), null, "connaissances", null, 0, -1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(connaissanceEClass, Connaissance.class, "Connaissance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -955,14 +970,15 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     initEClass(choixEClass, Choix.class, "Choix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getChoix_Numero(), ecorePackage.getEInt(), "numero", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChoix_Reponse(), ecorePackage.getEString(), "reponse", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChoix_Recompense(), this.getRecompense(), null, "recompense", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChoix_Qte(), ecorePackage.getEInt(), "qte", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChoix_Avantage(), this.getAvantage(), null, "avantage", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getCondition_ConnaissancesRequises(), this.getConnaissance(), null, "connaissancesRequises", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCondition_ObjetsRequis(), this.getObjet(), null, "objetsRequis", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(recompenseEClass, Recompense.class, "Recompense", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRecompense_Avantage(), this.getAvantage(), null, "avantage", null, 0, -1, Recompense.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCondition_ConnaissancesRequises(), this.getConnaissance(), null, "connaissancesRequises", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCondition_ConnaissancesInterdites(), this.getConnaissance(), null, "connaissancesInterdites", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCondition_ObjetsRequis(), this.getObjet(), null, "objetsRequis", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getCondition_ObjetsInterdits(), this.getObjet(), null, "objetsInterdits", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(natureEEnum, Nature.class, "Nature");

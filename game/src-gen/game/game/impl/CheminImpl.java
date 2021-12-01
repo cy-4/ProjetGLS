@@ -4,10 +4,12 @@
 package game.game.impl;
 
 import game.game.Chemin;
+import game.game.Condition;
 import game.game.GamePackage;
 import game.game.Lieu;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -24,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link game.game.impl.CheminImpl#getPred <em>Pred</em>}</li>
  *   <li>{@link game.game.impl.CheminImpl#getSucc <em>Succ</em>}</li>
- *   <li>{@link game.game.impl.CheminImpl#isVisible <em>Visible</em>}</li>
+ *   <li>{@link game.game.impl.CheminImpl#getVisible <em>Visible</em>}</li>
  *   <li>{@link game.game.impl.CheminImpl#isObligatoire <em>Obligatoire</em>}</li>
  *   <li>{@link game.game.impl.CheminImpl#isOuvert <em>Ouvert</em>}</li>
  * </ul>
@@ -54,24 +56,14 @@ public class CheminImpl extends PlaceImpl implements Chemin
   protected Lieu succ;
 
   /**
-   * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
+   * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isVisible()
+   * @see #getVisible()
    * @generated
    * @ordered
    */
-  protected static final boolean VISIBLE_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isVisible() <em>Visible</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isVisible()
-   * @generated
-   * @ordered
-   */
-  protected boolean visible = VISIBLE_EDEFAULT;
+  protected Condition visible;
 
   /**
    * The default value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
@@ -230,7 +222,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
    * @generated
    */
   @Override
-  public boolean isVisible()
+  public Condition getVisible()
   {
     return visible;
   }
@@ -240,13 +232,38 @@ public class CheminImpl extends PlaceImpl implements Chemin
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setVisible(boolean newVisible)
+  public NotificationChain basicSetVisible(Condition newVisible, NotificationChain msgs)
   {
-    boolean oldVisible = visible;
+    Condition oldVisible = visible;
     visible = newVisible;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__VISIBLE, oldVisible, visible));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__VISIBLE, oldVisible, newVisible);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setVisible(Condition newVisible)
+  {
+    if (newVisible != visible)
+    {
+      NotificationChain msgs = null;
+      if (visible != null)
+        msgs = ((InternalEObject)visible).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__VISIBLE, null, msgs);
+      if (newVisible != null)
+        msgs = ((InternalEObject)newVisible).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__VISIBLE, null, msgs);
+      msgs = basicSetVisible(newVisible, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__VISIBLE, newVisible, newVisible));
   }
 
   /**
@@ -305,6 +322,22 @@ public class CheminImpl extends PlaceImpl implements Chemin
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GamePackage.CHEMIN__VISIBLE:
+        return basicSetVisible(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
@@ -316,7 +349,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
         if (resolve) return getSucc();
         return basicGetSucc();
       case GamePackage.CHEMIN__VISIBLE:
-        return isVisible();
+        return getVisible();
       case GamePackage.CHEMIN__OBLIGATOIRE:
         return isObligatoire();
       case GamePackage.CHEMIN__OUVERT:
@@ -342,7 +375,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
         setSucc((Lieu)newValue);
         return;
       case GamePackage.CHEMIN__VISIBLE:
-        setVisible((Boolean)newValue);
+        setVisible((Condition)newValue);
         return;
       case GamePackage.CHEMIN__OBLIGATOIRE:
         setObligatoire((Boolean)newValue);
@@ -371,7 +404,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
         setSucc((Lieu)null);
         return;
       case GamePackage.CHEMIN__VISIBLE:
-        setVisible(VISIBLE_EDEFAULT);
+        setVisible((Condition)null);
         return;
       case GamePackage.CHEMIN__OBLIGATOIRE:
         setObligatoire(OBLIGATOIRE_EDEFAULT);
@@ -398,7 +431,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
       case GamePackage.CHEMIN__SUCC:
         return succ != null;
       case GamePackage.CHEMIN__VISIBLE:
-        return visible != VISIBLE_EDEFAULT;
+        return visible != null;
       case GamePackage.CHEMIN__OBLIGATOIRE:
         return obligatoire != OBLIGATOIRE_EDEFAULT;
       case GamePackage.CHEMIN__OUVERT:
@@ -418,9 +451,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (visible: ");
-    result.append(visible);
-    result.append(", obligatoire: ");
+    result.append(" (obligatoire: ");
     result.append(obligatoire);
     result.append(", ouvert: ");
     result.append(ouvert);

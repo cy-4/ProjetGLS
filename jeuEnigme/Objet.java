@@ -1,7 +1,6 @@
 package jeuEnigme;
 
 
-
 public class Objet implements Avantage {
 	
 	private String name;
@@ -36,12 +35,10 @@ public class Objet implements Avantage {
 	
 	@Override
 	public boolean estVisible() {
-		// TODO Auto-generated method stub
 		return this.visible;
 	}
 	@Override
 	public boolean estActif() {
-		// TODO Auto-generated method stub
 		return this.actif;
 	}
 	

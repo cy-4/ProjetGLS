@@ -150,15 +150,6 @@ public interface GameFactory extends EFactory
   Condition createCondition();
 
   /**
-   * Returns a new object of class '<em>Recompense</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Recompense</em>'.
-   * @generated
-   */
-  Recompense createRecompense();
-
-  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

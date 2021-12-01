@@ -12,6 +12,10 @@ public class Connaissance implements Avantage {
 		this.visible = visible;
 		this.actif = actif;
 	}
+	
+	public String getName() {
+		return this.name;
+	}
 
 	@Override
 	public boolean estVisible() {
