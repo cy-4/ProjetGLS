@@ -1,0 +1,95 @@
+grammar game.Game with org.eclipse.xtext.common.Terminals
+
+generate game "http://www.Game.game"
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+Jeu: 'jeu' nom = ID '{'
+	territoire = Territoire
+	explorateur = Explorateur
+	elementsjeu += ElementsJeu*
+'}'
+;
+
+enum Nature returns Nature:
+	depart = 'depart'
+	| fin = 'fin'
+	| inter = 'intermediaire'
+;
+
+terminal BOOL returns ecore::EBoolean: ('true'|'false');
+
+ElementsJeu: Personne | Avantage | Place;
+
+Place: Lieu | Chemin;
+
+Avantage: Connaissance | Objet;
+
+Territoire: 'territoire' '{'
+	places += Place+
+'}'
+;
+
+Lieu: 'lieu' nom = ID ':' nature = Nature;
+
+Chemin: 'chemin' '{'
+	'de' pred = [Lieu]
+    'vers' succ = [Lieu]
+	'visible' visible = BOOL
+	'obligatoire' obligatoire = BOOL
+	'ouvert' ouvert = BOOL
+'}'
+;
+
+Personne: 'personne' nom = ID '{'
+	'visible' visible = BOOL
+	'actif' actif = BOOL
+	'obligatoire' obligatoire = BOOL	
+	'interactions' interactions += Interaction*
+'}'
+;
+
+Explorateur: 'explorateur' '{'
+	'localisation' place = Place
+	'taille' 'disponible' tailleDispo = INT
+	'objets' 'possedes' objets = Objet*
+	'connaissances' 'possedes' connaissances = Connaissance*
+'}'
+;
+
+Connaissance: 'connaissance' '{'
+	'visible' visible = BOOL
+	'actif' actif = BOOL
+'}'
+;
+
+Objet: 'objet' '{' 
+	'visible' visible = BOOL
+	'actif' actif = BOOL
+	'quantite' qte = INT
+	'taille' taille = INT 
+	'transformable' transformable = BOOL
+'}'
+;
+
+Interaction : 'interaction' '{'
+	'question' question = STRING
+	'choix' choix += Choix+
+'}'
+;
+
+Choix: 'choix' numero = INT '{'
+	'reponse' reponse = STRING
+	'recompense' recompense = Recompense
+'}'
+;
+
+Condition: 'condition' '{'
+	'connaissances' 'requises' connaissancesRequises += Connaissance*
+	'objets' 'requis' objetsRequis += Objet*
+'}'
+;
+
+Recompense: 'recompense' '{'
+	'avantage' avantage += Avantage*
+'}'
+;

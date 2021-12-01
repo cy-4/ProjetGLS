@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: game.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: game.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: game.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: game,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-10
+Export-Package: game.ide.contentassist.antlr,
+ game.ide.contentassist.antlr.internal
