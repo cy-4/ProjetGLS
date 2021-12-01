@@ -1,0 +1,9 @@
+tr Jouer [0,w[ Idle -> Enigme
+tr Reponse1 [0,w[ Tentative Enigme -> Reponses Reussite
+tr Visible [0,w[ Reussite?1 Reponses!-1 -> Succes
+tr Reponse2 [0,w[ Tentative Enigme?1 -> Reponses
+tr Obligatoire [0,w[ Reponses*3 -> Echec
+pl Idle (1)
+pl Tentative (3)
+net buffer
+
