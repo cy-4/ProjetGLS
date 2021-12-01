@@ -1,0 +1,18 @@
+[] <> dead ; # Il y a toujours un arret du jeu
+
+
+op finis = Succes\/Echec ; # etats finaux
+
+[] (dead => finis); # Si on a finis, on est forcement dans un état final
+
+[] (finis => dead); # Si on a finis, on peut plus rien faire
+
+[] -(Succes/\Echec); # On ne peut jamais avoir Sucess et Echec en meme temps
+
+[] (Tentatives<=3); # On peur pas avoir plus de 3 tentatives
+
+
+# On ne peut pas etre à plus de un endroit en meme temps
+[](enigme + Echec + Succes <= 1);
+
+
