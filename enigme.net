@@ -1,0 +1,9 @@
+tr Finir [0,w[ Visible Reussite?1 -> Succes
+tr Rep2 [0,w[ Tentatives Question?1 -> Rates
+tr Jouer [0,w[ Init -> Question
+tr Obligatoire [0,w[ Rates*3 -> Echec
+tr Rep1 [0,w[ Tentatives Question -> Visible Reussite
+pl Tentatives (3)
+pl Init (1)
+net enigme
+
