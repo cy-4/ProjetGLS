@@ -1,10 +1,8 @@
-package jeuEnigme;
-
+package jeu;
 
 public enum Nature {
 	DEPART,
 	ARRIVEE,
-	INTERMEDIAIRE;
-	
+	INTERMEDIAIRE;	
 }
 		

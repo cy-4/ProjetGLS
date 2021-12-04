@@ -1,4 +1,4 @@
-package jeuEnigme;
+package jeu;
 
 
 public interface ElementsJeu {

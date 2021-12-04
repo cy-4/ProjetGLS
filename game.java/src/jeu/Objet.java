@@ -1,5 +1,4 @@
-package jeuEnigme;
-
+package jeu;
 
 public class Objet implements Avantage {
 	
@@ -33,13 +32,22 @@ public class Objet implements Avantage {
 		return this.transformable;
 	}
 	
+	public void addQuantite(int q) {
+		this.quantite += q; 
+	}
+	
 	@Override
-	public boolean estVisible() {
+	public boolean isVisible() {
 		return this.visible;
 	}
 	@Override
-	public boolean estActif() {
+	public boolean isActif() {
 		return this.actif;
+	}
+
+	@Override
+	public ElementsJeu getElement() {
+		return this;
 	}
 	
 }

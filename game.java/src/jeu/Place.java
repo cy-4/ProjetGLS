@@ -1,9 +1,9 @@
-package jeuEnigme;
+package jeu;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class Place {
+public class Place implements ElementsJeu {
 	
 	
 	private String name;
@@ -35,4 +35,10 @@ public class Place {
 	public void initialiserConnaissances(Map<String, Connaissance> connaissancesInit) {
 		this.connaissances = connaissancesInit;
 	}
+
+	@Override
+	public ElementsJeu getElement() {
+		return this;
+	}
+
 }

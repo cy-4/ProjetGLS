@@ -1,5 +1,4 @@
-package jeuEnigme;
-
+package jeu;
 
 
 public class Connaissance implements Avantage {
@@ -18,16 +17,20 @@ public class Connaissance implements Avantage {
 	}
 
 	@Override
-	public boolean estVisible() {
+	public boolean isVisible() {
 		
 		return this.visible;
 	}
 
 	@Override
-	public boolean estActif() {
+	public boolean isActif() {
 		
 		return this.actif;
 	}
-	
+
+	@Override
+	public ElementsJeu getElement() {
+		return this;
+	}
 	
 }
