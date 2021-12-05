@@ -4,9 +4,9 @@ package jeu;
 public class Connaissance implements Avantage {
 	
 	private String name;
-	private boolean visible, actif;
+	private Condition visible, actif;
 	
-	public Connaissance(String nom, boolean visible, boolean actif) {
+	public Connaissance(String nom, Condition visible, Condition actif) {
 		this.name = nom;
 		this.visible = visible;
 		this.actif = actif;
@@ -18,14 +18,18 @@ public class Connaissance implements Avantage {
 
 	@Override
 	public boolean isVisible() {
-		
-		return this.visible;
+		if (this.visible == null) {
+			return true;
+		}
+		return this.visible.verifierCondition();
 	}
 
 	@Override
 	public boolean isActif() {
-		
-		return this.actif;
+		if (this.actif == null) {
+			return true;
+		}
+		return this.actif.verifierCondition();
 	}
 
 	@Override
