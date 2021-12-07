@@ -1,0 +1,224 @@
+jeu enquete {
+	territoire {
+		
+	    lieu Paris : depart
+	    lieu Toulouse: intermediaire
+	    lieu Lyon: intermediaire    
+	    lieu Assassintrouve : fin
+		lieu Innocentchoisiee : fin
+		
+		chemin TGV {
+	       de Paris
+	       vers Toulouse
+	       visible condition AvoirBilletTGV {
+	       	objets requis BilletTGV
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+		chemin Avions {
+	       de Paris
+	       vers Lyon
+	       visible condition AvoirBilletAvion {
+	       	objets requis BilletAvion
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+	    chemin PerduLyon {
+	       de Lyon
+	       vers Innocentchoisiee
+	       visible condition Lyon1 {
+	       	objets requis Innocenttue CouplableMenote
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+	    chemin GagneLyon {
+	       de Lyon
+	       vers Assassintrouve
+	       visible condition Lyon2 {
+	       	objets requis CouplableMenote
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+	    chemin PerduToulouse {
+	       de Lyon
+	       vers Innocentchoisiee
+	       visible condition Lyon1 {
+	       	objets requis Innocenttue CouplableMenote
+	      
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+	    chemin GagneToulouse {
+	       de Lyon
+	       vers Innocentchoisiee
+	       visible condition Toulouse1 {
+	       	objets requis CouplableMenote
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+	}
+	
+	explorateur {
+		localisation Paris
+		taille disponible 4
+		objets possedes objet Pistole {
+							visible true
+							actif true
+							quantite 3
+							taille 1 
+							transformable false
+						}
+						 objet CarteEnquete {
+							visible true
+							actif true
+							quantite 1
+							taille 1 
+							transformable false
+						}
+	}
+	objet BilletTGV{
+							visible true
+							actif true
+							quantite 1
+							taille 1 
+							transformable false
+	}
+	objet BilletAvion{
+							visible true
+							actif true
+							quantite 1
+							taille 1 
+							transformable false
+	}
+	objet Innocenttue{
+							visible true
+							actif true
+							quantite 1
+							taille 1 
+							transformable false
+	}
+	objet InnocentMenote{
+							visible true
+							actif true
+							quantite 1
+							taille 1 
+							transformable false
+	}
+	objet CouplableMenote{
+							visible true
+							actif true
+							quantite 1
+							taille 1 
+							transformable false
+	}
+	
+
+	personne Police{
+		localisation Paris
+	    visible condition Policier{
+	    		objets requis CarteEnquete
+	    	}
+	    actif true
+	    obligatoire true
+		interactions interaction {
+			question "[Question: Bonjour jeune personne, on a trouvé un corps dans la Seine. La carte bleu du suspect a été utilisé pour acheter un billet à Toulouse et à Lyon, vous voulez allez ou ?]"
+			choix 1 {
+				reponse "[Lyon, j'aime bien la pluie en plus ]"
+				donne 1 BilletAvion
+			}
+			choix 2 {
+				reponse "[Toulouse, meilleur ville du monde en plus ]"
+				consomme 1 BilletTGV
+			}
+		}
+	}
+	personne Suspect1Lyon{
+		localisation Lyon
+		visible condition Policier{
+	    		objets requis CarteEnquete		
+	    	}   
+	    actif true
+	    obligatoire true
+	    interactions interaction {
+			question "[Question: Bonjour inspecteur, ce n'est pas moi, je vous jure]"
+			choix 1 {
+				reponse "[Si c'est vous, je vais vous tuer]"
+				donne 1 Innocenttue
+				consomme 1 Pistole
+			}
+			choix 2 {
+				reponse "[Ok, bonne continuation, au revoir]"
+			}
+		}
+	    
+	}
+	personne Suspect2Lyon{
+		localisation Lyon
+		visible condition Policier{
+	    		objets requis CarteEnquete 
+	    		objets interdits Innocenttue    			   
+	    	}   
+	    actif true
+	    obligatoire true
+	    interactions interaction {
+			question "[Question: Bonjour inspecteur, j'était en train de pécher ce dimanche à Paris, sinon rien de spécial]"
+			choix 1 {
+				reponse "[AAAAh, votre alibi est nulle, c'est vous]"
+				donne 1 CouplableMenote
+			}
+			choix 2 {
+				reponse "[C'est pas vous, vous m'avez convaincu, je vais arreter quelqu'un quelqu'un d'autre]"
+				donne 1 InnocentMenote
+			}
+		}
+	    
+	}
+	
+	personne Suspect1Toulouse{
+		localisation Toulouse
+		visible condition Policier{
+	    		objets requis CarteEnquete		
+	    	}   
+	    actif true
+	    obligatoire true
+	    interactions interaction {
+			question "[Question: Bonjour inspecteur, ce n'est pas moi, je vous jure]"
+			choix 1 {
+				reponse "[Si c'est vous, je vais vous tuer]"
+				donne 1 Innocenttue
+				consomme 1 Pistole
+			}
+			choix 2 {
+				reponse "[Ok, bonne continuation, au revoir]"
+			}
+		}
+	    
+	}
+	personne Suspect2Toulouse{
+		localisation Toulouse
+		visible condition Policier{
+	    		objets requis CarteEnquete 
+	    		objets interdits Innocenttue	    			   
+	    	}   
+	    actif true
+	    obligatoire true
+	    interactions interaction {
+			question "[Question: Bonjour inspecteur, j'était en train de pécher ce dimanche à Paris, sinon rien de spécial]"
+			choix 1 {
+				reponse "[AAAAh, votre alibi est nulle, c'est vous]"
+				donne 1 CouplableMenote
+			}
+			choix 2 {
+				reponse "[C'est pas vous, vous m'avez convaincu, je vais arreter quelqu'un d'autre]"
+				donne 1 InnocentMenote
+			}
+		}
+	    
+	}
+}
