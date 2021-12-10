@@ -1,0 +1,54 @@
+import 'Game.ecore'
+
+package game
+
+context Jeu
+inv warningSeverity: false
+inv withMessage('Explicit message in game ' + self.name + ' (withMessage)'): false
+inv errorSeverity: null
+
+/* Le nom d'un Explorateur doit commencer par une majuscule.
+ * Il doit etre compose d'au moins deux caracteres. */
+context Explorateur
+inv validName('Invalid name: ' + self.name):
+	self.name.matches('[A-Z][A-Za-z0-9_]+')
+
+/* Taille disponible dans le 'sac' de l'explorateur toujours >=0 */
+context Explorateur
+inv tailleDispoPos:
+	self.tailleDispo >= 0
+
+/* Le nom d'une Personne doit commencer par une majuscule.
+ * Il doit etre compose d'au moins deux caracteres. */
+context Personne
+inv validName('Invalid name: ' + self.name):
+	self.name.matches('[A-Z][A-Za-z0-9_]+')
+	
+/* Deux lieux et/ou chemins doivent necessairement avoir deux noms differents */
+context Place
+inv uniqueName('Not unique name: ' + self.name):
+	Place.allInstances()->forAll(p1,p2 | p1 <> p2 implies p1.name <> p2.name)
+
+/* Il n'y a qu'un Lieu de nature Start */
+context Lieu
+inv uniqueStart('Not unique start: ' + self.name): let Bool unique = false in 
+	Lieu.allInstances()
+	->select(l1 | if (l1.nature == Nature::Depart and unique = false) then unique = true else l1.nature <> Nature::Depart endif)
+	/* ->forAll(l1| if (l1.nature == Nature::Depart and unique = false) then unique = true else l1.nature <> Nature::Depart endif) */
+
+/* Un chemin ne peut pas etre reflexive */
+context Chemin
+inv CheminNotReflexive:
+	self.pred <> self.succ
+	
+/* Quantite d'Objet positive */
+context Objet
+inv qtePositive:
+	self.qte > 0
+
+/* Taille d'Objet positive */
+context Objet
+inv taillePositive:
+	self.taille > 0
+
+endpackage
