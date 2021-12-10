@@ -32,6 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link game.game.impl.ConditionImpl#getName <em>Name</em>}</li>
  *   <li>{@link game.game.impl.ConditionImpl#getConnaissancesRequises <em>Connaissances Requises</em>}</li>
  *   <li>{@link game.game.impl.ConditionImpl#getConnaissancesInterdites <em>Connaissances Interdites</em>}</li>
+ *   <li>{@link game.game.impl.ConditionImpl#getQuantite <em>Quantite</em>}</li>
  *   <li>{@link game.game.impl.ConditionImpl#getObjetsRequis <em>Objets Requis</em>}</li>
  *   <li>{@link game.game.impl.ConditionImpl#getObjetsInterdits <em>Objets Interdits</em>}</li>
  * </ul>
@@ -79,6 +80,26 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
    * @ordered
    */
   protected EList<Connaissance> connaissancesInterdites;
+
+  /**
+   * The default value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getQuantite()
+   * @generated
+   * @ordered
+   */
+  protected static final int QUANTITE_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getQuantite()
+   * @generated
+   * @ordered
+   */
+  protected int quantite = QUANTITE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getObjetsRequis() <em>Objets Requis</em>}' reference list.
@@ -182,6 +203,31 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
    * @generated
    */
   @Override
+  public int getQuantite()
+  {
+    return quantite;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setQuantite(int newQuantite)
+  {
+    int oldQuantite = quantite;
+    quantite = newQuantite;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__QUANTITE, oldQuantite, quantite));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EList<Objet> getObjetsRequis()
   {
     if (objetsRequis == null)
@@ -222,6 +268,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
         return getConnaissancesRequises();
       case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
         return getConnaissancesInterdites();
+      case GamePackage.CONDITION__QUANTITE:
+        return getQuantite();
       case GamePackage.CONDITION__OBJETS_REQUIS:
         return getObjetsRequis();
       case GamePackage.CONDITION__OBJETS_INTERDITS:
@@ -251,6 +299,9 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
       case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
         getConnaissancesInterdites().clear();
         getConnaissancesInterdites().addAll((Collection<? extends Connaissance>)newValue);
+        return;
+      case GamePackage.CONDITION__QUANTITE:
+        setQuantite((Integer)newValue);
         return;
       case GamePackage.CONDITION__OBJETS_REQUIS:
         getObjetsRequis().clear();
@@ -283,6 +334,9 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
       case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
         getConnaissancesInterdites().clear();
         return;
+      case GamePackage.CONDITION__QUANTITE:
+        setQuantite(QUANTITE_EDEFAULT);
+        return;
       case GamePackage.CONDITION__OBJETS_REQUIS:
         getObjetsRequis().clear();
         return;
@@ -309,6 +363,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
         return connaissancesRequises != null && !connaissancesRequises.isEmpty();
       case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
         return connaissancesInterdites != null && !connaissancesInterdites.isEmpty();
+      case GamePackage.CONDITION__QUANTITE:
+        return quantite != QUANTITE_EDEFAULT;
       case GamePackage.CONDITION__OBJETS_REQUIS:
         return objetsRequis != null && !objetsRequis.isEmpty();
       case GamePackage.CONDITION__OBJETS_INTERDITS:
@@ -330,6 +386,8 @@ public class ConditionImpl extends MinimalEObjectImpl.Container implements Condi
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", quantite: ");
+    result.append(quantite);
     result.append(')');
     return result.toString();
   }

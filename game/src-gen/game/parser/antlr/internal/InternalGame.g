@@ -1369,17 +1369,35 @@ ruleCondition returns [EObject current=null]
 						)*
 					)
 				)
-			)?
+			)*
 			(
-				otherlv_8='objets'
+				(
+					(
+						lv_quantite_8_0=RULE_INT
+						{
+							newLeafNode(lv_quantite_8_0, grammarAccess.getConditionAccess().getQuantiteINTTerminalRuleCall_0_4_0_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getConditionRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"quantite",
+								lv_quantite_8_0,
+								"org.eclipse.xtext.common.Terminals.INT");
+						}
+					)
+				)
+				otherlv_9='objets'
 				{
-					newLeafNode(otherlv_8, grammarAccess.getConditionAccess().getObjetsKeyword_0_4_0());
+					newLeafNode(otherlv_9, grammarAccess.getConditionAccess().getObjetsKeyword_0_4_1());
 				}
 				(
 					(
-						otherlv_9='requis'
+						otherlv_10='requis'
 						{
-							newLeafNode(otherlv_9, grammarAccess.getConditionAccess().getRequisKeyword_0_4_1_0_0());
+							newLeafNode(otherlv_10, grammarAccess.getConditionAccess().getRequisKeyword_0_4_2_0_0());
 						}
 						(
 							(
@@ -1388,18 +1406,18 @@ ruleCondition returns [EObject current=null]
 										$current = createModelElement(grammarAccess.getConditionRule());
 									}
 								}
-								otherlv_10=RULE_ID
+								otherlv_11=RULE_ID
 								{
-									newLeafNode(otherlv_10, grammarAccess.getConditionAccess().getObjetsRequisObjetCrossReference_0_4_1_0_1_0());
+									newLeafNode(otherlv_11, grammarAccess.getConditionAccess().getObjetsRequisObjetCrossReference_0_4_2_0_1_0());
 								}
 							)
 						)*
 					)
 					    |
 					(
-						otherlv_11='interdits'
+						otherlv_12='interdits'
 						{
-							newLeafNode(otherlv_11, grammarAccess.getConditionAccess().getInterditsKeyword_0_4_1_1_0());
+							newLeafNode(otherlv_12, grammarAccess.getConditionAccess().getInterditsKeyword_0_4_2_1_0());
 						}
 						(
 							(
@@ -1408,24 +1426,24 @@ ruleCondition returns [EObject current=null]
 										$current = createModelElement(grammarAccess.getConditionRule());
 									}
 								}
-								otherlv_12=RULE_ID
+								otherlv_13=RULE_ID
 								{
-									newLeafNode(otherlv_12, grammarAccess.getConditionAccess().getObjetsInterditsObjetCrossReference_0_4_1_1_1_0());
+									newLeafNode(otherlv_13, grammarAccess.getConditionAccess().getObjetsInterditsObjetCrossReference_0_4_2_1_1_0());
 								}
 							)
 						)*
 					)
 				)
-			)?
-			otherlv_13='}'
+			)*
+			otherlv_14='}'
 			{
-				newLeafNode(otherlv_13, grammarAccess.getConditionAccess().getRightCurlyBracketKeyword_0_5());
+				newLeafNode(otherlv_14, grammarAccess.getConditionAccess().getRightCurlyBracketKeyword_0_5());
 			}
 		)
 		    |
-		this_BOOL_14=RULE_BOOL
+		this_BOOL_15=RULE_BOOL
 		{
-			newLeafNode(this_BOOL_14, grammarAccess.getConditionAccess().getBOOLTerminalRuleCall_1());
+			newLeafNode(this_BOOL_15, grammarAccess.getConditionAccess().getBOOLTerminalRuleCall_1());
 		}
 	)
 ;

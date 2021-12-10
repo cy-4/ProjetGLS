@@ -1744,14 +1744,14 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Condition__Alternatives_0_3_1"
 
 
-    // $ANTLR start "rule__Condition__Alternatives_0_4_1"
-    // InternalGame.g:550:1: rule__Condition__Alternatives_0_4_1 : ( ( ( rule__Condition__Group_0_4_1_0__0 ) ) | ( ( rule__Condition__Group_0_4_1_1__0 ) ) );
-    public final void rule__Condition__Alternatives_0_4_1() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Alternatives_0_4_2"
+    // InternalGame.g:550:1: rule__Condition__Alternatives_0_4_2 : ( ( ( rule__Condition__Group_0_4_2_0__0 ) ) | ( ( rule__Condition__Group_0_4_2_1__0 ) ) );
+    public final void rule__Condition__Alternatives_0_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:554:1: ( ( ( rule__Condition__Group_0_4_1_0__0 ) ) | ( ( rule__Condition__Group_0_4_1_1__0 ) ) )
+            // InternalGame.g:554:1: ( ( ( rule__Condition__Group_0_4_2_0__0 ) ) | ( ( rule__Condition__Group_0_4_2_1__0 ) ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1769,24 +1769,24 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             }
             switch (alt7) {
                 case 1 :
-                    // InternalGame.g:555:2: ( ( rule__Condition__Group_0_4_1_0__0 ) )
+                    // InternalGame.g:555:2: ( ( rule__Condition__Group_0_4_2_0__0 ) )
                     {
-                    // InternalGame.g:555:2: ( ( rule__Condition__Group_0_4_1_0__0 ) )
-                    // InternalGame.g:556:3: ( rule__Condition__Group_0_4_1_0__0 )
+                    // InternalGame.g:555:2: ( ( rule__Condition__Group_0_4_2_0__0 ) )
+                    // InternalGame.g:556:3: ( rule__Condition__Group_0_4_2_0__0 )
                     {
-                     before(grammarAccess.getConditionAccess().getGroup_0_4_1_0()); 
-                    // InternalGame.g:557:3: ( rule__Condition__Group_0_4_1_0__0 )
-                    // InternalGame.g:557:4: rule__Condition__Group_0_4_1_0__0
+                     before(grammarAccess.getConditionAccess().getGroup_0_4_2_0()); 
+                    // InternalGame.g:557:3: ( rule__Condition__Group_0_4_2_0__0 )
+                    // InternalGame.g:557:4: rule__Condition__Group_0_4_2_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Condition__Group_0_4_1_0__0();
+                    rule__Condition__Group_0_4_2_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getConditionAccess().getGroup_0_4_1_0()); 
+                     after(grammarAccess.getConditionAccess().getGroup_0_4_2_0()); 
 
                     }
 
@@ -1794,24 +1794,24 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalGame.g:561:2: ( ( rule__Condition__Group_0_4_1_1__0 ) )
+                    // InternalGame.g:561:2: ( ( rule__Condition__Group_0_4_2_1__0 ) )
                     {
-                    // InternalGame.g:561:2: ( ( rule__Condition__Group_0_4_1_1__0 ) )
-                    // InternalGame.g:562:3: ( rule__Condition__Group_0_4_1_1__0 )
+                    // InternalGame.g:561:2: ( ( rule__Condition__Group_0_4_2_1__0 ) )
+                    // InternalGame.g:562:3: ( rule__Condition__Group_0_4_2_1__0 )
                     {
-                     before(grammarAccess.getConditionAccess().getGroup_0_4_1_1()); 
-                    // InternalGame.g:563:3: ( rule__Condition__Group_0_4_1_1__0 )
-                    // InternalGame.g:563:4: rule__Condition__Group_0_4_1_1__0
+                     before(grammarAccess.getConditionAccess().getGroup_0_4_2_1()); 
+                    // InternalGame.g:563:3: ( rule__Condition__Group_0_4_2_1__0 )
+                    // InternalGame.g:563:4: rule__Condition__Group_0_4_2_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Condition__Group_0_4_1_1__0();
+                    rule__Condition__Group_0_4_2_1__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getConditionAccess().getGroup_0_4_1_1()); 
+                     after(grammarAccess.getConditionAccess().getGroup_0_4_2_1()); 
 
                     }
 
@@ -1832,7 +1832,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Alternatives_0_4_1"
+    // $ANTLR end "rule__Condition__Alternatives_0_4_2"
 
 
     // $ANTLR start "rule__Nature__Alternatives"
@@ -9946,7 +9946,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             // InternalGame.g:3289:1: ( rule__Condition__Group_0__2__Impl rule__Condition__Group_0__3 )
             // InternalGame.g:3290:2: rule__Condition__Group_0__2__Impl rule__Condition__Group_0__3
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_43);
             rule__Condition__Group_0__2__Impl();
 
             state._fsp--;
@@ -10021,7 +10021,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             // InternalGame.g:3316:1: ( rule__Condition__Group_0__3__Impl rule__Condition__Group_0__4 )
             // InternalGame.g:3317:2: rule__Condition__Group_0__3__Impl rule__Condition__Group_0__4
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_43);
             rule__Condition__Group_0__3__Impl();
 
             state._fsp--;
@@ -10050,40 +10050,47 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group_0__3__Impl"
-    // InternalGame.g:3324:1: rule__Condition__Group_0__3__Impl : ( ( rule__Condition__Group_0_3__0 )? ) ;
+    // InternalGame.g:3324:1: rule__Condition__Group_0__3__Impl : ( ( rule__Condition__Group_0_3__0 )* ) ;
     public final void rule__Condition__Group_0__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3328:1: ( ( ( rule__Condition__Group_0_3__0 )? ) )
-            // InternalGame.g:3329:1: ( ( rule__Condition__Group_0_3__0 )? )
+            // InternalGame.g:3328:1: ( ( ( rule__Condition__Group_0_3__0 )* ) )
+            // InternalGame.g:3329:1: ( ( rule__Condition__Group_0_3__0 )* )
             {
-            // InternalGame.g:3329:1: ( ( rule__Condition__Group_0_3__0 )? )
-            // InternalGame.g:3330:2: ( rule__Condition__Group_0_3__0 )?
+            // InternalGame.g:3329:1: ( ( rule__Condition__Group_0_3__0 )* )
+            // InternalGame.g:3330:2: ( rule__Condition__Group_0_3__0 )*
             {
              before(grammarAccess.getConditionAccess().getGroup_0_3()); 
-            // InternalGame.g:3331:2: ( rule__Condition__Group_0_3__0 )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // InternalGame.g:3331:2: ( rule__Condition__Group_0_3__0 )*
+            loop18:
+            do {
+                int alt18=2;
+                int LA18_0 = input.LA(1);
 
-            if ( (LA18_0==38) ) {
-                alt18=1;
-            }
-            switch (alt18) {
-                case 1 :
-                    // InternalGame.g:3331:3: rule__Condition__Group_0_3__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Condition__Group_0_3__0();
-
-                    state._fsp--;
+                if ( (LA18_0==38) ) {
+                    alt18=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt18) {
+            	case 1 :
+            	    // InternalGame.g:3331:3: rule__Condition__Group_0_3__0
+            	    {
+            	    pushFollow(FOLLOW_44);
+            	    rule__Condition__Group_0_3__0();
 
-            }
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop18;
+                }
+            } while (true);
 
              after(grammarAccess.getConditionAccess().getGroup_0_3()); 
 
@@ -10117,7 +10124,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             // InternalGame.g:3343:1: ( rule__Condition__Group_0__4__Impl rule__Condition__Group_0__5 )
             // InternalGame.g:3344:2: rule__Condition__Group_0__4__Impl rule__Condition__Group_0__5
             {
-            pushFollow(FOLLOW_28);
+            pushFollow(FOLLOW_43);
             rule__Condition__Group_0__4__Impl();
 
             state._fsp--;
@@ -10146,40 +10153,47 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group_0__4__Impl"
-    // InternalGame.g:3351:1: rule__Condition__Group_0__4__Impl : ( ( rule__Condition__Group_0_4__0 )? ) ;
+    // InternalGame.g:3351:1: rule__Condition__Group_0__4__Impl : ( ( rule__Condition__Group_0_4__0 )* ) ;
     public final void rule__Condition__Group_0__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3355:1: ( ( ( rule__Condition__Group_0_4__0 )? ) )
-            // InternalGame.g:3356:1: ( ( rule__Condition__Group_0_4__0 )? )
+            // InternalGame.g:3355:1: ( ( ( rule__Condition__Group_0_4__0 )* ) )
+            // InternalGame.g:3356:1: ( ( rule__Condition__Group_0_4__0 )* )
             {
-            // InternalGame.g:3356:1: ( ( rule__Condition__Group_0_4__0 )? )
-            // InternalGame.g:3357:2: ( rule__Condition__Group_0_4__0 )?
+            // InternalGame.g:3356:1: ( ( rule__Condition__Group_0_4__0 )* )
+            // InternalGame.g:3357:2: ( rule__Condition__Group_0_4__0 )*
             {
              before(grammarAccess.getConditionAccess().getGroup_0_4()); 
-            // InternalGame.g:3358:2: ( rule__Condition__Group_0_4__0 )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // InternalGame.g:3358:2: ( rule__Condition__Group_0_4__0 )*
+            loop19:
+            do {
+                int alt19=2;
+                int LA19_0 = input.LA(1);
 
-            if ( (LA19_0==36) ) {
-                alt19=1;
-            }
-            switch (alt19) {
-                case 1 :
-                    // InternalGame.g:3358:3: rule__Condition__Group_0_4__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Condition__Group_0_4__0();
-
-                    state._fsp--;
+                if ( (LA19_0==RULE_INT) ) {
+                    alt19=1;
+                }
 
 
-                    }
-                    break;
+                switch (alt19) {
+            	case 1 :
+            	    // InternalGame.g:3358:3: rule__Condition__Group_0_4__0
+            	    {
+            	    pushFollow(FOLLOW_45);
+            	    rule__Condition__Group_0_4__0();
 
-            }
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop19;
+                }
+            } while (true);
 
              after(grammarAccess.getConditionAccess().getGroup_0_4()); 
 
@@ -10283,7 +10297,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             // InternalGame.g:3397:1: ( rule__Condition__Group_0_3__0__Impl rule__Condition__Group_0_3__1 )
             // InternalGame.g:3398:2: rule__Condition__Group_0_3__0__Impl rule__Condition__Group_0_3__1
             {
-            pushFollow(FOLLOW_43);
+            pushFollow(FOLLOW_46);
             rule__Condition__Group_0_3__0__Impl();
 
             state._fsp--;
@@ -10565,7 +10579,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalGame.g:3492:3: rule__Condition__ConnaissancesRequisesAssignment_0_3_1_0_1
             	    {
-            	    pushFollow(FOLLOW_44);
+            	    pushFollow(FOLLOW_47);
             	    rule__Condition__ConnaissancesRequisesAssignment_0_3_1_0_1();
 
             	    state._fsp--;
@@ -10738,7 +10752,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalGame.g:3546:3: rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1
             	    {
-            	    pushFollow(FOLLOW_44);
+            	    pushFollow(FOLLOW_47);
             	    rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1();
 
             	    state._fsp--;
@@ -10784,7 +10798,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             // InternalGame.g:3559:1: ( rule__Condition__Group_0_4__0__Impl rule__Condition__Group_0_4__1 )
             // InternalGame.g:3560:2: rule__Condition__Group_0_4__0__Impl rule__Condition__Group_0_4__1
             {
-            pushFollow(FOLLOW_45);
+            pushFollow(FOLLOW_48);
             rule__Condition__Group_0_4__0__Impl();
 
             state._fsp--;
@@ -10813,21 +10827,31 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group_0_4__0__Impl"
-    // InternalGame.g:3567:1: rule__Condition__Group_0_4__0__Impl : ( 'objets' ) ;
+    // InternalGame.g:3567:1: rule__Condition__Group_0_4__0__Impl : ( ( rule__Condition__QuantiteAssignment_0_4_0 ) ) ;
     public final void rule__Condition__Group_0_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3571:1: ( ( 'objets' ) )
-            // InternalGame.g:3572:1: ( 'objets' )
+            // InternalGame.g:3571:1: ( ( ( rule__Condition__QuantiteAssignment_0_4_0 ) ) )
+            // InternalGame.g:3572:1: ( ( rule__Condition__QuantiteAssignment_0_4_0 ) )
             {
-            // InternalGame.g:3572:1: ( 'objets' )
-            // InternalGame.g:3573:2: 'objets'
+            // InternalGame.g:3572:1: ( ( rule__Condition__QuantiteAssignment_0_4_0 ) )
+            // InternalGame.g:3573:2: ( rule__Condition__QuantiteAssignment_0_4_0 )
             {
-             before(grammarAccess.getConditionAccess().getObjetsKeyword_0_4_0()); 
-            match(input,36,FOLLOW_2); 
-             after(grammarAccess.getConditionAccess().getObjetsKeyword_0_4_0()); 
+             before(grammarAccess.getConditionAccess().getQuantiteAssignment_0_4_0()); 
+            // InternalGame.g:3574:2: ( rule__Condition__QuantiteAssignment_0_4_0 )
+            // InternalGame.g:3574:3: rule__Condition__QuantiteAssignment_0_4_0
+            {
+            pushFollow(FOLLOW_2);
+            rule__Condition__QuantiteAssignment_0_4_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getConditionAccess().getQuantiteAssignment_0_4_0()); 
 
             }
 
@@ -10850,17 +10874,22 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group_0_4__1"
-    // InternalGame.g:3582:1: rule__Condition__Group_0_4__1 : rule__Condition__Group_0_4__1__Impl ;
+    // InternalGame.g:3582:1: rule__Condition__Group_0_4__1 : rule__Condition__Group_0_4__1__Impl rule__Condition__Group_0_4__2 ;
     public final void rule__Condition__Group_0_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3586:1: ( rule__Condition__Group_0_4__1__Impl )
-            // InternalGame.g:3587:2: rule__Condition__Group_0_4__1__Impl
+            // InternalGame.g:3586:1: ( rule__Condition__Group_0_4__1__Impl rule__Condition__Group_0_4__2 )
+            // InternalGame.g:3587:2: rule__Condition__Group_0_4__1__Impl rule__Condition__Group_0_4__2
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_49);
             rule__Condition__Group_0_4__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Condition__Group_0_4__2();
 
             state._fsp--;
 
@@ -10883,31 +10912,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__Group_0_4__1__Impl"
-    // InternalGame.g:3593:1: rule__Condition__Group_0_4__1__Impl : ( ( rule__Condition__Alternatives_0_4_1 ) ) ;
+    // InternalGame.g:3594:1: rule__Condition__Group_0_4__1__Impl : ( 'objets' ) ;
     public final void rule__Condition__Group_0_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3597:1: ( ( ( rule__Condition__Alternatives_0_4_1 ) ) )
-            // InternalGame.g:3598:1: ( ( rule__Condition__Alternatives_0_4_1 ) )
+            // InternalGame.g:3598:1: ( ( 'objets' ) )
+            // InternalGame.g:3599:1: ( 'objets' )
             {
-            // InternalGame.g:3598:1: ( ( rule__Condition__Alternatives_0_4_1 ) )
-            // InternalGame.g:3599:2: ( rule__Condition__Alternatives_0_4_1 )
+            // InternalGame.g:3599:1: ( 'objets' )
+            // InternalGame.g:3600:2: 'objets'
             {
-             before(grammarAccess.getConditionAccess().getAlternatives_0_4_1()); 
-            // InternalGame.g:3600:2: ( rule__Condition__Alternatives_0_4_1 )
-            // InternalGame.g:3600:3: rule__Condition__Alternatives_0_4_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Condition__Alternatives_0_4_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getConditionAccess().getAlternatives_0_4_1()); 
+             before(grammarAccess.getConditionAccess().getObjetsKeyword_0_4_1()); 
+            match(input,36,FOLLOW_2); 
+             after(grammarAccess.getConditionAccess().getObjetsKeyword_0_4_1()); 
 
             }
 
@@ -10929,23 +10948,103 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Condition__Group_0_4__1__Impl"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_0__0"
-    // InternalGame.g:3609:1: rule__Condition__Group_0_4_1_0__0 : rule__Condition__Group_0_4_1_0__0__Impl rule__Condition__Group_0_4_1_0__1 ;
-    public final void rule__Condition__Group_0_4_1_0__0() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4__2"
+    // InternalGame.g:3609:1: rule__Condition__Group_0_4__2 : rule__Condition__Group_0_4__2__Impl ;
+    public final void rule__Condition__Group_0_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3613:1: ( rule__Condition__Group_0_4_1_0__0__Impl rule__Condition__Group_0_4_1_0__1 )
-            // InternalGame.g:3614:2: rule__Condition__Group_0_4_1_0__0__Impl rule__Condition__Group_0_4_1_0__1
+            // InternalGame.g:3613:1: ( rule__Condition__Group_0_4__2__Impl )
+            // InternalGame.g:3614:2: rule__Condition__Group_0_4__2__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Condition__Group_0_4__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Condition__Group_0_4__2"
+
+
+    // $ANTLR start "rule__Condition__Group_0_4__2__Impl"
+    // InternalGame.g:3620:1: rule__Condition__Group_0_4__2__Impl : ( ( rule__Condition__Alternatives_0_4_2 ) ) ;
+    public final void rule__Condition__Group_0_4__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGame.g:3624:1: ( ( ( rule__Condition__Alternatives_0_4_2 ) ) )
+            // InternalGame.g:3625:1: ( ( rule__Condition__Alternatives_0_4_2 ) )
+            {
+            // InternalGame.g:3625:1: ( ( rule__Condition__Alternatives_0_4_2 ) )
+            // InternalGame.g:3626:2: ( rule__Condition__Alternatives_0_4_2 )
+            {
+             before(grammarAccess.getConditionAccess().getAlternatives_0_4_2()); 
+            // InternalGame.g:3627:2: ( rule__Condition__Alternatives_0_4_2 )
+            // InternalGame.g:3627:3: rule__Condition__Alternatives_0_4_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Condition__Alternatives_0_4_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getConditionAccess().getAlternatives_0_4_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Condition__Group_0_4__2__Impl"
+
+
+    // $ANTLR start "rule__Condition__Group_0_4_2_0__0"
+    // InternalGame.g:3636:1: rule__Condition__Group_0_4_2_0__0 : rule__Condition__Group_0_4_2_0__0__Impl rule__Condition__Group_0_4_2_0__1 ;
+    public final void rule__Condition__Group_0_4_2_0__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGame.g:3640:1: ( rule__Condition__Group_0_4_2_0__0__Impl rule__Condition__Group_0_4_2_0__1 )
+            // InternalGame.g:3641:2: rule__Condition__Group_0_4_2_0__0__Impl rule__Condition__Group_0_4_2_0__1
             {
             pushFollow(FOLLOW_3);
-            rule__Condition__Group_0_4_1_0__0__Impl();
+            rule__Condition__Group_0_4_2_0__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Condition__Group_0_4_1_0__1();
+            rule__Condition__Group_0_4_2_0__1();
 
             state._fsp--;
 
@@ -10964,25 +11063,25 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_0__0"
+    // $ANTLR end "rule__Condition__Group_0_4_2_0__0"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_0__0__Impl"
-    // InternalGame.g:3621:1: rule__Condition__Group_0_4_1_0__0__Impl : ( 'requis' ) ;
-    public final void rule__Condition__Group_0_4_1_0__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4_2_0__0__Impl"
+    // InternalGame.g:3648:1: rule__Condition__Group_0_4_2_0__0__Impl : ( 'requis' ) ;
+    public final void rule__Condition__Group_0_4_2_0__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3625:1: ( ( 'requis' ) )
-            // InternalGame.g:3626:1: ( 'requis' )
+            // InternalGame.g:3652:1: ( ( 'requis' ) )
+            // InternalGame.g:3653:1: ( 'requis' )
             {
-            // InternalGame.g:3626:1: ( 'requis' )
-            // InternalGame.g:3627:2: 'requis'
+            // InternalGame.g:3653:1: ( 'requis' )
+            // InternalGame.g:3654:2: 'requis'
             {
-             before(grammarAccess.getConditionAccess().getRequisKeyword_0_4_1_0_0()); 
+             before(grammarAccess.getConditionAccess().getRequisKeyword_0_4_2_0_0()); 
             match(input,50,FOLLOW_2); 
-             after(grammarAccess.getConditionAccess().getRequisKeyword_0_4_1_0_0()); 
+             after(grammarAccess.getConditionAccess().getRequisKeyword_0_4_2_0_0()); 
 
             }
 
@@ -11001,21 +11100,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_0__0__Impl"
+    // $ANTLR end "rule__Condition__Group_0_4_2_0__0__Impl"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_0__1"
-    // InternalGame.g:3636:1: rule__Condition__Group_0_4_1_0__1 : rule__Condition__Group_0_4_1_0__1__Impl ;
-    public final void rule__Condition__Group_0_4_1_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4_2_0__1"
+    // InternalGame.g:3663:1: rule__Condition__Group_0_4_2_0__1 : rule__Condition__Group_0_4_2_0__1__Impl ;
+    public final void rule__Condition__Group_0_4_2_0__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3640:1: ( rule__Condition__Group_0_4_1_0__1__Impl )
-            // InternalGame.g:3641:2: rule__Condition__Group_0_4_1_0__1__Impl
+            // InternalGame.g:3667:1: ( rule__Condition__Group_0_4_2_0__1__Impl )
+            // InternalGame.g:3668:2: rule__Condition__Group_0_4_2_0__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Condition__Group_0_4_1_0__1__Impl();
+            rule__Condition__Group_0_4_2_0__1__Impl();
 
             state._fsp--;
 
@@ -11034,24 +11133,24 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_0__1"
+    // $ANTLR end "rule__Condition__Group_0_4_2_0__1"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_0__1__Impl"
-    // InternalGame.g:3647:1: rule__Condition__Group_0_4_1_0__1__Impl : ( ( rule__Condition__ObjetsRequisAssignment_0_4_1_0_1 )* ) ;
-    public final void rule__Condition__Group_0_4_1_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4_2_0__1__Impl"
+    // InternalGame.g:3674:1: rule__Condition__Group_0_4_2_0__1__Impl : ( ( rule__Condition__ObjetsRequisAssignment_0_4_2_0_1 )* ) ;
+    public final void rule__Condition__Group_0_4_2_0__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3651:1: ( ( ( rule__Condition__ObjetsRequisAssignment_0_4_1_0_1 )* ) )
-            // InternalGame.g:3652:1: ( ( rule__Condition__ObjetsRequisAssignment_0_4_1_0_1 )* )
+            // InternalGame.g:3678:1: ( ( ( rule__Condition__ObjetsRequisAssignment_0_4_2_0_1 )* ) )
+            // InternalGame.g:3679:1: ( ( rule__Condition__ObjetsRequisAssignment_0_4_2_0_1 )* )
             {
-            // InternalGame.g:3652:1: ( ( rule__Condition__ObjetsRequisAssignment_0_4_1_0_1 )* )
-            // InternalGame.g:3653:2: ( rule__Condition__ObjetsRequisAssignment_0_4_1_0_1 )*
+            // InternalGame.g:3679:1: ( ( rule__Condition__ObjetsRequisAssignment_0_4_2_0_1 )* )
+            // InternalGame.g:3680:2: ( rule__Condition__ObjetsRequisAssignment_0_4_2_0_1 )*
             {
-             before(grammarAccess.getConditionAccess().getObjetsRequisAssignment_0_4_1_0_1()); 
-            // InternalGame.g:3654:2: ( rule__Condition__ObjetsRequisAssignment_0_4_1_0_1 )*
+             before(grammarAccess.getConditionAccess().getObjetsRequisAssignment_0_4_2_0_1()); 
+            // InternalGame.g:3681:2: ( rule__Condition__ObjetsRequisAssignment_0_4_2_0_1 )*
             loop22:
             do {
                 int alt22=2;
@@ -11064,10 +11163,10 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
                 switch (alt22) {
             	case 1 :
-            	    // InternalGame.g:3654:3: rule__Condition__ObjetsRequisAssignment_0_4_1_0_1
+            	    // InternalGame.g:3681:3: rule__Condition__ObjetsRequisAssignment_0_4_2_0_1
             	    {
-            	    pushFollow(FOLLOW_44);
-            	    rule__Condition__ObjetsRequisAssignment_0_4_1_0_1();
+            	    pushFollow(FOLLOW_47);
+            	    rule__Condition__ObjetsRequisAssignment_0_4_2_0_1();
 
             	    state._fsp--;
 
@@ -11080,7 +11179,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getConditionAccess().getObjetsRequisAssignment_0_4_1_0_1()); 
+             after(grammarAccess.getConditionAccess().getObjetsRequisAssignment_0_4_2_0_1()); 
 
             }
 
@@ -11099,26 +11198,26 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_0__1__Impl"
+    // $ANTLR end "rule__Condition__Group_0_4_2_0__1__Impl"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_1__0"
-    // InternalGame.g:3663:1: rule__Condition__Group_0_4_1_1__0 : rule__Condition__Group_0_4_1_1__0__Impl rule__Condition__Group_0_4_1_1__1 ;
-    public final void rule__Condition__Group_0_4_1_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4_2_1__0"
+    // InternalGame.g:3690:1: rule__Condition__Group_0_4_2_1__0 : rule__Condition__Group_0_4_2_1__0__Impl rule__Condition__Group_0_4_2_1__1 ;
+    public final void rule__Condition__Group_0_4_2_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3667:1: ( rule__Condition__Group_0_4_1_1__0__Impl rule__Condition__Group_0_4_1_1__1 )
-            // InternalGame.g:3668:2: rule__Condition__Group_0_4_1_1__0__Impl rule__Condition__Group_0_4_1_1__1
+            // InternalGame.g:3694:1: ( rule__Condition__Group_0_4_2_1__0__Impl rule__Condition__Group_0_4_2_1__1 )
+            // InternalGame.g:3695:2: rule__Condition__Group_0_4_2_1__0__Impl rule__Condition__Group_0_4_2_1__1
             {
             pushFollow(FOLLOW_3);
-            rule__Condition__Group_0_4_1_1__0__Impl();
+            rule__Condition__Group_0_4_2_1__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Condition__Group_0_4_1_1__1();
+            rule__Condition__Group_0_4_2_1__1();
 
             state._fsp--;
 
@@ -11137,25 +11236,25 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_1__0"
+    // $ANTLR end "rule__Condition__Group_0_4_2_1__0"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_1__0__Impl"
-    // InternalGame.g:3675:1: rule__Condition__Group_0_4_1_1__0__Impl : ( 'interdits' ) ;
-    public final void rule__Condition__Group_0_4_1_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4_2_1__0__Impl"
+    // InternalGame.g:3702:1: rule__Condition__Group_0_4_2_1__0__Impl : ( 'interdits' ) ;
+    public final void rule__Condition__Group_0_4_2_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3679:1: ( ( 'interdits' ) )
-            // InternalGame.g:3680:1: ( 'interdits' )
+            // InternalGame.g:3706:1: ( ( 'interdits' ) )
+            // InternalGame.g:3707:1: ( 'interdits' )
             {
-            // InternalGame.g:3680:1: ( 'interdits' )
-            // InternalGame.g:3681:2: 'interdits'
+            // InternalGame.g:3707:1: ( 'interdits' )
+            // InternalGame.g:3708:2: 'interdits'
             {
-             before(grammarAccess.getConditionAccess().getInterditsKeyword_0_4_1_1_0()); 
+             before(grammarAccess.getConditionAccess().getInterditsKeyword_0_4_2_1_0()); 
             match(input,51,FOLLOW_2); 
-             after(grammarAccess.getConditionAccess().getInterditsKeyword_0_4_1_1_0()); 
+             after(grammarAccess.getConditionAccess().getInterditsKeyword_0_4_2_1_0()); 
 
             }
 
@@ -11174,21 +11273,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_1__0__Impl"
+    // $ANTLR end "rule__Condition__Group_0_4_2_1__0__Impl"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_1__1"
-    // InternalGame.g:3690:1: rule__Condition__Group_0_4_1_1__1 : rule__Condition__Group_0_4_1_1__1__Impl ;
-    public final void rule__Condition__Group_0_4_1_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4_2_1__1"
+    // InternalGame.g:3717:1: rule__Condition__Group_0_4_2_1__1 : rule__Condition__Group_0_4_2_1__1__Impl ;
+    public final void rule__Condition__Group_0_4_2_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3694:1: ( rule__Condition__Group_0_4_1_1__1__Impl )
-            // InternalGame.g:3695:2: rule__Condition__Group_0_4_1_1__1__Impl
+            // InternalGame.g:3721:1: ( rule__Condition__Group_0_4_2_1__1__Impl )
+            // InternalGame.g:3722:2: rule__Condition__Group_0_4_2_1__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Condition__Group_0_4_1_1__1__Impl();
+            rule__Condition__Group_0_4_2_1__1__Impl();
 
             state._fsp--;
 
@@ -11207,24 +11306,24 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_1__1"
+    // $ANTLR end "rule__Condition__Group_0_4_2_1__1"
 
 
-    // $ANTLR start "rule__Condition__Group_0_4_1_1__1__Impl"
-    // InternalGame.g:3701:1: rule__Condition__Group_0_4_1_1__1__Impl : ( ( rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1 )* ) ;
-    public final void rule__Condition__Group_0_4_1_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Condition__Group_0_4_2_1__1__Impl"
+    // InternalGame.g:3728:1: rule__Condition__Group_0_4_2_1__1__Impl : ( ( rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1 )* ) ;
+    public final void rule__Condition__Group_0_4_2_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3705:1: ( ( ( rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1 )* ) )
-            // InternalGame.g:3706:1: ( ( rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1 )* )
+            // InternalGame.g:3732:1: ( ( ( rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1 )* ) )
+            // InternalGame.g:3733:1: ( ( rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1 )* )
             {
-            // InternalGame.g:3706:1: ( ( rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1 )* )
-            // InternalGame.g:3707:2: ( rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1 )*
+            // InternalGame.g:3733:1: ( ( rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1 )* )
+            // InternalGame.g:3734:2: ( rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1 )*
             {
-             before(grammarAccess.getConditionAccess().getObjetsInterditsAssignment_0_4_1_1_1()); 
-            // InternalGame.g:3708:2: ( rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1 )*
+             before(grammarAccess.getConditionAccess().getObjetsInterditsAssignment_0_4_2_1_1()); 
+            // InternalGame.g:3735:2: ( rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1 )*
             loop23:
             do {
                 int alt23=2;
@@ -11237,10 +11336,10 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
                 switch (alt23) {
             	case 1 :
-            	    // InternalGame.g:3708:3: rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1
+            	    // InternalGame.g:3735:3: rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1
             	    {
-            	    pushFollow(FOLLOW_44);
-            	    rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1();
+            	    pushFollow(FOLLOW_47);
+            	    rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1();
 
             	    state._fsp--;
 
@@ -11253,7 +11352,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
                 }
             } while (true);
 
-             after(grammarAccess.getConditionAccess().getObjetsInterditsAssignment_0_4_1_1_1()); 
+             after(grammarAccess.getConditionAccess().getObjetsInterditsAssignment_0_4_2_1_1()); 
 
             }
 
@@ -11272,21 +11371,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__Group_0_4_1_1__1__Impl"
+    // $ANTLR end "rule__Condition__Group_0_4_2_1__1__Impl"
 
 
     // $ANTLR start "rule__Jeu__NameAssignment_1"
-    // InternalGame.g:3717:1: rule__Jeu__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGame.g:3744:1: rule__Jeu__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Jeu__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3721:1: ( ( RULE_ID ) )
-            // InternalGame.g:3722:2: ( RULE_ID )
+            // InternalGame.g:3748:1: ( ( RULE_ID ) )
+            // InternalGame.g:3749:2: ( RULE_ID )
             {
-            // InternalGame.g:3722:2: ( RULE_ID )
-            // InternalGame.g:3723:3: RULE_ID
+            // InternalGame.g:3749:2: ( RULE_ID )
+            // InternalGame.g:3750:3: RULE_ID
             {
              before(grammarAccess.getJeuAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11313,17 +11412,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Jeu__TerritoireAssignment_3"
-    // InternalGame.g:3732:1: rule__Jeu__TerritoireAssignment_3 : ( ruleTerritoire ) ;
+    // InternalGame.g:3759:1: rule__Jeu__TerritoireAssignment_3 : ( ruleTerritoire ) ;
     public final void rule__Jeu__TerritoireAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3736:1: ( ( ruleTerritoire ) )
-            // InternalGame.g:3737:2: ( ruleTerritoire )
+            // InternalGame.g:3763:1: ( ( ruleTerritoire ) )
+            // InternalGame.g:3764:2: ( ruleTerritoire )
             {
-            // InternalGame.g:3737:2: ( ruleTerritoire )
-            // InternalGame.g:3738:3: ruleTerritoire
+            // InternalGame.g:3764:2: ( ruleTerritoire )
+            // InternalGame.g:3765:3: ruleTerritoire
             {
              before(grammarAccess.getJeuAccess().getTerritoireTerritoireParserRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -11354,17 +11453,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Jeu__ExplorateurAssignment_4"
-    // InternalGame.g:3747:1: rule__Jeu__ExplorateurAssignment_4 : ( ruleExplorateur ) ;
+    // InternalGame.g:3774:1: rule__Jeu__ExplorateurAssignment_4 : ( ruleExplorateur ) ;
     public final void rule__Jeu__ExplorateurAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3751:1: ( ( ruleExplorateur ) )
-            // InternalGame.g:3752:2: ( ruleExplorateur )
+            // InternalGame.g:3778:1: ( ( ruleExplorateur ) )
+            // InternalGame.g:3779:2: ( ruleExplorateur )
             {
-            // InternalGame.g:3752:2: ( ruleExplorateur )
-            // InternalGame.g:3753:3: ruleExplorateur
+            // InternalGame.g:3779:2: ( ruleExplorateur )
+            // InternalGame.g:3780:3: ruleExplorateur
             {
              before(grammarAccess.getJeuAccess().getExplorateurExplorateurParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -11395,17 +11494,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Jeu__ElementsjeuAssignment_5"
-    // InternalGame.g:3762:1: rule__Jeu__ElementsjeuAssignment_5 : ( ruleElementsJeu ) ;
+    // InternalGame.g:3789:1: rule__Jeu__ElementsjeuAssignment_5 : ( ruleElementsJeu ) ;
     public final void rule__Jeu__ElementsjeuAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3766:1: ( ( ruleElementsJeu ) )
-            // InternalGame.g:3767:2: ( ruleElementsJeu )
+            // InternalGame.g:3793:1: ( ( ruleElementsJeu ) )
+            // InternalGame.g:3794:2: ( ruleElementsJeu )
             {
-            // InternalGame.g:3767:2: ( ruleElementsJeu )
-            // InternalGame.g:3768:3: ruleElementsJeu
+            // InternalGame.g:3794:2: ( ruleElementsJeu )
+            // InternalGame.g:3795:3: ruleElementsJeu
             {
              before(grammarAccess.getJeuAccess().getElementsjeuElementsJeuParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -11436,17 +11535,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Territoire__PlacesAssignment_2"
-    // InternalGame.g:3777:1: rule__Territoire__PlacesAssignment_2 : ( rulePlace ) ;
+    // InternalGame.g:3804:1: rule__Territoire__PlacesAssignment_2 : ( rulePlace ) ;
     public final void rule__Territoire__PlacesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3781:1: ( ( rulePlace ) )
-            // InternalGame.g:3782:2: ( rulePlace )
+            // InternalGame.g:3808:1: ( ( rulePlace ) )
+            // InternalGame.g:3809:2: ( rulePlace )
             {
-            // InternalGame.g:3782:2: ( rulePlace )
-            // InternalGame.g:3783:3: rulePlace
+            // InternalGame.g:3809:2: ( rulePlace )
+            // InternalGame.g:3810:3: rulePlace
             {
              before(grammarAccess.getTerritoireAccess().getPlacesPlaceParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -11477,17 +11576,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Lieu__NameAssignment_1"
-    // InternalGame.g:3792:1: rule__Lieu__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGame.g:3819:1: rule__Lieu__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Lieu__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3796:1: ( ( RULE_ID ) )
-            // InternalGame.g:3797:2: ( RULE_ID )
+            // InternalGame.g:3823:1: ( ( RULE_ID ) )
+            // InternalGame.g:3824:2: ( RULE_ID )
             {
-            // InternalGame.g:3797:2: ( RULE_ID )
-            // InternalGame.g:3798:3: RULE_ID
+            // InternalGame.g:3824:2: ( RULE_ID )
+            // InternalGame.g:3825:3: RULE_ID
             {
              before(grammarAccess.getLieuAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11514,17 +11613,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Lieu__NatureAssignment_3"
-    // InternalGame.g:3807:1: rule__Lieu__NatureAssignment_3 : ( ruleNature ) ;
+    // InternalGame.g:3834:1: rule__Lieu__NatureAssignment_3 : ( ruleNature ) ;
     public final void rule__Lieu__NatureAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3811:1: ( ( ruleNature ) )
-            // InternalGame.g:3812:2: ( ruleNature )
+            // InternalGame.g:3838:1: ( ( ruleNature ) )
+            // InternalGame.g:3839:2: ( ruleNature )
             {
-            // InternalGame.g:3812:2: ( ruleNature )
-            // InternalGame.g:3813:3: ruleNature
+            // InternalGame.g:3839:2: ( ruleNature )
+            // InternalGame.g:3840:3: ruleNature
             {
              before(grammarAccess.getLieuAccess().getNatureNatureEnumRuleCall_3_0()); 
             pushFollow(FOLLOW_2);
@@ -11555,17 +11654,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Chemin__NameAssignment_1"
-    // InternalGame.g:3822:1: rule__Chemin__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGame.g:3849:1: rule__Chemin__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Chemin__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3826:1: ( ( RULE_ID ) )
-            // InternalGame.g:3827:2: ( RULE_ID )
+            // InternalGame.g:3853:1: ( ( RULE_ID ) )
+            // InternalGame.g:3854:2: ( RULE_ID )
             {
-            // InternalGame.g:3827:2: ( RULE_ID )
-            // InternalGame.g:3828:3: RULE_ID
+            // InternalGame.g:3854:2: ( RULE_ID )
+            // InternalGame.g:3855:3: RULE_ID
             {
              before(grammarAccess.getCheminAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11592,21 +11691,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Chemin__PredAssignment_4"
-    // InternalGame.g:3837:1: rule__Chemin__PredAssignment_4 : ( ( RULE_ID ) ) ;
+    // InternalGame.g:3864:1: rule__Chemin__PredAssignment_4 : ( ( RULE_ID ) ) ;
     public final void rule__Chemin__PredAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3841:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:3842:2: ( ( RULE_ID ) )
+            // InternalGame.g:3868:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:3869:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:3842:2: ( ( RULE_ID ) )
-            // InternalGame.g:3843:3: ( RULE_ID )
+            // InternalGame.g:3869:2: ( ( RULE_ID ) )
+            // InternalGame.g:3870:3: ( RULE_ID )
             {
              before(grammarAccess.getCheminAccess().getPredLieuCrossReference_4_0()); 
-            // InternalGame.g:3844:3: ( RULE_ID )
-            // InternalGame.g:3845:4: RULE_ID
+            // InternalGame.g:3871:3: ( RULE_ID )
+            // InternalGame.g:3872:4: RULE_ID
             {
              before(grammarAccess.getCheminAccess().getPredLieuIDTerminalRuleCall_4_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11637,21 +11736,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Chemin__SuccAssignment_6"
-    // InternalGame.g:3856:1: rule__Chemin__SuccAssignment_6 : ( ( RULE_ID ) ) ;
+    // InternalGame.g:3883:1: rule__Chemin__SuccAssignment_6 : ( ( RULE_ID ) ) ;
     public final void rule__Chemin__SuccAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3860:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:3861:2: ( ( RULE_ID ) )
+            // InternalGame.g:3887:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:3888:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:3861:2: ( ( RULE_ID ) )
-            // InternalGame.g:3862:3: ( RULE_ID )
+            // InternalGame.g:3888:2: ( ( RULE_ID ) )
+            // InternalGame.g:3889:3: ( RULE_ID )
             {
              before(grammarAccess.getCheminAccess().getSuccLieuCrossReference_6_0()); 
-            // InternalGame.g:3863:3: ( RULE_ID )
-            // InternalGame.g:3864:4: RULE_ID
+            // InternalGame.g:3890:3: ( RULE_ID )
+            // InternalGame.g:3891:4: RULE_ID
             {
              before(grammarAccess.getCheminAccess().getSuccLieuIDTerminalRuleCall_6_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11682,17 +11781,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Chemin__VisibleAssignment_8"
-    // InternalGame.g:3875:1: rule__Chemin__VisibleAssignment_8 : ( ruleCondition ) ;
+    // InternalGame.g:3902:1: rule__Chemin__VisibleAssignment_8 : ( ruleCondition ) ;
     public final void rule__Chemin__VisibleAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3879:1: ( ( ruleCondition ) )
-            // InternalGame.g:3880:2: ( ruleCondition )
+            // InternalGame.g:3906:1: ( ( ruleCondition ) )
+            // InternalGame.g:3907:2: ( ruleCondition )
             {
-            // InternalGame.g:3880:2: ( ruleCondition )
-            // InternalGame.g:3881:3: ruleCondition
+            // InternalGame.g:3907:2: ( ruleCondition )
+            // InternalGame.g:3908:3: ruleCondition
             {
              before(grammarAccess.getCheminAccess().getVisibleConditionParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
@@ -11723,17 +11822,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Chemin__ObligatoireAssignment_10"
-    // InternalGame.g:3890:1: rule__Chemin__ObligatoireAssignment_10 : ( RULE_BOOL ) ;
+    // InternalGame.g:3917:1: rule__Chemin__ObligatoireAssignment_10 : ( RULE_BOOL ) ;
     public final void rule__Chemin__ObligatoireAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3894:1: ( ( RULE_BOOL ) )
-            // InternalGame.g:3895:2: ( RULE_BOOL )
+            // InternalGame.g:3921:1: ( ( RULE_BOOL ) )
+            // InternalGame.g:3922:2: ( RULE_BOOL )
             {
-            // InternalGame.g:3895:2: ( RULE_BOOL )
-            // InternalGame.g:3896:3: RULE_BOOL
+            // InternalGame.g:3922:2: ( RULE_BOOL )
+            // InternalGame.g:3923:3: RULE_BOOL
             {
              before(grammarAccess.getCheminAccess().getObligatoireBOOLTerminalRuleCall_10_0()); 
             match(input,RULE_BOOL,FOLLOW_2); 
@@ -11760,17 +11859,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Chemin__OuvertAssignment_12"
-    // InternalGame.g:3905:1: rule__Chemin__OuvertAssignment_12 : ( RULE_BOOL ) ;
+    // InternalGame.g:3932:1: rule__Chemin__OuvertAssignment_12 : ( RULE_BOOL ) ;
     public final void rule__Chemin__OuvertAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3909:1: ( ( RULE_BOOL ) )
-            // InternalGame.g:3910:2: ( RULE_BOOL )
+            // InternalGame.g:3936:1: ( ( RULE_BOOL ) )
+            // InternalGame.g:3937:2: ( RULE_BOOL )
             {
-            // InternalGame.g:3910:2: ( RULE_BOOL )
-            // InternalGame.g:3911:3: RULE_BOOL
+            // InternalGame.g:3937:2: ( RULE_BOOL )
+            // InternalGame.g:3938:3: RULE_BOOL
             {
              before(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0()); 
             match(input,RULE_BOOL,FOLLOW_2); 
@@ -11797,17 +11896,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Personne__NameAssignment_1"
-    // InternalGame.g:3920:1: rule__Personne__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGame.g:3947:1: rule__Personne__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Personne__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3924:1: ( ( RULE_ID ) )
-            // InternalGame.g:3925:2: ( RULE_ID )
+            // InternalGame.g:3951:1: ( ( RULE_ID ) )
+            // InternalGame.g:3952:2: ( RULE_ID )
             {
-            // InternalGame.g:3925:2: ( RULE_ID )
-            // InternalGame.g:3926:3: RULE_ID
+            // InternalGame.g:3952:2: ( RULE_ID )
+            // InternalGame.g:3953:3: RULE_ID
             {
              before(grammarAccess.getPersonneAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11834,21 +11933,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Personne__PlaceAssignment_4"
-    // InternalGame.g:3935:1: rule__Personne__PlaceAssignment_4 : ( ( RULE_ID ) ) ;
+    // InternalGame.g:3962:1: rule__Personne__PlaceAssignment_4 : ( ( RULE_ID ) ) ;
     public final void rule__Personne__PlaceAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3939:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:3940:2: ( ( RULE_ID ) )
+            // InternalGame.g:3966:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:3967:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:3940:2: ( ( RULE_ID ) )
-            // InternalGame.g:3941:3: ( RULE_ID )
+            // InternalGame.g:3967:2: ( ( RULE_ID ) )
+            // InternalGame.g:3968:3: ( RULE_ID )
             {
              before(grammarAccess.getPersonneAccess().getPlacePlaceCrossReference_4_0()); 
-            // InternalGame.g:3942:3: ( RULE_ID )
-            // InternalGame.g:3943:4: RULE_ID
+            // InternalGame.g:3969:3: ( RULE_ID )
+            // InternalGame.g:3970:4: RULE_ID
             {
              before(grammarAccess.getPersonneAccess().getPlacePlaceIDTerminalRuleCall_4_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -11879,17 +11978,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Personne__VisibleAssignment_6"
-    // InternalGame.g:3954:1: rule__Personne__VisibleAssignment_6 : ( ruleCondition ) ;
+    // InternalGame.g:3981:1: rule__Personne__VisibleAssignment_6 : ( ruleCondition ) ;
     public final void rule__Personne__VisibleAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3958:1: ( ( ruleCondition ) )
-            // InternalGame.g:3959:2: ( ruleCondition )
+            // InternalGame.g:3985:1: ( ( ruleCondition ) )
+            // InternalGame.g:3986:2: ( ruleCondition )
             {
-            // InternalGame.g:3959:2: ( ruleCondition )
-            // InternalGame.g:3960:3: ruleCondition
+            // InternalGame.g:3986:2: ( ruleCondition )
+            // InternalGame.g:3987:3: ruleCondition
             {
              before(grammarAccess.getPersonneAccess().getVisibleConditionParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -11920,17 +12019,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Personne__ActifAssignment_8"
-    // InternalGame.g:3969:1: rule__Personne__ActifAssignment_8 : ( ruleCondition ) ;
+    // InternalGame.g:3996:1: rule__Personne__ActifAssignment_8 : ( ruleCondition ) ;
     public final void rule__Personne__ActifAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3973:1: ( ( ruleCondition ) )
-            // InternalGame.g:3974:2: ( ruleCondition )
+            // InternalGame.g:4000:1: ( ( ruleCondition ) )
+            // InternalGame.g:4001:2: ( ruleCondition )
             {
-            // InternalGame.g:3974:2: ( ruleCondition )
-            // InternalGame.g:3975:3: ruleCondition
+            // InternalGame.g:4001:2: ( ruleCondition )
+            // InternalGame.g:4002:3: ruleCondition
             {
              before(grammarAccess.getPersonneAccess().getActifConditionParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
@@ -11961,17 +12060,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Personne__ObligatoireAssignment_10"
-    // InternalGame.g:3984:1: rule__Personne__ObligatoireAssignment_10 : ( RULE_BOOL ) ;
+    // InternalGame.g:4011:1: rule__Personne__ObligatoireAssignment_10 : ( RULE_BOOL ) ;
     public final void rule__Personne__ObligatoireAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3988:1: ( ( RULE_BOOL ) )
-            // InternalGame.g:3989:2: ( RULE_BOOL )
+            // InternalGame.g:4015:1: ( ( RULE_BOOL ) )
+            // InternalGame.g:4016:2: ( RULE_BOOL )
             {
-            // InternalGame.g:3989:2: ( RULE_BOOL )
-            // InternalGame.g:3990:3: RULE_BOOL
+            // InternalGame.g:4016:2: ( RULE_BOOL )
+            // InternalGame.g:4017:3: RULE_BOOL
             {
              before(grammarAccess.getPersonneAccess().getObligatoireBOOLTerminalRuleCall_10_0()); 
             match(input,RULE_BOOL,FOLLOW_2); 
@@ -11998,17 +12097,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Personne__InteractionsAssignment_12"
-    // InternalGame.g:3999:1: rule__Personne__InteractionsAssignment_12 : ( ruleInteraction ) ;
+    // InternalGame.g:4026:1: rule__Personne__InteractionsAssignment_12 : ( ruleInteraction ) ;
     public final void rule__Personne__InteractionsAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4003:1: ( ( ruleInteraction ) )
-            // InternalGame.g:4004:2: ( ruleInteraction )
+            // InternalGame.g:4030:1: ( ( ruleInteraction ) )
+            // InternalGame.g:4031:2: ( ruleInteraction )
             {
-            // InternalGame.g:4004:2: ( ruleInteraction )
-            // InternalGame.g:4005:3: ruleInteraction
+            // InternalGame.g:4031:2: ( ruleInteraction )
+            // InternalGame.g:4032:3: ruleInteraction
             {
              before(grammarAccess.getPersonneAccess().getInteractionsInteractionParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
@@ -12039,21 +12138,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Explorateur__PlaceAssignment_3"
-    // InternalGame.g:4014:1: rule__Explorateur__PlaceAssignment_3 : ( ( RULE_ID ) ) ;
+    // InternalGame.g:4041:1: rule__Explorateur__PlaceAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__Explorateur__PlaceAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4018:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:4019:2: ( ( RULE_ID ) )
+            // InternalGame.g:4045:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:4046:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:4019:2: ( ( RULE_ID ) )
-            // InternalGame.g:4020:3: ( RULE_ID )
+            // InternalGame.g:4046:2: ( ( RULE_ID ) )
+            // InternalGame.g:4047:3: ( RULE_ID )
             {
              before(grammarAccess.getExplorateurAccess().getPlacePlaceCrossReference_3_0()); 
-            // InternalGame.g:4021:3: ( RULE_ID )
-            // InternalGame.g:4022:4: RULE_ID
+            // InternalGame.g:4048:3: ( RULE_ID )
+            // InternalGame.g:4049:4: RULE_ID
             {
              before(grammarAccess.getExplorateurAccess().getPlacePlaceIDTerminalRuleCall_3_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -12084,17 +12183,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Explorateur__TailleDispoAssignment_6"
-    // InternalGame.g:4033:1: rule__Explorateur__TailleDispoAssignment_6 : ( RULE_INT ) ;
+    // InternalGame.g:4060:1: rule__Explorateur__TailleDispoAssignment_6 : ( RULE_INT ) ;
     public final void rule__Explorateur__TailleDispoAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4037:1: ( ( RULE_INT ) )
-            // InternalGame.g:4038:2: ( RULE_INT )
+            // InternalGame.g:4064:1: ( ( RULE_INT ) )
+            // InternalGame.g:4065:2: ( RULE_INT )
             {
-            // InternalGame.g:4038:2: ( RULE_INT )
-            // InternalGame.g:4039:3: RULE_INT
+            // InternalGame.g:4065:2: ( RULE_INT )
+            // InternalGame.g:4066:3: RULE_INT
             {
              before(grammarAccess.getExplorateurAccess().getTailleDispoINTTerminalRuleCall_6_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -12121,17 +12220,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Explorateur__ObjetsAssignment_7_2"
-    // InternalGame.g:4048:1: rule__Explorateur__ObjetsAssignment_7_2 : ( ruleObjet ) ;
+    // InternalGame.g:4075:1: rule__Explorateur__ObjetsAssignment_7_2 : ( ruleObjet ) ;
     public final void rule__Explorateur__ObjetsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4052:1: ( ( ruleObjet ) )
-            // InternalGame.g:4053:2: ( ruleObjet )
+            // InternalGame.g:4079:1: ( ( ruleObjet ) )
+            // InternalGame.g:4080:2: ( ruleObjet )
             {
-            // InternalGame.g:4053:2: ( ruleObjet )
-            // InternalGame.g:4054:3: ruleObjet
+            // InternalGame.g:4080:2: ( ruleObjet )
+            // InternalGame.g:4081:3: ruleObjet
             {
              before(grammarAccess.getExplorateurAccess().getObjetsObjetParserRuleCall_7_2_0()); 
             pushFollow(FOLLOW_2);
@@ -12162,17 +12261,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Explorateur__ConnaissancesAssignment_8_2"
-    // InternalGame.g:4063:1: rule__Explorateur__ConnaissancesAssignment_8_2 : ( ruleConnaissance ) ;
+    // InternalGame.g:4090:1: rule__Explorateur__ConnaissancesAssignment_8_2 : ( ruleConnaissance ) ;
     public final void rule__Explorateur__ConnaissancesAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4067:1: ( ( ruleConnaissance ) )
-            // InternalGame.g:4068:2: ( ruleConnaissance )
+            // InternalGame.g:4094:1: ( ( ruleConnaissance ) )
+            // InternalGame.g:4095:2: ( ruleConnaissance )
             {
-            // InternalGame.g:4068:2: ( ruleConnaissance )
-            // InternalGame.g:4069:3: ruleConnaissance
+            // InternalGame.g:4095:2: ( ruleConnaissance )
+            // InternalGame.g:4096:3: ruleConnaissance
             {
              before(grammarAccess.getExplorateurAccess().getConnaissancesConnaissanceParserRuleCall_8_2_0()); 
             pushFollow(FOLLOW_2);
@@ -12203,17 +12302,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connaissance__NameAssignment_1"
-    // InternalGame.g:4078:1: rule__Connaissance__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGame.g:4105:1: rule__Connaissance__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Connaissance__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4082:1: ( ( RULE_ID ) )
-            // InternalGame.g:4083:2: ( RULE_ID )
+            // InternalGame.g:4109:1: ( ( RULE_ID ) )
+            // InternalGame.g:4110:2: ( RULE_ID )
             {
-            // InternalGame.g:4083:2: ( RULE_ID )
-            // InternalGame.g:4084:3: RULE_ID
+            // InternalGame.g:4110:2: ( RULE_ID )
+            // InternalGame.g:4111:3: RULE_ID
             {
              before(grammarAccess.getConnaissanceAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -12240,17 +12339,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connaissance__VisibleAssignment_4"
-    // InternalGame.g:4093:1: rule__Connaissance__VisibleAssignment_4 : ( ruleCondition ) ;
+    // InternalGame.g:4120:1: rule__Connaissance__VisibleAssignment_4 : ( ruleCondition ) ;
     public final void rule__Connaissance__VisibleAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4097:1: ( ( ruleCondition ) )
-            // InternalGame.g:4098:2: ( ruleCondition )
+            // InternalGame.g:4124:1: ( ( ruleCondition ) )
+            // InternalGame.g:4125:2: ( ruleCondition )
             {
-            // InternalGame.g:4098:2: ( ruleCondition )
-            // InternalGame.g:4099:3: ruleCondition
+            // InternalGame.g:4125:2: ( ruleCondition )
+            // InternalGame.g:4126:3: ruleCondition
             {
              before(grammarAccess.getConnaissanceAccess().getVisibleConditionParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -12281,17 +12380,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Connaissance__ActifAssignment_6"
-    // InternalGame.g:4108:1: rule__Connaissance__ActifAssignment_6 : ( ruleCondition ) ;
+    // InternalGame.g:4135:1: rule__Connaissance__ActifAssignment_6 : ( ruleCondition ) ;
     public final void rule__Connaissance__ActifAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4112:1: ( ( ruleCondition ) )
-            // InternalGame.g:4113:2: ( ruleCondition )
+            // InternalGame.g:4139:1: ( ( ruleCondition ) )
+            // InternalGame.g:4140:2: ( ruleCondition )
             {
-            // InternalGame.g:4113:2: ( ruleCondition )
-            // InternalGame.g:4114:3: ruleCondition
+            // InternalGame.g:4140:2: ( ruleCondition )
+            // InternalGame.g:4141:3: ruleCondition
             {
              before(grammarAccess.getConnaissanceAccess().getActifConditionParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -12322,17 +12421,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objet__NameAssignment_1"
-    // InternalGame.g:4123:1: rule__Objet__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalGame.g:4150:1: rule__Objet__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Objet__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4127:1: ( ( RULE_ID ) )
-            // InternalGame.g:4128:2: ( RULE_ID )
+            // InternalGame.g:4154:1: ( ( RULE_ID ) )
+            // InternalGame.g:4155:2: ( RULE_ID )
             {
-            // InternalGame.g:4128:2: ( RULE_ID )
-            // InternalGame.g:4129:3: RULE_ID
+            // InternalGame.g:4155:2: ( RULE_ID )
+            // InternalGame.g:4156:3: RULE_ID
             {
              before(grammarAccess.getObjetAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -12359,17 +12458,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objet__VisibleAssignment_4"
-    // InternalGame.g:4138:1: rule__Objet__VisibleAssignment_4 : ( ruleCondition ) ;
+    // InternalGame.g:4165:1: rule__Objet__VisibleAssignment_4 : ( ruleCondition ) ;
     public final void rule__Objet__VisibleAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4142:1: ( ( ruleCondition ) )
-            // InternalGame.g:4143:2: ( ruleCondition )
+            // InternalGame.g:4169:1: ( ( ruleCondition ) )
+            // InternalGame.g:4170:2: ( ruleCondition )
             {
-            // InternalGame.g:4143:2: ( ruleCondition )
-            // InternalGame.g:4144:3: ruleCondition
+            // InternalGame.g:4170:2: ( ruleCondition )
+            // InternalGame.g:4171:3: ruleCondition
             {
              before(grammarAccess.getObjetAccess().getVisibleConditionParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -12400,17 +12499,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objet__ActifAssignment_6"
-    // InternalGame.g:4153:1: rule__Objet__ActifAssignment_6 : ( ruleCondition ) ;
+    // InternalGame.g:4180:1: rule__Objet__ActifAssignment_6 : ( ruleCondition ) ;
     public final void rule__Objet__ActifAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4157:1: ( ( ruleCondition ) )
-            // InternalGame.g:4158:2: ( ruleCondition )
+            // InternalGame.g:4184:1: ( ( ruleCondition ) )
+            // InternalGame.g:4185:2: ( ruleCondition )
             {
-            // InternalGame.g:4158:2: ( ruleCondition )
-            // InternalGame.g:4159:3: ruleCondition
+            // InternalGame.g:4185:2: ( ruleCondition )
+            // InternalGame.g:4186:3: ruleCondition
             {
              before(grammarAccess.getObjetAccess().getActifConditionParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -12441,17 +12540,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objet__QteAssignment_8"
-    // InternalGame.g:4168:1: rule__Objet__QteAssignment_8 : ( RULE_INT ) ;
+    // InternalGame.g:4195:1: rule__Objet__QteAssignment_8 : ( RULE_INT ) ;
     public final void rule__Objet__QteAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4172:1: ( ( RULE_INT ) )
-            // InternalGame.g:4173:2: ( RULE_INT )
+            // InternalGame.g:4199:1: ( ( RULE_INT ) )
+            // InternalGame.g:4200:2: ( RULE_INT )
             {
-            // InternalGame.g:4173:2: ( RULE_INT )
-            // InternalGame.g:4174:3: RULE_INT
+            // InternalGame.g:4200:2: ( RULE_INT )
+            // InternalGame.g:4201:3: RULE_INT
             {
              before(grammarAccess.getObjetAccess().getQteINTTerminalRuleCall_8_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -12478,17 +12577,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objet__TailleAssignment_10"
-    // InternalGame.g:4183:1: rule__Objet__TailleAssignment_10 : ( RULE_INT ) ;
+    // InternalGame.g:4210:1: rule__Objet__TailleAssignment_10 : ( RULE_INT ) ;
     public final void rule__Objet__TailleAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4187:1: ( ( RULE_INT ) )
-            // InternalGame.g:4188:2: ( RULE_INT )
+            // InternalGame.g:4214:1: ( ( RULE_INT ) )
+            // InternalGame.g:4215:2: ( RULE_INT )
             {
-            // InternalGame.g:4188:2: ( RULE_INT )
-            // InternalGame.g:4189:3: RULE_INT
+            // InternalGame.g:4215:2: ( RULE_INT )
+            // InternalGame.g:4216:3: RULE_INT
             {
              before(grammarAccess.getObjetAccess().getTailleINTTerminalRuleCall_10_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -12515,17 +12614,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Objet__TransformableAssignment_12"
-    // InternalGame.g:4198:1: rule__Objet__TransformableAssignment_12 : ( RULE_BOOL ) ;
+    // InternalGame.g:4225:1: rule__Objet__TransformableAssignment_12 : ( RULE_BOOL ) ;
     public final void rule__Objet__TransformableAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4202:1: ( ( RULE_BOOL ) )
-            // InternalGame.g:4203:2: ( RULE_BOOL )
+            // InternalGame.g:4229:1: ( ( RULE_BOOL ) )
+            // InternalGame.g:4230:2: ( RULE_BOOL )
             {
-            // InternalGame.g:4203:2: ( RULE_BOOL )
-            // InternalGame.g:4204:3: RULE_BOOL
+            // InternalGame.g:4230:2: ( RULE_BOOL )
+            // InternalGame.g:4231:3: RULE_BOOL
             {
              before(grammarAccess.getObjetAccess().getTransformableBOOLTerminalRuleCall_12_0()); 
             match(input,RULE_BOOL,FOLLOW_2); 
@@ -12552,17 +12651,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interaction__QuestionAssignment_3"
-    // InternalGame.g:4213:1: rule__Interaction__QuestionAssignment_3 : ( RULE_STRING ) ;
+    // InternalGame.g:4240:1: rule__Interaction__QuestionAssignment_3 : ( RULE_STRING ) ;
     public final void rule__Interaction__QuestionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4217:1: ( ( RULE_STRING ) )
-            // InternalGame.g:4218:2: ( RULE_STRING )
+            // InternalGame.g:4244:1: ( ( RULE_STRING ) )
+            // InternalGame.g:4245:2: ( RULE_STRING )
             {
-            // InternalGame.g:4218:2: ( RULE_STRING )
-            // InternalGame.g:4219:3: RULE_STRING
+            // InternalGame.g:4245:2: ( RULE_STRING )
+            // InternalGame.g:4246:3: RULE_STRING
             {
              before(grammarAccess.getInteractionAccess().getQuestionSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -12589,17 +12688,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Interaction__ChoixAssignment_4"
-    // InternalGame.g:4228:1: rule__Interaction__ChoixAssignment_4 : ( ruleChoix ) ;
+    // InternalGame.g:4255:1: rule__Interaction__ChoixAssignment_4 : ( ruleChoix ) ;
     public final void rule__Interaction__ChoixAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4232:1: ( ( ruleChoix ) )
-            // InternalGame.g:4233:2: ( ruleChoix )
+            // InternalGame.g:4259:1: ( ( ruleChoix ) )
+            // InternalGame.g:4260:2: ( ruleChoix )
             {
-            // InternalGame.g:4233:2: ( ruleChoix )
-            // InternalGame.g:4234:3: ruleChoix
+            // InternalGame.g:4260:2: ( ruleChoix )
+            // InternalGame.g:4261:3: ruleChoix
             {
              before(grammarAccess.getInteractionAccess().getChoixChoixParserRuleCall_4_0()); 
             pushFollow(FOLLOW_2);
@@ -12630,17 +12729,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Choix__NumeroAssignment_1"
-    // InternalGame.g:4243:1: rule__Choix__NumeroAssignment_1 : ( RULE_INT ) ;
+    // InternalGame.g:4270:1: rule__Choix__NumeroAssignment_1 : ( RULE_INT ) ;
     public final void rule__Choix__NumeroAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4247:1: ( ( RULE_INT ) )
-            // InternalGame.g:4248:2: ( RULE_INT )
+            // InternalGame.g:4274:1: ( ( RULE_INT ) )
+            // InternalGame.g:4275:2: ( RULE_INT )
             {
-            // InternalGame.g:4248:2: ( RULE_INT )
-            // InternalGame.g:4249:3: RULE_INT
+            // InternalGame.g:4275:2: ( RULE_INT )
+            // InternalGame.g:4276:3: RULE_INT
             {
              before(grammarAccess.getChoixAccess().getNumeroINTTerminalRuleCall_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -12667,17 +12766,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Choix__ReponseAssignment_4"
-    // InternalGame.g:4258:1: rule__Choix__ReponseAssignment_4 : ( RULE_STRING ) ;
+    // InternalGame.g:4285:1: rule__Choix__ReponseAssignment_4 : ( RULE_STRING ) ;
     public final void rule__Choix__ReponseAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4262:1: ( ( RULE_STRING ) )
-            // InternalGame.g:4263:2: ( RULE_STRING )
+            // InternalGame.g:4289:1: ( ( RULE_STRING ) )
+            // InternalGame.g:4290:2: ( RULE_STRING )
             {
-            // InternalGame.g:4263:2: ( RULE_STRING )
-            // InternalGame.g:4264:3: RULE_STRING
+            // InternalGame.g:4290:2: ( RULE_STRING )
+            // InternalGame.g:4291:3: RULE_STRING
             {
              before(grammarAccess.getChoixAccess().getReponseSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -12704,17 +12803,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Choix__QteAssignment_5_1"
-    // InternalGame.g:4273:1: rule__Choix__QteAssignment_5_1 : ( RULE_INT ) ;
+    // InternalGame.g:4300:1: rule__Choix__QteAssignment_5_1 : ( RULE_INT ) ;
     public final void rule__Choix__QteAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4277:1: ( ( RULE_INT ) )
-            // InternalGame.g:4278:2: ( RULE_INT )
+            // InternalGame.g:4304:1: ( ( RULE_INT ) )
+            // InternalGame.g:4305:2: ( RULE_INT )
             {
-            // InternalGame.g:4278:2: ( RULE_INT )
-            // InternalGame.g:4279:3: RULE_INT
+            // InternalGame.g:4305:2: ( RULE_INT )
+            // InternalGame.g:4306:3: RULE_INT
             {
              before(grammarAccess.getChoixAccess().getQteINTTerminalRuleCall_5_1_0()); 
             match(input,RULE_INT,FOLLOW_2); 
@@ -12741,21 +12840,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Choix__AvantageAssignment_5_2"
-    // InternalGame.g:4288:1: rule__Choix__AvantageAssignment_5_2 : ( ( RULE_ID ) ) ;
+    // InternalGame.g:4315:1: rule__Choix__AvantageAssignment_5_2 : ( ( RULE_ID ) ) ;
     public final void rule__Choix__AvantageAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4292:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:4293:2: ( ( RULE_ID ) )
+            // InternalGame.g:4319:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:4320:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:4293:2: ( ( RULE_ID ) )
-            // InternalGame.g:4294:3: ( RULE_ID )
+            // InternalGame.g:4320:2: ( ( RULE_ID ) )
+            // InternalGame.g:4321:3: ( RULE_ID )
             {
              before(grammarAccess.getChoixAccess().getAvantageAvantageCrossReference_5_2_0()); 
-            // InternalGame.g:4295:3: ( RULE_ID )
-            // InternalGame.g:4296:4: RULE_ID
+            // InternalGame.g:4322:3: ( RULE_ID )
+            // InternalGame.g:4323:4: RULE_ID
             {
              before(grammarAccess.getChoixAccess().getAvantageAvantageIDTerminalRuleCall_5_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -12786,17 +12885,17 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__NameAssignment_0_1"
-    // InternalGame.g:4307:1: rule__Condition__NameAssignment_0_1 : ( RULE_ID ) ;
+    // InternalGame.g:4334:1: rule__Condition__NameAssignment_0_1 : ( RULE_ID ) ;
     public final void rule__Condition__NameAssignment_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4311:1: ( ( RULE_ID ) )
-            // InternalGame.g:4312:2: ( RULE_ID )
+            // InternalGame.g:4338:1: ( ( RULE_ID ) )
+            // InternalGame.g:4339:2: ( RULE_ID )
             {
-            // InternalGame.g:4312:2: ( RULE_ID )
-            // InternalGame.g:4313:3: RULE_ID
+            // InternalGame.g:4339:2: ( RULE_ID )
+            // InternalGame.g:4340:3: RULE_ID
             {
              before(grammarAccess.getConditionAccess().getNameIDTerminalRuleCall_0_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -12823,21 +12922,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__ConnaissancesRequisesAssignment_0_3_1_0_1"
-    // InternalGame.g:4322:1: rule__Condition__ConnaissancesRequisesAssignment_0_3_1_0_1 : ( ( RULE_ID ) ) ;
+    // InternalGame.g:4349:1: rule__Condition__ConnaissancesRequisesAssignment_0_3_1_0_1 : ( ( RULE_ID ) ) ;
     public final void rule__Condition__ConnaissancesRequisesAssignment_0_3_1_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4326:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:4327:2: ( ( RULE_ID ) )
+            // InternalGame.g:4353:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:4354:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:4327:2: ( ( RULE_ID ) )
-            // InternalGame.g:4328:3: ( RULE_ID )
+            // InternalGame.g:4354:2: ( ( RULE_ID ) )
+            // InternalGame.g:4355:3: ( RULE_ID )
             {
              before(grammarAccess.getConditionAccess().getConnaissancesRequisesConnaissanceCrossReference_0_3_1_0_1_0()); 
-            // InternalGame.g:4329:3: ( RULE_ID )
-            // InternalGame.g:4330:4: RULE_ID
+            // InternalGame.g:4356:3: ( RULE_ID )
+            // InternalGame.g:4357:4: RULE_ID
             {
              before(grammarAccess.getConditionAccess().getConnaissancesRequisesConnaissanceIDTerminalRuleCall_0_3_1_0_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -12868,21 +12967,21 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1"
-    // InternalGame.g:4341:1: rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1 : ( ( RULE_ID ) ) ;
+    // InternalGame.g:4368:1: rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1 : ( ( RULE_ID ) ) ;
     public final void rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4345:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:4346:2: ( ( RULE_ID ) )
+            // InternalGame.g:4372:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:4373:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:4346:2: ( ( RULE_ID ) )
-            // InternalGame.g:4347:3: ( RULE_ID )
+            // InternalGame.g:4373:2: ( ( RULE_ID ) )
+            // InternalGame.g:4374:3: ( RULE_ID )
             {
              before(grammarAccess.getConditionAccess().getConnaissancesInterditesConnaissanceCrossReference_0_3_1_1_1_0()); 
-            // InternalGame.g:4348:3: ( RULE_ID )
-            // InternalGame.g:4349:4: RULE_ID
+            // InternalGame.g:4375:3: ( RULE_ID )
+            // InternalGame.g:4376:4: RULE_ID
             {
              before(grammarAccess.getConditionAccess().getConnaissancesInterditesConnaissanceIDTerminalRuleCall_0_3_1_1_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -12912,30 +13011,22 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1"
 
 
-    // $ANTLR start "rule__Condition__ObjetsRequisAssignment_0_4_1_0_1"
-    // InternalGame.g:4360:1: rule__Condition__ObjetsRequisAssignment_0_4_1_0_1 : ( ( RULE_ID ) ) ;
-    public final void rule__Condition__ObjetsRequisAssignment_0_4_1_0_1() throws RecognitionException {
+    // $ANTLR start "rule__Condition__QuantiteAssignment_0_4_0"
+    // InternalGame.g:4387:1: rule__Condition__QuantiteAssignment_0_4_0 : ( RULE_INT ) ;
+    public final void rule__Condition__QuantiteAssignment_0_4_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4364:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:4365:2: ( ( RULE_ID ) )
+            // InternalGame.g:4391:1: ( ( RULE_INT ) )
+            // InternalGame.g:4392:2: ( RULE_INT )
             {
-            // InternalGame.g:4365:2: ( ( RULE_ID ) )
-            // InternalGame.g:4366:3: ( RULE_ID )
+            // InternalGame.g:4392:2: ( RULE_INT )
+            // InternalGame.g:4393:3: RULE_INT
             {
-             before(grammarAccess.getConditionAccess().getObjetsRequisObjetCrossReference_0_4_1_0_1_0()); 
-            // InternalGame.g:4367:3: ( RULE_ID )
-            // InternalGame.g:4368:4: RULE_ID
-            {
-             before(grammarAccess.getConditionAccess().getObjetsRequisObjetIDTerminalRuleCall_0_4_1_0_1_0_1()); 
-            match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getConditionAccess().getObjetsRequisObjetIDTerminalRuleCall_0_4_1_0_1_0_1()); 
-
-            }
-
-             after(grammarAccess.getConditionAccess().getObjetsRequisObjetCrossReference_0_4_1_0_1_0()); 
+             before(grammarAccess.getConditionAccess().getQuantiteINTTerminalRuleCall_0_4_0_0()); 
+            match(input,RULE_INT,FOLLOW_2); 
+             after(grammarAccess.getConditionAccess().getQuantiteINTTerminalRuleCall_0_4_0_0()); 
 
             }
 
@@ -12954,33 +13045,33 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__ObjetsRequisAssignment_0_4_1_0_1"
+    // $ANTLR end "rule__Condition__QuantiteAssignment_0_4_0"
 
 
-    // $ANTLR start "rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1"
-    // InternalGame.g:4379:1: rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1 : ( ( RULE_ID ) ) ;
-    public final void rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1() throws RecognitionException {
+    // $ANTLR start "rule__Condition__ObjetsRequisAssignment_0_4_2_0_1"
+    // InternalGame.g:4402:1: rule__Condition__ObjetsRequisAssignment_0_4_2_0_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Condition__ObjetsRequisAssignment_0_4_2_0_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:4383:1: ( ( ( RULE_ID ) ) )
-            // InternalGame.g:4384:2: ( ( RULE_ID ) )
+            // InternalGame.g:4406:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:4407:2: ( ( RULE_ID ) )
             {
-            // InternalGame.g:4384:2: ( ( RULE_ID ) )
-            // InternalGame.g:4385:3: ( RULE_ID )
+            // InternalGame.g:4407:2: ( ( RULE_ID ) )
+            // InternalGame.g:4408:3: ( RULE_ID )
             {
-             before(grammarAccess.getConditionAccess().getObjetsInterditsObjetCrossReference_0_4_1_1_1_0()); 
-            // InternalGame.g:4386:3: ( RULE_ID )
-            // InternalGame.g:4387:4: RULE_ID
+             before(grammarAccess.getConditionAccess().getObjetsRequisObjetCrossReference_0_4_2_0_1_0()); 
+            // InternalGame.g:4409:3: ( RULE_ID )
+            // InternalGame.g:4410:4: RULE_ID
             {
-             before(grammarAccess.getConditionAccess().getObjetsInterditsObjetIDTerminalRuleCall_0_4_1_1_1_0_1()); 
+             before(grammarAccess.getConditionAccess().getObjetsRequisObjetIDTerminalRuleCall_0_4_2_0_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getConditionAccess().getObjetsInterditsObjetIDTerminalRuleCall_0_4_1_1_1_0_1()); 
+             after(grammarAccess.getConditionAccess().getObjetsRequisObjetIDTerminalRuleCall_0_4_2_0_1_0_1()); 
 
             }
 
-             after(grammarAccess.getConditionAccess().getObjetsInterditsObjetCrossReference_0_4_1_1_1_0()); 
+             after(grammarAccess.getConditionAccess().getObjetsRequisObjetCrossReference_0_4_2_0_1_0()); 
 
             }
 
@@ -12999,7 +13090,52 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1"
+    // $ANTLR end "rule__Condition__ObjetsRequisAssignment_0_4_2_0_1"
+
+
+    // $ANTLR start "rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1"
+    // InternalGame.g:4421:1: rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalGame.g:4425:1: ( ( ( RULE_ID ) ) )
+            // InternalGame.g:4426:2: ( ( RULE_ID ) )
+            {
+            // InternalGame.g:4426:2: ( ( RULE_ID ) )
+            // InternalGame.g:4427:3: ( RULE_ID )
+            {
+             before(grammarAccess.getConditionAccess().getObjetsInterditsObjetCrossReference_0_4_2_1_1_0()); 
+            // InternalGame.g:4428:3: ( RULE_ID )
+            // InternalGame.g:4429:4: RULE_ID
+            {
+             before(grammarAccess.getConditionAccess().getObjetsInterditsObjetIDTerminalRuleCall_0_4_2_1_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_2); 
+             after(grammarAccess.getConditionAccess().getObjetsInterditsObjetIDTerminalRuleCall_0_4_2_1_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getConditionAccess().getObjetsInterditsObjetCrossReference_0_4_2_1_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1"
 
     // Delegated rules
 
@@ -13048,8 +13184,12 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0000400000000000L});
     public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0000000000083000L});
     public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0000000000003002L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0003000000000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000022L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x000C000000000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0000004000080040L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000004000000002L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0000000000000042L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0003000000000000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x0000000000000022L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x000C000000000000L});
 
 }

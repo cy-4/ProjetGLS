@@ -750,9 +750,20 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
+  public EAttribute getCondition_Quantite()
+  {
+    return (EAttribute)conditionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getCondition_ObjetsRequis()
   {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(3);
+    return (EReference)conditionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -763,7 +774,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
   @Override
   public EReference getCondition_ObjetsInterdits()
   {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(4);
+    return (EReference)conditionEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -870,6 +881,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     createEAttribute(conditionEClass, CONDITION__NAME);
     createEReference(conditionEClass, CONDITION__CONNAISSANCES_REQUISES);
     createEReference(conditionEClass, CONDITION__CONNAISSANCES_INTERDITES);
+    createEAttribute(conditionEClass, CONDITION__QUANTITE);
     createEReference(conditionEClass, CONDITION__OBJETS_REQUIS);
     createEReference(conditionEClass, CONDITION__OBJETS_INTERDITS);
 
@@ -977,6 +989,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondition_ConnaissancesRequises(), this.getConnaissance(), null, "connaissancesRequises", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondition_ConnaissancesInterdites(), this.getConnaissance(), null, "connaissancesInterdites", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCondition_Quantite(), ecorePackage.getEInt(), "quantite", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondition_ObjetsRequis(), this.getObjet(), null, "objetsRequis", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCondition_ObjetsInterdits(), this.getObjet(), null, "objetsInterdits", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

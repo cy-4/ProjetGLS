@@ -37,7 +37,7 @@ public class GameParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getChoixAccess().getAlternatives_5_0(), "rule__Choix__Alternatives_5_0");
 			builder.put(grammarAccess.getConditionAccess().getAlternatives(), "rule__Condition__Alternatives");
 			builder.put(grammarAccess.getConditionAccess().getAlternatives_0_3_1(), "rule__Condition__Alternatives_0_3_1");
-			builder.put(grammarAccess.getConditionAccess().getAlternatives_0_4_1(), "rule__Condition__Alternatives_0_4_1");
+			builder.put(grammarAccess.getConditionAccess().getAlternatives_0_4_2(), "rule__Condition__Alternatives_0_4_2");
 			builder.put(grammarAccess.getNatureAccess().getAlternatives(), "rule__Nature__Alternatives");
 			builder.put(grammarAccess.getJeuAccess().getGroup(), "rule__Jeu__Group__0");
 			builder.put(grammarAccess.getTerritoireAccess().getGroup(), "rule__Territoire__Group__0");
@@ -57,8 +57,8 @@ public class GameParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionAccess().getGroup_0_3_1_0(), "rule__Condition__Group_0_3_1_0__0");
 			builder.put(grammarAccess.getConditionAccess().getGroup_0_3_1_1(), "rule__Condition__Group_0_3_1_1__0");
 			builder.put(grammarAccess.getConditionAccess().getGroup_0_4(), "rule__Condition__Group_0_4__0");
-			builder.put(grammarAccess.getConditionAccess().getGroup_0_4_1_0(), "rule__Condition__Group_0_4_1_0__0");
-			builder.put(grammarAccess.getConditionAccess().getGroup_0_4_1_1(), "rule__Condition__Group_0_4_1_1__0");
+			builder.put(grammarAccess.getConditionAccess().getGroup_0_4_2_0(), "rule__Condition__Group_0_4_2_0__0");
+			builder.put(grammarAccess.getConditionAccess().getGroup_0_4_2_1(), "rule__Condition__Group_0_4_2_1__0");
 			builder.put(grammarAccess.getJeuAccess().getNameAssignment_1(), "rule__Jeu__NameAssignment_1");
 			builder.put(grammarAccess.getJeuAccess().getTerritoireAssignment_3(), "rule__Jeu__TerritoireAssignment_3");
 			builder.put(grammarAccess.getJeuAccess().getExplorateurAssignment_4(), "rule__Jeu__ExplorateurAssignment_4");
@@ -100,8 +100,9 @@ public class GameParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getConditionAccess().getNameAssignment_0_1(), "rule__Condition__NameAssignment_0_1");
 			builder.put(grammarAccess.getConditionAccess().getConnaissancesRequisesAssignment_0_3_1_0_1(), "rule__Condition__ConnaissancesRequisesAssignment_0_3_1_0_1");
 			builder.put(grammarAccess.getConditionAccess().getConnaissancesInterditesAssignment_0_3_1_1_1(), "rule__Condition__ConnaissancesInterditesAssignment_0_3_1_1_1");
-			builder.put(grammarAccess.getConditionAccess().getObjetsRequisAssignment_0_4_1_0_1(), "rule__Condition__ObjetsRequisAssignment_0_4_1_0_1");
-			builder.put(grammarAccess.getConditionAccess().getObjetsInterditsAssignment_0_4_1_1_1(), "rule__Condition__ObjetsInterditsAssignment_0_4_1_1_1");
+			builder.put(grammarAccess.getConditionAccess().getQuantiteAssignment_0_4_0(), "rule__Condition__QuantiteAssignment_0_4_0");
+			builder.put(grammarAccess.getConditionAccess().getObjetsRequisAssignment_0_4_2_0_1(), "rule__Condition__ObjetsRequisAssignment_0_4_2_0_1");
+			builder.put(grammarAccess.getConditionAccess().getObjetsInterditsAssignment_0_4_2_1_1(), "rule__Condition__ObjetsInterditsAssignment_0_4_2_1_1");
 		}
 	}
 	

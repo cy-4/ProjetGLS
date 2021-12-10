@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link game.game.Condition#getName <em>Name</em>}</li>
  *   <li>{@link game.game.Condition#getConnaissancesRequises <em>Connaissances Requises</em>}</li>
  *   <li>{@link game.game.Condition#getConnaissancesInterdites <em>Connaissances Interdites</em>}</li>
+ *   <li>{@link game.game.Condition#getQuantite <em>Quantite</em>}</li>
  *   <li>{@link game.game.Condition#getObjetsRequis <em>Objets Requis</em>}</li>
  *   <li>{@link game.game.Condition#getObjetsInterdits <em>Objets Interdits</em>}</li>
  * </ul>
@@ -74,6 +75,28 @@ public interface Condition extends EObject
    * @generated
    */
   EList<Connaissance> getConnaissancesInterdites();
+
+  /**
+   * Returns the value of the '<em><b>Quantite</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Quantite</em>' attribute.
+   * @see #setQuantite(int)
+   * @see game.game.GamePackage#getCondition_Quantite()
+   * @model
+   * @generated
+   */
+  int getQuantite();
+
+  /**
+   * Sets the value of the '{@link game.game.Condition#getQuantite <em>Quantite</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Quantite</em>' attribute.
+   * @see #getQuantite()
+   * @generated
+   */
+  void setQuantite(int value);
 
   /**
    * Returns the value of the '<em><b>Objets Requis</b></em>' reference list.

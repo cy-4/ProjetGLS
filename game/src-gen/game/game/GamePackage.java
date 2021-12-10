@@ -730,13 +730,22 @@ public interface GamePackage extends EPackage
   int CONDITION__CONNAISSANCES_INTERDITES = 2;
 
   /**
+   * The feature id for the '<em><b>Quantite</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONDITION__QUANTITE = 3;
+
+  /**
    * The feature id for the '<em><b>Objets Requis</b></em>' reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CONDITION__OBJETS_REQUIS = 3;
+  int CONDITION__OBJETS_REQUIS = 4;
 
   /**
    * The feature id for the '<em><b>Objets Interdits</b></em>' reference list.
@@ -745,7 +754,7 @@ public interface GamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITION__OBJETS_INTERDITS = 4;
+  int CONDITION__OBJETS_INTERDITS = 5;
 
   /**
    * The number of structural features of the '<em>Condition</em>' class.
@@ -754,7 +763,7 @@ public interface GamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CONDITION_FEATURE_COUNT = 5;
+  int CONDITION_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link game.game.Nature <em>Nature</em>}' enum.
@@ -1293,6 +1302,17 @@ public interface GamePackage extends EPackage
   EReference getCondition_ConnaissancesInterdites();
 
   /**
+   * Returns the meta object for the attribute '{@link game.game.Condition#getQuantite <em>Quantite</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Quantite</em>'.
+   * @see game.game.Condition#getQuantite()
+   * @see #getCondition()
+   * @generated
+   */
+  EAttribute getCondition_Quantite();
+
+  /**
    * Returns the meta object for the reference list '{@link game.game.Condition#getObjetsRequis <em>Objets Requis</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1766,6 +1786,14 @@ public interface GamePackage extends EPackage
      * @generated
      */
     EReference CONDITION__CONNAISSANCES_INTERDITES = eINSTANCE.getCondition_ConnaissancesInterdites();
+
+    /**
+     * The meta object literal for the '<em><b>Quantite</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONDITION__QUANTITE = eINSTANCE.getCondition_Quantite();
 
     /**
      * The meta object literal for the '<em><b>Objets Requis</b></em>' reference list feature.

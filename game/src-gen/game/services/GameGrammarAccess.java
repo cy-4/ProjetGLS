@@ -826,36 +826,38 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final CrossReference cConnaissancesInterditesConnaissanceCrossReference_0_3_1_1_1_0 = (CrossReference)cConnaissancesInterditesAssignment_0_3_1_1_1.eContents().get(0);
 		private final RuleCall cConnaissancesInterditesConnaissanceIDTerminalRuleCall_0_3_1_1_1_0_1 = (RuleCall)cConnaissancesInterditesConnaissanceCrossReference_0_3_1_1_1_0.eContents().get(1);
 		private final Group cGroup_0_4 = (Group)cGroup_0.eContents().get(4);
-		private final Keyword cObjetsKeyword_0_4_0 = (Keyword)cGroup_0_4.eContents().get(0);
-		private final Alternatives cAlternatives_0_4_1 = (Alternatives)cGroup_0_4.eContents().get(1);
-		private final Group cGroup_0_4_1_0 = (Group)cAlternatives_0_4_1.eContents().get(0);
-		private final Keyword cRequisKeyword_0_4_1_0_0 = (Keyword)cGroup_0_4_1_0.eContents().get(0);
-		private final Assignment cObjetsRequisAssignment_0_4_1_0_1 = (Assignment)cGroup_0_4_1_0.eContents().get(1);
-		private final CrossReference cObjetsRequisObjetCrossReference_0_4_1_0_1_0 = (CrossReference)cObjetsRequisAssignment_0_4_1_0_1.eContents().get(0);
-		private final RuleCall cObjetsRequisObjetIDTerminalRuleCall_0_4_1_0_1_0_1 = (RuleCall)cObjetsRequisObjetCrossReference_0_4_1_0_1_0.eContents().get(1);
-		private final Group cGroup_0_4_1_1 = (Group)cAlternatives_0_4_1.eContents().get(1);
-		private final Keyword cInterditsKeyword_0_4_1_1_0 = (Keyword)cGroup_0_4_1_1.eContents().get(0);
-		private final Assignment cObjetsInterditsAssignment_0_4_1_1_1 = (Assignment)cGroup_0_4_1_1.eContents().get(1);
-		private final CrossReference cObjetsInterditsObjetCrossReference_0_4_1_1_1_0 = (CrossReference)cObjetsInterditsAssignment_0_4_1_1_1.eContents().get(0);
-		private final RuleCall cObjetsInterditsObjetIDTerminalRuleCall_0_4_1_1_1_0_1 = (RuleCall)cObjetsInterditsObjetCrossReference_0_4_1_1_1_0.eContents().get(1);
+		private final Assignment cQuantiteAssignment_0_4_0 = (Assignment)cGroup_0_4.eContents().get(0);
+		private final RuleCall cQuantiteINTTerminalRuleCall_0_4_0_0 = (RuleCall)cQuantiteAssignment_0_4_0.eContents().get(0);
+		private final Keyword cObjetsKeyword_0_4_1 = (Keyword)cGroup_0_4.eContents().get(1);
+		private final Alternatives cAlternatives_0_4_2 = (Alternatives)cGroup_0_4.eContents().get(2);
+		private final Group cGroup_0_4_2_0 = (Group)cAlternatives_0_4_2.eContents().get(0);
+		private final Keyword cRequisKeyword_0_4_2_0_0 = (Keyword)cGroup_0_4_2_0.eContents().get(0);
+		private final Assignment cObjetsRequisAssignment_0_4_2_0_1 = (Assignment)cGroup_0_4_2_0.eContents().get(1);
+		private final CrossReference cObjetsRequisObjetCrossReference_0_4_2_0_1_0 = (CrossReference)cObjetsRequisAssignment_0_4_2_0_1.eContents().get(0);
+		private final RuleCall cObjetsRequisObjetIDTerminalRuleCall_0_4_2_0_1_0_1 = (RuleCall)cObjetsRequisObjetCrossReference_0_4_2_0_1_0.eContents().get(1);
+		private final Group cGroup_0_4_2_1 = (Group)cAlternatives_0_4_2.eContents().get(1);
+		private final Keyword cInterditsKeyword_0_4_2_1_0 = (Keyword)cGroup_0_4_2_1.eContents().get(0);
+		private final Assignment cObjetsInterditsAssignment_0_4_2_1_1 = (Assignment)cGroup_0_4_2_1.eContents().get(1);
+		private final CrossReference cObjetsInterditsObjetCrossReference_0_4_2_1_1_0 = (CrossReference)cObjetsInterditsAssignment_0_4_2_1_1.eContents().get(0);
+		private final RuleCall cObjetsInterditsObjetIDTerminalRuleCall_0_4_2_1_1_0_1 = (RuleCall)cObjetsInterditsObjetCrossReference_0_4_2_1_1_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_0_5 = (Keyword)cGroup_0.eContents().get(5);
 		private final RuleCall cBOOLTerminalRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Condition:
 		//	'condition' name=ID '{' ('connaissances' ('requises' connaissancesRequises+=[Connaissance]* | 'interdites'
-		//	connaissancesInterdites+=[Connaissance]*))? ('objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
-		//	objetsInterdits+=[Objet]*))?
+		//	connaissancesInterdites+=[Connaissance]*))* (quantite=INT 'objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
+		//	objetsInterdits+=[Objet]*))*
 		//	'}' | BOOL;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'condition' name=ID '{' ('connaissances' ('requises' connaissancesRequises+=[Connaissance]* | 'interdites'
-		//connaissancesInterdites+=[Connaissance]*))? ('objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
-		//objetsInterdits+=[Objet]*))? '}' | BOOL
+		//connaissancesInterdites+=[Connaissance]*))* (quantite=INT 'objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
+		//objetsInterdits+=[Objet]*))* '}' | BOOL
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//'condition' name=ID '{' ('connaissances' ('requises' connaissancesRequises+=[Connaissance]* | 'interdites'
-		//connaissancesInterdites+=[Connaissance]*))? ('objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
-		//objetsInterdits+=[Objet]*))? '}'
+		//connaissancesInterdites+=[Connaissance]*))* (quantite=INT 'objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
+		//objetsInterdits+=[Objet]*))* '}'
 		public Group getGroup_0() { return cGroup_0; }
 		
 		//'condition'
@@ -871,7 +873,7 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		public Keyword getLeftCurlyBracketKeyword_0_2() { return cLeftCurlyBracketKeyword_0_2; }
 		
 		//('connaissances' ('requises' connaissancesRequises+=[Connaissance]* | 'interdites'
-		//connaissancesInterdites+=[Connaissance]*))?
+		//connaissancesInterdites+=[Connaissance]*))*
 		public Group getGroup_0_3() { return cGroup_0_3; }
 		
 		//'connaissances'
@@ -910,44 +912,50 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//ID
 		public RuleCall getConnaissancesInterditesConnaissanceIDTerminalRuleCall_0_3_1_1_1_0_1() { return cConnaissancesInterditesConnaissanceIDTerminalRuleCall_0_3_1_1_1_0_1; }
 		
-		//('objets' ('requis' objetsRequis+=[Objet]* | 'interdits' objetsInterdits+=[Objet]*))?
+		//(quantite=INT 'objets' ('requis' objetsRequis+=[Objet]* | 'interdits' objetsInterdits+=[Objet]*))*
 		public Group getGroup_0_4() { return cGroup_0_4; }
 		
+		//quantite=INT
+		public Assignment getQuantiteAssignment_0_4_0() { return cQuantiteAssignment_0_4_0; }
+		
+		//INT
+		public RuleCall getQuantiteINTTerminalRuleCall_0_4_0_0() { return cQuantiteINTTerminalRuleCall_0_4_0_0; }
+		
 		//'objets'
-		public Keyword getObjetsKeyword_0_4_0() { return cObjetsKeyword_0_4_0; }
+		public Keyword getObjetsKeyword_0_4_1() { return cObjetsKeyword_0_4_1; }
 		
 		//('requis' objetsRequis+=[Objet]* | 'interdits' objetsInterdits+=[Objet]*)
-		public Alternatives getAlternatives_0_4_1() { return cAlternatives_0_4_1; }
+		public Alternatives getAlternatives_0_4_2() { return cAlternatives_0_4_2; }
 		
 		//'requis' objetsRequis+=[Objet]*
-		public Group getGroup_0_4_1_0() { return cGroup_0_4_1_0; }
+		public Group getGroup_0_4_2_0() { return cGroup_0_4_2_0; }
 		
 		//'requis'
-		public Keyword getRequisKeyword_0_4_1_0_0() { return cRequisKeyword_0_4_1_0_0; }
+		public Keyword getRequisKeyword_0_4_2_0_0() { return cRequisKeyword_0_4_2_0_0; }
 		
 		//objetsRequis+=[Objet]*
-		public Assignment getObjetsRequisAssignment_0_4_1_0_1() { return cObjetsRequisAssignment_0_4_1_0_1; }
+		public Assignment getObjetsRequisAssignment_0_4_2_0_1() { return cObjetsRequisAssignment_0_4_2_0_1; }
 		
 		//[Objet]
-		public CrossReference getObjetsRequisObjetCrossReference_0_4_1_0_1_0() { return cObjetsRequisObjetCrossReference_0_4_1_0_1_0; }
+		public CrossReference getObjetsRequisObjetCrossReference_0_4_2_0_1_0() { return cObjetsRequisObjetCrossReference_0_4_2_0_1_0; }
 		
 		//ID
-		public RuleCall getObjetsRequisObjetIDTerminalRuleCall_0_4_1_0_1_0_1() { return cObjetsRequisObjetIDTerminalRuleCall_0_4_1_0_1_0_1; }
+		public RuleCall getObjetsRequisObjetIDTerminalRuleCall_0_4_2_0_1_0_1() { return cObjetsRequisObjetIDTerminalRuleCall_0_4_2_0_1_0_1; }
 		
 		//'interdits' objetsInterdits+=[Objet]*
-		public Group getGroup_0_4_1_1() { return cGroup_0_4_1_1; }
+		public Group getGroup_0_4_2_1() { return cGroup_0_4_2_1; }
 		
 		//'interdits'
-		public Keyword getInterditsKeyword_0_4_1_1_0() { return cInterditsKeyword_0_4_1_1_0; }
+		public Keyword getInterditsKeyword_0_4_2_1_0() { return cInterditsKeyword_0_4_2_1_0; }
 		
 		//objetsInterdits+=[Objet]*
-		public Assignment getObjetsInterditsAssignment_0_4_1_1_1() { return cObjetsInterditsAssignment_0_4_1_1_1; }
+		public Assignment getObjetsInterditsAssignment_0_4_2_1_1() { return cObjetsInterditsAssignment_0_4_2_1_1; }
 		
 		//[Objet]
-		public CrossReference getObjetsInterditsObjetCrossReference_0_4_1_1_1_0() { return cObjetsInterditsObjetCrossReference_0_4_1_1_1_0; }
+		public CrossReference getObjetsInterditsObjetCrossReference_0_4_2_1_1_0() { return cObjetsInterditsObjetCrossReference_0_4_2_1_1_0; }
 		
 		//ID
-		public RuleCall getObjetsInterditsObjetIDTerminalRuleCall_0_4_1_1_1_0_1() { return cObjetsInterditsObjetIDTerminalRuleCall_0_4_1_1_1_0_1; }
+		public RuleCall getObjetsInterditsObjetIDTerminalRuleCall_0_4_2_1_1_0_1() { return cObjetsInterditsObjetIDTerminalRuleCall_0_4_2_1_1_0_1; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_0_5() { return cRightCurlyBracketKeyword_0_5; }
@@ -1247,8 +1255,8 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	
 	//Condition:
 	//	'condition' name=ID '{' ('connaissances' ('requises' connaissancesRequises+=[Connaissance]* | 'interdites'
-	//	connaissancesInterdites+=[Connaissance]*))? ('objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
-	//	objetsInterdits+=[Objet]*))?
+	//	connaissancesInterdites+=[Connaissance]*))* (quantite=INT 'objets' ('requis' objetsRequis+=[Objet]* | 'interdits'
+	//	objetsInterdits+=[Objet]*))*
 	//	'}' | BOOL;
 	public ConditionElements getConditionAccess() {
 		return pCondition;

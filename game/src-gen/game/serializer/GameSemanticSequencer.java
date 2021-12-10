@@ -39,7 +39,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		EPackage epackage = semanticObject.eClass().getEPackage();
 		ParserRule rule = context.getParserRule();
 		Action action = context.getAssignedAction();
-		Iterable<Parameter> parameters = context.getEnabledBooleanParameters();
+		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == GamePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
 			case GamePackage.CHEMIN:
@@ -141,8 +141,8 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         (connaissancesRequises+=[Connaissance|ID]+ | connaissancesInterdites+=[Connaissance|ID]+)? 
-	 *         (objetsRequis+=[Objet|ID]+ | objetsInterdits+=[Objet|ID]+)?
+	 *         (connaissancesRequises+=[Connaissance|ID] | connaissancesInterdites+=[Connaissance|ID])* 
+	 *         (quantite=INT (objetsRequis+=[Objet|ID]+ | objetsInterdits+=[Objet|ID]+)?)*
 	 *     )
 	 */
 	protected void sequence_Condition(ISerializationContext context, Condition semanticObject) {

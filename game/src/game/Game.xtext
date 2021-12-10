@@ -85,7 +85,7 @@ Choix: 'choix' numero = INT '{'
 ;
 
 Condition: ('condition' name = ID '{'
-	('connaissances' ('requises' connaissancesRequises += [Connaissance]* | 'interdites' connaissancesInterdites += [Connaissance]*))?
-	('objets' ('requis' objetsRequis += [Objet]* | 'interdits' objetsInterdits += [Objet]*))*
+	('connaissances' ('requises' connaissancesRequises += [Connaissance]* | 'interdites' connaissancesInterdites += [Connaissance]*))*
+	(quantite = INT 'objets' ('requis' objetsRequis += [Objet]* | 'interdits' objetsInterdits += [Objet]*))*
 '}' | BOOL)
 ;

@@ -71,6 +71,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Condition/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Game.ecore#//Condition/connaissancesRequises"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Game.ecore#//Condition/connaissancesInterdites"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Condition/quantite"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Game.ecore#//Condition/objetsRequis"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Game.ecore#//Condition/objetsInterdits"/>
     </genClasses>

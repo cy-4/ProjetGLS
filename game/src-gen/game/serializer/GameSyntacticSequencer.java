@@ -23,8 +23,11 @@ public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GameGrammarAccess grammarAccess;
 	protected AbstractElementAlias match_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1;
-	protected AbstractElementAlias match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____q;
-	protected AbstractElementAlias match_Condition___ObjetsKeyword_0_4_0___InterditsKeyword_0_4_1_1_0_or_RequisKeyword_0_4_1_0_0____q;
+	protected AbstractElementAlias match_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0;
+	protected AbstractElementAlias match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a;
+	protected AbstractElementAlias match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_InterditesKeyword_0_3_1_1_0__q;
+	protected AbstractElementAlias match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_RequisesKeyword_0_3_1_0_0__q;
+	protected AbstractElementAlias match_Condition_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a;
 	protected AbstractElementAlias match_Explorateur___ConnaissancesKeyword_8_0_PossedesKeyword_8_1__q;
 	protected AbstractElementAlias match_Explorateur___ObjetsKeyword_7_0_PossedesKeyword_7_1__q;
 	
@@ -32,8 +35,11 @@ public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GameGrammarAccess) access;
 		match_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getChoixAccess().getConsommeKeyword_5_0_0()), new TokenAlias(false, false, grammarAccess.getChoixAccess().getDonneKeyword_5_0_1()));
-		match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0())));
-		match_Condition___ObjetsKeyword_0_4_0___InterditsKeyword_0_4_1_1_0_or_RequisKeyword_0_4_1_0_0____q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getObjetsKeyword_0_4_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditsKeyword_0_4_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisKeyword_0_4_1_0_0())));
+		match_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditsKeyword_0_4_2_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisKeyword_0_4_2_0_0()));
+		match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0())));
+		match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_InterditesKeyword_0_3_1_1_0__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0()), new GroupAlias(true, true, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0())), new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0())), new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()));
+		match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_RequisesKeyword_0_3_1_0_0__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0()), new GroupAlias(true, true, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0())), new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0())), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0()));
+		match_Condition_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a = new GroupAlias(true, true, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0())), new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0()));
 		match_Explorateur___ConnaissancesKeyword_8_0_PossedesKeyword_8_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getExplorateurAccess().getConnaissancesKeyword_8_0()), new TokenAlias(false, false, grammarAccess.getExplorateurAccess().getPossedesKeyword_8_1()));
 		match_Explorateur___ObjetsKeyword_7_0_PossedesKeyword_7_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getExplorateurAccess().getObjetsKeyword_7_0()), new TokenAlias(false, false, grammarAccess.getExplorateurAccess().getPossedesKeyword_7_1()));
 	}
@@ -62,10 +68,16 @@ public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
 			if (match_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1.equals(syntax))
 				emit_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____q.equals(syntax))
-				emit_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Condition___ObjetsKeyword_0_4_0___InterditsKeyword_0_4_1_1_0_or_RequisKeyword_0_4_1_0_0____q.equals(syntax))
-				emit_Condition___ObjetsKeyword_0_4_0___InterditsKeyword_0_4_1_1_0_or_RequisKeyword_0_4_1_0_0____q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0.equals(syntax))
+				emit_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a.equals(syntax))
+				emit_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_InterditesKeyword_0_3_1_1_0__q.equals(syntax))
+				emit_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_InterditesKeyword_0_3_1_1_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_RequisesKeyword_0_3_1_0_0__q.equals(syntax))
+				emit_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_RequisesKeyword_0_3_1_0_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Condition_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a.equals(syntax))
+				emit_Condition_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Explorateur___ConnaissancesKeyword_8_0_PossedesKeyword_8_1__q.equals(syntax))
 				emit_Explorateur___ConnaissancesKeyword_8_0_PossedesKeyword_8_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Explorateur___ObjetsKeyword_7_0_PossedesKeyword_7_1__q.equals(syntax))
@@ -88,27 +100,65 @@ public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('connaissances' ('requises' | 'interdites'))?
+	 *     'requis' | 'interdits'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name=ID '{' (ambiguity) 'objets' 'interdits' objetsInterdits+=[Objet|ID]
-	 *     name=ID '{' (ambiguity) 'objets' 'requis' objetsRequis+=[Objet|ID]
-	 *     name=ID '{' (ambiguity) ('objets' ('requis' | 'interdits'))? '}' (rule end)
+	 *     quantite=INT 'objets' (ambiguity) '}' (rule end)
+	 *     quantite=INT 'objets' (ambiguity) quantite=INT
 	 */
-	protected void emit_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('objets' ('requis' | 'interdits'))?
+	 *     ('connaissances' ('requises' | 'interdites'))*
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     connaissancesInterdites+=[Connaissance|ID] (ambiguity) '}' (rule end)
+	 *     connaissancesInterdites+=[Connaissance|ID] (ambiguity) quantite=INT
 	 *     connaissancesRequises+=[Connaissance|ID] (ambiguity) '}' (rule end)
-	 *     name=ID '{' ('connaissances' ('requises' | 'interdites'))? (ambiguity) '}' (rule end)
+	 *     connaissancesRequises+=[Connaissance|ID] (ambiguity) quantite=INT
+	 *     name=ID '{' (ambiguity) '}' (rule end)
+	 *     name=ID '{' (ambiguity) quantite=INT
 	 */
-	protected void emit_Condition___ObjetsKeyword_0_4_0___InterditsKeyword_0_4_1_1_0_or_RequisKeyword_0_4_1_0_0____q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('connaissances' (('requises' | 'interdites') 'connaissances')* 'interdites')?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     connaissancesInterdites+=[Connaissance|ID] (ambiguity) connaissancesInterdites+=[Connaissance|ID]
+	 */
+	protected void emit_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_InterditesKeyword_0_3_1_1_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('connaissances' (('requises' | 'interdites') 'connaissances')* 'requises')?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     connaissancesRequises+=[Connaissance|ID] (ambiguity) connaissancesRequises+=[Connaissance|ID]
+	 */
+	protected void emit_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_RequisesKeyword_0_3_1_0_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (('requises' | 'interdites') 'connaissances')*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     connaissancesInterdites+=[Connaissance|ID] 'connaissances' (ambiguity) 'requises' connaissancesRequises+=[Connaissance|ID]
+	 *     connaissancesRequises+=[Connaissance|ID] 'connaissances' (ambiguity) 'interdites' connaissancesInterdites+=[Connaissance|ID]
+	 *     name=ID '{' 'connaissances' (ambiguity) 'interdites' connaissancesInterdites+=[Connaissance|ID]
+	 *     name=ID '{' 'connaissances' (ambiguity) 'requises' connaissancesRequises+=[Connaissance|ID]
+	 */
+	protected void emit_Condition_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
