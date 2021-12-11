@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link game.game.impl.CheminImpl#getSucc <em>Succ</em>}</li>
  *   <li>{@link game.game.impl.CheminImpl#getVisible <em>Visible</em>}</li>
  *   <li>{@link game.game.impl.CheminImpl#isObligatoire <em>Obligatoire</em>}</li>
- *   <li>{@link game.game.impl.CheminImpl#isOuvert <em>Ouvert</em>}</li>
+ *   <li>{@link game.game.impl.CheminImpl#getOuvert <em>Ouvert</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,24 +86,14 @@ public class CheminImpl extends PlaceImpl implements Chemin
   protected boolean obligatoire = OBLIGATOIRE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isOuvert() <em>Ouvert</em>}' attribute.
+   * The cached value of the '{@link #getOuvert() <em>Ouvert</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isOuvert()
+   * @see #getOuvert()
    * @generated
    * @ordered
    */
-  protected static final boolean OUVERT_EDEFAULT = false;
-
-  /**
-   * The cached value of the '{@link #isOuvert() <em>Ouvert</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #isOuvert()
-   * @generated
-   * @ordered
-   */
-  protected boolean ouvert = OUVERT_EDEFAULT;
+  protected Condition ouvert;
 
   /**
    * <!-- begin-user-doc -->
@@ -297,7 +287,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
    * @generated
    */
   @Override
-  public boolean isOuvert()
+  public Condition getOuvert()
   {
     return ouvert;
   }
@@ -307,13 +297,38 @@ public class CheminImpl extends PlaceImpl implements Chemin
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setOuvert(boolean newOuvert)
+  public NotificationChain basicSetOuvert(Condition newOuvert, NotificationChain msgs)
   {
-    boolean oldOuvert = ouvert;
+    Condition oldOuvert = ouvert;
     ouvert = newOuvert;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__OUVERT, oldOuvert, ouvert));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__OUVERT, oldOuvert, newOuvert);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setOuvert(Condition newOuvert)
+  {
+    if (newOuvert != ouvert)
+    {
+      NotificationChain msgs = null;
+      if (ouvert != null)
+        msgs = ((InternalEObject)ouvert).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__OUVERT, null, msgs);
+      if (newOuvert != null)
+        msgs = ((InternalEObject)newOuvert).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__OUVERT, null, msgs);
+      msgs = basicSetOuvert(newOuvert, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__OUVERT, newOuvert, newOuvert));
   }
 
   /**
@@ -328,6 +343,8 @@ public class CheminImpl extends PlaceImpl implements Chemin
     {
       case GamePackage.CHEMIN__VISIBLE:
         return basicSetVisible(null, msgs);
+      case GamePackage.CHEMIN__OUVERT:
+        return basicSetOuvert(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -353,7 +370,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
       case GamePackage.CHEMIN__OBLIGATOIRE:
         return isObligatoire();
       case GamePackage.CHEMIN__OUVERT:
-        return isOuvert();
+        return getOuvert();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -381,7 +398,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
         setObligatoire((Boolean)newValue);
         return;
       case GamePackage.CHEMIN__OUVERT:
-        setOuvert((Boolean)newValue);
+        setOuvert((Condition)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -410,7 +427,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
         setObligatoire(OBLIGATOIRE_EDEFAULT);
         return;
       case GamePackage.CHEMIN__OUVERT:
-        setOuvert(OUVERT_EDEFAULT);
+        setOuvert((Condition)null);
         return;
     }
     super.eUnset(featureID);
@@ -435,7 +452,7 @@ public class CheminImpl extends PlaceImpl implements Chemin
       case GamePackage.CHEMIN__OBLIGATOIRE:
         return obligatoire != OBLIGATOIRE_EDEFAULT;
       case GamePackage.CHEMIN__OUVERT:
-        return ouvert != OUVERT_EDEFAULT;
+        return ouvert != null;
     }
     return super.eIsSet(featureID);
   }
@@ -453,8 +470,6 @@ public class CheminImpl extends PlaceImpl implements Chemin
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (obligatoire: ");
     result.append(obligatoire);
-    result.append(", ouvert: ");
-    result.append(ouvert);
     result.append(')');
     return result.toString();
   }

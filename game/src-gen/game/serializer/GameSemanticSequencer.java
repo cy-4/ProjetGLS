@@ -93,7 +93,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         succ=[Lieu|ID] 
 	 *         visible=Condition 
 	 *         obligatoire=BOOL 
-	 *         ouvert=BOOL
+	 *         ouvert=Condition
 	 *     )
 	 */
 	protected void sequence_Chemin(ISerializationContext context, Chemin semanticObject) {
@@ -117,7 +117,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getCheminAccess().getSuccLieuIDTerminalRuleCall_6_0_1(), semanticObject.eGet(GamePackage.Literals.CHEMIN__SUCC, false));
 		feeder.accept(grammarAccess.getCheminAccess().getVisibleConditionParserRuleCall_8_0(), semanticObject.getVisible());
 		feeder.accept(grammarAccess.getCheminAccess().getObligatoireBOOLTerminalRuleCall_10_0(), semanticObject.isObligatoire());
-		feeder.accept(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0(), semanticObject.isOuvert());
+		feeder.accept(grammarAccess.getCheminAccess().getOuvertConditionParserRuleCall_12_0(), semanticObject.getOuvert());
 		feeder.finish();
 	}
 	

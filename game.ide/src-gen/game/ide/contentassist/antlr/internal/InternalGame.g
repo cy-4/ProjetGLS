@@ -3935,9 +3935,9 @@ rule__Chemin__OuvertAssignment_12
 	}
 :
 	(
-		{ before(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0()); }
-		RULE_BOOL
-		{ after(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0()); }
+		{ before(grammarAccess.getCheminAccess().getOuvertConditionParserRuleCall_12_0()); }
+		ruleCondition
+		{ after(grammarAccess.getCheminAccess().getOuvertConditionParserRuleCall_12_0()); }
 	)
 ;
 finally {

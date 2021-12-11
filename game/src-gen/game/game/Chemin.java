@@ -17,7 +17,7 @@ package game.game;
  *   <li>{@link game.game.Chemin#getSucc <em>Succ</em>}</li>
  *   <li>{@link game.game.Chemin#getVisible <em>Visible</em>}</li>
  *   <li>{@link game.game.Chemin#isObligatoire <em>Obligatoire</em>}</li>
- *   <li>{@link game.game.Chemin#isOuvert <em>Ouvert</em>}</li>
+ *   <li>{@link game.game.Chemin#getOuvert <em>Ouvert</em>}</li>
  * </ul>
  *
  * @see game.game.GamePackage#getChemin()
@@ -115,25 +115,25 @@ public interface Chemin extends Place
   void setObligatoire(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Ouvert</b></em>' attribute.
+   * Returns the value of the '<em><b>Ouvert</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ouvert</em>' attribute.
-   * @see #setOuvert(boolean)
+   * @return the value of the '<em>Ouvert</em>' containment reference.
+   * @see #setOuvert(Condition)
    * @see game.game.GamePackage#getChemin_Ouvert()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  boolean isOuvert();
+  Condition getOuvert();
 
   /**
-   * Sets the value of the '{@link game.game.Chemin#isOuvert <em>Ouvert</em>}' attribute.
+   * Sets the value of the '{@link game.game.Chemin#getOuvert <em>Ouvert</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ouvert</em>' attribute.
-   * @see #isOuvert()
+   * @param value the new value of the '<em>Ouvert</em>' containment reference.
+   * @see #getOuvert()
    * @generated
    */
-  void setOuvert(boolean value);
+  void setOuvert(Condition value);
 
 } // Chemin

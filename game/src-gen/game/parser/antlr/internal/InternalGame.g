@@ -525,19 +525,20 @@ ruleChemin returns [EObject current=null]
 		}
 		(
 			(
-				lv_ouvert_12_0=RULE_BOOL
 				{
-					newLeafNode(lv_ouvert_12_0, grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0());
+					newCompositeNode(grammarAccess.getCheminAccess().getOuvertConditionParserRuleCall_12_0());
 				}
+				lv_ouvert_12_0=ruleCondition
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getCheminRule());
+						$current = createModelElementForParent(grammarAccess.getCheminRule());
 					}
-					setWithLastConsumed(
+					set(
 						$current,
 						"ouvert",
 						lv_ouvert_12_0,
-						"game.Game.BOOL");
+						"game.Game.Condition");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)

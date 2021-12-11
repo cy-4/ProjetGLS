@@ -4074,7 +4074,7 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
             // InternalGame.g:1311:1: ( rule__Chemin__Group__11__Impl rule__Chemin__Group__12 )
             // InternalGame.g:1312:2: rule__Chemin__Group__11__Impl rule__Chemin__Group__12
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_16);
             rule__Chemin__Group__11__Impl();
 
             state._fsp--;
@@ -11859,21 +11859,25 @@ public class InternalGameParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Chemin__OuvertAssignment_12"
-    // InternalGame.g:3932:1: rule__Chemin__OuvertAssignment_12 : ( RULE_BOOL ) ;
+    // InternalGame.g:3932:1: rule__Chemin__OuvertAssignment_12 : ( ruleCondition ) ;
     public final void rule__Chemin__OuvertAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalGame.g:3936:1: ( ( RULE_BOOL ) )
-            // InternalGame.g:3937:2: ( RULE_BOOL )
+            // InternalGame.g:3936:1: ( ( ruleCondition ) )
+            // InternalGame.g:3937:2: ( ruleCondition )
             {
-            // InternalGame.g:3937:2: ( RULE_BOOL )
-            // InternalGame.g:3938:3: RULE_BOOL
+            // InternalGame.g:3937:2: ( ruleCondition )
+            // InternalGame.g:3938:3: ruleCondition
             {
-             before(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0()); 
-            match(input,RULE_BOOL,FOLLOW_2); 
-             after(grammarAccess.getCheminAccess().getOuvertBOOLTerminalRuleCall_12_0()); 
+             before(grammarAccess.getCheminAccess().getOuvertConditionParserRuleCall_12_0()); 
+            pushFollow(FOLLOW_2);
+            ruleCondition();
+
+            state._fsp--;
+
+             after(grammarAccess.getCheminAccess().getOuvertConditionParserRuleCall_12_0()); 
 
             }
 

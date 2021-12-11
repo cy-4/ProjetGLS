@@ -336,7 +336,7 @@ public interface GamePackage extends EPackage
   int CHEMIN__OBLIGATOIRE = PLACE_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Ouvert</b></em>' attribute.
+   * The feature id for the '<em><b>Ouvert</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -990,15 +990,15 @@ public interface GamePackage extends EPackage
   EAttribute getChemin_Obligatoire();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Chemin#isOuvert <em>Ouvert</em>}'.
+   * Returns the meta object for the containment reference '{@link game.game.Chemin#getOuvert <em>Ouvert</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Ouvert</em>'.
-   * @see game.game.Chemin#isOuvert()
+   * @return the meta object for the containment reference '<em>Ouvert</em>'.
+   * @see game.game.Chemin#getOuvert()
    * @see #getChemin()
    * @generated
    */
-  EAttribute getChemin_Ouvert();
+  EReference getChemin_Ouvert();
 
   /**
    * Returns the meta object for class '{@link game.game.Personne <em>Personne</em>}'.
@@ -1542,12 +1542,12 @@ public interface GamePackage extends EPackage
     EAttribute CHEMIN__OBLIGATOIRE = eINSTANCE.getChemin_Obligatoire();
 
     /**
-     * The meta object literal for the '<em><b>Ouvert</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Ouvert</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CHEMIN__OUVERT = eINSTANCE.getChemin_Ouvert();
+    EReference CHEMIN__OUVERT = eINSTANCE.getChemin_Ouvert();
 
     /**
      * The meta object literal for the '{@link game.game.impl.PersonneImpl <em>Personne</em>}' class.

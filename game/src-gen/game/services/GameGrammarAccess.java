@@ -236,7 +236,7 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final RuleCall cObligatoireBOOLTerminalRuleCall_10_0 = (RuleCall)cObligatoireAssignment_10.eContents().get(0);
 		private final Keyword cOuvertKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cOuvertAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cOuvertBOOLTerminalRuleCall_12_0 = (RuleCall)cOuvertAssignment_12.eContents().get(0);
+		private final RuleCall cOuvertConditionParserRuleCall_12_0 = (RuleCall)cOuvertAssignment_12.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//Chemin:
@@ -245,12 +245,12 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//	'vers' succ=[Lieu]
 		//	'visible' visible=Condition
 		//	'obligatoire' obligatoire=BOOL
-		//	'ouvert' ouvert=BOOL
+		//	'ouvert' ouvert=Condition
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'chemin' name=ID '{' 'de' pred=[Lieu] 'vers' succ=[Lieu] 'visible' visible=Condition 'obligatoire' obligatoire=BOOL
-		//'ouvert' ouvert=BOOL '}'
+		//'ouvert' ouvert=Condition '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'chemin'
@@ -310,11 +310,11 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//'ouvert'
 		public Keyword getOuvertKeyword_11() { return cOuvertKeyword_11; }
 		
-		//ouvert=BOOL
+		//ouvert=Condition
 		public Assignment getOuvertAssignment_12() { return cOuvertAssignment_12; }
 		
-		//BOOL
-		public RuleCall getOuvertBOOLTerminalRuleCall_12_0() { return cOuvertBOOLTerminalRuleCall_12_0; }
+		//Condition
+		public RuleCall getOuvertConditionParserRuleCall_12_0() { return cOuvertConditionParserRuleCall_12_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_13() { return cRightCurlyBracketKeyword_13; }
@@ -1159,7 +1159,7 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	//	'vers' succ=[Lieu]
 	//	'visible' visible=Condition
 	//	'obligatoire' obligatoire=BOOL
-	//	'ouvert' ouvert=BOOL
+	//	'ouvert' ouvert=Condition
 	//	'}';
 	public CheminElements getCheminAccess() {
 		return pChemin;

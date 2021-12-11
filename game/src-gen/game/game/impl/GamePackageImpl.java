@@ -431,9 +431,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getChemin_Ouvert()
+  public EReference getChemin_Ouvert()
   {
-    return (EAttribute)cheminEClass.getEStructuralFeatures().get(4);
+    return (EReference)cheminEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -845,7 +845,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     createEReference(cheminEClass, CHEMIN__SUCC);
     createEReference(cheminEClass, CHEMIN__VISIBLE);
     createEAttribute(cheminEClass, CHEMIN__OBLIGATOIRE);
-    createEAttribute(cheminEClass, CHEMIN__OUVERT);
+    createEReference(cheminEClass, CHEMIN__OUVERT);
 
     personneEClass = createEClass(PERSONNE);
     createEReference(personneEClass, PERSONNE__PLACE);
@@ -953,7 +953,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     initEReference(getChemin_Succ(), this.getLieu(), null, "succ", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getChemin_Visible(), this.getCondition(), null, "visible", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemin_Obligatoire(), ecorePackage.getEBoolean(), "obligatoire", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChemin_Ouvert(), ecorePackage.getEBoolean(), "ouvert", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChemin_Ouvert(), this.getCondition(), null, "ouvert", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(personneEClass, Personne.class, "Personne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getPersonne_Place(), this.getPlace(), null, "place", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
