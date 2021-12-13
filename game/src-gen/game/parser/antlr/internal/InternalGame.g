@@ -284,6 +284,56 @@ ruleAvantage returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleQteObjet
+entryRuleQteObjet returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getQteObjetRule()); }
+	iv_ruleQteObjet=ruleQteObjet
+	{ $current=$iv_ruleQteObjet.current; }
+	EOF;
+
+// Rule QteObjet
+ruleQteObjet returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_qte_0_0=RULE_INT
+				{
+					newLeafNode(lv_qte_0_0, grammarAccess.getQteObjetAccess().getQteINTTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getQteObjetRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"qte",
+						lv_qte_0_0,
+						"org.eclipse.xtext.common.Terminals.INT");
+				}
+			)
+		)
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getQteObjetRule());
+					}
+				}
+				otherlv_1=RULE_ID
+				{
+					newLeafNode(otherlv_1, grammarAccess.getQteObjetAccess().getObjetObjetCrossReference_1_0());
+				}
+			)
+		)
+	)
+;
+
 // Entry rule entryRuleTerritoire
 entryRuleTerritoire returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getTerritoireRule()); }
@@ -1110,10 +1160,24 @@ ruleInteraction returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='interaction'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getInteractionAccess().getInteractionKeyword_0());
-		}
+		(
+			(
+				lv_name_0_0=RULE_ID
+				{
+					newLeafNode(lv_name_0_0, grammarAccess.getInteractionAccess().getNameIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getInteractionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_0_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
 		otherlv_1='{'
 		{
 			newLeafNode(otherlv_1, grammarAccess.getInteractionAccess().getLeftCurlyBracketKeyword_1());
@@ -1188,9 +1252,9 @@ ruleChoix returns [EObject current=null]
 		}
 		(
 			(
-				lv_numero_1_0=RULE_INT
+				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_numero_1_0, grammarAccess.getChoixAccess().getNumeroINTTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getChoixAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -1198,9 +1262,9 @@ ruleChoix returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"numero",
-						lv_numero_1_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
@@ -1230,53 +1294,103 @@ ruleChoix returns [EObject current=null]
 				}
 			)
 		)
+		otherlv_5='bonne'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getChoixAccess().getBonneKeyword_5());
+		}
 		(
 			(
-				otherlv_5='consomme'
+				lv_bonne_6_0=RULE_BOOL
 				{
-					newLeafNode(otherlv_5, grammarAccess.getChoixAccess().getConsommeKeyword_5_0_0());
+					newLeafNode(lv_bonne_6_0, grammarAccess.getChoixAccess().getBonneBOOLTerminalRuleCall_6_0());
 				}
-				    |
-				otherlv_6='donne'
 				{
-					newLeafNode(otherlv_6, grammarAccess.getChoixAccess().getDonneKeyword_5_0_1());
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getChoixRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"bonne",
+						lv_bonne_6_0,
+						"game.Game.BOOL");
 				}
 			)
+		)
+		(
+			otherlv_7='consomme'
+			{
+				newLeafNode(otherlv_7, grammarAccess.getChoixAccess().getConsommeKeyword_7_0());
+			}
 			(
 				(
-					lv_qte_7_0=RULE_INT
 					{
-						newLeafNode(lv_qte_7_0, grammarAccess.getChoixAccess().getQteINTTerminalRuleCall_5_1_0());
+						newCompositeNode(grammarAccess.getChoixAccess().getObjetConsQteObjetParserRuleCall_7_1_0());
 					}
+					lv_objetCons_8_0=ruleQteObjet
 					{
 						if ($current==null) {
-							$current = createModelElement(grammarAccess.getChoixRule());
+							$current = createModelElementForParent(grammarAccess.getChoixRule());
 						}
-						addWithLastConsumed(
+						add(
 							$current,
-							"qte",
-							lv_qte_7_0,
-							"org.eclipse.xtext.common.Terminals.INT");
-					}
-				)
-			)
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getChoixRule());
-						}
-					}
-					otherlv_8=RULE_ID
-					{
-						newLeafNode(otherlv_8, grammarAccess.getChoixAccess().getAvantageAvantageCrossReference_5_2_0());
+							"objetCons",
+							lv_objetCons_8_0,
+							"game.Game.QteObjet");
+						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_9='}'
+		(
+			otherlv_9='donne'
+			{
+				newLeafNode(otherlv_9, grammarAccess.getChoixAccess().getDonneKeyword_8_0());
+			}
+			(
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getChoixAccess().getObjetDonQteObjetParserRuleCall_8_1_0_0());
+						}
+						lv_objetDon_10_0=ruleQteObjet
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getChoixRule());
+							}
+							add(
+								$current,
+								"objetDon",
+								lv_objetDon_10_0,
+								"game.Game.QteObjet");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				    |
+				(
+					otherlv_11='connaissance'
+					{
+						newLeafNode(otherlv_11, grammarAccess.getChoixAccess().getConnaissanceKeyword_8_1_1_0());
+					}
+					(
+						(
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getChoixRule());
+								}
+							}
+							otherlv_12=RULE_ID
+							{
+								newLeafNode(otherlv_12, grammarAccess.getChoixAccess().getConnaisDonConnaissanceCrossReference_8_1_1_1_0());
+							}
+						)
+					)
+				)
+			)
+		)*
+		otherlv_13='}'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getChoixAccess().getRightCurlyBracketKeyword_6());
+			newLeafNode(otherlv_13, grammarAccess.getChoixAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;

@@ -25,6 +25,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="actif" eType="#//Condition"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QteObjet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qte" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objet" eType="#//Objet"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Territoire">
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" upperBound="-1"
         eType="#//Place" containment="true"/>
@@ -66,17 +70,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transformable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interaction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="question" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="choix" upperBound="-1"
         eType="#//Choix" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Choix">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numero" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reponse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qte" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="avantage" unique="false"
-        upperBound="-1" eType="#//Avantage"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bonne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objetCons" upperBound="-1"
+        eType="#//QteObjet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objetDon" upperBound="-1"
+        eType="#//QteObjet" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connaisDon" unique="false"
+        upperBound="-1" eType="#//Connaissance"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

@@ -3,23 +3,27 @@
  */
 package game.game.impl;
 
-import game.game.Avantage;
 import game.game.Choix;
+import game.game.Connaissance;
 import game.game.GamePackage;
+import game.game.QteObjet;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,10 +33,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.ChoixImpl#getNumero <em>Numero</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#getName <em>Name</em>}</li>
  *   <li>{@link game.game.impl.ChoixImpl#getReponse <em>Reponse</em>}</li>
- *   <li>{@link game.game.impl.ChoixImpl#getQte <em>Qte</em>}</li>
- *   <li>{@link game.game.impl.ChoixImpl#getAvantage <em>Avantage</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#isBonne <em>Bonne</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#getObjetCons <em>Objet Cons</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#getObjetDon <em>Objet Don</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#getConnaisDon <em>Connais Don</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,24 +46,24 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
 {
   /**
-   * The default value of the '{@link #getNumero() <em>Numero</em>}' attribute.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNumero()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final int NUMERO_EDEFAULT = 0;
+  protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNumero() <em>Numero</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNumero()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected int numero = NUMERO_EDEFAULT;
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getReponse() <em>Reponse</em>}' attribute.
@@ -80,24 +86,54 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
   protected String reponse = REPONSE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getQte() <em>Qte</em>}' attribute list.
+   * The default value of the '{@link #isBonne() <em>Bonne</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQte()
+   * @see #isBonne()
    * @generated
    * @ordered
    */
-  protected EList<Integer> qte;
+  protected static final boolean BONNE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getAvantage() <em>Avantage</em>}' reference list.
+   * The cached value of the '{@link #isBonne() <em>Bonne</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAvantage()
+   * @see #isBonne()
    * @generated
    * @ordered
    */
-  protected EList<Avantage> avantage;
+  protected boolean bonne = BONNE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getObjetCons() <em>Objet Cons</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getObjetCons()
+   * @generated
+   * @ordered
+   */
+  protected EList<QteObjet> objetCons;
+
+  /**
+   * The cached value of the '{@link #getObjetDon() <em>Objet Don</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getObjetDon()
+   * @generated
+   * @ordered
+   */
+  protected EList<QteObjet> objetDon;
+
+  /**
+   * The cached value of the '{@link #getConnaisDon() <em>Connais Don</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConnaisDon()
+   * @generated
+   * @ordered
+   */
+  protected EList<Connaissance> connaisDon;
 
   /**
    * <!-- begin-user-doc -->
@@ -126,9 +162,9 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
    * @generated
    */
   @Override
-  public int getNumero()
+  public String getName()
   {
-    return numero;
+    return name;
   }
 
   /**
@@ -137,12 +173,12 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
    * @generated
    */
   @Override
-  public void setNumero(int newNumero)
+  public void setName(String newName)
   {
-    int oldNumero = numero;
-    numero = newNumero;
+    String oldName = name;
+    name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__NUMERO, oldNumero, numero));
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__NAME, oldName, name));
   }
 
   /**
@@ -176,13 +212,9 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
    * @generated
    */
   @Override
-  public EList<Integer> getQte()
+  public boolean isBonne()
   {
-    if (qte == null)
-    {
-      qte = new EDataTypeEList<Integer>(Integer.class, this, GamePackage.CHOIX__QTE);
-    }
-    return qte;
+    return bonne;
   }
 
   /**
@@ -191,13 +223,75 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
    * @generated
    */
   @Override
-  public EList<Avantage> getAvantage()
+  public void setBonne(boolean newBonne)
   {
-    if (avantage == null)
+    boolean oldBonne = bonne;
+    bonne = newBonne;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__BONNE, oldBonne, bonne));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<QteObjet> getObjetCons()
+  {
+    if (objetCons == null)
     {
-      avantage = new EObjectResolvingEList<Avantage>(Avantage.class, this, GamePackage.CHOIX__AVANTAGE);
+      objetCons = new EObjectContainmentEList<QteObjet>(QteObjet.class, this, GamePackage.CHOIX__OBJET_CONS);
     }
-    return avantage;
+    return objetCons;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<QteObjet> getObjetDon()
+  {
+    if (objetDon == null)
+    {
+      objetDon = new EObjectContainmentEList<QteObjet>(QteObjet.class, this, GamePackage.CHOIX__OBJET_DON);
+    }
+    return objetDon;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EList<Connaissance> getConnaisDon()
+  {
+    if (connaisDon == null)
+    {
+      connaisDon = new EObjectResolvingEList<Connaissance>(Connaissance.class, this, GamePackage.CHOIX__CONNAIS_DON);
+    }
+    return connaisDon;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case GamePackage.CHOIX__OBJET_CONS:
+        return ((InternalEList<?>)getObjetCons()).basicRemove(otherEnd, msgs);
+      case GamePackage.CHOIX__OBJET_DON:
+        return ((InternalEList<?>)getObjetDon()).basicRemove(otherEnd, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -210,14 +304,18 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
   {
     switch (featureID)
     {
-      case GamePackage.CHOIX__NUMERO:
-        return getNumero();
+      case GamePackage.CHOIX__NAME:
+        return getName();
       case GamePackage.CHOIX__REPONSE:
         return getReponse();
-      case GamePackage.CHOIX__QTE:
-        return getQte();
-      case GamePackage.CHOIX__AVANTAGE:
-        return getAvantage();
+      case GamePackage.CHOIX__BONNE:
+        return isBonne();
+      case GamePackage.CHOIX__OBJET_CONS:
+        return getObjetCons();
+      case GamePackage.CHOIX__OBJET_DON:
+        return getObjetDon();
+      case GamePackage.CHOIX__CONNAIS_DON:
+        return getConnaisDon();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -233,19 +331,26 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
   {
     switch (featureID)
     {
-      case GamePackage.CHOIX__NUMERO:
-        setNumero((Integer)newValue);
+      case GamePackage.CHOIX__NAME:
+        setName((String)newValue);
         return;
       case GamePackage.CHOIX__REPONSE:
         setReponse((String)newValue);
         return;
-      case GamePackage.CHOIX__QTE:
-        getQte().clear();
-        getQte().addAll((Collection<? extends Integer>)newValue);
+      case GamePackage.CHOIX__BONNE:
+        setBonne((Boolean)newValue);
         return;
-      case GamePackage.CHOIX__AVANTAGE:
-        getAvantage().clear();
-        getAvantage().addAll((Collection<? extends Avantage>)newValue);
+      case GamePackage.CHOIX__OBJET_CONS:
+        getObjetCons().clear();
+        getObjetCons().addAll((Collection<? extends QteObjet>)newValue);
+        return;
+      case GamePackage.CHOIX__OBJET_DON:
+        getObjetDon().clear();
+        getObjetDon().addAll((Collection<? extends QteObjet>)newValue);
+        return;
+      case GamePackage.CHOIX__CONNAIS_DON:
+        getConnaisDon().clear();
+        getConnaisDon().addAll((Collection<? extends Connaissance>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -261,17 +366,23 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
   {
     switch (featureID)
     {
-      case GamePackage.CHOIX__NUMERO:
-        setNumero(NUMERO_EDEFAULT);
+      case GamePackage.CHOIX__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case GamePackage.CHOIX__REPONSE:
         setReponse(REPONSE_EDEFAULT);
         return;
-      case GamePackage.CHOIX__QTE:
-        getQte().clear();
+      case GamePackage.CHOIX__BONNE:
+        setBonne(BONNE_EDEFAULT);
         return;
-      case GamePackage.CHOIX__AVANTAGE:
-        getAvantage().clear();
+      case GamePackage.CHOIX__OBJET_CONS:
+        getObjetCons().clear();
+        return;
+      case GamePackage.CHOIX__OBJET_DON:
+        getObjetDon().clear();
+        return;
+      case GamePackage.CHOIX__CONNAIS_DON:
+        getConnaisDon().clear();
         return;
     }
     super.eUnset(featureID);
@@ -287,14 +398,18 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
   {
     switch (featureID)
     {
-      case GamePackage.CHOIX__NUMERO:
-        return numero != NUMERO_EDEFAULT;
+      case GamePackage.CHOIX__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case GamePackage.CHOIX__REPONSE:
         return REPONSE_EDEFAULT == null ? reponse != null : !REPONSE_EDEFAULT.equals(reponse);
-      case GamePackage.CHOIX__QTE:
-        return qte != null && !qte.isEmpty();
-      case GamePackage.CHOIX__AVANTAGE:
-        return avantage != null && !avantage.isEmpty();
+      case GamePackage.CHOIX__BONNE:
+        return bonne != BONNE_EDEFAULT;
+      case GamePackage.CHOIX__OBJET_CONS:
+        return objetCons != null && !objetCons.isEmpty();
+      case GamePackage.CHOIX__OBJET_DON:
+        return objetDon != null && !objetDon.isEmpty();
+      case GamePackage.CHOIX__CONNAIS_DON:
+        return connaisDon != null && !connaisDon.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -310,12 +425,12 @@ public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (numero: ");
-    result.append(numero);
+    result.append(" (name: ");
+    result.append(name);
     result.append(", reponse: ");
     result.append(reponse);
-    result.append(", qte: ");
-    result.append(qte);
+    result.append(", bonne: ");
+    result.append(bonne);
     result.append(')');
     return result.toString();
   }

@@ -96,6 +96,11 @@ public class GameAdapterFactory extends AdapterFactoryImpl
         return createAvantageAdapter();
       }
       @Override
+      public Adapter caseQteObjet(QteObjet object)
+      {
+        return createQteObjetAdapter();
+      }
+      @Override
       public Adapter caseTerritoire(Territoire object)
       {
         return createTerritoireAdapter();
@@ -223,6 +228,21 @@ public class GameAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAvantageAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link game.game.QteObjet <em>Qte Objet</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see game.game.QteObjet
+   * @generated
+   */
+  public Adapter createQteObjetAdapter()
   {
     return null;
   }

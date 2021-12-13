@@ -15,6 +15,7 @@ import game.game.Jeu;
 import game.game.Lieu;
 import game.game.Objet;
 import game.game.Personne;
+import game.game.QteObjet;
 import game.game.Territoire;
 import game.services.GameGrammarAccess;
 import java.util.Set;
@@ -39,7 +40,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		EPackage epackage = semanticObject.eClass().getEPackage();
 		ParserRule rule = context.getParserRule();
 		Action action = context.getAssignedAction();
-		Set<Parameter> parameters = context.getEnabledBooleanParameters();
+		Iterable<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == GamePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
 			case GamePackage.CHEMIN:
@@ -71,6 +72,9 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case GamePackage.PERSONNE:
 				sequence_Personne(context, (Personne) semanticObject); 
+				return; 
+			case GamePackage.QTE_OBJET:
+				sequence_QteObjet(context, (QteObjet) semanticObject); 
 				return; 
 			case GamePackage.TERRITOIRE:
 				sequence_Territoire(context, (Territoire) semanticObject); 
@@ -127,7 +131,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Choix returns Choix
 	 *
 	 * Constraint:
-	 *     (numero=INT reponse=STRING (qte+=INT avantage+=[Avantage|ID])*)
+	 *     (name=ID reponse=STRING bonne=BOOL objetCons+=QteObjet* (objetDon+=QteObjet | connaisDon+=[Connaissance|ID])*)
 	 */
 	protected void sequence_Choix(ISerializationContext context, Choix semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -193,7 +197,7 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     Interaction returns Interaction
 	 *
 	 * Constraint:
-	 *     (question=STRING choix+=Choix+)
+	 *     (name=ID question=STRING choix+=Choix+)
 	 */
 	protected void sequence_Interaction(ISerializationContext context, Interaction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -294,6 +298,27 @@ public class GameSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_Personne(ISerializationContext context, Personne semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     QteObjet returns QteObjet
+	 *
+	 * Constraint:
+	 *     (qte=INT objet=[Objet|ID])
+	 */
+	protected void sequence_QteObjet(ISerializationContext context, QteObjet semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.QTE_OBJET__QTE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.QTE_OBJET__QTE));
+			if (transientValues.isValueTransient(semanticObject, GamePackage.Literals.QTE_OBJET__OBJET) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GamePackage.Literals.QTE_OBJET__OBJET));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getQteObjetAccess().getQteINTTerminalRuleCall_0_0(), semanticObject.getQte());
+		feeder.accept(grammarAccess.getQteObjetAccess().getObjetObjetIDTerminalRuleCall_1_0_1(), semanticObject.eGet(GamePackage.Literals.QTE_OBJET__OBJET, false));
+		feeder.finish();
 	}
 	
 	

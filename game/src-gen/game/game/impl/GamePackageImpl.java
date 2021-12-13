@@ -19,6 +19,7 @@ import game.game.Nature;
 import game.game.Objet;
 import game.game.Personne;
 import game.game.Place;
+import game.game.QteObjet;
 import game.game.Territoire;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -64,6 +65,13 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   private EClass avantageEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass qteObjetEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -324,6 +332,39 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
   public EReference getAvantage_Actif()
   {
     return (EReference)avantageEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getQteObjet()
+  {
+    return qteObjetEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getQteObjet_Qte()
+  {
+    return (EAttribute)qteObjetEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getQteObjet_Objet()
+  {
+    return (EReference)qteObjetEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -629,7 +670,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getInteraction_Question()
+  public EAttribute getInteraction_Name()
   {
     return (EAttribute)interactionEClass.getEStructuralFeatures().get(0);
   }
@@ -640,9 +681,20 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
+  public EAttribute getInteraction_Question()
+  {
+    return (EAttribute)interactionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getInteraction_Choix()
   {
-    return (EReference)interactionEClass.getEStructuralFeatures().get(1);
+    return (EReference)interactionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -662,7 +714,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getChoix_Numero()
+  public EAttribute getChoix_Name()
   {
     return (EAttribute)choixEClass.getEStructuralFeatures().get(0);
   }
@@ -684,7 +736,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EAttribute getChoix_Qte()
+  public EAttribute getChoix_Bonne()
   {
     return (EAttribute)choixEClass.getEStructuralFeatures().get(2);
   }
@@ -695,9 +747,31 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
    * @generated
    */
   @Override
-  public EReference getChoix_Avantage()
+  public EReference getChoix_ObjetCons()
   {
     return (EReference)choixEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getChoix_ObjetDon()
+  {
+    return (EReference)choixEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getChoix_ConnaisDon()
+  {
+    return (EReference)choixEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -834,6 +908,10 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     createEReference(avantageEClass, AVANTAGE__VISIBLE);
     createEReference(avantageEClass, AVANTAGE__ACTIF);
 
+    qteObjetEClass = createEClass(QTE_OBJET);
+    createEAttribute(qteObjetEClass, QTE_OBJET__QTE);
+    createEReference(qteObjetEClass, QTE_OBJET__OBJET);
+
     territoireEClass = createEClass(TERRITOIRE);
     createEReference(territoireEClass, TERRITOIRE__PLACES);
 
@@ -868,14 +946,17 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     createEAttribute(objetEClass, OBJET__TRANSFORMABLE);
 
     interactionEClass = createEClass(INTERACTION);
+    createEAttribute(interactionEClass, INTERACTION__NAME);
     createEAttribute(interactionEClass, INTERACTION__QUESTION);
     createEReference(interactionEClass, INTERACTION__CHOIX);
 
     choixEClass = createEClass(CHOIX);
-    createEAttribute(choixEClass, CHOIX__NUMERO);
+    createEAttribute(choixEClass, CHOIX__NAME);
     createEAttribute(choixEClass, CHOIX__REPONSE);
-    createEAttribute(choixEClass, CHOIX__QTE);
-    createEReference(choixEClass, CHOIX__AVANTAGE);
+    createEAttribute(choixEClass, CHOIX__BONNE);
+    createEReference(choixEClass, CHOIX__OBJET_CONS);
+    createEReference(choixEClass, CHOIX__OBJET_DON);
+    createEReference(choixEClass, CHOIX__CONNAIS_DON);
 
     conditionEClass = createEClass(CONDITION);
     createEAttribute(conditionEClass, CONDITION__NAME);
@@ -942,6 +1023,10 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     initEReference(getAvantage_Visible(), this.getCondition(), null, "visible", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAvantage_Actif(), this.getCondition(), null, "actif", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(qteObjetEClass, QteObjet.class, "QteObjet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getQteObjet_Qte(), ecorePackage.getEInt(), "qte", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getQteObjet_Objet(), this.getObjet(), null, "objet", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(territoireEClass, Territoire.class, "Territoire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTerritoire_Places(), this.getPlace(), null, "places", null, 0, -1, Territoire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -976,14 +1061,17 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage
     initEAttribute(getObjet_Transformable(), ecorePackage.getEBoolean(), "transformable", null, 0, 1, Objet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(interactionEClass, Interaction.class, "Interaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getInteraction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getInteraction_Question(), ecorePackage.getEString(), "question", null, 0, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getInteraction_Choix(), this.getChoix(), null, "choix", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(choixEClass, Choix.class, "Choix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getChoix_Numero(), ecorePackage.getEInt(), "numero", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChoix_Name(), ecorePackage.getEString(), "name", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChoix_Reponse(), ecorePackage.getEString(), "reponse", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChoix_Qte(), ecorePackage.getEInt(), "qte", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChoix_Avantage(), this.getAvantage(), null, "avantage", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChoix_Bonne(), ecorePackage.getEBoolean(), "bonne", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChoix_ObjetCons(), this.getQteObjet(), null, "objetCons", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChoix_ObjetDon(), this.getQteObjet(), null, "objetDon", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChoix_ConnaisDon(), this.getConnaissance(), null, "connaisDon", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

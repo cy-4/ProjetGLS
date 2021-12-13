@@ -60,6 +60,15 @@ public interface GameFactory extends EFactory
   Avantage createAvantage();
 
   /**
+   * Returns a new object of class '<em>Qte Objet</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Qte Objet</em>'.
+   * @generated
+   */
+  QteObjet createQteObjet();
+
+  /**
    * Returns a new object of class '<em>Territoire</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

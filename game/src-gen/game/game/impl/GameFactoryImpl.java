@@ -70,6 +70,7 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory
       case GamePackage.ELEMENTS_JEU: return createElementsJeu();
       case GamePackage.PLACE: return createPlace();
       case GamePackage.AVANTAGE: return createAvantage();
+      case GamePackage.QTE_OBJET: return createQteObjet();
       case GamePackage.TERRITOIRE: return createTerritoire();
       case GamePackage.LIEU: return createLieu();
       case GamePackage.CHEMIN: return createChemin();
@@ -165,6 +166,18 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory
   {
     AvantageImpl avantage = new AvantageImpl();
     return avantage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public QteObjet createQteObjet()
+  {
+    QteObjetImpl qteObjet = new QteObjetImpl();
+    return qteObjet;
   }
 
   /**

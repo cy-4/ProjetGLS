@@ -145,6 +145,37 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//Objet
 		public RuleCall getObjetParserRuleCall_1() { return cObjetParserRuleCall_1; }
 	}
+	public class QteObjetElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "game.Game.QteObjet");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cQteAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cQteINTTerminalRuleCall_0_0 = (RuleCall)cQteAssignment_0.eContents().get(0);
+		private final Assignment cObjetAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cObjetObjetCrossReference_1_0 = (CrossReference)cObjetAssignment_1.eContents().get(0);
+		private final RuleCall cObjetObjetIDTerminalRuleCall_1_0_1 = (RuleCall)cObjetObjetCrossReference_1_0.eContents().get(1);
+		
+		//QteObjet:
+		//	qte=INT objet=[Objet];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//qte=INT objet=[Objet]
+		public Group getGroup() { return cGroup; }
+		
+		//qte=INT
+		public Assignment getQteAssignment_0() { return cQteAssignment_0; }
+		
+		//INT
+		public RuleCall getQteINTTerminalRuleCall_0_0() { return cQteINTTerminalRuleCall_0_0; }
+		
+		//objet=[Objet]
+		public Assignment getObjetAssignment_1() { return cObjetAssignment_1; }
+		
+		//[Objet]
+		public CrossReference getObjetObjetCrossReference_1_0() { return cObjetObjetCrossReference_1_0; }
+		
+		//ID
+		public RuleCall getObjetObjetIDTerminalRuleCall_1_0_1() { return cObjetObjetIDTerminalRuleCall_1_0_1; }
+	}
 	public class TerritoireElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "game.Game.Territoire");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -680,7 +711,8 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	public class InteractionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "game.Game.Interaction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInteractionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cQuestionKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cQuestionAssignment_3 = (Assignment)cGroup.eContents().get(3);
@@ -690,17 +722,20 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Interaction:
-		//	'interaction' '{'
+		//	name=ID '{'
 		//	'question' question=STRING
 		//	choix+=Choix+
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'interaction' '{' 'question' question=STRING choix+=Choix+ '}'
+		//name=ID '{' 'question' question=STRING choix+=Choix+ '}'
 		public Group getGroup() { return cGroup; }
 		
-		//'interaction'
-		public Keyword getInteractionKeyword_0() { return cInteractionKeyword_0; }
+		//name=ID
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
@@ -727,40 +762,51 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "game.Game.Choix");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cChoixKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNumeroAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNumeroINTTerminalRuleCall_1_0 = (RuleCall)cNumeroAssignment_1.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cReponseKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cReponseAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cReponseSTRINGTerminalRuleCall_4_0 = (RuleCall)cReponseAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Alternatives cAlternatives_5_0 = (Alternatives)cGroup_5.eContents().get(0);
-		private final Keyword cConsommeKeyword_5_0_0 = (Keyword)cAlternatives_5_0.eContents().get(0);
-		private final Keyword cDonneKeyword_5_0_1 = (Keyword)cAlternatives_5_0.eContents().get(1);
-		private final Assignment cQteAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cQteINTTerminalRuleCall_5_1_0 = (RuleCall)cQteAssignment_5_1.eContents().get(0);
-		private final Assignment cAvantageAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final CrossReference cAvantageAvantageCrossReference_5_2_0 = (CrossReference)cAvantageAssignment_5_2.eContents().get(0);
-		private final RuleCall cAvantageAvantageIDTerminalRuleCall_5_2_0_1 = (RuleCall)cAvantageAvantageCrossReference_5_2_0.eContents().get(1);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cBonneKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cBonneAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBonneBOOLTerminalRuleCall_6_0 = (RuleCall)cBonneAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cConsommeKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cObjetConsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cObjetConsQteObjetParserRuleCall_7_1_0 = (RuleCall)cObjetConsAssignment_7_1.eContents().get(0);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cDonneKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Alternatives cAlternatives_8_1 = (Alternatives)cGroup_8.eContents().get(1);
+		private final Assignment cObjetDonAssignment_8_1_0 = (Assignment)cAlternatives_8_1.eContents().get(0);
+		private final RuleCall cObjetDonQteObjetParserRuleCall_8_1_0_0 = (RuleCall)cObjetDonAssignment_8_1_0.eContents().get(0);
+		private final Group cGroup_8_1_1 = (Group)cAlternatives_8_1.eContents().get(1);
+		private final Keyword cConnaissanceKeyword_8_1_1_0 = (Keyword)cGroup_8_1_1.eContents().get(0);
+		private final Assignment cConnaisDonAssignment_8_1_1_1 = (Assignment)cGroup_8_1_1.eContents().get(1);
+		private final CrossReference cConnaisDonConnaissanceCrossReference_8_1_1_1_0 = (CrossReference)cConnaisDonAssignment_8_1_1_1.eContents().get(0);
+		private final RuleCall cConnaisDonConnaissanceIDTerminalRuleCall_8_1_1_1_0_1 = (RuleCall)cConnaisDonConnaissanceCrossReference_8_1_1_1_0.eContents().get(1);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Choix:
-		//	'choix' numero=INT '{'
-		//	'reponse' reponse=STRING (('consomme' | 'donne') qte+=INT avantage+=[Avantage])*
+		//	'choix' name=ID '{'
+		//	'reponse' reponse=STRING
+		//	'bonne' bonne=BOOL ('consomme' objetCons+=QteObjet)* ('donne' (objetDon+=QteObjet | 'connaissance'
+		//	connaisDon+=[Connaissance]))*
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'choix' numero=INT '{' 'reponse' reponse=STRING (('consomme' | 'donne') qte+=INT avantage+=[Avantage])* '}'
+		//'choix' name=ID '{' 'reponse' reponse=STRING 'bonne' bonne=BOOL ('consomme' objetCons+=QteObjet)* ('donne'
+		//(objetDon+=QteObjet | 'connaissance' connaisDon+=[Connaissance]))* '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'choix'
 		public Keyword getChoixKeyword_0() { return cChoixKeyword_0; }
 		
-		//numero=INT
-		public Assignment getNumeroAssignment_1() { return cNumeroAssignment_1; }
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 		
-		//INT
-		public RuleCall getNumeroINTTerminalRuleCall_1_0() { return cNumeroINTTerminalRuleCall_1_0; }
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
@@ -774,35 +820,59 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		//STRING
 		public RuleCall getReponseSTRINGTerminalRuleCall_4_0() { return cReponseSTRINGTerminalRuleCall_4_0; }
 		
-		//(('consomme' | 'donne') qte+=INT avantage+=[Avantage])*
-		public Group getGroup_5() { return cGroup_5; }
+		//'bonne'
+		public Keyword getBonneKeyword_5() { return cBonneKeyword_5; }
 		
-		//('consomme' | 'donne')
-		public Alternatives getAlternatives_5_0() { return cAlternatives_5_0; }
+		//bonne=BOOL
+		public Assignment getBonneAssignment_6() { return cBonneAssignment_6; }
+		
+		//BOOL
+		public RuleCall getBonneBOOLTerminalRuleCall_6_0() { return cBonneBOOLTerminalRuleCall_6_0; }
+		
+		//('consomme' objetCons+=QteObjet)*
+		public Group getGroup_7() { return cGroup_7; }
 		
 		//'consomme'
-		public Keyword getConsommeKeyword_5_0_0() { return cConsommeKeyword_5_0_0; }
+		public Keyword getConsommeKeyword_7_0() { return cConsommeKeyword_7_0; }
+		
+		//objetCons+=QteObjet
+		public Assignment getObjetConsAssignment_7_1() { return cObjetConsAssignment_7_1; }
+		
+		//QteObjet
+		public RuleCall getObjetConsQteObjetParserRuleCall_7_1_0() { return cObjetConsQteObjetParserRuleCall_7_1_0; }
+		
+		//('donne' (objetDon+=QteObjet | 'connaissance' connaisDon+=[Connaissance]))*
+		public Group getGroup_8() { return cGroup_8; }
 		
 		//'donne'
-		public Keyword getDonneKeyword_5_0_1() { return cDonneKeyword_5_0_1; }
+		public Keyword getDonneKeyword_8_0() { return cDonneKeyword_8_0; }
 		
-		//qte+=INT
-		public Assignment getQteAssignment_5_1() { return cQteAssignment_5_1; }
+		//(objetDon+=QteObjet | 'connaissance' connaisDon+=[Connaissance])
+		public Alternatives getAlternatives_8_1() { return cAlternatives_8_1; }
 		
-		//INT
-		public RuleCall getQteINTTerminalRuleCall_5_1_0() { return cQteINTTerminalRuleCall_5_1_0; }
+		//objetDon+=QteObjet
+		public Assignment getObjetDonAssignment_8_1_0() { return cObjetDonAssignment_8_1_0; }
 		
-		//avantage+=[Avantage]
-		public Assignment getAvantageAssignment_5_2() { return cAvantageAssignment_5_2; }
+		//QteObjet
+		public RuleCall getObjetDonQteObjetParserRuleCall_8_1_0_0() { return cObjetDonQteObjetParserRuleCall_8_1_0_0; }
 		
-		//[Avantage]
-		public CrossReference getAvantageAvantageCrossReference_5_2_0() { return cAvantageAvantageCrossReference_5_2_0; }
+		//'connaissance' connaisDon+=[Connaissance]
+		public Group getGroup_8_1_1() { return cGroup_8_1_1; }
+		
+		//'connaissance'
+		public Keyword getConnaissanceKeyword_8_1_1_0() { return cConnaissanceKeyword_8_1_1_0; }
+		
+		//connaisDon+=[Connaissance]
+		public Assignment getConnaisDonAssignment_8_1_1_1() { return cConnaisDonAssignment_8_1_1_1; }
+		
+		//[Connaissance]
+		public CrossReference getConnaisDonConnaissanceCrossReference_8_1_1_1_0() { return cConnaisDonConnaissanceCrossReference_8_1_1_1_0; }
 		
 		//ID
-		public RuleCall getAvantageAvantageIDTerminalRuleCall_5_2_0_1() { return cAvantageAvantageIDTerminalRuleCall_5_2_0_1; }
+		public RuleCall getConnaisDonConnaissanceIDTerminalRuleCall_8_1_1_1_0_1() { return cConnaisDonConnaissanceIDTerminalRuleCall_8_1_1_1_0_1; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class ConditionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "game.Game.Condition");
@@ -1006,6 +1076,7 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	private final ElementsJeuElements pElementsJeu;
 	private final PlaceElements pPlace;
 	private final AvantageElements pAvantage;
+	private final QteObjetElements pQteObjet;
 	private final TerritoireElements pTerritoire;
 	private final LieuElements pLieu;
 	private final CheminElements pChemin;
@@ -1032,6 +1103,7 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 		this.pElementsJeu = new ElementsJeuElements();
 		this.pPlace = new PlaceElements();
 		this.pAvantage = new AvantageElements();
+		this.pQteObjet = new QteObjetElements();
 		this.pTerritoire = new TerritoireElements();
 		this.pLieu = new LieuElements();
 		this.pChemin = new CheminElements();
@@ -1129,6 +1201,16 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	
 	public ParserRule getAvantageRule() {
 		return getAvantageAccess().getRule();
+	}
+	
+	//QteObjet:
+	//	qte=INT objet=[Objet];
+	public QteObjetElements getQteObjetAccess() {
+		return pQteObjet;
+	}
+	
+	public ParserRule getQteObjetRule() {
+		return getQteObjetAccess().getRule();
 	}
 	
 	//Territoire:
@@ -1229,7 +1311,7 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//Interaction:
-	//	'interaction' '{'
+	//	name=ID '{'
 	//	'question' question=STRING
 	//	choix+=Choix+
 	//	'}';
@@ -1242,8 +1324,10 @@ public class GameGrammarAccess extends AbstractElementFinder.AbstractGrammarElem
 	}
 	
 	//Choix:
-	//	'choix' numero=INT '{'
-	//	'reponse' reponse=STRING (('consomme' | 'donne') qte+=INT avantage+=[Avantage])*
+	//	'choix' name=ID '{'
+	//	'reponse' reponse=STRING
+	//	'bonne' bonne=BOOL ('consomme' objetCons+=QteObjet)* ('donne' (objetDon+=QteObjet | 'connaissance'
+	//	connaisDon+=[Connaissance]))*
 	//	'}';
 	public ChoixElements getChoixAccess() {
 		return pChoix;

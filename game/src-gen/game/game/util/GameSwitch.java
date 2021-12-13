@@ -103,6 +103,13 @@ public class GameSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case GamePackage.QTE_OBJET:
+      {
+        QteObjet qteObjet = (QteObjet)theEObject;
+        T result = caseQteObjet(qteObjet);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case GamePackage.TERRITOIRE:
       {
         Territoire territoire = (Territoire)theEObject;
@@ -246,6 +253,22 @@ public class GameSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAvantage(Avantage object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Qte Objet</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Qte Objet</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQteObjet(QteObjet object)
   {
     return null;
   }

@@ -16,10 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link game.game.Choix#getNumero <em>Numero</em>}</li>
+ *   <li>{@link game.game.Choix#getName <em>Name</em>}</li>
  *   <li>{@link game.game.Choix#getReponse <em>Reponse</em>}</li>
- *   <li>{@link game.game.Choix#getQte <em>Qte</em>}</li>
- *   <li>{@link game.game.Choix#getAvantage <em>Avantage</em>}</li>
+ *   <li>{@link game.game.Choix#isBonne <em>Bonne</em>}</li>
+ *   <li>{@link game.game.Choix#getObjetCons <em>Objet Cons</em>}</li>
+ *   <li>{@link game.game.Choix#getObjetDon <em>Objet Don</em>}</li>
+ *   <li>{@link game.game.Choix#getConnaisDon <em>Connais Don</em>}</li>
  * </ul>
  *
  * @see game.game.GamePackage#getChoix()
@@ -29,26 +31,26 @@ import org.eclipse.emf.ecore.EObject;
 public interface Choix extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Numero</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Numero</em>' attribute.
-   * @see #setNumero(int)
-   * @see game.game.GamePackage#getChoix_Numero()
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see game.game.GamePackage#getChoix_Name()
    * @model
    * @generated
    */
-  int getNumero();
+  String getName();
 
   /**
-   * Sets the value of the '{@link game.game.Choix#getNumero <em>Numero</em>}' attribute.
+   * Sets the value of the '{@link game.game.Choix#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Numero</em>' attribute.
-   * @see #getNumero()
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
    * @generated
    */
-  void setNumero(int value);
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Reponse</b></em>' attribute.
@@ -73,27 +75,61 @@ public interface Choix extends EObject
   void setReponse(String value);
 
   /**
-   * Returns the value of the '<em><b>Qte</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.Integer}.
+   * Returns the value of the '<em><b>Bonne</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Qte</em>' attribute list.
-   * @see game.game.GamePackage#getChoix_Qte()
-   * @model unique="false"
-   * @generated
-   */
-  EList<Integer> getQte();
-
-  /**
-   * Returns the value of the '<em><b>Avantage</b></em>' reference list.
-   * The list contents are of type {@link game.game.Avantage}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Avantage</em>' reference list.
-   * @see game.game.GamePackage#getChoix_Avantage()
+   * @return the value of the '<em>Bonne</em>' attribute.
+   * @see #setBonne(boolean)
+   * @see game.game.GamePackage#getChoix_Bonne()
    * @model
    * @generated
    */
-  EList<Avantage> getAvantage();
+  boolean isBonne();
+
+  /**
+   * Sets the value of the '{@link game.game.Choix#isBonne <em>Bonne</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Bonne</em>' attribute.
+   * @see #isBonne()
+   * @generated
+   */
+  void setBonne(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Objet Cons</b></em>' containment reference list.
+   * The list contents are of type {@link game.game.QteObjet}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Objet Cons</em>' containment reference list.
+   * @see game.game.GamePackage#getChoix_ObjetCons()
+   * @model containment="true"
+   * @generated
+   */
+  EList<QteObjet> getObjetCons();
+
+  /**
+   * Returns the value of the '<em><b>Objet Don</b></em>' containment reference list.
+   * The list contents are of type {@link game.game.QteObjet}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Objet Don</em>' containment reference list.
+   * @see game.game.GamePackage#getChoix_ObjetDon()
+   * @model containment="true"
+   * @generated
+   */
+  EList<QteObjet> getObjetDon();
+
+  /**
+   * Returns the value of the '<em><b>Connais Don</b></em>' reference list.
+   * The list contents are of type {@link game.game.Connaissance}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Connais Don</em>' reference list.
+   * @see game.game.GamePackage#getChoix_ConnaisDon()
+   * @model
+   * @generated
+   */
+  EList<Connaissance> getConnaisDon();
 
 } // Choix

@@ -216,6 +216,43 @@ public interface GamePackage extends EPackage
   int AVANTAGE_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 2;
 
   /**
+   * The meta object id for the '{@link game.game.impl.QteObjetImpl <em>Qte Objet</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see game.game.impl.QteObjetImpl
+   * @see game.game.impl.GamePackageImpl#getQteObjet()
+   * @generated
+   */
+  int QTE_OBJET = 4;
+
+  /**
+   * The feature id for the '<em><b>Qte</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QTE_OBJET__QTE = 0;
+
+  /**
+   * The feature id for the '<em><b>Objet</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QTE_OBJET__OBJET = 1;
+
+  /**
+   * The number of structural features of the '<em>Qte Objet</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QTE_OBJET_FEATURE_COUNT = 2;
+
+  /**
    * The meta object id for the '{@link game.game.impl.TerritoireImpl <em>Territoire</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -223,7 +260,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getTerritoire()
    * @generated
    */
-  int TERRITOIRE = 4;
+  int TERRITOIRE = 5;
 
   /**
    * The feature id for the '<em><b>Places</b></em>' containment reference list.
@@ -251,7 +288,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getLieu()
    * @generated
    */
-  int LIEU = 5;
+  int LIEU = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -288,7 +325,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getChemin()
    * @generated
    */
-  int CHEMIN = 6;
+  int CHEMIN = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -361,7 +398,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getPersonne()
    * @generated
    */
-  int PERSONNE = 7;
+  int PERSONNE = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -434,7 +471,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getExplorateur()
    * @generated
    */
-  int EXPLORATEUR = 8;
+  int EXPLORATEUR = 9;
 
   /**
    * The feature id for the '<em><b>Place</b></em>' reference.
@@ -489,7 +526,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getConnaissance()
    * @generated
    */
-  int CONNAISSANCE = 9;
+  int CONNAISSANCE = 10;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -535,7 +572,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getObjet()
    * @generated
    */
-  int OBJET = 10;
+  int OBJET = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -608,7 +645,16 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getInteraction()
    * @generated
    */
-  int INTERACTION = 11;
+  int INTERACTION = 12;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INTERACTION__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -617,7 +663,7 @@ public interface GamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int INTERACTION__QUESTION = 0;
+  int INTERACTION__QUESTION = 1;
 
   /**
    * The feature id for the '<em><b>Choix</b></em>' containment reference list.
@@ -626,7 +672,7 @@ public interface GamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int INTERACTION__CHOIX = 1;
+  int INTERACTION__CHOIX = 2;
 
   /**
    * The number of structural features of the '<em>Interaction</em>' class.
@@ -635,7 +681,7 @@ public interface GamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int INTERACTION_FEATURE_COUNT = 2;
+  int INTERACTION_FEATURE_COUNT = 3;
 
   /**
    * The meta object id for the '{@link game.game.impl.ChoixImpl <em>Choix</em>}' class.
@@ -645,16 +691,16 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getChoix()
    * @generated
    */
-  int CHOIX = 12;
+  int CHOIX = 13;
 
   /**
-   * The feature id for the '<em><b>Numero</b></em>' attribute.
+   * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHOIX__NUMERO = 0;
+  int CHOIX__NAME = 0;
 
   /**
    * The feature id for the '<em><b>Reponse</b></em>' attribute.
@@ -666,22 +712,40 @@ public interface GamePackage extends EPackage
   int CHOIX__REPONSE = 1;
 
   /**
-   * The feature id for the '<em><b>Qte</b></em>' attribute list.
+   * The feature id for the '<em><b>Bonne</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHOIX__QTE = 2;
+  int CHOIX__BONNE = 2;
 
   /**
-   * The feature id for the '<em><b>Avantage</b></em>' reference list.
+   * The feature id for the '<em><b>Objet Cons</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHOIX__AVANTAGE = 3;
+  int CHOIX__OBJET_CONS = 3;
+
+  /**
+   * The feature id for the '<em><b>Objet Don</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOIX__OBJET_DON = 4;
+
+  /**
+   * The feature id for the '<em><b>Connais Don</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHOIX__CONNAIS_DON = 5;
 
   /**
    * The number of structural features of the '<em>Choix</em>' class.
@@ -690,7 +754,7 @@ public interface GamePackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHOIX_FEATURE_COUNT = 4;
+  int CHOIX_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link game.game.impl.ConditionImpl <em>Condition</em>}' class.
@@ -700,7 +764,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getCondition()
    * @generated
    */
-  int CONDITION = 13;
+  int CONDITION = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -773,7 +837,7 @@ public interface GamePackage extends EPackage
    * @see game.game.impl.GamePackageImpl#getNature()
    * @generated
    */
-  int NATURE = 14;
+  int NATURE = 15;
 
 
   /**
@@ -892,6 +956,38 @@ public interface GamePackage extends EPackage
    * @generated
    */
   EReference getAvantage_Actif();
+
+  /**
+   * Returns the meta object for class '{@link game.game.QteObjet <em>Qte Objet</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Qte Objet</em>'.
+   * @see game.game.QteObjet
+   * @generated
+   */
+  EClass getQteObjet();
+
+  /**
+   * Returns the meta object for the attribute '{@link game.game.QteObjet#getQte <em>Qte</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Qte</em>'.
+   * @see game.game.QteObjet#getQte()
+   * @see #getQteObjet()
+   * @generated
+   */
+  EAttribute getQteObjet_Qte();
+
+  /**
+   * Returns the meta object for the reference '{@link game.game.QteObjet#getObjet <em>Objet</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Objet</em>'.
+   * @see game.game.QteObjet#getObjet()
+   * @see #getQteObjet()
+   * @generated
+   */
+  EReference getQteObjet_Objet();
 
   /**
    * Returns the meta object for class '{@link game.game.Territoire <em>Territoire</em>}'.
@@ -1183,6 +1279,17 @@ public interface GamePackage extends EPackage
   EClass getInteraction();
 
   /**
+   * Returns the meta object for the attribute '{@link game.game.Interaction#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see game.game.Interaction#getName()
+   * @see #getInteraction()
+   * @generated
+   */
+  EAttribute getInteraction_Name();
+
+  /**
    * Returns the meta object for the attribute '{@link game.game.Interaction#getQuestion <em>Question</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1215,15 +1322,15 @@ public interface GamePackage extends EPackage
   EClass getChoix();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Choix#getNumero <em>Numero</em>}'.
+   * Returns the meta object for the attribute '{@link game.game.Choix#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Numero</em>'.
-   * @see game.game.Choix#getNumero()
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see game.game.Choix#getName()
    * @see #getChoix()
    * @generated
    */
-  EAttribute getChoix_Numero();
+  EAttribute getChoix_Name();
 
   /**
    * Returns the meta object for the attribute '{@link game.game.Choix#getReponse <em>Reponse</em>}'.
@@ -1237,26 +1344,48 @@ public interface GamePackage extends EPackage
   EAttribute getChoix_Reponse();
 
   /**
-   * Returns the meta object for the attribute list '{@link game.game.Choix#getQte <em>Qte</em>}'.
+   * Returns the meta object for the attribute '{@link game.game.Choix#isBonne <em>Bonne</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Qte</em>'.
-   * @see game.game.Choix#getQte()
+   * @return the meta object for the attribute '<em>Bonne</em>'.
+   * @see game.game.Choix#isBonne()
    * @see #getChoix()
    * @generated
    */
-  EAttribute getChoix_Qte();
+  EAttribute getChoix_Bonne();
 
   /**
-   * Returns the meta object for the reference list '{@link game.game.Choix#getAvantage <em>Avantage</em>}'.
+   * Returns the meta object for the containment reference list '{@link game.game.Choix#getObjetCons <em>Objet Cons</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Avantage</em>'.
-   * @see game.game.Choix#getAvantage()
+   * @return the meta object for the containment reference list '<em>Objet Cons</em>'.
+   * @see game.game.Choix#getObjetCons()
    * @see #getChoix()
    * @generated
    */
-  EReference getChoix_Avantage();
+  EReference getChoix_ObjetCons();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link game.game.Choix#getObjetDon <em>Objet Don</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Objet Don</em>'.
+   * @see game.game.Choix#getObjetDon()
+   * @see #getChoix()
+   * @generated
+   */
+  EReference getChoix_ObjetDon();
+
+  /**
+   * Returns the meta object for the reference list '{@link game.game.Choix#getConnaisDon <em>Connais Don</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Connais Don</em>'.
+   * @see game.game.Choix#getConnaisDon()
+   * @see #getChoix()
+   * @generated
+   */
+  EReference getChoix_ConnaisDon();
 
   /**
    * Returns the meta object for class '{@link game.game.Condition <em>Condition</em>}'.
@@ -1462,6 +1591,32 @@ public interface GamePackage extends EPackage
      * @generated
      */
     EReference AVANTAGE__ACTIF = eINSTANCE.getAvantage_Actif();
+
+    /**
+     * The meta object literal for the '{@link game.game.impl.QteObjetImpl <em>Qte Objet</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see game.game.impl.QteObjetImpl
+     * @see game.game.impl.GamePackageImpl#getQteObjet()
+     * @generated
+     */
+    EClass QTE_OBJET = eINSTANCE.getQteObjet();
+
+    /**
+     * The meta object literal for the '<em><b>Qte</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QTE_OBJET__QTE = eINSTANCE.getQteObjet_Qte();
+
+    /**
+     * The meta object literal for the '<em><b>Objet</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QTE_OBJET__OBJET = eINSTANCE.getQteObjet_Objet();
 
     /**
      * The meta object literal for the '{@link game.game.impl.TerritoireImpl <em>Territoire</em>}' class.
@@ -1696,6 +1851,14 @@ public interface GamePackage extends EPackage
     EClass INTERACTION = eINSTANCE.getInteraction();
 
     /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INTERACTION__NAME = eINSTANCE.getInteraction_Name();
+
+    /**
      * The meta object literal for the '<em><b>Question</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1722,12 +1885,12 @@ public interface GamePackage extends EPackage
     EClass CHOIX = eINSTANCE.getChoix();
 
     /**
-     * The meta object literal for the '<em><b>Numero</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CHOIX__NUMERO = eINSTANCE.getChoix_Numero();
+    EAttribute CHOIX__NAME = eINSTANCE.getChoix_Name();
 
     /**
      * The meta object literal for the '<em><b>Reponse</b></em>' attribute feature.
@@ -1738,20 +1901,36 @@ public interface GamePackage extends EPackage
     EAttribute CHOIX__REPONSE = eINSTANCE.getChoix_Reponse();
 
     /**
-     * The meta object literal for the '<em><b>Qte</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Bonne</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CHOIX__QTE = eINSTANCE.getChoix_Qte();
+    EAttribute CHOIX__BONNE = eINSTANCE.getChoix_Bonne();
 
     /**
-     * The meta object literal for the '<em><b>Avantage</b></em>' reference list feature.
+     * The meta object literal for the '<em><b>Objet Cons</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CHOIX__AVANTAGE = eINSTANCE.getChoix_Avantage();
+    EReference CHOIX__OBJET_CONS = eINSTANCE.getChoix_ObjetCons();
+
+    /**
+     * The meta object literal for the '<em><b>Objet Don</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHOIX__OBJET_DON = eINSTANCE.getChoix_ObjetDon();
+
+    /**
+     * The meta object literal for the '<em><b>Connais Don</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHOIX__CONNAIS_DON = eINSTANCE.getChoix_ConnaisDon();
 
     /**
      * The meta object literal for the '{@link game.game.impl.ConditionImpl <em>Condition</em>}' class.

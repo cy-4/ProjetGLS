@@ -25,6 +25,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Game.ecore#//Avantage/visible"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Game.ecore#//Avantage/actif"/>
     </genClasses>
+    <genClasses ecoreClass="Game.ecore#//QteObjet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//QteObjet/qte"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Game.ecore#//QteObjet/objet"/>
+    </genClasses>
     <genClasses ecoreClass="Game.ecore#//Territoire">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Game.ecore#//Territoire/places"/>
     </genClasses>
@@ -58,14 +62,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Objet/transformable"/>
     </genClasses>
     <genClasses ecoreClass="Game.ecore#//Interaction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Interaction/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Interaction/question"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Game.ecore#//Interaction/choix"/>
     </genClasses>
     <genClasses ecoreClass="Game.ecore#//Choix">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Choix/numero"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Choix/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Choix/reponse"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Choix/qte"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Game.ecore#//Choix/avantage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Choix/bonne"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Game.ecore#//Choix/objetCons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Game.ecore#//Choix/objetDon"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Game.ecore#//Choix/connaisDon"/>
     </genClasses>
     <genClasses ecoreClass="Game.ecore#//Condition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Game.ecore#//Condition/name"/>

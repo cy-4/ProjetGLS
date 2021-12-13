@@ -1,7 +1,8 @@
 ':'=17
 'actif'=26
+'bonne'=41
 'chemin'=18
-'choix'=40
+'choix'=39
 'condition'=44
 'connaissance'=34
 'connaissances'=33
@@ -12,7 +13,6 @@
 'donne'=43
 'explorateur'=28
 'fin'=50
-'interaction'=38
 'interactions'=27
 'interdites'=46
 'interdits'=48
@@ -27,8 +27,8 @@
 'personne'=24
 'possedes'=32
 'quantite'=36
-'question'=39
-'reponse'=41
+'question'=38
+'reponse'=40
 'requis'=47
 'requises'=45
 'taille'=29
@@ -39,9 +39,9 @@
 '{'=13
 '}'=14
 RULE_ANY_OTHER=11
-RULE_BOOL=5
+RULE_BOOL=6
 RULE_ID=4
-RULE_INT=6
+RULE_INT=5
 RULE_ML_COMMENT=8
 RULE_SL_COMMENT=9
 RULE_STRING=7

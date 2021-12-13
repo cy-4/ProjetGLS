@@ -24,6 +24,8 @@ Place: Lieu | Chemin;
 
 Avantage: Connaissance | Objet;
 
+QteObjet: qte = INT objet = [Objet];
+
 Territoire: 'territoire' '{'
 	places += Place+
 '}'
@@ -72,15 +74,17 @@ Objet: 'objet' name = ID '{'
 '}'
 ;
 
-Interaction : 'interaction' '{'
+Interaction : name = ID '{'
 	'question' question = STRING
 	choix += Choix+
 '}'
 ;
 
-Choix: 'choix' numero = INT '{'
+Choix: 'choix' name = ID '{'
 	'reponse' reponse = STRING
-	(('consomme' | 'donne') qte += INT avantage += [Avantage])*
+	'bonne' bonne = BOOL
+	('consomme' objetCons += QteObjet)*
+	('donne' (objetDon += QteObjet | 'connaissance' connaisDon += [Connaissance]))*
 '}'
 ;
 

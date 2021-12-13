@@ -22,7 +22,6 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected GameGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1;
 	protected AbstractElementAlias match_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0;
 	protected AbstractElementAlias match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a;
 	protected AbstractElementAlias match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_InterditesKeyword_0_3_1_1_0__q;
@@ -34,7 +33,6 @@ public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (GameGrammarAccess) access;
-		match_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getChoixAccess().getConsommeKeyword_5_0_0()), new TokenAlias(false, false, grammarAccess.getChoixAccess().getDonneKeyword_5_0_1()));
 		match_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditsKeyword_0_4_2_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisKeyword_0_4_2_0_0()));
 		match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0())));
 		match_Condition___ConnaissancesKeyword_0_3_0_____InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0___ConnaissancesKeyword_0_3_0__a_InterditesKeyword_0_3_1_1_0__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0()), new GroupAlias(true, true, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()), new TokenAlias(false, false, grammarAccess.getConditionAccess().getRequisesKeyword_0_3_1_0_0())), new TokenAlias(false, false, grammarAccess.getConditionAccess().getConnaissancesKeyword_0_3_0())), new TokenAlias(false, false, grammarAccess.getConditionAccess().getInterditesKeyword_0_3_1_1_0()));
@@ -66,9 +64,7 @@ public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1.equals(syntax))
-				emit_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0.equals(syntax))
+			if (match_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0.equals(syntax))
 				emit_Condition_InterditsKeyword_0_4_2_1_0_or_RequisKeyword_0_4_2_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a.equals(syntax))
 				emit_Condition___ConnaissancesKeyword_0_3_0___InterditesKeyword_0_3_1_1_0_or_RequisesKeyword_0_3_1_0_0____a(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -86,18 +82,6 @@ public class GameSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     'consomme' | 'donne'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     avantage+=[Avantage|ID] (ambiguity) qte+=INT
-	 *     reponse=STRING (ambiguity) qte+=INT
-	 */
-	protected void emit_Choix_ConsommeKeyword_5_0_0_or_DonneKeyword_5_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     'requis' | 'interdits'
