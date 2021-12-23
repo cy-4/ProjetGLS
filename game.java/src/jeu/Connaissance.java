@@ -17,7 +17,7 @@ public class Connaissance implements Avantage {
 	}
 
 	@Override
-	public boolean isVisible() {
+	public boolean isVisible() throws QuantiteInsuffisanteException {
 		if (this.visible == null) {
 			return true;
 		}
@@ -25,7 +25,7 @@ public class Connaissance implements Avantage {
 	}
 
 	@Override
-	public boolean isActif() {
+	public boolean isActif() throws QuantiteInsuffisanteException {
 		if (this.actif == null) {
 			return true;
 		}

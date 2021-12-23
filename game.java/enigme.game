@@ -1,0 +1,61 @@
+jeu enigme {
+	territoire {
+	    lieu Enigme : depart
+	    lieu Succes : fin
+		lieu Echec : fin
+		chemin Victoire {
+	       de Enigme
+	       vers Succes
+	       visible condition AvoirGagne {
+	       	connaissances requises Reussite
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+		chemin Defaite {
+	       de Enigme
+	       vers Echec
+	       visible condition PlusDeTentatives {
+	       	1 objets interdits Tentative
+	       }
+	       obligatoire true
+	       ouvert true
+	    }
+	}
+	explorateur {
+		localisation Enigme
+		taille disponible 4
+		objets possedes objet Tentative {
+							visible true
+							actif true
+							quantite 3
+							taille 1 
+							transformable false
+						}
+	}
+	connaissance Reussite {
+		visible true
+		actif true
+	}
+	personne Sphinx{
+		localisation Enigme
+	    visible condition SphinxVisible {
+	    		connaissances interdites Reussite
+	    		1 objets requis Tentative
+	    	}
+	    actif true
+	    obligatoire true
+		interactions interaction {
+			question "[Question..]"
+			choix 1 {
+				reponse "[Bonne reponse..]"
+				donne 1 Reussite
+				consomme 1 Tentative
+			}
+			choix 2 {
+				reponse "[Mauvaise reponse..]"
+				consomme 1 Tentative
+			}
+		}
+	}
+}

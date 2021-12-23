@@ -33,40 +33,39 @@ public class Condition {
 		return connaissancesInterdites;
 	}
 
-	public boolean verifierCondition() {
+	public boolean verifierCondition() throws QuantiteInsuffisanteException {
 		HashMap<String, Objet> inv = (HashMap<String, Objet>) Jeu.explorateur.getInventaire();
 		HashMap<String, Connaissance> comp = (HashMap<String, Connaissance>) Jeu.explorateur.getCompetences();
 		for (String key : this.objetsInterdits.keySet()) {
 			if (inv.containsKey(key)) {
-				System.out.println(Jeu.explorateur.getName() + ", vous ne pouvez pas posséder l'objet : "
-						+ inv.get(key).getName());
-				return false;
+				if (inv.get(key).getQuantite() > 0) {
+					return false;
+				}
 			}
 		}
 		for (String key : this.connaissancesInterdites.keySet()) {
 			if (comp.containsKey(key)) {
-				System.out.println(Jeu.explorateur.getName() + ", vous ne pouvez pas posséder la connaissance : "
-						+ comp.get(key).getName());
+				//System.out.println(Jeu.explorateur.getName() + ", vous ne pouvez pas posséder la connaissance : "
+				//		+ comp.get(key).getName());
 				return false;
 			}
 		}
 		for (String key : this.objetsRequis.keySet()) {
 			if (inv.containsKey(key)) {
 				if (inv.get(key).getQuantite() < this.objetsRequis.get(key).getQuantite()) {
-					System.out.println(Jeu.explorateur.getName() + ", vous n'avez pas assez de l'objet : "
+					throw new QuantiteInsuffisanteException(Jeu.explorateur.getName() + ", vous n'avez pas assez de l'objet : "
 							+ inv.get(key).getName());
-					return false;
 				}
 			} else {
-				System.out.println(Jeu.explorateur.getName() + ", vous devez posséder l'objet : "
-						+ this.objetsRequis.get(key).getName());
+				//System.out.println(Jeu.explorateur.getName() + ", vous devez posséder l'objet : "
+				//		+ this.objetsRequis.get(key).getName());
 				return false;
 			}
 		}
 		for (String key : this.connaissancesRequises.keySet()) {
 			if (!comp.containsKey(key)) {
-				System.out.println(Jeu.explorateur.getName() + ", vous devez posséder la connaissance : "
-						+ this.connaissancesRequises.get(key).getName());
+				//System.out.println(Jeu.explorateur.getName() + ", vous devez posséder la connaissance : "
+				//		+ this.connaissancesRequises.get(key).getName());
 				return false;
 			}
 		}

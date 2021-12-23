@@ -19,6 +19,10 @@ public class Lieu extends Place {
 	public ElementsJeu getElement() {
 		return this;
 	}
+	
+	public void addPersonne(Personne p) {
+		this.personnes.put(p.getName(), p);
+	}
 
 	public Map<String, Personne> getPersonnes() {
 		return this.personnes;

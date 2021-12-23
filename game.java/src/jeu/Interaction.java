@@ -5,16 +5,14 @@ import java.util.Map;
 
 public class Interaction {
 
-	private Condition condition;
 	private boolean effectuee = false;
 	private String question;
 	private Map<Integer, Choix> choix = new HashMap<Integer, Choix>();
 	private Choix reponse;
 	private int indice = 0;
 	
-	public Interaction(String q, Condition c) {
+	public Interaction(String q) {
 		this.question = q;
-		this.condition = c;
 	}
 	
 	public void addChoix(Choix c) {
@@ -27,19 +25,18 @@ public class Interaction {
 	}
 
 	public void lancer() throws ObjetAbsentException, QuantiteInsuffisanteException, InventairePleinException {
-		if (this.condition.verifierCondition()) {
-			System.out.println(this.question);
-			for (int k : this.choix.keySet()) {
-				System.out.println(k + " - " + this.choix.get(k).getReponse());
-			}
-			int ch = Jeu.scan.nextInt();
-			this.reponse = choix.get(ch);
-			Jeu.explorateur.consommer(this.reponse.getConsomme());
-			if (this.reponse.getBonne()) {
-				this.effectuee = true;
-			}
-			Jeu.explorateur.recompenser(this.reponse.getRecompense());
+		System.out.println(this.question);
+		for (int k : this.choix.keySet()) {
+			System.out.println(k + " - " + this.choix.get(k).getReponse());
 		}
+		int ch = Jeu.scan.nextInt();
+		System.out.println("");
+		this.reponse = choix.get(ch);
+		Jeu.explorateur.consommer(this.reponse.getConsomme());
+		if (this.reponse.getBonne()) {
+			this.effectuee = true;
+		}
+		Jeu.explorateur.recompenser(this.reponse.getRecompense());
 	}
 	
 	public Choix getReponse() {

@@ -5,9 +5,10 @@ public class Objet implements Avantage {
 	private String name;
 	private int poids;
 	private int quantite;
-	private boolean transformable, visible, actif;
+	private Condition visible, actif;
+	private boolean transformable;
 	
-	public Objet(String nom, int poids, int quantite, boolean transformable, boolean visible, boolean actif) {
+	public Objet(String nom, int poids, int quantite, boolean transformable, Condition visible, Condition actif) {
 		this.name = nom;
 		this.poids = poids;
 		this.quantite = quantite;
@@ -37,12 +38,12 @@ public class Objet implements Avantage {
 	}
 	
 	@Override
-	public boolean isVisible() {
-		return this.visible;
+	public boolean isVisible() throws QuantiteInsuffisanteException {
+		return this.visible.verifierCondition();
 	}
 	@Override
-	public boolean isActif() {
-		return this.actif;
+	public boolean isActif() throws QuantiteInsuffisanteException {
+		return this.actif.verifierCondition();
 	}
 
 	@Override

@@ -6,10 +6,10 @@ public class Chemin extends Place {
 	private Lieu pred;
 	private Lieu succ;
 	private Condition visible;
-	private Condition obligatoire;
+	private boolean obligatoire;
 	private Condition ouvert;
 
-	public Chemin(String nom, Lieu p, Lieu s, Condition v, Condition ob, Condition ov) {
+	public Chemin(String nom, Lieu p, Lieu s, Condition v, boolean ob, Condition ov) {
 		super(nom);
 		this.pred = p;
 		this.succ = s;
@@ -26,7 +26,7 @@ public class Chemin extends Place {
 		return succ;
 	}
 
-	public boolean isVisible() {
+	public boolean isVisible() throws QuantiteInsuffisanteException {
 		if (this.visible == null) {
 			return true;
 		}
@@ -34,13 +34,10 @@ public class Chemin extends Place {
 	}
 
 	public boolean isObligatoire() {
-		if (this.obligatoire == null) {
-			return true;
-		}
-		return obligatoire.verifierCondition();
+		return obligatoire;
 	}
 
-	public boolean isOuvert() {
+	public boolean isOuvert() throws QuantiteInsuffisanteException {
 		if (this.ouvert == null) {
 			return true;
 		}

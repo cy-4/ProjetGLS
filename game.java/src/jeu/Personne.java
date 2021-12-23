@@ -7,13 +7,13 @@ public class Personne implements ElementsJeu {
 	
 	private String name;
 	private Place position;
-	private boolean visible;
-	private boolean actif;
+	private Condition visible;
+	private Condition actif;
 	private boolean obligatoire;
 	private List<Interaction> interactions;
 	private int numInteraction = 0;
 	
-	public Personne(String n, Place p, boolean v, boolean a, boolean o) {
+	public Personne(String n, Place p, Condition v, Condition a, boolean o) {
 		this.name = n;
 		this.position = p;
 		this.visible = v;
@@ -32,7 +32,7 @@ public class Personne implements ElementsJeu {
 		}
 	}
 	
-	public void interagir() throws ObjetAbsentException, QuantiteInsuffisanteException, InventairePleinException {
+	public boolean interagir() throws ObjetAbsentException, QuantiteInsuffisanteException, InventairePleinException {
 		int i;
 		for (i = this.numInteraction ; i < this.interactions.size() ; i++) {
 			if (!this.interactions.get(i).getEffectuee()) {
@@ -41,12 +41,14 @@ public class Personne implements ElementsJeu {
 				if (this.interactions.get(i).getEffectuee()) {
 					this.numInteraction ++;
 				}
-				break;
+				return true;
 			}
 		}
 		if (i == this.interactions.size()) {
-			System.out.println("Aucune interaction disponible");
+			System.out.println(Jeu.explorateur.getName() + ", aucune interaction disponible avec " + this.name);
+			System.out.println("");
 		}
+		return false;
 	}
 
 	@Override
@@ -66,16 +68,16 @@ public class Personne implements ElementsJeu {
 		this.position = p;
 	}
 
-	public boolean isVisible() {
-		return visible;
+	public boolean isVisible() throws QuantiteInsuffisanteException {
+		return this.visible.verifierCondition();
 	}
 
-	public boolean isActif() {
-		return actif;
+	public boolean isActif() throws QuantiteInsuffisanteException {
+		return this.actif.verifierCondition();
 	}
 
 	public boolean isObligatoire() {
-		return obligatoire;
+		return this.obligatoire;
 	}
 
 	public List<Interaction> getInteractions() {
