@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petrinet:PetriNet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:petrinet="http://petrinet"
+    xsi:schemaLocation="http://petrinet PetriNet.ecore"
+    name="Saisons">
+  <petriNetElements
+      xsi:type="petrinet:Place"
+      name="Printemps"
+      arc="//@petriNetElements.8 //@petriNetElements.15"/>
+  <petriNetElements
+      xsi:type="petrinet:Place"
+      name="Ete"
+      arc="//@petriNetElements.9 //@petriNetElements.10"/>
+  <petriNetElements
+      xsi:type="petrinet:Place"
+      name="Automne"
+      currentToken="1"
+      arc="//@petriNetElements.11 //@petriNetElements.12"/>
+  <petriNetElements
+      xsi:type="petrinet:Place"
+      name="Hiver"
+      arc="//@petriNetElements.13 //@petriNetElements.14"/>
+  <petriNetElements
+      xsi:type="petrinet:Transition"
+      name="Fin_Soleil"
+      arc="//@petriNetElements.10 //@petriNetElements.11"/>
+  <petriNetElements
+      xsi:type="petrinet:Transition"
+      name="Début_Froid"
+      arc="//@petriNetElements.12 //@petriNetElements.13"/>
+  <petriNetElements
+      xsi:type="petrinet:Transition"
+      name="Retour_Soleil"
+      arc="//@petriNetElements.14 //@petriNetElements.15"/>
+  <petriNetElements
+      xsi:type="petrinet:Transition"
+      name="Fin_Froid"
+      arc="//@petriNetElements.8 //@petriNetElements.9"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      placeToTrans="true"
+      transition="//@petriNetElements.7"
+      place="//@petriNetElements.0"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      transition="//@petriNetElements.7"
+      place="//@petriNetElements.1"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      placeToTrans="true"
+      transition="//@petriNetElements.4"
+      place="//@petriNetElements.1"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      transition="//@petriNetElements.4"
+      place="//@petriNetElements.2"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      placeToTrans="true"
+      transition="//@petriNetElements.5"
+      place="//@petriNetElements.2"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      transition="//@petriNetElements.5"
+      place="//@petriNetElements.3"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      placeToTrans="true"
+      transition="//@petriNetElements.6"
+      place="//@petriNetElements.3"/>
+  <petriNetElements
+      xsi:type="petrinet:Arc"
+      linkType="take"
+      weight="1"
+      transition="//@petriNetElements.6"
+      place="//@petriNetElements.0"/>
+</petrinet:PetriNet>

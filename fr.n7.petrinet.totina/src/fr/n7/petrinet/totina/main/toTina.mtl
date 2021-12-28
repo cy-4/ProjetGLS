@@ -1,0 +1,55 @@
+[comment encoding = UTF-8 /]
+[module toTina('http://petrinet')]
+
+
+[template public petriNetToTina(aPetriNet : PetriNet)]
+[comment @main/]
+[file (aPetriNet.name + '.net', false, 'UTF-8')]
+net [aPetriNet.name/]
+[let places : OrderedSet(Place) = aPetriNet.getPs()]
+	[if (places->size() > 0)]
+		[for (pl : Place | places)]
+pl [pl.name/] ([pl.currentToken/])
+		[/for]
+	[/if]
+[/let]
+[let trs : OrderedSet(Transition) = aPetriNet.getTs()]
+	[if (trs->size() > 0)]
+		[for (tr : Transition | trs)]
+tr [tr.name/] ['[0,w[ '/][tr.toTina()/]
+		[/for]
+	[/if]
+[/let]
+[/file]
+[/template]
+
+[query public getTs(p: PetriNet) : OrderedSet(Transition) =
+	p.petriNetElements->select( e | e.oclIsTypeOf(Transition) )
+		->collect( e | e.oclAsType(Transition) )
+		->asOrderedSet()
+/]
+
+[query public getPs(p: PetriNet) : OrderedSet(Place) =
+	p.petriNetElements->select( e | e.oclIsTypeOf(Place) )
+		->collect( e | e.oclAsType(Place) )
+		->asOrderedSet()
+/]
+
+[query public getArcs(p: PetriNet) : OrderedSet(Arc) =
+	p.petriNetElements->select( e | e.oclIsTypeOf(Arc) )
+		->collect( e | e.oclAsType(Arc) )
+		->asOrderedSet()
+/]
+
+[query public toState(link: TransType) : String =
+	if link = TransType::read then
+		'?'
+	else
+		'*'
+	endif
+/]
+
+[template public toTina(tr: Transition) post (trim()) ]
+[for (arc : Arc | tr.arc)]
+	[if (arc.placeToTrans)][arc.place.name/][arc.linkType.toState()/][arc.weight/] [/if][/for]-> [for (arc : Arc | tr.arc)][if (not arc.placeToTrans)][arc.place.name/][arc.linkType.toState()/][arc.weight/] [/if][/for]
+[/template]

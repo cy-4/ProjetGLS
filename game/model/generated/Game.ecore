@@ -52,8 +52,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="actif" eType="#//Condition"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="obligatoire" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interactions" upperBound="-1"
-        eType="#//Interaction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interactions" lowerBound="1"
+        upperBound="-1" eType="#//Interaction" eOpposite="#//Interaction/personne"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Explorateur">
     <eStructuralFeatures xsi:type="ecore:EReference" name="place" eType="#//Place"/>
@@ -69,14 +69,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="taille" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="transformable" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Interaction">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Interaction" eSuperTypes="#//ElementsJeu">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="question" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="personne" lowerBound="1"
+        eType="#//Personne" eOpposite="#//Personne/interactions"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="choix" upperBound="-1"
-        eType="#//Choix" containment="true"/>
+        eType="#//Choix" eOpposite="#//Choix/interaction"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Choix">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Choix" eSuperTypes="#//ElementsJeu">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reponse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bonne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objetCons" upperBound="-1"
@@ -85,6 +85,8 @@
         eType="#//QteObjet" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connaisDon" unique="false"
         upperBound="-1" eType="#//Connaissance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interaction" lowerBound="1"
+        eType="#//Interaction" eOpposite="#//Interaction/choix"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Condition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

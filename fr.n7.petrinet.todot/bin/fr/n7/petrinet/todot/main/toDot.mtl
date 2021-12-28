@@ -1,0 +1,36 @@
+[comment encoding = UTF-8 /]
+[module toDot('http://petrinet')]
+
+
+[template public petriNetToDot(aPetriNet : PetriNet)]
+[comment @main/]
+[file (aPetriNet.name + '.dot', false, 'UTF-8')]
+digraph [aPetriNet.name/] {
+[let trs : OrderedSet(Transition) = aPetriNet.getTs()]
+	[if (trs->size() > 0)]
+		[for (tr : Transition | trs)]
+			[tr.name/] ['['/]shape=box]
+			[for (arc : Arc | tr.arc)]
+				[arc.place.name/] ['['/]shape=circle, label=[arc.place.name + '___' + arc.place.currentToken/]]
+				[if (arc.placeToTrans)]
+					[if (arc.linkType = TransType::read)]
+	[arc.place.name/] -> [tr.name/] ['['/]arrowhead=dot, label=[arc.weight/]]
+					[else]
+	[arc.place.name/] -> [tr.name/] ['['/]arrowhead=vee, label=[arc.weight/]]
+					[/if]
+				[else]
+	[tr.name/] -> [arc.place.name/] ['['/]arrowhead=vee, label=[arc.weight/]]
+				[/if]
+			[/for]
+		[/for]
+	[/if]
+[/let]
+}
+[/file]
+[/template]
+
+[query public getTs(p: PetriNet) : OrderedSet(Transition) =
+	p.petriNetElements->select( e | e.oclIsTypeOf(Transition) )
+		->collect( e | e.oclAsType(Transition) )
+		->asOrderedSet()
+/]

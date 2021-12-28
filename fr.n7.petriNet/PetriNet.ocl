@@ -1,0 +1,71 @@
+import 'PetriNet.ecore'
+
+package petriNet
+
+context PetriNet
+--
+-- example invariant with a custom error message to verify that
+-- the 'petriNetElements' property of all 'petriNet::PetriNet' instances is non-null
+--
+inv NonNull_petriNetElements('The \'petriNetElements\' property of "' + self.toString() + '" is null'):
+	petriNetElements <> null
+
+context Place
+--
+-- on ne peut pas avoir un nombre
+-- négatif de jetons
+--
+inv MinTokens('The place ' + self.toString() + ' must have at least 0 token.'):
+	self.currentToken >= 0
+
+context Place
+--
+-- on doit avoir un nombre de jetons
+-- inférieur à une borne maximale
+--
+inv MaxTokens('The place ' + self.toString() + ' cannot have this much tokens.'):
+	self.currentToken <= self.maxToken
+
+context Arc
+--
+-- le poids d'un arc doit
+-- être strictement positif
+--
+inv PositiveWeight('An arc must have a weight of at least one.'):
+	self.weight > 0
+
+context Transition
+--
+-- le nom d'une transition doit être composé
+-- d'au moins deux caractères
+--
+inv TwoCharactersName('The name of ' + self.toString() + ' must have at least two characters.'):
+	self.name.size() > 1
+
+context Transition
+--
+-- le nom d'une transition ne doit être composé
+-- que de lettres, chiffres ou soulignés, un
+-- chiffre ne peut pas être première position
+--
+inv CorrectName('The name of ' + self.toString() + ' can only contain letters, underline, or figures but not in first position.'):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+
+context Place
+--
+-- le nom d'une place doit être composé
+-- d'au moins deux caractères
+--
+inv TwoCharactersName('The name of ' + self.toString() + ' must have at least two characters.'):
+	self.name.size() > 1
+
+context Place
+--
+-- le nom d'une place ne doit être composé
+-- que de lettres, chiffres ou soulignés, un
+-- chiffre ne peut pas être première position
+--
+inv CorrectName('The name of ' + self.toString() + ' can only contain letters, underline, or figures but not in first position.'):
+	self.name.matches('[A-Za-z_][A-Za-z0-9_]*')
+	
+endpackage

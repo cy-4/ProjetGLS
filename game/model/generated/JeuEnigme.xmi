@@ -4,50 +4,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:game="http://www.Game.game"
     xsi:schemaLocation="http://www.Game.game Game.ecore"
-    name="JeuEnigme">
+    name="Enigme">
   <territoire/>
   <explorateur
-      place="//@elementsjeu.2"
-      tailleDispo="1">
+      place="//@elementsjeu.0"
+      tailleDispo="4">
     <objets
         name="Tentative"
         qte="3"
         taille="1"/>
   </explorateur>
-  <elementsjeu
-      xsi:type="game:Connaissance"
-      name="Reussite"/>
-  <elementsjeu
-      xsi:type="game:Personne"
-      name="Sphinx"
-      place="//@elementsjeu.2"
-      obligatoire="true">
-    <visible
-        name="SphinxVisible"
-        connaissancesInterdites="//@elementsjeu.0"
-        quantite="1"
-        objetsRequis="//@elementsjeu.7"/>
-    <interactions
-        name="Question"
-        question="[Question...]">
-      <choix
-          name="Bonne"
-          reponse="oui"
-          bonne="true"
-          connaisDon="//@elementsjeu.0">
-        <objetCons
-            qte="1"
-            objet="//@explorateur/@objets.0"/>
-      </choix>
-      <choix
-          name="Mauvaise"
-          reponse="non">
-        <objetCons
-            qte="1"
-            objet="//@elementsjeu.7"/>
-      </choix>
-    </interactions>
-  </elementsjeu>
   <elementsjeu
       xsi:type="game:Lieu"
       name="Enigme"/>
@@ -62,28 +28,64 @@
   <elementsjeu
       xsi:type="game:Chemin"
       name="Victoire"
-      pred="//@elementsjeu.2"
-      succ="//@elementsjeu.3"
+      pred="//@elementsjeu.0"
+      succ="//@elementsjeu.1"
       obligatoire="true">
     <visible
-        name="ReussiteObtenue"
-        connaissancesRequises="//@elementsjeu.0"/>
+        name="WinVis"
+        connaissancesRequises="//@elementsjeu.6"/>
   </elementsjeu>
   <elementsjeu
       xsi:type="game:Chemin"
       name="Defaite"
-      pred="//@elementsjeu.2"
-      succ="//@elementsjeu.4"
+      pred="//@elementsjeu.0"
+      succ="//@elementsjeu.2"
       obligatoire="true">
     <visible
-        name="PlusDeTentatives"
-        connaissancesInterdites="//@elementsjeu.0"
-        quantite="1"
-        objetsInterdits="//@elementsjeu.7"/>
+        name="Defvis"
+        connaissancesInterdites="//@elementsjeu.6"
+        objetsInterdits="//@explorateur/@objets.0"/>
   </elementsjeu>
   <elementsjeu
-      xsi:type="game:Objet"
-      name="Tentative"
-      qte="1"
-      taille="1"/>
+      xsi:type="game:Personne"
+      name="Sphinx"
+      place="//@elementsjeu.0"
+      obligatoire="true"
+      interactions="//@elementsjeu.7">
+    <visible
+        name="Spvis"
+        quantite="1"
+        objetsRequis="//@explorateur/@objets.0"/>
+  </elementsjeu>
+  <elementsjeu
+      xsi:type="game:Connaissance"
+      name="Reussite"/>
+  <elementsjeu
+      xsi:type="game:Interaction"
+      name="ParlerSphinx"
+      question="BLabla"
+      personne="//@elementsjeu.5"
+      choix="//@elementsjeu.8 //@elementsjeu.9"/>
+  <elementsjeu
+      xsi:type="game:Choix"
+      name="bonne"
+      reponse="oui"
+      bonne="true"
+      connaisDon="//@elementsjeu.6"
+      interaction="//@elementsjeu.7">
+    <objetCons
+        qte="1"
+        objet="//@explorateur/@objets.0"/>
+  </elementsjeu>
+  <elementsjeu
+      xsi:type="game:Choix"
+      name="mauvaise"
+      reponse="non"
+      interaction="//@elementsjeu.7">
+    <objetCons
+        qte="1"
+        objet="//@explorateur/@objets.0"/>
+  </elementsjeu>
+  <elementsjeu
+      name="Elements"/>
 </game:Jeu>
