@@ -8,8 +8,9 @@ create OUT : petri from IN : game;
 helper context game!ElementsJeu
 def: getJeu(): game!Jeu =
 	game!Jeu.allInstances()
-		->select(p | p.ElementsJeu->includes(self))
+		->select(p | p.elementsjeu->includes(self))
 		->asSequence()->first();
+
 
 -- Traduire un Jeu en un PetriNet de même nom
 rule Jeu2PetriNet {
@@ -17,7 +18,7 @@ rule Jeu2PetriNet {
 	to 	pn: petri!PetriNet (name <- j.name),
 	
 		p_init: petri!Place(
-			name <- j.name + '_init',
+			name <- 'Init',
 			currentToken <- 1,
 			petrinet <- pn),
 			
@@ -38,9 +39,9 @@ rule Jeu2PetriNet {
 rule LieuFinal2PetriNet {
 	from l: game!Lieu(l.nature=#fin)
 	to 	p_init: petri!Place(
-			name <- l.name + '_init',
+			name <- l.name,
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn'))
 }
 
 -- Traduire un Lieu de départ
@@ -49,12 +50,12 @@ rule LieuInitial2PetriNet {
 	to 	p_init: petri!Place(
 			name <- l.name + '_init',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
 		
 		p_end: petri!Place(
 			name <- l.name + '_end',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
 		
 		arc: petri!Arc(
 			linkType <- #take,
@@ -62,7 +63,32 @@ rule LieuInitial2PetriNet {
 			placeToTrans <- false,
 			place <- p_init,
 			transition <- thisModule.resolveTemp(l.getJeu(), 't_start'),
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
+		
+		p_inter: petri!Place(
+			name <- l.name + '_inter',
+			currentToken <- 0,
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
+		
+		t_inter: petri!Transition(
+			name <- 'finish_' + l.name,
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
+		
+		a_interIn: petri!Arc(
+			linkType <- #take,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- p_inter,
+			transition <- t_inter,
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
+		
+		a_interOut: petri!Arc(
+			linkType <- #take,
+			weight <- 1,
+			placeToTrans <- false,
+			place <- p_end,
+			transition <- t_inter,
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn'))
 }
 
 -- Traduire un Lieu intermédiaire
@@ -71,21 +97,21 @@ rule LieuInter2PetriNet {
 	to	p_init: petri!Place(
 			name <- l.name + '_init',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
 		
 		p_end: petri!Place(
 			name <- l.name + '_end',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
 		
 		p_inter: petri!Place(
 			name <- l.name + '_inter',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
 		
 		t_inter: petri!Transition(
-			name <- l.name,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init')),
+			name <- 'finish_' + l.name,
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
 		
 		a_interIn: petri!Arc(
 			linkType <- #take,
@@ -93,7 +119,7 @@ rule LieuInter2PetriNet {
 			placeToTrans <- true,
 			place <- p_inter,
 			transition <- t_inter,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn')),
 		
 		a_interOut: petri!Arc(
 			linkType <- #take,
@@ -101,7 +127,7 @@ rule LieuInter2PetriNet {
 			placeToTrans <- false,
 			place <- p_end,
 			transition <- t_inter,
-			petrinet <- thisModule.resolveTemp(l.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn'))
 }
 
 -- Traduire un Chemin
@@ -109,30 +135,30 @@ rule Chemin2PetriNet {
 	from ch: game!Chemin
 	to 	tr: petri!Transition(
 			name <- ch.name,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		tr_initVisible: petri!Transition(
 			name <- 'init_' + ch.name + '_visible',
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		tr_initOuvert: petri!Transition(
 			name <- 'init_' + ch.name + '_ouvert',
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 		
 		p_ouvert: petri!Place(
 			name <- ch.name + '_open',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		p_visible: petri!Place(
 			name <- ch.name + '_visible',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		p_obligatoire: petri!Place(
 			name <- ch.name + '_obligatoire',
 			currentToken <- if ch.obligatoire then 1 else 0 endif,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		a_vis: petri!Arc(
 			linkType <- #take,
@@ -140,7 +166,7 @@ rule Chemin2PetriNet {
 			placeToTrans <- false,
 			place <- p_visible,
 			transition <- tr_initVisible,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		a_vis2: petri!Arc(
 			linkType <- #take,
@@ -148,7 +174,7 @@ rule Chemin2PetriNet {
 			placeToTrans <- true,
 			place <- p_visible,
 			transition <- tr,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		a_ouv: petri!Arc(
 			linkType <- #take,
@@ -156,7 +182,7 @@ rule Chemin2PetriNet {
 			placeToTrans <- false,
 			place <- p_ouvert,
 			transition <- tr_initOuvert,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 		
 		a_ouv2: petri!Arc(
 			linkType <- #take,
@@ -164,7 +190,7 @@ rule Chemin2PetriNet {
 			placeToTrans <- true,
 			place <- p_ouvert,
 			transition <- tr,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 		
 		a_pred: petri!Arc(
 			linkType <- #take,
@@ -172,15 +198,15 @@ rule Chemin2PetriNet {
 			placeToTrans <- true,
 			place <- thisModule.resolveTemp(ch.pred, 'p_end'),
 			transition <- tr,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn')),
 			
 		a_succ: petri!Arc(
 			linkType <- #take,
 			weight <- 1,
 			placeToTrans <- false,
-			place <- thisModule.resolveTemp(ch.pred, 'p_init'),
+			place <- thisModule.resolveTemp(ch.succ, 'p_init'),
 			transition <- tr,
-			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn'))
 }
 
 -- Traduire une Personne obligatoire
@@ -188,34 +214,34 @@ rule Personne2PetriNet {
 	from pers: game!Personne(pers.obligatoire)
 	to 	t_initVisible: petri!Transition(
 			name <- 'init_' + pers.name + '_visible',
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
 			
 		t_initActive: petri!Transition(
 			name <- 'init_' + pers.name + '_active',
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
 		
 		p_visible: petri!Place(
 			name <- pers.name + '_visible',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
 		
 		p_active: petri!Place(
 			name <- pers.name + '_active',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
 			
 		p_oblig: petri!Place(
 			name <- pers.name + '_oblig',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
 		
 		a_oblig: petri!Arc(
 			linkType <- #take,
 			weight <- 1,
 			placeToTrans <- true,
 			place <- p_oblig,
-			transition <- thisModule.resolveTemp(pers.place, 'p_inter'),
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init')),
+			transition <- thisModule.resolveTemp(pers.place, 't_inter'),
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
 		
 		a_vis: petri!Arc(
 			linkType <- #take,
@@ -223,7 +249,7 @@ rule Personne2PetriNet {
 			placeToTrans <- false,
 			place <- p_visible,
 			transition <- t_initVisible,
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
 		
 		a_active: petri!Arc(
 			linkType <- #take,
@@ -231,7 +257,7 @@ rule Personne2PetriNet {
 			placeToTrans <- false,
 			place <- p_active,
 			transition <- t_initActive,
-			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn'))
 }
 
 -- Traduire une Interaction
@@ -239,15 +265,15 @@ rule Interaction2PetriNet {
 	from i: game!Interaction
 	to	t_start: petri!Transition(
 			name <- 'start_' + i.name,
-			petrinet <- thisModule.resolveTemp(i.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(i.getJeu(), 'pn')),
 		
 		a_start: petri!Arc(
 			linkType <- #read,
 			weight <- 1,
 			placeToTrans <- true,
-			place <- thisModule.resolveTemp(i.place, 'p_init'),
+			place <- thisModule.resolveTemp(i.personne.place, 'p_init'),
 			transition <- t_start,
-			petrinet <- thisModule.resolveTemp(i.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(i.getJeu(), 'pn')),
 		
 		a_startVis: petri!Arc(
 			linkType <- #read,
@@ -255,7 +281,7 @@ rule Interaction2PetriNet {
 			placeToTrans <- true,
 			place <- thisModule.resolveTemp(i.personne, 'p_visible'),
 			transition <- t_start,
-			petrinet <- thisModule.resolveTemp(i.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(i.getJeu(), 'pn')),
 		
 		a_startAct: petri!Arc(
 			linkType <- #read,
@@ -263,12 +289,12 @@ rule Interaction2PetriNet {
 			placeToTrans <- true,
 			place <- thisModule.resolveTemp(i.personne, 'p_active'),
 			transition <- t_start,
-			petrinet <- thisModule.resolveTemp(i.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(i.getJeu(), 'pn')),
 			
 		p_quest: petri!Place(
 			name <- i.question,
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(i.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(i.getJeu(), 'pn')),
 		
 		a_quest: petri!Arc(
 			linkType <- #take,
@@ -276,15 +302,15 @@ rule Interaction2PetriNet {
 			placeToTrans <- false,
 			place <- p_quest,
 			transition <- t_start,
-			petrinet <- thisModule.resolveTemp(i.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(i.getJeu(), 'pn'))
 }
 
--- Traduire un Choix d'une personne obligatoire
+-- Traduire un Choix d'une personne obligatoire, bonne réponse
 rule ChoixOblig2PetriNet {
 	from c: game!Choix(c.interaction.personne.obligatoire)
 	to	t: petri!Transition(
 			name <- c.reponse,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 	
 		a_in: petri!Arc(
 			linkType <- #take,
@@ -292,7 +318,7 @@ rule ChoixOblig2PetriNet {
 			placeToTrans <- true,
 			place <- thisModule.resolveTemp(c.interaction, 'p_quest'),
 			transition <- t,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
 		a_out: petri!Arc(
 			linkType <- #take,
@@ -300,7 +326,7 @@ rule ChoixOblig2PetriNet {
 			placeToTrans <- false,
 			place <- if c.bonne then thisModule.resolveTemp(c.interaction.personne.place, 'p_inter') else thisModule.resolveTemp(c.interaction.personne.place, 'p_init') endif,
 			transition <- t,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 		
 		a_oblig: petri!Arc(
 			linkType <- #take,
@@ -308,7 +334,7 @@ rule ChoixOblig2PetriNet {
 			placeToTrans <- false,
 			place <- thisModule.resolveTemp(c.interaction.personne, 'p_oblig'),
 			transition <- t,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
 
 -- Traduire un Choix d'une personne non obligatoire
@@ -316,7 +342,7 @@ rule Choix2PetriNet {
 	from c: game!Choix(not c.interaction.personne.obligatoire)
 	to	t: petri!Transition(
 			name <- c.reponse,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 	
 		a_in: petri!Arc(
 			linkType <- #take,
@@ -324,7 +350,7 @@ rule Choix2PetriNet {
 			placeToTrans <- true,
 			place <- thisModule.resolveTemp(c.interaction, 'p_quest'),
 			transition <- t,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
 		a_out: petri!Arc(
 			linkType <- #take,
@@ -332,7 +358,7 @@ rule Choix2PetriNet {
 			placeToTrans <- false,
 			place <- if c.bonne then thisModule.resolveTemp(c.interaction.personne.place, 'p_inter') else thisModule.resolveTemp(c.interaction.personne.place, 'p_init') endif,
 			transition <- t,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
 
 -- Traduire une Condition
@@ -347,27 +373,27 @@ rule Object2PetriNet {
 	to	p_visible: petri!Place(
 			name <- o.name + '_visible',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(o.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(o.getJeu(), 'pn')),
 			
 		p_actif: petri!Place(
 			name <- o.name + '_actif',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(o.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(o.getJeu(), 'pn')),
 			
 		p_objet: petri!Place(
 			name <- o.name,
 			currentToken <- o.qte,
-			petrinet <- thisModule.resolveTemp(o.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(o.getJeu(), 'pn')),
 		
 		p_conso: petri!Place(
 			name <- o.name + '_conso',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(o.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(o.getJeu(), 'pn')),
 		
 		p_trans: petri!Place(
 			name <- o.name + '_trans',
 			currentToken <- if o.transformable then 1 else 0 endif,
-			petrinet <- thisModule.resolveTemp(o.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(o.getJeu(), 'pn'))
 }
 
 -- Traduire une Connaissance
@@ -376,22 +402,22 @@ rule Connaissance2PetriNet {
 	to	p_visible: petri!Place(
 			name <- c.name + '_visible',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
 		p_active: petri!Place(
 			name <- c.name + '_active',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
 		p_presente: petri!Place(
 			name <- c.name + '_presente',
 			currentToken <- 0,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init')),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 		
 		p_absente: petri!Place(
 			name <- c.name + '_absente',
 			currentToken <- 1,
-			petrinet <- thisModule.resolveTemp(c.getJeu(), 'p_init'))
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
 
 -- Traduire un explorateur

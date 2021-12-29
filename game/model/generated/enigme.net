@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petrinet="http://petrinet">
+  <petrinet:PetriNet name="Enigme">
+    <petriNetElements xsi:type="petrinet:Place" name="Init" currentToken="1" arc="/0/@petriNetElements.2"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="start_Enigme" arc="/0/@petriNetElements.2 /0/@petriNetElements.7"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.1" place="/0/@petriNetElements.0"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Succes" arc="/0/@petriNetElements.23"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Echec" arc="/0/@petriNetElements.35"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Enigme_init" arc="/0/@petriNetElements.7 /0/@petriNetElements.45 /0/@petriNetElements.56"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Enigme_end" arc="/0/@petriNetElements.11 /0/@petriNetElements.22 /0/@petriNetElements.34"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.1" place="/0/@petriNetElements.5"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Enigme_inter" arc="/0/@petriNetElements.10 /0/@petriNetElements.52"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="finish_Enigme" arc="/0/@petriNetElements.10 /0/@petriNetElements.11 /0/@petriNetElements.41"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.9" place="/0/@petriNetElements.8"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.9" place="/0/@petriNetElements.6"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="Victoire" arc="/0/@petriNetElements.19 /0/@petriNetElements.21 /0/@petriNetElements.22 /0/@petriNetElements.23"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="init_Victoire_visible" arc="/0/@petriNetElements.18"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="init_Victoire_ouvert" arc="/0/@petriNetElements.20"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Victoire_open" arc="/0/@petriNetElements.20 /0/@petriNetElements.21"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Victoire_visible" arc="/0/@petriNetElements.18 /0/@petriNetElements.19"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Victoire_obligatoire" currentToken="1"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.13" place="/0/@petriNetElements.16"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.12" place="/0/@petriNetElements.16"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.14" place="/0/@petriNetElements.15"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.12" place="/0/@petriNetElements.15"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.12" place="/0/@petriNetElements.6"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.12" place="/0/@petriNetElements.3"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="Defaite" arc="/0/@petriNetElements.31 /0/@petriNetElements.33 /0/@petriNetElements.34 /0/@petriNetElements.35"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="init_Defaite_visible" arc="/0/@petriNetElements.30"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="init_Defaite_ouvert" arc="/0/@petriNetElements.32"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Defaite_open" arc="/0/@petriNetElements.32 /0/@petriNetElements.33"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Defaite_visible" arc="/0/@petriNetElements.30 /0/@petriNetElements.31"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Defaite_obligatoire" currentToken="1"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.25" place="/0/@petriNetElements.28"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.24" place="/0/@petriNetElements.28"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.26" place="/0/@petriNetElements.27"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.24" place="/0/@petriNetElements.27"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.24" place="/0/@petriNetElements.6"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.24" place="/0/@petriNetElements.4"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="init_Sphinx_visible" arc="/0/@petriNetElements.42"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="init_Sphinx_active" arc="/0/@petriNetElements.43"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Sphinx_visible" arc="/0/@petriNetElements.42 /0/@petriNetElements.46"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Sphinx_active" arc="/0/@petriNetElements.43 /0/@petriNetElements.47"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Sphinx_oblig" arc="/0/@petriNetElements.41 /0/@petriNetElements.53 /0/@petriNetElements.57"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.9" place="/0/@petriNetElements.40"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.36" place="/0/@petriNetElements.38"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.37" place="/0/@petriNetElements.39"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="start_ParlerSphinx" arc="/0/@petriNetElements.45 /0/@petriNetElements.46 /0/@petriNetElements.47 /0/@petriNetElements.49"/>
+    <petriNetElements xsi:type="petrinet:Arc" weight="1" placeToTrans="true" transition="/0/@petriNetElements.44" place="/0/@petriNetElements.5"/>
+    <petriNetElements xsi:type="petrinet:Arc" weight="1" placeToTrans="true" transition="/0/@petriNetElements.44" place="/0/@petriNetElements.38"/>
+    <petriNetElements xsi:type="petrinet:Arc" weight="1" placeToTrans="true" transition="/0/@petriNetElements.44" place="/0/@petriNetElements.39"/>
+    <petriNetElements xsi:type="petrinet:Place" name="BLabla" arc="/0/@petriNetElements.49 /0/@petriNetElements.51 /0/@petriNetElements.55"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.44" place="/0/@petriNetElements.48"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="oui" arc="/0/@petriNetElements.51 /0/@petriNetElements.52 /0/@petriNetElements.53"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.50" place="/0/@petriNetElements.48"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.50" place="/0/@petriNetElements.8"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.50" place="/0/@petriNetElements.40"/>
+    <petriNetElements xsi:type="petrinet:Transition" name="non" arc="/0/@petriNetElements.55 /0/@petriNetElements.56 /0/@petriNetElements.57"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" placeToTrans="true" transition="/0/@petriNetElements.54" place="/0/@petriNetElements.48"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.54" place="/0/@petriNetElements.5"/>
+    <petriNetElements xsi:type="petrinet:Arc" linkType="take" weight="1" transition="/0/@petriNetElements.54" place="/0/@petriNetElements.40"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Reussite_visible"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Reussite_active"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Reussite_presente"/>
+    <petriNetElements xsi:type="petrinet:Place" name="Reussite_absente" currentToken="1"/>
+  </petrinet:PetriNet>
+  <petrinet:Place name="Tentative_visible"/>
+  <petrinet:Place name="Tentative_actif"/>
+  <petrinet:Place name="Tentative" currentToken="3"/>
+  <petrinet:Place name="Tentative_conso"/>
+  <petrinet:Place name="Tentative_trans"/>
+</xmi:XMI>
