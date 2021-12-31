@@ -1,0 +1,42 @@
+net Enigme
+pl Init (1)
+pl Default (1)
+pl Succes (0)
+pl Echec (0)
+pl Enigme_init (0)
+pl Enigme_end (0)
+pl Victoire_open (0)
+pl Victoire_visible (0)
+pl Victoire_obligatoire (1)
+pl Victoire_first (1)
+pl Defaite_open (0)
+pl Defaite_visible (0)
+pl Defaite_obligatoire (1)
+pl Defaite_first (1)
+pl Sphinx_visible (0)
+pl Sphinx_active (0)
+pl Sphinx_oblig (0)
+pl Gagner (0)
+pl Tentative_visible (0)
+pl Tentative_actif (0)
+pl Tentative (3)
+pl Tentative_conso (0)
+pl Tentative_trans (0)
+pl Reussite_visible (0)
+pl Reussite_active (0)
+pl Reussite_presente (0)
+pl Reussite_absente (1)
+tr Start_Enigme [0,w[ Init*1 	-> Enigme_init*1
+tr t_def [0,w[ ->
+tr finish_Enigme [0,w[ Sphinx_oblig*1 -> Enigme_end*1
+tr Victoire [0,w[ Victoire_first*1 	Victoire_visible*1 	Victoire_open*1 	Enigme_end*1 	-> Succes*1
+tr init_Victoire_visible [0,w[ Enigme_end?1 		VicVisible_def!1 	Reussite_presente?1 	VicVisible_def!1 	VicVisible_def!1 -> Victoire_visible*1
+tr init_Victoire_ouvert [0,w[ Enigme_end?1 	-> Victoire_open*1
+tr Defaite [0,w[ Defaite_first*1 	Defaite_visible*1 	Defaite_open*1 	Enigme_end*1 	-> Echec*1
+tr init_Defaite_visible [0,w[ Enigme_end?1 		defVisible_def!1 	defVisible_def!1 	Tentative?-1 	Reussite_absente?1 -> Defaite_visible*1
+tr init_Defaite_ouvert [0,w[ Enigme_end?1 	-> Defaite_open*1
+tr init_Sphinx_visible [0,w[ Enigme_init?1 		Tentative?1 	sphinxVisible_def!1 	sphinxVisible_def!1 	Reussite_absente?1 -> Sphinx_visible*1
+tr init_Sphinx_active [0,w[ Enigme_init?1 	-> Sphinx_active*1
+tr start_Question [0,w[ Enigme_init?1 	Sphinx_visible*1 	Sphinx_active*1 	-> Gagner*1
+tr oui [0,w[ Gagner*1 			Tentative*2 	Reussite_absente*1 	-> Default*1 Sphinx_oblig*1 Reussite_presente*1
+tr non [0,w[ Gagner*1 			Tentative*1 -> Enigme_init*1 Sphinx_oblig*1

@@ -20,14 +20,18 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//ElementsJeu"/>
   <eClassifiers xsi:type="ecore:EClass" name="Avantage" eSuperTypes="#//ElementsJeu">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" eType="#//Condition"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actif" eType="#//Condition"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" upperBound="-1"
+        eType="#//ConditionAvantage" containment="true" eOpposite="#//ConditionAvantage/visible"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actif" upperBound="-1"
+        eType="#//ConditionAvantage" containment="true" eOpposite="#//ConditionAvantage/actif"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="QteObjet">
+  <eClassifiers xsi:type="ecore:EClass" name="QteObjet" eSuperTypes="#//ElementsJeu">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qte" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objet" eType="#//Objet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choixCons" eType="#//Choix"
+        eOpposite="#//Choix/objetCons"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choixDon" eType="#//Choix"
+        eOpposite="#//Choix/objetDon"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Territoire">
     <eStructuralFeatures xsi:type="ecore:EReference" name="places" upperBound="-1"
@@ -41,19 +45,19 @@
   <eClassifiers xsi:type="ecore:EClass" name="Chemin" eSuperTypes="#//Place">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pred" eType="#//Lieu"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="succ" eType="#//Lieu"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" eType="#//Condition"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" upperBound="-1"
+        eType="#//ConditionChemin" containment="true" eOpposite="#//ConditionChemin/visible"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="obligatoire" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ouvert" eType="#//Condition"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ouvert" upperBound="-1"
+        eType="#//ConditionChemin" containment="true" eOpposite="#//ConditionChemin/ouvert"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Personne" eSuperTypes="#//ElementsJeu">
     <eStructuralFeatures xsi:type="ecore:EReference" name="place" lowerBound="1" eType="#//Lieu"
         eOpposite="#//Lieu/personnes"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" eType="#//Condition"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actif" eType="#//Condition"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" upperBound="-1"
+        eType="#//ConditionPersonne" containment="true" eOpposite="#//ConditionPersonne/visible"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="active" upperBound="-1"
+        eType="#//ConditionPersonne" containment="true" eOpposite="#//ConditionPersonne/active"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="obligatoire" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interactions" lowerBound="1"
         upperBound="-1" eType="#//Interaction" eOpposite="#//Interaction/personne"/>
@@ -66,7 +70,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="connaissances" upperBound="-1"
         eType="#//Connaissance" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Connaissance" eSuperTypes="#//Avantage"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Connaissance" eSuperTypes="#//Avantage">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="choix" eType="#//Choix"
+        eOpposite="#//Choix/connaisDon"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Objet" eSuperTypes="#//Avantage">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="qte" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="taille" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -83,24 +90,40 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reponse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="bonne" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objetCons" upperBound="-1"
-        eType="#//QteObjet" containment="true"/>
+        eType="#//QteObjet" containment="true" eOpposite="#//QteObjet/choixCons"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objetDon" upperBound="-1"
-        eType="#//QteObjet" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connaisDon" unique="false"
-        upperBound="-1" eType="#//Connaissance"/>
+        eType="#//QteObjet" containment="true" eOpposite="#//QteObjet/choixDon"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connaisDon" upperBound="-1"
+        eType="#//Connaissance" eOpposite="#//Connaissance/choix"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interaction" lowerBound="1"
         eType="#//Interaction" eOpposite="#//Interaction/choix"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Condition">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connaissancesRequises"
-        unique="false" upperBound="-1" eType="#//Connaissance"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="connaissancesInterdites"
-        unique="false" upperBound="-1" eType="#//Connaissance"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantite" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objetsRequis" unique="false"
-        upperBound="-1" eType="#//Objet"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objetsInterdits" unique="false"
-        upperBound="-1" eType="#//Objet"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition" eSuperTypes="#//ElementsJeu">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connaissanceRequise" unique="false"
+        eType="#//Connaissance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connaissanceInterdite"
+        unique="false" eType="#//Connaissance"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objetRequis" unique="false"
+        eType="#//Objet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objetInterdit" unique="false"
+        eType="#//Objet"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionPersonne" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" eType="#//Personne"
+        eOpposite="#//Personne/visible"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="active" eType="#//Personne"
+        eOpposite="#//Personne/active"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionAvantage" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" eType="#//Avantage"
+        eOpposite="#//Avantage/visible"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actif" eType="#//Avantage"
+        eOpposite="#//Avantage/actif"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionChemin" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="visible" eType="#//Chemin"
+        eOpposite="#//Chemin/visible"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ouvert" eType="#//Chemin"
+        eOpposite="#//Chemin/ouvert"/>
   </eClassifiers>
 </ecore:EPackage>

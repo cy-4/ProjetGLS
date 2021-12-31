@@ -7,85 +7,84 @@
     name="Enigme">
   <territoire/>
   <explorateur
-      place="//@elementsjeu.0"
-      tailleDispo="4">
-    <objets
-        name="Tentative"
-        qte="3"
-        taille="1"/>
-  </explorateur>
+      tailleDispo="4"/>
+  <elementsjeu
+      xsi:type="game:Objet"
+      name="Tentative"
+      qte="3"
+      taille="1"/>
   <elementsjeu
       xsi:type="game:Lieu"
-      name="Enigme"/>
+      name="Enigme"
+      personnes="//@elementsjeu.2"/>
+  <elementsjeu
+      xsi:type="game:Personne"
+      name="Sphinx"
+      place="//@elementsjeu.1"
+      obligatoire="true"
+      interactions="//@elementsjeu.3">
+    <visible
+        name="sphinxVisible"
+        connaissanceInterdite="//@elementsjeu.6"
+        objetRequis="//@elementsjeu.0"/>
+  </elementsjeu>
+  <elementsjeu
+      xsi:type="game:Interaction"
+      name="Question"
+      question="Gagner"
+      personne="//@elementsjeu.2"
+      choix="//@elementsjeu.4 //@elementsjeu.5"/>
+  <elementsjeu
+      xsi:type="game:Choix"
+      name="vrai"
+      reponse="oui"
+      bonne="true"
+      connaisDon="//@elementsjeu.6"
+      interaction="//@elementsjeu.3">
+    <objetCons
+        qte="2"
+        objet="//@elementsjeu.0"/>
+  </elementsjeu>
+  <elementsjeu
+      xsi:type="game:Choix"
+      name="faux"
+      reponse="non"
+      interaction="//@elementsjeu.3">
+    <objetCons
+        qte="1"
+        objet="//@elementsjeu.0"/>
+  </elementsjeu>
+  <elementsjeu
+      xsi:type="game:Connaissance"
+      name="Reussite"
+      choix="//@elementsjeu.4"/>
   <elementsjeu
       xsi:type="game:Lieu"
       name="Succes"
       nature="fin"/>
   <elementsjeu
-      xsi:type="game:Lieu"
-      name="Echec"
-      nature="fin"/>
-  <elementsjeu
       xsi:type="game:Chemin"
       name="Victoire"
-      pred="//@elementsjeu.0"
-      succ="//@elementsjeu.1"
+      pred="//@elementsjeu.1"
+      succ="//@elementsjeu.7"
       obligatoire="true">
     <visible
-        name="WinVis"
-        connaissancesRequises="//@elementsjeu.6"/>
+        name="VicVisible"
+        connaissanceRequise="//@elementsjeu.6"/>
   </elementsjeu>
   <elementsjeu
       xsi:type="game:Chemin"
       name="Defaite"
-      pred="//@elementsjeu.0"
-      succ="//@elementsjeu.2"
+      pred="//@elementsjeu.1"
+      succ="//@elementsjeu.10"
       obligatoire="true">
     <visible
-        name="Defvis"
-        connaissancesInterdites="//@elementsjeu.6"
-        objetsInterdits="//@explorateur/@objets.0"/>
+        name="defVisible"
+        connaissanceInterdite="//@elementsjeu.6"
+        objetInterdit="//@elementsjeu.0"/>
   </elementsjeu>
   <elementsjeu
-      xsi:type="game:Personne"
-      name="Sphinx"
-      place="//@elementsjeu.0"
-      obligatoire="true"
-      interactions="//@elementsjeu.7">
-    <visible
-        name="Spvis"
-        quantite="1"
-        objetsRequis="//@explorateur/@objets.0"/>
-  </elementsjeu>
-  <elementsjeu
-      xsi:type="game:Connaissance"
-      name="Reussite"/>
-  <elementsjeu
-      xsi:type="game:Interaction"
-      name="ParlerSphinx"
-      question="BLabla"
-      personne="//@elementsjeu.5"
-      choix="//@elementsjeu.8 //@elementsjeu.9"/>
-  <elementsjeu
-      xsi:type="game:Choix"
-      name="bonne"
-      reponse="oui"
-      bonne="true"
-      connaisDon="//@elementsjeu.6"
-      interaction="//@elementsjeu.7">
-    <objetCons
-        qte="1"
-        objet="//@explorateur/@objets.0"/>
-  </elementsjeu>
-  <elementsjeu
-      xsi:type="game:Choix"
-      name="mauvaise"
-      reponse="non"
-      interaction="//@elementsjeu.7">
-    <objetCons
-        qte="1"
-        objet="//@explorateur/@objets.0"/>
-  </elementsjeu>
-  <elementsjeu
-      name="Elements"/>
+      xsi:type="game:Lieu"
+      name="Echec"
+      nature="fin"/>
 </game:Jeu>
