@@ -5,6 +5,7 @@ package game.game.provider;
 
 
 import game.game.Choix;
+import game.game.GameFactory;
 import game.game.GamePackage;
 
 import java.util.Collection;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -33,13 +35,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ChoixItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ElementsJeuItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -61,36 +57,12 @@ public class ChoixItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addReponsePropertyDescriptor(object);
-			addQteConsPropertyDescriptor(object);
-			addAvantageConsPropertyDescriptor(object);
-			addQteDonPropertyDescriptor(object);
-			addAvantageDonPropertyDescriptor(object);
+			addBonnePropertyDescriptor(object);
+			addConnaisDonPropertyDescriptor(object);
+			addInteractionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Choix_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_name_feature", "_UI_Choix_type"),
-				 GamePackage.Literals.CHOIX__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -116,41 +88,41 @@ public class ChoixItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Qte Cons feature.
+	 * This adds a property descriptor for the Bonne feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addQteConsPropertyDescriptor(Object object) {
+	protected void addBonnePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Choix_qteCons_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_qteCons_feature", "_UI_Choix_type"),
-				 GamePackage.Literals.CHOIX__QTE_CONS,
+				 getString("_UI_Choix_bonne_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_bonne_feature", "_UI_Choix_type"),
+				 GamePackage.Literals.CHOIX__BONNE,
 				 true,
 				 false,
 				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Avantage Cons feature.
+	 * This adds a property descriptor for the Connais Don feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAvantageConsPropertyDescriptor(Object object) {
+	protected void addConnaisDonPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Choix_avantageCons_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_avantageCons_feature", "_UI_Choix_type"),
-				 GamePackage.Literals.CHOIX__AVANTAGE_CONS,
+				 getString("_UI_Choix_connaisDon_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_connaisDon_feature", "_UI_Choix_type"),
+				 GamePackage.Literals.CHOIX__CONNAIS_DON,
 				 true,
 				 false,
 				 true,
@@ -160,47 +132,56 @@ public class ChoixItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Qte Don feature.
+	 * This adds a property descriptor for the Interaction feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addQteDonPropertyDescriptor(Object object) {
+	protected void addInteractionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Choix_qteDon_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_qteDon_feature", "_UI_Choix_type"),
-				 GamePackage.Literals.CHOIX__QTE_DON,
+				 getString("_UI_Choix_interaction_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_interaction_feature", "_UI_Choix_type"),
+				 GamePackage.Literals.CHOIX__INTERACTION,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(GamePackage.Literals.CHOIX__OBJET_CONS);
+			childrenFeatures.add(GamePackage.Literals.CHOIX__OBJET_DON);
+		}
+		return childrenFeatures;
 	}
 
 	/**
-	 * This adds a property descriptor for the Avantage Don feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAvantageDonPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Choix_avantageDon_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Choix_avantageDon_feature", "_UI_Choix_type"),
-				 GamePackage.Literals.CHOIX__AVANTAGE_DON,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -241,11 +222,13 @@ public class ChoixItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Choix.class)) {
-			case GamePackage.CHOIX__NAME:
 			case GamePackage.CHOIX__REPONSE:
-			case GamePackage.CHOIX__QTE_CONS:
-			case GamePackage.CHOIX__QTE_DON:
+			case GamePackage.CHOIX__BONNE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case GamePackage.CHOIX__OBJET_CONS:
+			case GamePackage.CHOIX__OBJET_DON:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -261,17 +244,39 @@ public class ChoixItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.CHOIX__OBJET_CONS,
+				 GameFactory.eINSTANCE.createQteObjet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.CHOIX__OBJET_DON,
+				 GameFactory.eINSTANCE.createQteObjet()));
 	}
 
 	/**
-	 * Return the resource locator for this item provider's resources.
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public ResourceLocator getResourceLocator() {
-		return GameEditPlugin.INSTANCE;
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == GamePackage.Literals.CHOIX__OBJET_CONS ||
+			childFeature == GamePackage.Literals.CHOIX__OBJET_DON;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

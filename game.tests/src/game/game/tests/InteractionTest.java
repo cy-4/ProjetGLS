@@ -16,15 +16,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InteractionTest extends TestCase {
-
-	/**
-	 * The fixture for this Interaction test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Interaction fixture = null;
+public class InteractionTest extends ElementsJeuTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,23 +38,14 @@ public class InteractionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Interaction test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Interaction fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Interaction test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Interaction getFixture() {
-		return fixture;
+		return (Interaction)fixture;
 	}
 
 	/**

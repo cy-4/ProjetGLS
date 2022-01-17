@@ -16,15 +16,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ChoixTest extends TestCase {
-
-	/**
-	 * The fixture for this Choix test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Choix fixture = null;
+public class ChoixTest extends ElementsJeuTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,23 +38,14 @@ public class ChoixTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Choix test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Choix fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Choix test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Choix getFixture() {
-		return fixture;
+		return (Choix)fixture;
 	}
 
 	/**

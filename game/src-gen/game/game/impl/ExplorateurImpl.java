@@ -44,309 +44,300 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ExplorateurImpl extends MinimalEObjectImpl.Container implements Explorateur
 {
   /**
-   * The cached value of the '{@link #getPlace() <em>Place</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPlace() <em>Place</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPlace()
-   * @generated
-   * @ordered
-   */
+	 * @see #getPlace()
+	 * @generated
+	 * @ordered
+	 */
   protected Place place;
 
   /**
-   * The default value of the '{@link #getTailleDispo() <em>Taille Dispo</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getTailleDispo() <em>Taille Dispo</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTailleDispo()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTailleDispo()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int TAILLE_DISPO_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getTailleDispo() <em>Taille Dispo</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTailleDispo() <em>Taille Dispo</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTailleDispo()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTailleDispo()
+	 * @generated
+	 * @ordered
+	 */
   protected int tailleDispo = TAILLE_DISPO_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getObjets() <em>Objets</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getObjets() <em>Objets</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getObjets()
-   * @generated
-   * @ordered
-   */
+	 * @see #getObjets()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Objet> objets;
 
   /**
-   * The cached value of the '{@link #getConnaissances() <em>Connaissances</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getConnaissances() <em>Connaissances</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConnaissances()
-   * @generated
-   * @ordered
-   */
+	 * @see #getConnaissances()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Connaissance> connaissances;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ExplorateurImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.EXPLORATEUR;
-  }
+		return GamePackage.Literals.EXPLORATEUR;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Place getPlace()
   {
-    if (place != null && place.eIsProxy())
-    {
-      InternalEObject oldPlace = (InternalEObject)place;
-      place = (Place)eResolveProxy(oldPlace);
-      if (place != oldPlace)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.EXPLORATEUR__PLACE, oldPlace, place));
-      }
-    }
-    return place;
-  }
+		if (place != null && place.eIsProxy()) {
+			InternalEObject oldPlace = (InternalEObject)place;
+			place = (Place)eResolveProxy(oldPlace);
+			if (place != oldPlace) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.EXPLORATEUR__PLACE, oldPlace, place));
+			}
+		}
+		return place;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Place basicGetPlace()
   {
-    return place;
-  }
+		return place;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setPlace(Place newPlace)
   {
-    Place oldPlace = place;
-    place = newPlace;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.EXPLORATEUR__PLACE, oldPlace, place));
-  }
+		Place oldPlace = place;
+		place = newPlace;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.EXPLORATEUR__PLACE, oldPlace, place));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public int getTailleDispo()
   {
-    return tailleDispo;
-  }
+		return tailleDispo;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setTailleDispo(int newTailleDispo)
   {
-    int oldTailleDispo = tailleDispo;
-    tailleDispo = newTailleDispo;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.EXPLORATEUR__TAILLE_DISPO, oldTailleDispo, tailleDispo));
-  }
+		int oldTailleDispo = tailleDispo;
+		tailleDispo = newTailleDispo;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.EXPLORATEUR__TAILLE_DISPO, oldTailleDispo, tailleDispo));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<Objet> getObjets()
   {
-    if (objets == null)
-    {
-      objets = new EObjectContainmentEList<Objet>(Objet.class, this, GamePackage.EXPLORATEUR__OBJETS);
-    }
-    return objets;
-  }
+		if (objets == null) {
+			objets = new EObjectContainmentEList<Objet>(Objet.class, this, GamePackage.EXPLORATEUR__OBJETS);
+		}
+		return objets;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<Connaissance> getConnaissances()
   {
-    if (connaissances == null)
-    {
-      connaissances = new EObjectContainmentEList<Connaissance>(Connaissance.class, this, GamePackage.EXPLORATEUR__CONNAISSANCES);
-    }
-    return connaissances;
-  }
+		if (connaissances == null) {
+			connaissances = new EObjectContainmentEList<Connaissance>(Connaissance.class, this, GamePackage.EXPLORATEUR__CONNAISSANCES);
+		}
+		return connaissances;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.EXPLORATEUR__OBJETS:
-        return ((InternalEList<?>)getObjets()).basicRemove(otherEnd, msgs);
-      case GamePackage.EXPLORATEUR__CONNAISSANCES:
-        return ((InternalEList<?>)getConnaissances()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.EXPLORATEUR__OBJETS:
+				return ((InternalEList<?>)getObjets()).basicRemove(otherEnd, msgs);
+			case GamePackage.EXPLORATEUR__CONNAISSANCES:
+				return ((InternalEList<?>)getConnaissances()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.EXPLORATEUR__PLACE:
-        if (resolve) return getPlace();
-        return basicGetPlace();
-      case GamePackage.EXPLORATEUR__TAILLE_DISPO:
-        return getTailleDispo();
-      case GamePackage.EXPLORATEUR__OBJETS:
-        return getObjets();
-      case GamePackage.EXPLORATEUR__CONNAISSANCES:
-        return getConnaissances();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.EXPLORATEUR__PLACE:
+				if (resolve) return getPlace();
+				return basicGetPlace();
+			case GamePackage.EXPLORATEUR__TAILLE_DISPO:
+				return getTailleDispo();
+			case GamePackage.EXPLORATEUR__OBJETS:
+				return getObjets();
+			case GamePackage.EXPLORATEUR__CONNAISSANCES:
+				return getConnaissances();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.EXPLORATEUR__PLACE:
-        setPlace((Place)newValue);
-        return;
-      case GamePackage.EXPLORATEUR__TAILLE_DISPO:
-        setTailleDispo((Integer)newValue);
-        return;
-      case GamePackage.EXPLORATEUR__OBJETS:
-        getObjets().clear();
-        getObjets().addAll((Collection<? extends Objet>)newValue);
-        return;
-      case GamePackage.EXPLORATEUR__CONNAISSANCES:
-        getConnaissances().clear();
-        getConnaissances().addAll((Collection<? extends Connaissance>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.EXPLORATEUR__PLACE:
+				setPlace((Place)newValue);
+				return;
+			case GamePackage.EXPLORATEUR__TAILLE_DISPO:
+				setTailleDispo((Integer)newValue);
+				return;
+			case GamePackage.EXPLORATEUR__OBJETS:
+				getObjets().clear();
+				getObjets().addAll((Collection<? extends Objet>)newValue);
+				return;
+			case GamePackage.EXPLORATEUR__CONNAISSANCES:
+				getConnaissances().clear();
+				getConnaissances().addAll((Collection<? extends Connaissance>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.EXPLORATEUR__PLACE:
-        setPlace((Place)null);
-        return;
-      case GamePackage.EXPLORATEUR__TAILLE_DISPO:
-        setTailleDispo(TAILLE_DISPO_EDEFAULT);
-        return;
-      case GamePackage.EXPLORATEUR__OBJETS:
-        getObjets().clear();
-        return;
-      case GamePackage.EXPLORATEUR__CONNAISSANCES:
-        getConnaissances().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.EXPLORATEUR__PLACE:
+				setPlace((Place)null);
+				return;
+			case GamePackage.EXPLORATEUR__TAILLE_DISPO:
+				setTailleDispo(TAILLE_DISPO_EDEFAULT);
+				return;
+			case GamePackage.EXPLORATEUR__OBJETS:
+				getObjets().clear();
+				return;
+			case GamePackage.EXPLORATEUR__CONNAISSANCES:
+				getConnaissances().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.EXPLORATEUR__PLACE:
-        return place != null;
-      case GamePackage.EXPLORATEUR__TAILLE_DISPO:
-        return tailleDispo != TAILLE_DISPO_EDEFAULT;
-      case GamePackage.EXPLORATEUR__OBJETS:
-        return objets != null && !objets.isEmpty();
-      case GamePackage.EXPLORATEUR__CONNAISSANCES:
-        return connaissances != null && !connaissances.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.EXPLORATEUR__PLACE:
+				return place != null;
+			case GamePackage.EXPLORATEUR__TAILLE_DISPO:
+				return tailleDispo != TAILLE_DISPO_EDEFAULT;
+			case GamePackage.EXPLORATEUR__OBJETS:
+				return objets != null && !objets.isEmpty();
+			case GamePackage.EXPLORATEUR__CONNAISSANCES:
+				return connaissances != null && !connaissances.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (tailleDispo: ");
-    result.append(tailleDispo);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (tailleDispo: ");
+		result.append(tailleDispo);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ExplorateurImpl

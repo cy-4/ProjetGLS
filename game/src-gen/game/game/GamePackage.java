@@ -27,1463 +27,1881 @@ import org.eclipse.emf.ecore.EReference;
 public interface GamePackage extends EPackage
 {
   /**
-   * The package name.
-   * <!-- begin-user-doc -->
+	 * The package name.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   String eNAME = "game";
 
   /**
-   * The package namespace URI.
-   * <!-- begin-user-doc -->
+	 * The package namespace URI.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   String eNS_URI = "http://www.Game.game";
 
   /**
-   * The package namespace name.
-   * <!-- begin-user-doc -->
+	 * The package namespace name.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   String eNS_PREFIX = "game";
 
   /**
-   * The singleton instance of the package.
-   * <!-- begin-user-doc -->
+	 * The singleton instance of the package.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   GamePackage eINSTANCE = game.game.impl.GamePackageImpl.init();
 
   /**
-   * The meta object id for the '{@link game.game.impl.JeuImpl <em>Jeu</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.JeuImpl <em>Jeu</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.JeuImpl
-   * @see game.game.impl.GamePackageImpl#getJeu()
-   * @generated
-   */
+	 * @see game.game.impl.JeuImpl
+	 * @see game.game.impl.GamePackageImpl#getJeu()
+	 * @generated
+	 */
   int JEU = 0;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Territoire</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Territoire</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU__TERRITOIRE = 1;
 
   /**
-   * The feature id for the '<em><b>Explorateur</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Explorateur</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU__EXPLORATEUR = 2;
 
   /**
-   * The feature id for the '<em><b>Elementsjeu</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Elementsjeu</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU__ELEMENTSJEU = 3;
 
   /**
-   * The number of structural features of the '<em>Jeu</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Jeu</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int JEU_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link game.game.impl.ElementsJeuImpl <em>Elements Jeu</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.ElementsJeuImpl <em>Elements Jeu</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.ElementsJeuImpl
-   * @see game.game.impl.GamePackageImpl#getElementsJeu()
-   * @generated
-   */
+	 * @see game.game.impl.ElementsJeuImpl
+	 * @see game.game.impl.GamePackageImpl#getElementsJeu()
+	 * @generated
+	 */
   int ELEMENTS_JEU = 1;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int ELEMENTS_JEU__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Elements Jeu</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Elements Jeu</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int ELEMENTS_JEU_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link game.game.impl.PlaceImpl <em>Place</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.PlaceImpl <em>Place</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.PlaceImpl
-   * @see game.game.impl.GamePackageImpl#getPlace()
-   * @generated
-   */
+	 * @see game.game.impl.PlaceImpl
+	 * @see game.game.impl.GamePackageImpl#getPlace()
+	 * @generated
+	 */
   int PLACE = 2;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PLACE__NAME = ELEMENTS_JEU__NAME;
 
   /**
-   * The number of structural features of the '<em>Place</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Place</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PLACE_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link game.game.impl.AvantageImpl <em>Avantage</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.AvantageImpl <em>Avantage</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.AvantageImpl
-   * @see game.game.impl.GamePackageImpl#getAvantage()
-   * @generated
-   */
+	 * @see game.game.impl.AvantageImpl
+	 * @see game.game.impl.GamePackageImpl#getAvantage()
+	 * @generated
+	 */
   int AVANTAGE = 3;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int AVANTAGE__NAME = ELEMENTS_JEU__NAME;
 
   /**
-   * The feature id for the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Visible</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int AVANTAGE__VISIBLE = ELEMENTS_JEU_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Actif</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Actif</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int AVANTAGE__ACTIF = ELEMENTS_JEU_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Avantage</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Avantage</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int AVANTAGE_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link game.game.impl.QteObjetImpl <em>Qte Objet</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.QteObjetImpl <em>Qte Objet</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.QteObjetImpl
-   * @see game.game.impl.GamePackageImpl#getQteObjet()
-   * @generated
-   */
+	 * @see game.game.impl.QteObjetImpl
+	 * @see game.game.impl.GamePackageImpl#getQteObjet()
+	 * @generated
+	 */
   int QTE_OBJET = 4;
 
   /**
-   * The feature id for the '<em><b>Qte</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QTE_OBJET__NAME = ELEMENTS_JEU__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Qte</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QTE_OBJET__QTE = 0;
+	 * @generated
+	 * @ordered
+	 */
+  int QTE_OBJET__QTE = ELEMENTS_JEU_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Objet</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Objet</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QTE_OBJET__OBJET = 1;
+	 * @generated
+	 * @ordered
+	 */
+  int QTE_OBJET__OBJET = ELEMENTS_JEU_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>Qte Objet</em>' class.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Choix Cons</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QTE_OBJET__CHOIX_CONS = ELEMENTS_JEU_FEATURE_COUNT + 2;
+
+		/**
+	 * The feature id for the '<em><b>Choix Don</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int QTE_OBJET__CHOIX_DON = ELEMENTS_JEU_FEATURE_COUNT + 3;
+
+		/**
+	 * The number of structural features of the '<em>Qte Objet</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int QTE_OBJET_FEATURE_COUNT = 2;
+	 * @generated
+	 * @ordered
+	 */
+  int QTE_OBJET_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 4;
 
   /**
-   * The meta object id for the '{@link game.game.impl.TerritoireImpl <em>Territoire</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.TerritoireImpl <em>Territoire</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.TerritoireImpl
-   * @see game.game.impl.GamePackageImpl#getTerritoire()
-   * @generated
-   */
+	 * @see game.game.impl.TerritoireImpl
+	 * @see game.game.impl.GamePackageImpl#getTerritoire()
+	 * @generated
+	 */
   int TERRITOIRE = 5;
 
   /**
-   * The feature id for the '<em><b>Places</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Places</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int TERRITOIRE__PLACES = 0;
 
   /**
-   * The number of structural features of the '<em>Territoire</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Territoire</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int TERRITOIRE_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link game.game.impl.LieuImpl <em>Lieu</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.LieuImpl <em>Lieu</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.LieuImpl
-   * @see game.game.impl.GamePackageImpl#getLieu()
-   * @generated
-   */
+	 * @see game.game.impl.LieuImpl
+	 * @see game.game.impl.GamePackageImpl#getLieu()
+	 * @generated
+	 */
   int LIEU = 6;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int LIEU__NAME = PLACE__NAME;
 
   /**
-   * The feature id for the '<em><b>Nature</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Nature</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int LIEU__NATURE = PLACE_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Lieu</em>' class.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Personnes</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LIEU__PERSONNES = PLACE_FEATURE_COUNT + 1;
+
+		/**
+	 * The number of structural features of the '<em>Lieu</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int LIEU_FEATURE_COUNT = PLACE_FEATURE_COUNT + 1;
+	 * @generated
+	 * @ordered
+	 */
+  int LIEU_FEATURE_COUNT = PLACE_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link game.game.impl.CheminImpl <em>Chemin</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.CheminImpl <em>Chemin</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.CheminImpl
-   * @see game.game.impl.GamePackageImpl#getChemin()
-   * @generated
-   */
+	 * @see game.game.impl.CheminImpl
+	 * @see game.game.impl.GamePackageImpl#getChemin()
+	 * @generated
+	 */
   int CHEMIN = 7;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CHEMIN__NAME = PLACE__NAME;
 
   /**
-   * The feature id for the '<em><b>Pred</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Pred</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CHEMIN__PRED = PLACE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Succ</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Succ</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CHEMIN__SUCC = PLACE_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Visible</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CHEMIN__VISIBLE = PLACE_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Obligatoire</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Obligatoire</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CHEMIN__OBLIGATOIRE = PLACE_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Ouvert</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Ouvert</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CHEMIN__OUVERT = PLACE_FEATURE_COUNT + 4;
 
   /**
-   * The number of structural features of the '<em>Chemin</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Chemin</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CHEMIN_FEATURE_COUNT = PLACE_FEATURE_COUNT + 5;
 
   /**
-   * The meta object id for the '{@link game.game.impl.PersonneImpl <em>Personne</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.PersonneImpl <em>Personne</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.PersonneImpl
-   * @see game.game.impl.GamePackageImpl#getPersonne()
-   * @generated
-   */
+	 * @see game.game.impl.PersonneImpl
+	 * @see game.game.impl.GamePackageImpl#getPersonne()
+	 * @generated
+	 */
   int PERSONNE = 8;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PERSONNE__NAME = ELEMENTS_JEU__NAME;
 
   /**
-   * The feature id for the '<em><b>Place</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Place</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PERSONNE__PLACE = ELEMENTS_JEU_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Visible</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PERSONNE__VISIBLE = ELEMENTS_JEU_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Actif</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int PERSONNE__ACTIF = ELEMENTS_JEU_FEATURE_COUNT + 2;
+	 * The feature id for the '<em><b>Active</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PERSONNE__ACTIVE = ELEMENTS_JEU_FEATURE_COUNT + 2;
 
-  /**
-   * The feature id for the '<em><b>Obligatoire</b></em>' attribute.
-   * <!-- begin-user-doc -->
+		/**
+	 * The feature id for the '<em><b>Obligatoire</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PERSONNE__OBLIGATOIRE = ELEMENTS_JEU_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Interactions</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Interactions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PERSONNE__INTERACTIONS = ELEMENTS_JEU_FEATURE_COUNT + 4;
 
   /**
-   * The number of structural features of the '<em>Personne</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Personne</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int PERSONNE_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 5;
 
   /**
-   * The meta object id for the '{@link game.game.impl.ExplorateurImpl <em>Explorateur</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.ExplorateurImpl <em>Explorateur</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.ExplorateurImpl
-   * @see game.game.impl.GamePackageImpl#getExplorateur()
-   * @generated
-   */
+	 * @see game.game.impl.ExplorateurImpl
+	 * @see game.game.impl.GamePackageImpl#getExplorateur()
+	 * @generated
+	 */
   int EXPLORATEUR = 9;
 
   /**
-   * The feature id for the '<em><b>Place</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Place</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int EXPLORATEUR__PLACE = 0;
 
   /**
-   * The feature id for the '<em><b>Taille Dispo</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Taille Dispo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int EXPLORATEUR__TAILLE_DISPO = 1;
 
   /**
-   * The feature id for the '<em><b>Objets</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Objets</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int EXPLORATEUR__OBJETS = 2;
 
   /**
-   * The feature id for the '<em><b>Connaissances</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Connaissances</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int EXPLORATEUR__CONNAISSANCES = 3;
 
   /**
-   * The number of structural features of the '<em>Explorateur</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Explorateur</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int EXPLORATEUR_FEATURE_COUNT = 4;
 
   /**
-   * The meta object id for the '{@link game.game.impl.ConnaissanceImpl <em>Connaissance</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.ConnaissanceImpl <em>Connaissance</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.ConnaissanceImpl
-   * @see game.game.impl.GamePackageImpl#getConnaissance()
-   * @generated
-   */
+	 * @see game.game.impl.ConnaissanceImpl
+	 * @see game.game.impl.GamePackageImpl#getConnaissance()
+	 * @generated
+	 */
   int CONNAISSANCE = 10;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CONNAISSANCE__NAME = AVANTAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Visible</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CONNAISSANCE__VISIBLE = AVANTAGE__VISIBLE;
 
   /**
-   * The feature id for the '<em><b>Actif</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Actif</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int CONNAISSANCE__ACTIF = AVANTAGE__ACTIF;
 
   /**
-   * The number of structural features of the '<em>Connaissance</em>' class.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Choix</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNAISSANCE__CHOIX = AVANTAGE_FEATURE_COUNT + 0;
+
+		/**
+	 * The number of structural features of the '<em>Connaissance</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONNAISSANCE_FEATURE_COUNT = AVANTAGE_FEATURE_COUNT + 0;
+	 * @generated
+	 * @ordered
+	 */
+  int CONNAISSANCE_FEATURE_COUNT = AVANTAGE_FEATURE_COUNT + 1;
 
   /**
-   * The meta object id for the '{@link game.game.impl.ObjetImpl <em>Objet</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.ObjetImpl <em>Objet</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.ObjetImpl
-   * @see game.game.impl.GamePackageImpl#getObjet()
-   * @generated
-   */
+	 * @see game.game.impl.ObjetImpl
+	 * @see game.game.impl.GamePackageImpl#getObjet()
+	 * @generated
+	 */
   int OBJET = 11;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBJET__NAME = AVANTAGE__NAME;
 
   /**
-   * The feature id for the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Visible</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBJET__VISIBLE = AVANTAGE__VISIBLE;
 
   /**
-   * The feature id for the '<em><b>Actif</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Actif</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBJET__ACTIF = AVANTAGE__ACTIF;
 
   /**
-   * The feature id for the '<em><b>Qte</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Qte</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBJET__QTE = AVANTAGE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Taille</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Taille</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBJET__TAILLE = AVANTAGE_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Transformable</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Transformable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBJET__TRANSFORMABLE = AVANTAGE_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Objet</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Objet</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
+	 * @generated
+	 * @ordered
+	 */
   int OBJET_FEATURE_COUNT = AVANTAGE_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link game.game.impl.InteractionImpl <em>Interaction</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.InteractionImpl <em>Interaction</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.InteractionImpl
-   * @see game.game.impl.GamePackageImpl#getInteraction()
-   * @generated
-   */
+	 * @see game.game.impl.InteractionImpl
+	 * @see game.game.impl.GamePackageImpl#getInteraction()
+	 * @generated
+	 */
   int INTERACTION = 12;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTERACTION__NAME = 0;
+	 * @generated
+	 * @ordered
+	 */
+  int INTERACTION__NAME = ELEMENTS_JEU__NAME;
 
   /**
-   * The feature id for the '<em><b>Question</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Question</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTERACTION__QUESTION = 1;
+	 * @generated
+	 * @ordered
+	 */
+  int INTERACTION__QUESTION = ELEMENTS_JEU_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Choix</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Personne</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERACTION__PERSONNE = ELEMENTS_JEU_FEATURE_COUNT + 1;
+
+		/**
+	 * The feature id for the '<em><b>Choix</b></em>' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTERACTION__CHOIX = 2;
+	 * @generated
+	 * @ordered
+	 */
+  int INTERACTION__CHOIX = ELEMENTS_JEU_FEATURE_COUNT + 2;
 
   /**
-   * The number of structural features of the '<em>Interaction</em>' class.
-   * <!-- begin-user-doc -->
+	 * The number of structural features of the '<em>Interaction</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int INTERACTION_FEATURE_COUNT = 3;
+	 * @generated
+	 * @ordered
+	 */
+  int INTERACTION_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 3;
 
   /**
-   * The meta object id for the '{@link game.game.impl.ChoixImpl <em>Choix</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.ChoixImpl <em>Choix</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.ChoixImpl
-   * @see game.game.impl.GamePackageImpl#getChoix()
-   * @generated
-   */
+	 * @see game.game.impl.ChoixImpl
+	 * @see game.game.impl.GamePackageImpl#getChoix()
+	 * @generated
+	 */
   int CHOIX = 13;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHOIX__NAME = 0;
+	 * @generated
+	 * @ordered
+	 */
+  int CHOIX__NAME = ELEMENTS_JEU__NAME;
 
   /**
-   * The feature id for the '<em><b>Reponse</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Reponse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHOIX__REPONSE = 1;
+	 * @generated
+	 * @ordered
+	 */
+  int CHOIX__REPONSE = ELEMENTS_JEU_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Bonne</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Bonne</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHOIX__BONNE = 2;
+	 * @generated
+	 * @ordered
+	 */
+  int CHOIX__BONNE = ELEMENTS_JEU_FEATURE_COUNT + 1;
 
   /**
-   * The feature id for the '<em><b>Objet Cons</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Objet Cons</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHOIX__OBJET_CONS = 3;
+	 * @generated
+	 * @ordered
+	 */
+  int CHOIX__OBJET_CONS = ELEMENTS_JEU_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Objet Don</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Objet Don</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHOIX__OBJET_DON = 4;
+	 * @generated
+	 * @ordered
+	 */
+  int CHOIX__OBJET_DON = ELEMENTS_JEU_FEATURE_COUNT + 3;
 
   /**
-   * The feature id for the '<em><b>Connais Don</b></em>' reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Connais Don</b></em>' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHOIX__CONNAIS_DON = 5;
+	 * @generated
+	 * @ordered
+	 */
+  int CHOIX__CONNAIS_DON = ELEMENTS_JEU_FEATURE_COUNT + 4;
 
   /**
-   * The number of structural features of the '<em>Choix</em>' class.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Interaction</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHOIX__INTERACTION = ELEMENTS_JEU_FEATURE_COUNT + 5;
+
+		/**
+	 * The number of structural features of the '<em>Choix</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHOIX_FEATURE_COUNT = 6;
+	 * @generated
+	 * @ordered
+	 */
+  int CHOIX_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 6;
 
   /**
-   * The meta object id for the '{@link game.game.impl.ConditionImpl <em>Condition</em>}' class.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.ConditionImpl <em>Condition</em>}' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see game.game.impl.ConditionImpl
-   * @see game.game.impl.GamePackageImpl#getCondition()
-   * @generated
-   */
+	 * @see game.game.impl.ConditionImpl
+	 * @see game.game.impl.GamePackageImpl#getCondition()
+	 * @generated
+	 */
   int CONDITION = 14;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION__NAME = 0;
+	 * @generated
+	 * @ordered
+	 */
+  int CONDITION__NAME = ELEMENTS_JEU__NAME;
 
   /**
-   * The feature id for the '<em><b>Connaissances Requises</b></em>' reference list.
-   * <!-- begin-user-doc -->
+	 * The feature id for the '<em><b>Connaissance Requise</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__CONNAISSANCE_REQUISE = ELEMENTS_JEU_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Connaissance Interdite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__CONNAISSANCE_INTERDITE = ELEMENTS_JEU_FEATURE_COUNT + 1;
+
+		/**
+	 * The feature id for the '<em><b>Objet Requis</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__OBJET_REQUIS = ELEMENTS_JEU_FEATURE_COUNT + 2;
+
+		/**
+	 * The feature id for the '<em><b>Objet Interdit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION__OBJET_INTERDIT = ELEMENTS_JEU_FEATURE_COUNT + 3;
+
+		/**
+	 * The number of structural features of the '<em>Condition</em>' class.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION__CONNAISSANCES_REQUISES = 1;
+	 * @generated
+	 * @ordered
+	 */
+  int CONDITION_FEATURE_COUNT = ELEMENTS_JEU_FEATURE_COUNT + 4;
 
   /**
-   * The feature id for the '<em><b>Connaissances Interdites</b></em>' reference list.
-   * <!-- begin-user-doc -->
+	 * The meta object id for the '{@link game.game.impl.ConditionPersonneImpl <em>Condition Personne</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see game.game.impl.ConditionPersonneImpl
+	 * @see game.game.impl.GamePackageImpl#getConditionPersonne()
+	 * @generated
+	 */
+	int CONDITION_PERSONNE = 15;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE__NAME = CONDITION__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Connaissance Requise</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE__CONNAISSANCE_REQUISE = CONDITION__CONNAISSANCE_REQUISE;
+
+		/**
+	 * The feature id for the '<em><b>Connaissance Interdite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE__CONNAISSANCE_INTERDITE = CONDITION__CONNAISSANCE_INTERDITE;
+
+		/**
+	 * The feature id for the '<em><b>Objet Requis</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE__OBJET_REQUIS = CONDITION__OBJET_REQUIS;
+
+		/**
+	 * The feature id for the '<em><b>Objet Interdit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE__OBJET_INTERDIT = CONDITION__OBJET_INTERDIT;
+
+		/**
+	 * The feature id for the '<em><b>Visible</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE__VISIBLE = CONDITION_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Active</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE__ACTIVE = CONDITION_FEATURE_COUNT + 1;
+
+		/**
+	 * The number of structural features of the '<em>Condition Personne</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_PERSONNE_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 2;
+
+		/**
+	 * The meta object id for the '{@link game.game.impl.ConditionAvantageImpl <em>Condition Avantage</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see game.game.impl.ConditionAvantageImpl
+	 * @see game.game.impl.GamePackageImpl#getConditionAvantage()
+	 * @generated
+	 */
+	int CONDITION_AVANTAGE = 16;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE__NAME = CONDITION__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Connaissance Requise</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE__CONNAISSANCE_REQUISE = CONDITION__CONNAISSANCE_REQUISE;
+
+		/**
+	 * The feature id for the '<em><b>Connaissance Interdite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE__CONNAISSANCE_INTERDITE = CONDITION__CONNAISSANCE_INTERDITE;
+
+		/**
+	 * The feature id for the '<em><b>Objet Requis</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE__OBJET_REQUIS = CONDITION__OBJET_REQUIS;
+
+		/**
+	 * The feature id for the '<em><b>Objet Interdit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE__OBJET_INTERDIT = CONDITION__OBJET_INTERDIT;
+
+		/**
+	 * The feature id for the '<em><b>Visible</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE__VISIBLE = CONDITION_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Actif</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE__ACTIF = CONDITION_FEATURE_COUNT + 1;
+
+		/**
+	 * The number of structural features of the '<em>Condition Avantage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_AVANTAGE_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 2;
+
+		/**
+	 * The meta object id for the '{@link game.game.impl.ConditionCheminImpl <em>Condition Chemin</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see game.game.impl.ConditionCheminImpl
+	 * @see game.game.impl.GamePackageImpl#getConditionChemin()
+	 * @generated
+	 */
+	int CONDITION_CHEMIN = 17;
+
+		/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN__NAME = CONDITION__NAME;
+
+		/**
+	 * The feature id for the '<em><b>Connaissance Requise</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN__CONNAISSANCE_REQUISE = CONDITION__CONNAISSANCE_REQUISE;
+
+		/**
+	 * The feature id for the '<em><b>Connaissance Interdite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN__CONNAISSANCE_INTERDITE = CONDITION__CONNAISSANCE_INTERDITE;
+
+		/**
+	 * The feature id for the '<em><b>Objet Requis</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN__OBJET_REQUIS = CONDITION__OBJET_REQUIS;
+
+		/**
+	 * The feature id for the '<em><b>Objet Interdit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN__OBJET_INTERDIT = CONDITION__OBJET_INTERDIT;
+
+		/**
+	 * The feature id for the '<em><b>Visible</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN__VISIBLE = CONDITION_FEATURE_COUNT + 0;
+
+		/**
+	 * The feature id for the '<em><b>Ouvert</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN__OUVERT = CONDITION_FEATURE_COUNT + 1;
+
+		/**
+	 * The number of structural features of the '<em>Condition Chemin</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONDITION_CHEMIN_FEATURE_COUNT = CONDITION_FEATURE_COUNT + 2;
+
+		/**
+	 * The meta object id for the '{@link game.game.Nature <em>Nature</em>}' enum.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION__CONNAISSANCES_INTERDITES = 2;
+	 * @see game.game.Nature
+	 * @see game.game.impl.GamePackageImpl#getNature()
+	 * @generated
+	 */
+  int NATURE = 18;
+
 
   /**
-   * The feature id for the '<em><b>Quantite</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Jeu <em>Jeu</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION__QUANTITE = 3;
-
-  /**
-   * The feature id for the '<em><b>Objets Requis</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION__OBJETS_REQUIS = 4;
-
-  /**
-   * The feature id for the '<em><b>Objets Interdits</b></em>' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION__OBJETS_INTERDITS = 5;
-
-  /**
-   * The number of structural features of the '<em>Condition</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CONDITION_FEATURE_COUNT = 6;
-
-  /**
-   * The meta object id for the '{@link game.game.Nature <em>Nature</em>}' enum.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see game.game.Nature
-   * @see game.game.impl.GamePackageImpl#getNature()
-   * @generated
-   */
-  int NATURE = 15;
-
-
-  /**
-   * Returns the meta object for class '{@link game.game.Jeu <em>Jeu</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Jeu</em>'.
-   * @see game.game.Jeu
-   * @generated
-   */
+	 * @return the meta object for class '<em>Jeu</em>'.
+	 * @see game.game.Jeu
+	 * @generated
+	 */
   EClass getJeu();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Jeu#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Jeu#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see game.game.Jeu#getName()
-   * @see #getJeu()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see game.game.Jeu#getName()
+	 * @see #getJeu()
+	 * @generated
+	 */
   EAttribute getJeu_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Jeu#getTerritoire <em>Territoire</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference '{@link game.game.Jeu#getTerritoire <em>Territoire</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Territoire</em>'.
-   * @see game.game.Jeu#getTerritoire()
-   * @see #getJeu()
-   * @generated
-   */
+	 * @return the meta object for the containment reference '<em>Territoire</em>'.
+	 * @see game.game.Jeu#getTerritoire()
+	 * @see #getJeu()
+	 * @generated
+	 */
   EReference getJeu_Territoire();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Jeu#getExplorateur <em>Explorateur</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference '{@link game.game.Jeu#getExplorateur <em>Explorateur</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Explorateur</em>'.
-   * @see game.game.Jeu#getExplorateur()
-   * @see #getJeu()
-   * @generated
-   */
+	 * @return the meta object for the containment reference '<em>Explorateur</em>'.
+	 * @see game.game.Jeu#getExplorateur()
+	 * @see #getJeu()
+	 * @generated
+	 */
   EReference getJeu_Explorateur();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Jeu#getElementsjeu <em>Elementsjeu</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Jeu#getElementsjeu <em>Elementsjeu</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Elementsjeu</em>'.
-   * @see game.game.Jeu#getElementsjeu()
-   * @see #getJeu()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Elementsjeu</em>'.
+	 * @see game.game.Jeu#getElementsjeu()
+	 * @see #getJeu()
+	 * @generated
+	 */
   EReference getJeu_Elementsjeu();
 
   /**
-   * Returns the meta object for class '{@link game.game.ElementsJeu <em>Elements Jeu</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.ElementsJeu <em>Elements Jeu</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Elements Jeu</em>'.
-   * @see game.game.ElementsJeu
-   * @generated
-   */
+	 * @return the meta object for class '<em>Elements Jeu</em>'.
+	 * @see game.game.ElementsJeu
+	 * @generated
+	 */
   EClass getElementsJeu();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.ElementsJeu#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.ElementsJeu#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see game.game.ElementsJeu#getName()
-   * @see #getElementsJeu()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see game.game.ElementsJeu#getName()
+	 * @see #getElementsJeu()
+	 * @generated
+	 */
   EAttribute getElementsJeu_Name();
 
   /**
-   * Returns the meta object for class '{@link game.game.Place <em>Place</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Place <em>Place</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Place</em>'.
-   * @see game.game.Place
-   * @generated
-   */
+	 * @return the meta object for class '<em>Place</em>'.
+	 * @see game.game.Place
+	 * @generated
+	 */
   EClass getPlace();
 
   /**
-   * Returns the meta object for class '{@link game.game.Avantage <em>Avantage</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Avantage <em>Avantage</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Avantage</em>'.
-   * @see game.game.Avantage
-   * @generated
-   */
+	 * @return the meta object for class '<em>Avantage</em>'.
+	 * @see game.game.Avantage
+	 * @generated
+	 */
   EClass getAvantage();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Avantage#getVisible <em>Visible</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Avantage#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Visible</em>'.
-   * @see game.game.Avantage#getVisible()
-   * @see #getAvantage()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Visible</em>'.
+	 * @see game.game.Avantage#getVisible()
+	 * @see #getAvantage()
+	 * @generated
+	 */
   EReference getAvantage_Visible();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Avantage#getActif <em>Actif</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Avantage#getActif <em>Actif</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Actif</em>'.
-   * @see game.game.Avantage#getActif()
-   * @see #getAvantage()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Actif</em>'.
+	 * @see game.game.Avantage#getActif()
+	 * @see #getAvantage()
+	 * @generated
+	 */
   EReference getAvantage_Actif();
 
   /**
-   * Returns the meta object for class '{@link game.game.QteObjet <em>Qte Objet</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.QteObjet <em>Qte Objet</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Qte Objet</em>'.
-   * @see game.game.QteObjet
-   * @generated
-   */
+	 * @return the meta object for class '<em>Qte Objet</em>'.
+	 * @see game.game.QteObjet
+	 * @generated
+	 */
   EClass getQteObjet();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.QteObjet#getQte <em>Qte</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.QteObjet#getQte <em>Qte</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Qte</em>'.
-   * @see game.game.QteObjet#getQte()
-   * @see #getQteObjet()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Qte</em>'.
+	 * @see game.game.QteObjet#getQte()
+	 * @see #getQteObjet()
+	 * @generated
+	 */
   EAttribute getQteObjet_Qte();
 
   /**
-   * Returns the meta object for the reference '{@link game.game.QteObjet#getObjet <em>Objet</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.QteObjet#getObjet <em>Objet</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Objet</em>'.
-   * @see game.game.QteObjet#getObjet()
-   * @see #getQteObjet()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Objet</em>'.
+	 * @see game.game.QteObjet#getObjet()
+	 * @see #getQteObjet()
+	 * @generated
+	 */
   EReference getQteObjet_Objet();
 
   /**
-   * Returns the meta object for class '{@link game.game.Territoire <em>Territoire</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the container reference '{@link game.game.QteObjet#getChoixCons <em>Choix Cons</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Choix Cons</em>'.
+	 * @see game.game.QteObjet#getChoixCons()
+	 * @see #getQteObjet()
+	 * @generated
+	 */
+	EReference getQteObjet_ChoixCons();
+
+		/**
+	 * Returns the meta object for the container reference '{@link game.game.QteObjet#getChoixDon <em>Choix Don</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Choix Don</em>'.
+	 * @see game.game.QteObjet#getChoixDon()
+	 * @see #getQteObjet()
+	 * @generated
+	 */
+	EReference getQteObjet_ChoixDon();
+
+		/**
+	 * Returns the meta object for class '{@link game.game.Territoire <em>Territoire</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Territoire</em>'.
-   * @see game.game.Territoire
-   * @generated
-   */
+	 * @return the meta object for class '<em>Territoire</em>'.
+	 * @see game.game.Territoire
+	 * @generated
+	 */
   EClass getTerritoire();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Territoire#getPlaces <em>Places</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Territoire#getPlaces <em>Places</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Places</em>'.
-   * @see game.game.Territoire#getPlaces()
-   * @see #getTerritoire()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Places</em>'.
+	 * @see game.game.Territoire#getPlaces()
+	 * @see #getTerritoire()
+	 * @generated
+	 */
   EReference getTerritoire_Places();
 
   /**
-   * Returns the meta object for class '{@link game.game.Lieu <em>Lieu</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Lieu <em>Lieu</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Lieu</em>'.
-   * @see game.game.Lieu
-   * @generated
-   */
+	 * @return the meta object for class '<em>Lieu</em>'.
+	 * @see game.game.Lieu
+	 * @generated
+	 */
   EClass getLieu();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Lieu#getNature <em>Nature</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Lieu#getNature <em>Nature</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Nature</em>'.
-   * @see game.game.Lieu#getNature()
-   * @see #getLieu()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Nature</em>'.
+	 * @see game.game.Lieu#getNature()
+	 * @see #getLieu()
+	 * @generated
+	 */
   EAttribute getLieu_Nature();
 
   /**
-   * Returns the meta object for class '{@link game.game.Chemin <em>Chemin</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference list '{@link game.game.Lieu#getPersonnes <em>Personnes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Personnes</em>'.
+	 * @see game.game.Lieu#getPersonnes()
+	 * @see #getLieu()
+	 * @generated
+	 */
+	EReference getLieu_Personnes();
+
+		/**
+	 * Returns the meta object for class '{@link game.game.Chemin <em>Chemin</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Chemin</em>'.
-   * @see game.game.Chemin
-   * @generated
-   */
+	 * @return the meta object for class '<em>Chemin</em>'.
+	 * @see game.game.Chemin
+	 * @generated
+	 */
   EClass getChemin();
 
   /**
-   * Returns the meta object for the reference '{@link game.game.Chemin#getPred <em>Pred</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.Chemin#getPred <em>Pred</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Pred</em>'.
-   * @see game.game.Chemin#getPred()
-   * @see #getChemin()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Pred</em>'.
+	 * @see game.game.Chemin#getPred()
+	 * @see #getChemin()
+	 * @generated
+	 */
   EReference getChemin_Pred();
 
   /**
-   * Returns the meta object for the reference '{@link game.game.Chemin#getSucc <em>Succ</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.Chemin#getSucc <em>Succ</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Succ</em>'.
-   * @see game.game.Chemin#getSucc()
-   * @see #getChemin()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Succ</em>'.
+	 * @see game.game.Chemin#getSucc()
+	 * @see #getChemin()
+	 * @generated
+	 */
   EReference getChemin_Succ();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Chemin#getVisible <em>Visible</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Chemin#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Visible</em>'.
-   * @see game.game.Chemin#getVisible()
-   * @see #getChemin()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Visible</em>'.
+	 * @see game.game.Chemin#getVisible()
+	 * @see #getChemin()
+	 * @generated
+	 */
   EReference getChemin_Visible();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Chemin#isObligatoire <em>Obligatoire</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Chemin#isObligatoire <em>Obligatoire</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Obligatoire</em>'.
-   * @see game.game.Chemin#isObligatoire()
-   * @see #getChemin()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Obligatoire</em>'.
+	 * @see game.game.Chemin#isObligatoire()
+	 * @see #getChemin()
+	 * @generated
+	 */
   EAttribute getChemin_Obligatoire();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Chemin#getOuvert <em>Ouvert</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Chemin#getOuvert <em>Ouvert</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ouvert</em>'.
-   * @see game.game.Chemin#getOuvert()
-   * @see #getChemin()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Ouvert</em>'.
+	 * @see game.game.Chemin#getOuvert()
+	 * @see #getChemin()
+	 * @generated
+	 */
   EReference getChemin_Ouvert();
 
   /**
-   * Returns the meta object for class '{@link game.game.Personne <em>Personne</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Personne <em>Personne</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Personne</em>'.
-   * @see game.game.Personne
-   * @generated
-   */
+	 * @return the meta object for class '<em>Personne</em>'.
+	 * @see game.game.Personne
+	 * @generated
+	 */
   EClass getPersonne();
 
   /**
-   * Returns the meta object for the reference '{@link game.game.Personne#getPlace <em>Place</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.Personne#getPlace <em>Place</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Place</em>'.
-   * @see game.game.Personne#getPlace()
-   * @see #getPersonne()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Place</em>'.
+	 * @see game.game.Personne#getPlace()
+	 * @see #getPersonne()
+	 * @generated
+	 */
   EReference getPersonne_Place();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Personne#getVisible <em>Visible</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Personne#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Visible</em>'.
-   * @see game.game.Personne#getVisible()
-   * @see #getPersonne()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Visible</em>'.
+	 * @see game.game.Personne#getVisible()
+	 * @see #getPersonne()
+	 * @generated
+	 */
   EReference getPersonne_Visible();
 
   /**
-   * Returns the meta object for the containment reference '{@link game.game.Personne#getActif <em>Actif</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Actif</em>'.
-   * @see game.game.Personne#getActif()
-   * @see #getPersonne()
-   * @generated
-   */
-  EReference getPersonne_Actif();
+	 * Returns the meta object for the containment reference list '{@link game.game.Personne#getActive <em>Active</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Active</em>'.
+	 * @see game.game.Personne#getActive()
+	 * @see #getPersonne()
+	 * @generated
+	 */
+	EReference getPersonne_Active();
 
-  /**
-   * Returns the meta object for the attribute '{@link game.game.Personne#isObligatoire <em>Obligatoire</em>}'.
-   * <!-- begin-user-doc -->
+		/**
+	 * Returns the meta object for the attribute '{@link game.game.Personne#isObligatoire <em>Obligatoire</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Obligatoire</em>'.
-   * @see game.game.Personne#isObligatoire()
-   * @see #getPersonne()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Obligatoire</em>'.
+	 * @see game.game.Personne#isObligatoire()
+	 * @see #getPersonne()
+	 * @generated
+	 */
   EAttribute getPersonne_Obligatoire();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Personne#getInteractions <em>Interactions</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference list '{@link game.game.Personne#getInteractions <em>Interactions</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Interactions</em>'.
-   * @see game.game.Personne#getInteractions()
-   * @see #getPersonne()
-   * @generated
-   */
+	 * @return the meta object for the reference list '<em>Interactions</em>'.
+	 * @see game.game.Personne#getInteractions()
+	 * @see #getPersonne()
+	 * @generated
+	 */
   EReference getPersonne_Interactions();
 
   /**
-   * Returns the meta object for class '{@link game.game.Explorateur <em>Explorateur</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Explorateur <em>Explorateur</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Explorateur</em>'.
-   * @see game.game.Explorateur
-   * @generated
-   */
+	 * @return the meta object for class '<em>Explorateur</em>'.
+	 * @see game.game.Explorateur
+	 * @generated
+	 */
   EClass getExplorateur();
 
   /**
-   * Returns the meta object for the reference '{@link game.game.Explorateur#getPlace <em>Place</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.Explorateur#getPlace <em>Place</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Place</em>'.
-   * @see game.game.Explorateur#getPlace()
-   * @see #getExplorateur()
-   * @generated
-   */
+	 * @return the meta object for the reference '<em>Place</em>'.
+	 * @see game.game.Explorateur#getPlace()
+	 * @see #getExplorateur()
+	 * @generated
+	 */
   EReference getExplorateur_Place();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Explorateur#getTailleDispo <em>Taille Dispo</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Explorateur#getTailleDispo <em>Taille Dispo</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Taille Dispo</em>'.
-   * @see game.game.Explorateur#getTailleDispo()
-   * @see #getExplorateur()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Taille Dispo</em>'.
+	 * @see game.game.Explorateur#getTailleDispo()
+	 * @see #getExplorateur()
+	 * @generated
+	 */
   EAttribute getExplorateur_TailleDispo();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Explorateur#getObjets <em>Objets</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Explorateur#getObjets <em>Objets</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Objets</em>'.
-   * @see game.game.Explorateur#getObjets()
-   * @see #getExplorateur()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Objets</em>'.
+	 * @see game.game.Explorateur#getObjets()
+	 * @see #getExplorateur()
+	 * @generated
+	 */
   EReference getExplorateur_Objets();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Explorateur#getConnaissances <em>Connaissances</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Explorateur#getConnaissances <em>Connaissances</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Connaissances</em>'.
-   * @see game.game.Explorateur#getConnaissances()
-   * @see #getExplorateur()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Connaissances</em>'.
+	 * @see game.game.Explorateur#getConnaissances()
+	 * @see #getExplorateur()
+	 * @generated
+	 */
   EReference getExplorateur_Connaissances();
 
   /**
-   * Returns the meta object for class '{@link game.game.Connaissance <em>Connaissance</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Connaissance <em>Connaissance</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Connaissance</em>'.
-   * @see game.game.Connaissance
-   * @generated
-   */
+	 * @return the meta object for class '<em>Connaissance</em>'.
+	 * @see game.game.Connaissance
+	 * @generated
+	 */
   EClass getConnaissance();
 
   /**
-   * Returns the meta object for class '{@link game.game.Objet <em>Objet</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.Connaissance#getChoix <em>Choix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Choix</em>'.
+	 * @see game.game.Connaissance#getChoix()
+	 * @see #getConnaissance()
+	 * @generated
+	 */
+	EReference getConnaissance_Choix();
+
+		/**
+	 * Returns the meta object for class '{@link game.game.Objet <em>Objet</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Objet</em>'.
-   * @see game.game.Objet
-   * @generated
-   */
+	 * @return the meta object for class '<em>Objet</em>'.
+	 * @see game.game.Objet
+	 * @generated
+	 */
   EClass getObjet();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Objet#getQte <em>Qte</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Objet#getQte <em>Qte</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Qte</em>'.
-   * @see game.game.Objet#getQte()
-   * @see #getObjet()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Qte</em>'.
+	 * @see game.game.Objet#getQte()
+	 * @see #getObjet()
+	 * @generated
+	 */
   EAttribute getObjet_Qte();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Objet#getTaille <em>Taille</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Objet#getTaille <em>Taille</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Taille</em>'.
-   * @see game.game.Objet#getTaille()
-   * @see #getObjet()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Taille</em>'.
+	 * @see game.game.Objet#getTaille()
+	 * @see #getObjet()
+	 * @generated
+	 */
   EAttribute getObjet_Taille();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Objet#isTransformable <em>Transformable</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Objet#isTransformable <em>Transformable</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Transformable</em>'.
-   * @see game.game.Objet#isTransformable()
-   * @see #getObjet()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Transformable</em>'.
+	 * @see game.game.Objet#isTransformable()
+	 * @see #getObjet()
+	 * @generated
+	 */
   EAttribute getObjet_Transformable();
 
   /**
-   * Returns the meta object for class '{@link game.game.Interaction <em>Interaction</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Interaction <em>Interaction</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Interaction</em>'.
-   * @see game.game.Interaction
-   * @generated
-   */
+	 * @return the meta object for class '<em>Interaction</em>'.
+	 * @see game.game.Interaction
+	 * @generated
+	 */
   EClass getInteraction();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Interaction#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Interaction#getQuestion <em>Question</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see game.game.Interaction#getName()
-   * @see #getInteraction()
-   * @generated
-   */
-  EAttribute getInteraction_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link game.game.Interaction#getQuestion <em>Question</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Question</em>'.
-   * @see game.game.Interaction#getQuestion()
-   * @see #getInteraction()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Question</em>'.
+	 * @see game.game.Interaction#getQuestion()
+	 * @see #getInteraction()
+	 * @generated
+	 */
   EAttribute getInteraction_Question();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Interaction#getChoix <em>Choix</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.Interaction#getPersonne <em>Personne</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Personne</em>'.
+	 * @see game.game.Interaction#getPersonne()
+	 * @see #getInteraction()
+	 * @generated
+	 */
+	EReference getInteraction_Personne();
+
+		/**
+	 * Returns the meta object for the reference list '{@link game.game.Interaction#getChoix <em>Choix</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Choix</em>'.
-   * @see game.game.Interaction#getChoix()
-   * @see #getInteraction()
-   * @generated
-   */
+	 * @return the meta object for the reference list '<em>Choix</em>'.
+	 * @see game.game.Interaction#getChoix()
+	 * @see #getInteraction()
+	 * @generated
+	 */
   EReference getInteraction_Choix();
 
   /**
-   * Returns the meta object for class '{@link game.game.Choix <em>Choix</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for class '{@link game.game.Choix <em>Choix</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Choix</em>'.
-   * @see game.game.Choix
-   * @generated
-   */
+	 * @return the meta object for class '<em>Choix</em>'.
+	 * @see game.game.Choix
+	 * @generated
+	 */
   EClass getChoix();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Choix#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Choix#getReponse <em>Reponse</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see game.game.Choix#getName()
-   * @see #getChoix()
-   * @generated
-   */
-  EAttribute getChoix_Name();
-
-  /**
-   * Returns the meta object for the attribute '{@link game.game.Choix#getReponse <em>Reponse</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Reponse</em>'.
-   * @see game.game.Choix#getReponse()
-   * @see #getChoix()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Reponse</em>'.
+	 * @see game.game.Choix#getReponse()
+	 * @see #getChoix()
+	 * @generated
+	 */
   EAttribute getChoix_Reponse();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Choix#isBonne <em>Bonne</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the attribute '{@link game.game.Choix#isBonne <em>Bonne</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Bonne</em>'.
-   * @see game.game.Choix#isBonne()
-   * @see #getChoix()
-   * @generated
-   */
+	 * @return the meta object for the attribute '<em>Bonne</em>'.
+	 * @see game.game.Choix#isBonne()
+	 * @see #getChoix()
+	 * @generated
+	 */
   EAttribute getChoix_Bonne();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Choix#getObjetCons <em>Objet Cons</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Choix#getObjetCons <em>Objet Cons</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Objet Cons</em>'.
-   * @see game.game.Choix#getObjetCons()
-   * @see #getChoix()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Objet Cons</em>'.
+	 * @see game.game.Choix#getObjetCons()
+	 * @see #getChoix()
+	 * @generated
+	 */
   EReference getChoix_ObjetCons();
 
   /**
-   * Returns the meta object for the containment reference list '{@link game.game.Choix#getObjetDon <em>Objet Don</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the containment reference list '{@link game.game.Choix#getObjetDon <em>Objet Don</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Objet Don</em>'.
-   * @see game.game.Choix#getObjetDon()
-   * @see #getChoix()
-   * @generated
-   */
+	 * @return the meta object for the containment reference list '<em>Objet Don</em>'.
+	 * @see game.game.Choix#getObjetDon()
+	 * @see #getChoix()
+	 * @generated
+	 */
   EReference getChoix_ObjetDon();
 
   /**
-   * Returns the meta object for the reference list '{@link game.game.Choix#getConnaisDon <em>Connais Don</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference list '{@link game.game.Choix#getConnaisDon <em>Connais Don</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Connais Don</em>'.
-   * @see game.game.Choix#getConnaisDon()
-   * @see #getChoix()
-   * @generated
-   */
+	 * @return the meta object for the reference list '<em>Connais Don</em>'.
+	 * @see game.game.Choix#getConnaisDon()
+	 * @see #getChoix()
+	 * @generated
+	 */
   EReference getChoix_ConnaisDon();
 
   /**
-   * Returns the meta object for class '{@link game.game.Condition <em>Condition</em>}'.
-   * <!-- begin-user-doc -->
+	 * Returns the meta object for the reference '{@link game.game.Choix#getInteraction <em>Interaction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Interaction</em>'.
+	 * @see game.game.Choix#getInteraction()
+	 * @see #getChoix()
+	 * @generated
+	 */
+	EReference getChoix_Interaction();
+
+		/**
+	 * Returns the meta object for class '{@link game.game.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Condition</em>'.
-   * @see game.game.Condition
-   * @generated
-   */
+	 * @return the meta object for class '<em>Condition</em>'.
+	 * @see game.game.Condition
+	 * @generated
+	 */
   EClass getCondition();
 
   /**
-   * Returns the meta object for the attribute '{@link game.game.Condition#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see game.game.Condition#getName()
-   * @see #getCondition()
-   * @generated
-   */
-  EAttribute getCondition_Name();
+	 * Returns the meta object for the reference '{@link game.game.Condition#getConnaissanceRequise <em>Connaissance Requise</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connaissance Requise</em>'.
+	 * @see game.game.Condition#getConnaissanceRequise()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_ConnaissanceRequise();
 
-  /**
-   * Returns the meta object for the reference list '{@link game.game.Condition#getConnaissancesRequises <em>Connaissances Requises</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Connaissances Requises</em>'.
-   * @see game.game.Condition#getConnaissancesRequises()
-   * @see #getCondition()
-   * @generated
-   */
-  EReference getCondition_ConnaissancesRequises();
+		/**
+	 * Returns the meta object for the reference '{@link game.game.Condition#getConnaissanceInterdite <em>Connaissance Interdite</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Connaissance Interdite</em>'.
+	 * @see game.game.Condition#getConnaissanceInterdite()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_ConnaissanceInterdite();
 
-  /**
-   * Returns the meta object for the reference list '{@link game.game.Condition#getConnaissancesInterdites <em>Connaissances Interdites</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Connaissances Interdites</em>'.
-   * @see game.game.Condition#getConnaissancesInterdites()
-   * @see #getCondition()
-   * @generated
-   */
-  EReference getCondition_ConnaissancesInterdites();
+		/**
+	 * Returns the meta object for the reference '{@link game.game.Condition#getObjetRequis <em>Objet Requis</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Objet Requis</em>'.
+	 * @see game.game.Condition#getObjetRequis()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_ObjetRequis();
 
-  /**
-   * Returns the meta object for the attribute '{@link game.game.Condition#getQuantite <em>Quantite</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Quantite</em>'.
-   * @see game.game.Condition#getQuantite()
-   * @see #getCondition()
-   * @generated
-   */
-  EAttribute getCondition_Quantite();
+		/**
+	 * Returns the meta object for the reference '{@link game.game.Condition#getObjetInterdit <em>Objet Interdit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Objet Interdit</em>'.
+	 * @see game.game.Condition#getObjetInterdit()
+	 * @see #getCondition()
+	 * @generated
+	 */
+	EReference getCondition_ObjetInterdit();
 
-  /**
-   * Returns the meta object for the reference list '{@link game.game.Condition#getObjetsRequis <em>Objets Requis</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Objets Requis</em>'.
-   * @see game.game.Condition#getObjetsRequis()
-   * @see #getCondition()
-   * @generated
-   */
-  EReference getCondition_ObjetsRequis();
+		/**
+	 * Returns the meta object for class '{@link game.game.ConditionPersonne <em>Condition Personne</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition Personne</em>'.
+	 * @see game.game.ConditionPersonne
+	 * @generated
+	 */
+	EClass getConditionPersonne();
 
-  /**
-   * Returns the meta object for the reference list '{@link game.game.Condition#getObjetsInterdits <em>Objets Interdits</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the reference list '<em>Objets Interdits</em>'.
-   * @see game.game.Condition#getObjetsInterdits()
-   * @see #getCondition()
-   * @generated
-   */
-  EReference getCondition_ObjetsInterdits();
+		/**
+	 * Returns the meta object for the container reference '{@link game.game.ConditionPersonne#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Visible</em>'.
+	 * @see game.game.ConditionPersonne#getVisible()
+	 * @see #getConditionPersonne()
+	 * @generated
+	 */
+	EReference getConditionPersonne_Visible();
 
-  /**
-   * Returns the meta object for enum '{@link game.game.Nature <em>Nature</em>}'.
-   * <!-- begin-user-doc -->
+		/**
+	 * Returns the meta object for the container reference '{@link game.game.ConditionPersonne#getActive <em>Active</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Active</em>'.
+	 * @see game.game.ConditionPersonne#getActive()
+	 * @see #getConditionPersonne()
+	 * @generated
+	 */
+	EReference getConditionPersonne_Active();
+
+		/**
+	 * Returns the meta object for class '{@link game.game.ConditionAvantage <em>Condition Avantage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition Avantage</em>'.
+	 * @see game.game.ConditionAvantage
+	 * @generated
+	 */
+	EClass getConditionAvantage();
+
+		/**
+	 * Returns the meta object for the container reference '{@link game.game.ConditionAvantage#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Visible</em>'.
+	 * @see game.game.ConditionAvantage#getVisible()
+	 * @see #getConditionAvantage()
+	 * @generated
+	 */
+	EReference getConditionAvantage_Visible();
+
+		/**
+	 * Returns the meta object for the container reference '{@link game.game.ConditionAvantage#getActif <em>Actif</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Actif</em>'.
+	 * @see game.game.ConditionAvantage#getActif()
+	 * @see #getConditionAvantage()
+	 * @generated
+	 */
+	EReference getConditionAvantage_Actif();
+
+		/**
+	 * Returns the meta object for class '{@link game.game.ConditionChemin <em>Condition Chemin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Condition Chemin</em>'.
+	 * @see game.game.ConditionChemin
+	 * @generated
+	 */
+	EClass getConditionChemin();
+
+		/**
+	 * Returns the meta object for the container reference '{@link game.game.ConditionChemin#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Visible</em>'.
+	 * @see game.game.ConditionChemin#getVisible()
+	 * @see #getConditionChemin()
+	 * @generated
+	 */
+	EReference getConditionChemin_Visible();
+
+		/**
+	 * Returns the meta object for the container reference '{@link game.game.ConditionChemin#getOuvert <em>Ouvert</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Ouvert</em>'.
+	 * @see game.game.ConditionChemin#getOuvert()
+	 * @see #getConditionChemin()
+	 * @generated
+	 */
+	EReference getConditionChemin_Ouvert();
+
+		/**
+	 * Returns the meta object for enum '{@link game.game.Nature <em>Nature</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Nature</em>'.
-   * @see game.game.Nature
-   * @generated
-   */
+	 * @return the meta object for enum '<em>Nature</em>'.
+	 * @see game.game.Nature
+	 * @generated
+	 */
   EEnum getNature();
 
   /**
-   * Returns the factory that creates the instances of the model.
-   * <!-- begin-user-doc -->
+	 * Returns the factory that creates the instances of the model.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the factory that creates the instances of the model.
-   * @generated
-   */
+	 * @return the factory that creates the instances of the model.
+	 * @generated
+	 */
   GameFactory getGameFactory();
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * Defines literals for the meta objects that represent
    * <ul>
    *   <li>each class,</li>
@@ -1492,512 +1910,606 @@ public interface GamePackage extends EPackage
    *   <li>and each data type</li>
    * </ul>
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link game.game.impl.JeuImpl <em>Jeu</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.JeuImpl <em>Jeu</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.JeuImpl
-     * @see game.game.impl.GamePackageImpl#getJeu()
-     * @generated
-     */
+		 * @see game.game.impl.JeuImpl
+		 * @see game.game.impl.GamePackageImpl#getJeu()
+		 * @generated
+		 */
     EClass JEU = eINSTANCE.getJeu();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute JEU__NAME = eINSTANCE.getJeu_Name();
 
     /**
-     * The meta object literal for the '<em><b>Territoire</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Territoire</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference JEU__TERRITOIRE = eINSTANCE.getJeu_Territoire();
 
     /**
-     * The meta object literal for the '<em><b>Explorateur</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Explorateur</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference JEU__EXPLORATEUR = eINSTANCE.getJeu_Explorateur();
 
     /**
-     * The meta object literal for the '<em><b>Elementsjeu</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Elementsjeu</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference JEU__ELEMENTSJEU = eINSTANCE.getJeu_Elementsjeu();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.ElementsJeuImpl <em>Elements Jeu</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.ElementsJeuImpl <em>Elements Jeu</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.ElementsJeuImpl
-     * @see game.game.impl.GamePackageImpl#getElementsJeu()
-     * @generated
-     */
+		 * @see game.game.impl.ElementsJeuImpl
+		 * @see game.game.impl.GamePackageImpl#getElementsJeu()
+		 * @generated
+		 */
     EClass ELEMENTS_JEU = eINSTANCE.getElementsJeu();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute ELEMENTS_JEU__NAME = eINSTANCE.getElementsJeu_Name();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.PlaceImpl <em>Place</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.PlaceImpl <em>Place</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.PlaceImpl
-     * @see game.game.impl.GamePackageImpl#getPlace()
-     * @generated
-     */
+		 * @see game.game.impl.PlaceImpl
+		 * @see game.game.impl.GamePackageImpl#getPlace()
+		 * @generated
+		 */
     EClass PLACE = eINSTANCE.getPlace();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.AvantageImpl <em>Avantage</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.AvantageImpl <em>Avantage</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.AvantageImpl
-     * @see game.game.impl.GamePackageImpl#getAvantage()
-     * @generated
-     */
+		 * @see game.game.impl.AvantageImpl
+		 * @see game.game.impl.GamePackageImpl#getAvantage()
+		 * @generated
+		 */
     EClass AVANTAGE = eINSTANCE.getAvantage();
 
     /**
-     * The meta object literal for the '<em><b>Visible</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Visible</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference AVANTAGE__VISIBLE = eINSTANCE.getAvantage_Visible();
 
     /**
-     * The meta object literal for the '<em><b>Actif</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Actif</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference AVANTAGE__ACTIF = eINSTANCE.getAvantage_Actif();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.QteObjetImpl <em>Qte Objet</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.QteObjetImpl <em>Qte Objet</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.QteObjetImpl
-     * @see game.game.impl.GamePackageImpl#getQteObjet()
-     * @generated
-     */
+		 * @see game.game.impl.QteObjetImpl
+		 * @see game.game.impl.GamePackageImpl#getQteObjet()
+		 * @generated
+		 */
     EClass QTE_OBJET = eINSTANCE.getQteObjet();
 
     /**
-     * The meta object literal for the '<em><b>Qte</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Qte</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute QTE_OBJET__QTE = eINSTANCE.getQteObjet_Qte();
 
     /**
-     * The meta object literal for the '<em><b>Objet</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Objet</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference QTE_OBJET__OBJET = eINSTANCE.getQteObjet_Objet();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.TerritoireImpl <em>Territoire</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Choix Cons</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QTE_OBJET__CHOIX_CONS = eINSTANCE.getQteObjet_ChoixCons();
+
+				/**
+		 * The meta object literal for the '<em><b>Choix Don</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference QTE_OBJET__CHOIX_DON = eINSTANCE.getQteObjet_ChoixDon();
+
+				/**
+		 * The meta object literal for the '{@link game.game.impl.TerritoireImpl <em>Territoire</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.TerritoireImpl
-     * @see game.game.impl.GamePackageImpl#getTerritoire()
-     * @generated
-     */
+		 * @see game.game.impl.TerritoireImpl
+		 * @see game.game.impl.GamePackageImpl#getTerritoire()
+		 * @generated
+		 */
     EClass TERRITOIRE = eINSTANCE.getTerritoire();
 
     /**
-     * The meta object literal for the '<em><b>Places</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Places</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference TERRITOIRE__PLACES = eINSTANCE.getTerritoire_Places();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.LieuImpl <em>Lieu</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.LieuImpl <em>Lieu</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.LieuImpl
-     * @see game.game.impl.GamePackageImpl#getLieu()
-     * @generated
-     */
+		 * @see game.game.impl.LieuImpl
+		 * @see game.game.impl.GamePackageImpl#getLieu()
+		 * @generated
+		 */
     EClass LIEU = eINSTANCE.getLieu();
 
     /**
-     * The meta object literal for the '<em><b>Nature</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Nature</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute LIEU__NATURE = eINSTANCE.getLieu_Nature();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.CheminImpl <em>Chemin</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Personnes</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LIEU__PERSONNES = eINSTANCE.getLieu_Personnes();
+
+				/**
+		 * The meta object literal for the '{@link game.game.impl.CheminImpl <em>Chemin</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.CheminImpl
-     * @see game.game.impl.GamePackageImpl#getChemin()
-     * @generated
-     */
+		 * @see game.game.impl.CheminImpl
+		 * @see game.game.impl.GamePackageImpl#getChemin()
+		 * @generated
+		 */
     EClass CHEMIN = eINSTANCE.getChemin();
 
     /**
-     * The meta object literal for the '<em><b>Pred</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Pred</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CHEMIN__PRED = eINSTANCE.getChemin_Pred();
 
     /**
-     * The meta object literal for the '<em><b>Succ</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Succ</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CHEMIN__SUCC = eINSTANCE.getChemin_Succ();
 
     /**
-     * The meta object literal for the '<em><b>Visible</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Visible</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CHEMIN__VISIBLE = eINSTANCE.getChemin_Visible();
 
     /**
-     * The meta object literal for the '<em><b>Obligatoire</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Obligatoire</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CHEMIN__OBLIGATOIRE = eINSTANCE.getChemin_Obligatoire();
 
     /**
-     * The meta object literal for the '<em><b>Ouvert</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Ouvert</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CHEMIN__OUVERT = eINSTANCE.getChemin_Ouvert();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.PersonneImpl <em>Personne</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.PersonneImpl <em>Personne</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.PersonneImpl
-     * @see game.game.impl.GamePackageImpl#getPersonne()
-     * @generated
-     */
+		 * @see game.game.impl.PersonneImpl
+		 * @see game.game.impl.GamePackageImpl#getPersonne()
+		 * @generated
+		 */
     EClass PERSONNE = eINSTANCE.getPersonne();
 
     /**
-     * The meta object literal for the '<em><b>Place</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Place</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PERSONNE__PLACE = eINSTANCE.getPersonne_Place();
 
     /**
-     * The meta object literal for the '<em><b>Visible</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Visible</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PERSONNE__VISIBLE = eINSTANCE.getPersonne_Visible();
 
     /**
-     * The meta object literal for the '<em><b>Actif</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference PERSONNE__ACTIF = eINSTANCE.getPersonne_Actif();
+		 * The meta object literal for the '<em><b>Active</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PERSONNE__ACTIVE = eINSTANCE.getPersonne_Active();
 
-    /**
-     * The meta object literal for the '<em><b>Obligatoire</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+				/**
+		 * The meta object literal for the '<em><b>Obligatoire</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute PERSONNE__OBLIGATOIRE = eINSTANCE.getPersonne_Obligatoire();
 
     /**
-     * The meta object literal for the '<em><b>Interactions</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Interactions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference PERSONNE__INTERACTIONS = eINSTANCE.getPersonne_Interactions();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.ExplorateurImpl <em>Explorateur</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.ExplorateurImpl <em>Explorateur</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.ExplorateurImpl
-     * @see game.game.impl.GamePackageImpl#getExplorateur()
-     * @generated
-     */
+		 * @see game.game.impl.ExplorateurImpl
+		 * @see game.game.impl.GamePackageImpl#getExplorateur()
+		 * @generated
+		 */
     EClass EXPLORATEUR = eINSTANCE.getExplorateur();
 
     /**
-     * The meta object literal for the '<em><b>Place</b></em>' reference feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Place</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference EXPLORATEUR__PLACE = eINSTANCE.getExplorateur_Place();
 
     /**
-     * The meta object literal for the '<em><b>Taille Dispo</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Taille Dispo</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute EXPLORATEUR__TAILLE_DISPO = eINSTANCE.getExplorateur_TailleDispo();
 
     /**
-     * The meta object literal for the '<em><b>Objets</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Objets</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference EXPLORATEUR__OBJETS = eINSTANCE.getExplorateur_Objets();
 
     /**
-     * The meta object literal for the '<em><b>Connaissances</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Connaissances</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference EXPLORATEUR__CONNAISSANCES = eINSTANCE.getExplorateur_Connaissances();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.ConnaissanceImpl <em>Connaissance</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.ConnaissanceImpl <em>Connaissance</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.ConnaissanceImpl
-     * @see game.game.impl.GamePackageImpl#getConnaissance()
-     * @generated
-     */
+		 * @see game.game.impl.ConnaissanceImpl
+		 * @see game.game.impl.GamePackageImpl#getConnaissance()
+		 * @generated
+		 */
     EClass CONNAISSANCE = eINSTANCE.getConnaissance();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.ObjetImpl <em>Objet</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Choix</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONNAISSANCE__CHOIX = eINSTANCE.getConnaissance_Choix();
+
+				/**
+		 * The meta object literal for the '{@link game.game.impl.ObjetImpl <em>Objet</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.ObjetImpl
-     * @see game.game.impl.GamePackageImpl#getObjet()
-     * @generated
-     */
+		 * @see game.game.impl.ObjetImpl
+		 * @see game.game.impl.GamePackageImpl#getObjet()
+		 * @generated
+		 */
     EClass OBJET = eINSTANCE.getObjet();
 
     /**
-     * The meta object literal for the '<em><b>Qte</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Qte</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute OBJET__QTE = eINSTANCE.getObjet_Qte();
 
     /**
-     * The meta object literal for the '<em><b>Taille</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Taille</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute OBJET__TAILLE = eINSTANCE.getObjet_Taille();
 
     /**
-     * The meta object literal for the '<em><b>Transformable</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Transformable</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute OBJET__TRANSFORMABLE = eINSTANCE.getObjet_Transformable();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.InteractionImpl <em>Interaction</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.InteractionImpl <em>Interaction</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.InteractionImpl
-     * @see game.game.impl.GamePackageImpl#getInteraction()
-     * @generated
-     */
+		 * @see game.game.impl.InteractionImpl
+		 * @see game.game.impl.GamePackageImpl#getInteraction()
+		 * @generated
+		 */
     EClass INTERACTION = eINSTANCE.getInteraction();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Question</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute INTERACTION__NAME = eINSTANCE.getInteraction_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Question</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute INTERACTION__QUESTION = eINSTANCE.getInteraction_Question();
 
     /**
-     * The meta object literal for the '<em><b>Choix</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Personne</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERACTION__PERSONNE = eINSTANCE.getInteraction_Personne();
+
+				/**
+		 * The meta object literal for the '<em><b>Choix</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference INTERACTION__CHOIX = eINSTANCE.getInteraction_Choix();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.ChoixImpl <em>Choix</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '{@link game.game.impl.ChoixImpl <em>Choix</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.ChoixImpl
-     * @see game.game.impl.GamePackageImpl#getChoix()
-     * @generated
-     */
+		 * @see game.game.impl.ChoixImpl
+		 * @see game.game.impl.GamePackageImpl#getChoix()
+		 * @generated
+		 */
     EClass CHOIX = eINSTANCE.getChoix();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Reponse</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CHOIX__NAME = eINSTANCE.getChoix_Name();
-
-    /**
-     * The meta object literal for the '<em><b>Reponse</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CHOIX__REPONSE = eINSTANCE.getChoix_Reponse();
 
     /**
-     * The meta object literal for the '<em><b>Bonne</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Bonne</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EAttribute CHOIX__BONNE = eINSTANCE.getChoix_Bonne();
 
     /**
-     * The meta object literal for the '<em><b>Objet Cons</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Objet Cons</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CHOIX__OBJET_CONS = eINSTANCE.getChoix_ObjetCons();
 
     /**
-     * The meta object literal for the '<em><b>Objet Don</b></em>' containment reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Objet Don</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CHOIX__OBJET_DON = eINSTANCE.getChoix_ObjetDon();
 
     /**
-     * The meta object literal for the '<em><b>Connais Don</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Connais Don</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @generated
-     */
+		 * @generated
+		 */
     EReference CHOIX__CONNAIS_DON = eINSTANCE.getChoix_ConnaisDon();
 
     /**
-     * The meta object literal for the '{@link game.game.impl.ConditionImpl <em>Condition</em>}' class.
-     * <!-- begin-user-doc -->
+		 * The meta object literal for the '<em><b>Interaction</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHOIX__INTERACTION = eINSTANCE.getChoix_Interaction();
+
+				/**
+		 * The meta object literal for the '{@link game.game.impl.ConditionImpl <em>Condition</em>}' class.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.impl.ConditionImpl
-     * @see game.game.impl.GamePackageImpl#getCondition()
-     * @generated
-     */
+		 * @see game.game.impl.ConditionImpl
+		 * @see game.game.impl.GamePackageImpl#getCondition()
+		 * @generated
+		 */
     EClass CONDITION = eINSTANCE.getCondition();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONDITION__NAME = eINSTANCE.getCondition_Name();
+		 * The meta object literal for the '<em><b>Connaissance Requise</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__CONNAISSANCE_REQUISE = eINSTANCE.getCondition_ConnaissanceRequise();
 
-    /**
-     * The meta object literal for the '<em><b>Connaissances Requises</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITION__CONNAISSANCES_REQUISES = eINSTANCE.getCondition_ConnaissancesRequises();
+				/**
+		 * The meta object literal for the '<em><b>Connaissance Interdite</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__CONNAISSANCE_INTERDITE = eINSTANCE.getCondition_ConnaissanceInterdite();
 
-    /**
-     * The meta object literal for the '<em><b>Connaissances Interdites</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITION__CONNAISSANCES_INTERDITES = eINSTANCE.getCondition_ConnaissancesInterdites();
+				/**
+		 * The meta object literal for the '<em><b>Objet Requis</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__OBJET_REQUIS = eINSTANCE.getCondition_ObjetRequis();
 
-    /**
-     * The meta object literal for the '<em><b>Quantite</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CONDITION__QUANTITE = eINSTANCE.getCondition_Quantite();
+				/**
+		 * The meta object literal for the '<em><b>Objet Interdit</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION__OBJET_INTERDIT = eINSTANCE.getCondition_ObjetInterdit();
 
-    /**
-     * The meta object literal for the '<em><b>Objets Requis</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITION__OBJETS_REQUIS = eINSTANCE.getCondition_ObjetsRequis();
+				/**
+		 * The meta object literal for the '{@link game.game.impl.ConditionPersonneImpl <em>Condition Personne</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see game.game.impl.ConditionPersonneImpl
+		 * @see game.game.impl.GamePackageImpl#getConditionPersonne()
+		 * @generated
+		 */
+		EClass CONDITION_PERSONNE = eINSTANCE.getConditionPersonne();
 
-    /**
-     * The meta object literal for the '<em><b>Objets Interdits</b></em>' reference list feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference CONDITION__OBJETS_INTERDITS = eINSTANCE.getCondition_ObjetsInterdits();
+				/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION_PERSONNE__VISIBLE = eINSTANCE.getConditionPersonne_Visible();
 
-    /**
-     * The meta object literal for the '{@link game.game.Nature <em>Nature</em>}' enum.
-     * <!-- begin-user-doc -->
+				/**
+		 * The meta object literal for the '<em><b>Active</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION_PERSONNE__ACTIVE = eINSTANCE.getConditionPersonne_Active();
+
+				/**
+		 * The meta object literal for the '{@link game.game.impl.ConditionAvantageImpl <em>Condition Avantage</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see game.game.impl.ConditionAvantageImpl
+		 * @see game.game.impl.GamePackageImpl#getConditionAvantage()
+		 * @generated
+		 */
+		EClass CONDITION_AVANTAGE = eINSTANCE.getConditionAvantage();
+
+				/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION_AVANTAGE__VISIBLE = eINSTANCE.getConditionAvantage_Visible();
+
+				/**
+		 * The meta object literal for the '<em><b>Actif</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION_AVANTAGE__ACTIF = eINSTANCE.getConditionAvantage_Actif();
+
+				/**
+		 * The meta object literal for the '{@link game.game.impl.ConditionCheminImpl <em>Condition Chemin</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see game.game.impl.ConditionCheminImpl
+		 * @see game.game.impl.GamePackageImpl#getConditionChemin()
+		 * @generated
+		 */
+		EClass CONDITION_CHEMIN = eINSTANCE.getConditionChemin();
+
+				/**
+		 * The meta object literal for the '<em><b>Visible</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION_CHEMIN__VISIBLE = eINSTANCE.getConditionChemin_Visible();
+
+				/**
+		 * The meta object literal for the '<em><b>Ouvert</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONDITION_CHEMIN__OUVERT = eINSTANCE.getConditionChemin_Ouvert();
+
+				/**
+		 * The meta object literal for the '{@link game.game.Nature <em>Nature</em>}' enum.
+		 * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see game.game.Nature
-     * @see game.game.impl.GamePackageImpl#getNature()
-     * @generated
-     */
+		 * @see game.game.Nature
+		 * @see game.game.impl.GamePackageImpl#getNature()
+		 * @generated
+		 */
     EEnum NATURE = eINSTANCE.getNature();
 
   }

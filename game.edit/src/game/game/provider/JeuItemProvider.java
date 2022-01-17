@@ -212,6 +212,11 @@ public class JeuItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(GamePackage.Literals.JEU__ELEMENTSJEU,
+				 GameFactory.eINSTANCE.createQteObjet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.JEU__ELEMENTSJEU,
 				 GameFactory.eINSTANCE.createLieu()));
 
 		newChildDescriptors.add
@@ -233,6 +238,36 @@ public class JeuItemProvider
 			(createChildParameter
 				(GamePackage.Literals.JEU__ELEMENTSJEU,
 				 GameFactory.eINSTANCE.createObjet()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.JEU__ELEMENTSJEU,
+				 GameFactory.eINSTANCE.createInteraction()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.JEU__ELEMENTSJEU,
+				 GameFactory.eINSTANCE.createChoix()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.JEU__ELEMENTSJEU,
+				 GameFactory.eINSTANCE.createCondition()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.JEU__ELEMENTSJEU,
+				 GameFactory.eINSTANCE.createConditionPersonne()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.JEU__ELEMENTSJEU,
+				 GameFactory.eINSTANCE.createConditionAvantage()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(GamePackage.Literals.JEU__ELEMENTSJEU,
+				 GameFactory.eINSTANCE.createConditionChemin()));
 	}
 
 	/**

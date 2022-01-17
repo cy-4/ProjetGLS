@@ -5,15 +5,20 @@ package game.game.impl;
 
 import game.game.Avantage;
 import game.game.Condition;
+import game.game.ConditionAvantage;
 import game.game.GamePackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,238 +37,181 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class AvantageImpl extends ElementsJeuImpl implements Avantage
 {
   /**
-   * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVisible()
-   * @generated
-   * @ordered
-   */
-  protected Condition visible;
+	 * @see #getVisible()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<ConditionAvantage> visible;
 
   /**
-   * The cached value of the '{@link #getActif() <em>Actif</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getActif() <em>Actif</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getActif()
-   * @generated
-   * @ordered
-   */
-  protected Condition actif;
+	 * @see #getActif()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<ConditionAvantage> actif;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected AvantageImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.AVANTAGE;
-  }
+		return GamePackage.Literals.AVANTAGE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
-  public Condition getVisible()
+  public EList<ConditionAvantage> getVisible()
   {
-    return visible;
-  }
+		if (visible == null) {
+			visible = new EObjectContainmentWithInverseEList<ConditionAvantage>(ConditionAvantage.class, this, GamePackage.AVANTAGE__VISIBLE, GamePackage.CONDITION_AVANTAGE__VISIBLE);
+		}
+		return visible;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetVisible(Condition newVisible, NotificationChain msgs)
-  {
-    Condition oldVisible = visible;
-    visible = newVisible;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__VISIBLE, oldVisible, newVisible);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
-  public void setVisible(Condition newVisible)
+  public EList<ConditionAvantage> getActif()
   {
-    if (newVisible != visible)
-    {
-      NotificationChain msgs = null;
-      if (visible != null)
-        msgs = ((InternalEObject)visible).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__VISIBLE, null, msgs);
-      if (newVisible != null)
-        msgs = ((InternalEObject)newVisible).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__VISIBLE, null, msgs);
-      msgs = basicSetVisible(newVisible, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__VISIBLE, newVisible, newVisible));
-  }
+		if (actif == null) {
+			actif = new EObjectContainmentWithInverseEList<ConditionAvantage>(ConditionAvantage.class, this, GamePackage.AVANTAGE__ACTIF, GamePackage.CONDITION_AVANTAGE__ACTIF);
+		}
+		return actif;
+	}
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Condition getActif()
-  {
-    return actif;
-  }
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.AVANTAGE__VISIBLE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVisible()).basicAdd(otherEnd, msgs);
+			case GamePackage.AVANTAGE__ACTIF:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActif()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetActif(Condition newActif, NotificationChain msgs)
-  {
-    Condition oldActif = actif;
-    actif = newActif;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__ACTIF, oldActif, newActif);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setActif(Condition newActif)
-  {
-    if (newActif != actif)
-    {
-      NotificationChain msgs = null;
-      if (actif != null)
-        msgs = ((InternalEObject)actif).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__ACTIF, null, msgs);
-      if (newActif != null)
-        msgs = ((InternalEObject)newActif).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.AVANTAGE__ACTIF, null, msgs);
-      msgs = basicSetActif(newActif, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.AVANTAGE__ACTIF, newActif, newActif));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.AVANTAGE__VISIBLE:
-        return basicSetVisible(null, msgs);
-      case GamePackage.AVANTAGE__ACTIF:
-        return basicSetActif(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.AVANTAGE__VISIBLE:
+				return ((InternalEList<?>)getVisible()).basicRemove(otherEnd, msgs);
+			case GamePackage.AVANTAGE__ACTIF:
+				return ((InternalEList<?>)getActif()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.AVANTAGE__VISIBLE:
-        return getVisible();
-      case GamePackage.AVANTAGE__ACTIF:
-        return getActif();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.AVANTAGE__VISIBLE:
+				return getVisible();
+			case GamePackage.AVANTAGE__ACTIF:
+				return getActif();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
+	 * @generated
+	 */
+  @SuppressWarnings("unchecked")
+		@Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.AVANTAGE__VISIBLE:
-        setVisible((Condition)newValue);
-        return;
-      case GamePackage.AVANTAGE__ACTIF:
-        setActif((Condition)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.AVANTAGE__VISIBLE:
+				getVisible().clear();
+				getVisible().addAll((Collection<? extends ConditionAvantage>)newValue);
+				return;
+			case GamePackage.AVANTAGE__ACTIF:
+				getActif().clear();
+				getActif().addAll((Collection<? extends ConditionAvantage>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.AVANTAGE__VISIBLE:
-        setVisible((Condition)null);
-        return;
-      case GamePackage.AVANTAGE__ACTIF:
-        setActif((Condition)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.AVANTAGE__VISIBLE:
+				getVisible().clear();
+				return;
+			case GamePackage.AVANTAGE__ACTIF:
+				getActif().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.AVANTAGE__VISIBLE:
-        return visible != null;
-      case GamePackage.AVANTAGE__ACTIF:
-        return actif != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.AVANTAGE__VISIBLE:
+				return visible != null && !visible.isEmpty();
+			case GamePackage.AVANTAGE__ACTIF:
+				return actif != null && !actif.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //AvantageImpl

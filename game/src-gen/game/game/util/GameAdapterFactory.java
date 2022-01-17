@@ -23,391 +23,425 @@ import org.eclipse.emf.ecore.EObject;
 public class GameAdapterFactory extends AdapterFactoryImpl
 {
   /**
-   * The cached model package.
-   * <!-- begin-user-doc -->
+	 * The cached model package.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected static GamePackage modelPackage;
 
   /**
-   * Creates an instance of the adapter factory.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the adapter factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public GameAdapterFactory()
   {
-    if (modelPackage == null)
-    {
-      modelPackage = GamePackage.eINSTANCE;
-    }
-  }
+		if (modelPackage == null) {
+			modelPackage = GamePackage.eINSTANCE;
+		}
+	}
 
   /**
-   * Returns whether this factory is applicable for the type of the object.
-   * <!-- begin-user-doc -->
+	 * Returns whether this factory is applicable for the type of the object.
+	 * <!-- begin-user-doc -->
    * This implementation returns <code>true</code> if the object is either the model's package or is an instance object of the model.
    * <!-- end-user-doc -->
-   * @return whether this factory is applicable for the type of the object.
-   * @generated
-   */
+	 * @return whether this factory is applicable for the type of the object.
+	 * @generated
+	 */
   @Override
   public boolean isFactoryForType(Object object)
   {
-    if (object == modelPackage)
-    {
-      return true;
-    }
-    if (object instanceof EObject)
-    {
-      return ((EObject)object).eClass().getEPackage() == modelPackage;
-    }
-    return false;
-  }
+		if (object == modelPackage) {
+			return true;
+		}
+		if (object instanceof EObject) {
+			return ((EObject)object).eClass().getEPackage() == modelPackage;
+		}
+		return false;
+	}
 
   /**
-   * The switch that delegates to the <code>createXXX</code> methods.
-   * <!-- begin-user-doc -->
+	 * The switch that delegates to the <code>createXXX</code> methods.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected GameSwitch<Adapter> modelSwitch =
-    new GameSwitch<Adapter>()
-    {
-      @Override
-      public Adapter caseJeu(Jeu object)
-      {
-        return createJeuAdapter();
-      }
-      @Override
-      public Adapter caseElementsJeu(ElementsJeu object)
-      {
-        return createElementsJeuAdapter();
-      }
-      @Override
-      public Adapter casePlace(Place object)
-      {
-        return createPlaceAdapter();
-      }
-      @Override
-      public Adapter caseAvantage(Avantage object)
-      {
-        return createAvantageAdapter();
-      }
-      @Override
-      public Adapter caseQteObjet(QteObjet object)
-      {
-        return createQteObjetAdapter();
-      }
-      @Override
-      public Adapter caseTerritoire(Territoire object)
-      {
-        return createTerritoireAdapter();
-      }
-      @Override
-      public Adapter caseLieu(Lieu object)
-      {
-        return createLieuAdapter();
-      }
-      @Override
-      public Adapter caseChemin(Chemin object)
-      {
-        return createCheminAdapter();
-      }
-      @Override
-      public Adapter casePersonne(Personne object)
-      {
-        return createPersonneAdapter();
-      }
-      @Override
-      public Adapter caseExplorateur(Explorateur object)
-      {
-        return createExplorateurAdapter();
-      }
-      @Override
-      public Adapter caseConnaissance(Connaissance object)
-      {
-        return createConnaissanceAdapter();
-      }
-      @Override
-      public Adapter caseObjet(Objet object)
-      {
-        return createObjetAdapter();
-      }
-      @Override
-      public Adapter caseInteraction(Interaction object)
-      {
-        return createInteractionAdapter();
-      }
-      @Override
-      public Adapter caseChoix(Choix object)
-      {
-        return createChoixAdapter();
-      }
-      @Override
-      public Adapter caseCondition(Condition object)
-      {
-        return createConditionAdapter();
-      }
-      @Override
-      public Adapter defaultCase(EObject object)
-      {
-        return createEObjectAdapter();
-      }
-    };
+    new GameSwitch<Adapter>() {
+			@Override
+			public Adapter caseJeu(Jeu object) {
+				return createJeuAdapter();
+			}
+			@Override
+			public Adapter caseElementsJeu(ElementsJeu object) {
+				return createElementsJeuAdapter();
+			}
+			@Override
+			public Adapter casePlace(Place object) {
+				return createPlaceAdapter();
+			}
+			@Override
+			public Adapter caseAvantage(Avantage object) {
+				return createAvantageAdapter();
+			}
+			@Override
+			public Adapter caseQteObjet(QteObjet object) {
+				return createQteObjetAdapter();
+			}
+			@Override
+			public Adapter caseTerritoire(Territoire object) {
+				return createTerritoireAdapter();
+			}
+			@Override
+			public Adapter caseLieu(Lieu object) {
+				return createLieuAdapter();
+			}
+			@Override
+			public Adapter caseChemin(Chemin object) {
+				return createCheminAdapter();
+			}
+			@Override
+			public Adapter casePersonne(Personne object) {
+				return createPersonneAdapter();
+			}
+			@Override
+			public Adapter caseExplorateur(Explorateur object) {
+				return createExplorateurAdapter();
+			}
+			@Override
+			public Adapter caseConnaissance(Connaissance object) {
+				return createConnaissanceAdapter();
+			}
+			@Override
+			public Adapter caseObjet(Objet object) {
+				return createObjetAdapter();
+			}
+			@Override
+			public Adapter caseInteraction(Interaction object) {
+				return createInteractionAdapter();
+			}
+			@Override
+			public Adapter caseChoix(Choix object) {
+				return createChoixAdapter();
+			}
+			@Override
+			public Adapter caseCondition(Condition object) {
+				return createConditionAdapter();
+			}
+			@Override
+			public Adapter caseConditionPersonne(ConditionPersonne object) {
+				return createConditionPersonneAdapter();
+			}
+			@Override
+			public Adapter caseConditionAvantage(ConditionAvantage object) {
+				return createConditionAvantageAdapter();
+			}
+			@Override
+			public Adapter caseConditionChemin(ConditionChemin object) {
+				return createConditionCheminAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
+		};
 
   /**
-   * Creates an adapter for the <code>target</code>.
-   * <!-- begin-user-doc -->
+	 * Creates an adapter for the <code>target</code>.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param target the object to adapt.
-   * @return the adapter for the <code>target</code>.
-   * @generated
-   */
+	 * @param target the object to adapt.
+	 * @return the adapter for the <code>target</code>.
+	 * @generated
+	 */
   @Override
   public Adapter createAdapter(Notifier target)
   {
-    return modelSwitch.doSwitch((EObject)target);
-  }
+		return modelSwitch.doSwitch((EObject)target);
+	}
 
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Jeu <em>Jeu</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Jeu <em>Jeu</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Jeu
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Jeu
+	 * @generated
+	 */
   public Adapter createJeuAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.ElementsJeu <em>Elements Jeu</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.ElementsJeu <em>Elements Jeu</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.ElementsJeu
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.ElementsJeu
+	 * @generated
+	 */
   public Adapter createElementsJeuAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Place <em>Place</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Place <em>Place</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Place
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Place
+	 * @generated
+	 */
   public Adapter createPlaceAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Avantage <em>Avantage</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Avantage <em>Avantage</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Avantage
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Avantage
+	 * @generated
+	 */
   public Adapter createAvantageAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.QteObjet <em>Qte Objet</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.QteObjet <em>Qte Objet</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.QteObjet
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.QteObjet
+	 * @generated
+	 */
   public Adapter createQteObjetAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Territoire <em>Territoire</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Territoire <em>Territoire</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Territoire
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Territoire
+	 * @generated
+	 */
   public Adapter createTerritoireAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Lieu <em>Lieu</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Lieu <em>Lieu</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Lieu
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Lieu
+	 * @generated
+	 */
   public Adapter createLieuAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Chemin <em>Chemin</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Chemin <em>Chemin</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Chemin
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Chemin
+	 * @generated
+	 */
   public Adapter createCheminAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Personne <em>Personne</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Personne <em>Personne</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Personne
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Personne
+	 * @generated
+	 */
   public Adapter createPersonneAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Explorateur <em>Explorateur</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Explorateur <em>Explorateur</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Explorateur
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Explorateur
+	 * @generated
+	 */
   public Adapter createExplorateurAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Connaissance <em>Connaissance</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Connaissance <em>Connaissance</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Connaissance
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Connaissance
+	 * @generated
+	 */
   public Adapter createConnaissanceAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Objet <em>Objet</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Objet <em>Objet</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Objet
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Objet
+	 * @generated
+	 */
   public Adapter createObjetAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Interaction <em>Interaction</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Interaction <em>Interaction</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Interaction
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Interaction
+	 * @generated
+	 */
   public Adapter createInteractionAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Choix <em>Choix</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Choix <em>Choix</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Choix
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Choix
+	 * @generated
+	 */
   public Adapter createChoixAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for an object of class '{@link game.game.Condition <em>Condition</em>}'.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see game.game.Condition
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @see game.game.Condition
+	 * @generated
+	 */
   public Adapter createConditionAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
   /**
-   * Creates a new adapter for the default case.
-   * <!-- begin-user-doc -->
+	 * Creates a new adapter for an object of class '{@link game.game.ConditionPersonne <em>Condition Personne</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see game.game.ConditionPersonne
+	 * @generated
+	 */
+	public Adapter createConditionPersonneAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link game.game.ConditionAvantage <em>Condition Avantage</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see game.game.ConditionAvantage
+	 * @generated
+	 */
+	public Adapter createConditionAvantageAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for an object of class '{@link game.game.ConditionChemin <em>Condition Chemin</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see game.game.ConditionChemin
+	 * @generated
+	 */
+	public Adapter createConditionCheminAdapter() {
+		return null;
+	}
+
+		/**
+	 * Creates a new adapter for the default case.
+	 * <!-- begin-user-doc -->
    * This default implementation returns null.
    * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @generated
-   */
+	 * @return the new adapter.
+	 * @generated
+	 */
   public Adapter createEObjectAdapter()
   {
-    return null;
-  }
+		return null;
+	}
 
 } //GameAdapterFactory

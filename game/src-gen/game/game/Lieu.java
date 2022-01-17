@@ -3,6 +3,8 @@
  */
 package game.game;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -14,6 +16,7 @@ package game.game;
  * </p>
  * <ul>
  *   <li>{@link game.game.Lieu#getNature <em>Nature</em>}</li>
+ *   <li>{@link game.game.Lieu#getPersonnes <em>Personnes</em>}</li>
  * </ul>
  *
  * @see game.game.GamePackage#getLieu()
@@ -23,28 +26,42 @@ package game.game;
 public interface Lieu extends Place
 {
   /**
-   * Returns the value of the '<em><b>Nature</b></em>' attribute.
-   * The literals are from the enumeration {@link game.game.Nature}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Nature</b></em>' attribute.
+	 * The literals are from the enumeration {@link game.game.Nature}.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Nature</em>' attribute.
-   * @see game.game.Nature
-   * @see #setNature(Nature)
-   * @see game.game.GamePackage#getLieu_Nature()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Nature</em>' attribute.
+	 * @see game.game.Nature
+	 * @see #setNature(Nature)
+	 * @see game.game.GamePackage#getLieu_Nature()
+	 * @model
+	 * @generated
+	 */
   Nature getNature();
 
   /**
-   * Sets the value of the '{@link game.game.Lieu#getNature <em>Nature</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Lieu#getNature <em>Nature</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Nature</em>' attribute.
-   * @see game.game.Nature
-   * @see #getNature()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Nature</em>' attribute.
+	 * @see game.game.Nature
+	 * @see #getNature()
+	 * @generated
+	 */
   void setNature(Nature value);
+
+		/**
+	 * Returns the value of the '<em><b>Personnes</b></em>' reference list.
+	 * The list contents are of type {@link game.game.Personne}.
+	 * It is bidirectional and its opposite is '{@link game.game.Personne#getPlace <em>Place</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Personnes</em>' reference list.
+	 * @see game.game.GamePackage#getLieu_Personnes()
+	 * @see game.game.Personne#getPlace
+	 * @model opposite="place"
+	 * @generated
+	 */
+	EList<Personne> getPersonnes();
 
 } // Lieu

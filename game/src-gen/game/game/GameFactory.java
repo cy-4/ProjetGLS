@@ -16,155 +16,182 @@ import org.eclipse.emf.ecore.EFactory;
 public interface GameFactory extends EFactory
 {
   /**
-   * The singleton instance of the factory.
-   * <!-- begin-user-doc -->
+	 * The singleton instance of the factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   GameFactory eINSTANCE = game.game.impl.GameFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>Jeu</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Jeu</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Jeu</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Jeu</em>'.
+	 * @generated
+	 */
   Jeu createJeu();
 
   /**
-   * Returns a new object of class '<em>Elements Jeu</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Elements Jeu</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Elements Jeu</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Elements Jeu</em>'.
+	 * @generated
+	 */
   ElementsJeu createElementsJeu();
 
   /**
-   * Returns a new object of class '<em>Place</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Place</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Place</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Place</em>'.
+	 * @generated
+	 */
   Place createPlace();
 
   /**
-   * Returns a new object of class '<em>Avantage</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Avantage</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Avantage</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Avantage</em>'.
+	 * @generated
+	 */
   Avantage createAvantage();
 
   /**
-   * Returns a new object of class '<em>Qte Objet</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Qte Objet</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Qte Objet</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Qte Objet</em>'.
+	 * @generated
+	 */
   QteObjet createQteObjet();
 
   /**
-   * Returns a new object of class '<em>Territoire</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Territoire</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Territoire</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Territoire</em>'.
+	 * @generated
+	 */
   Territoire createTerritoire();
 
   /**
-   * Returns a new object of class '<em>Lieu</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Lieu</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Lieu</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Lieu</em>'.
+	 * @generated
+	 */
   Lieu createLieu();
 
   /**
-   * Returns a new object of class '<em>Chemin</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Chemin</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Chemin</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Chemin</em>'.
+	 * @generated
+	 */
   Chemin createChemin();
 
   /**
-   * Returns a new object of class '<em>Personne</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Personne</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Personne</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Personne</em>'.
+	 * @generated
+	 */
   Personne createPersonne();
 
   /**
-   * Returns a new object of class '<em>Explorateur</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Explorateur</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Explorateur</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Explorateur</em>'.
+	 * @generated
+	 */
   Explorateur createExplorateur();
 
   /**
-   * Returns a new object of class '<em>Connaissance</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Connaissance</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Connaissance</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Connaissance</em>'.
+	 * @generated
+	 */
   Connaissance createConnaissance();
 
   /**
-   * Returns a new object of class '<em>Objet</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Objet</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Objet</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Objet</em>'.
+	 * @generated
+	 */
   Objet createObjet();
 
   /**
-   * Returns a new object of class '<em>Interaction</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Interaction</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Interaction</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Interaction</em>'.
+	 * @generated
+	 */
   Interaction createInteraction();
 
   /**
-   * Returns a new object of class '<em>Choix</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Choix</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Choix</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Choix</em>'.
+	 * @generated
+	 */
   Choix createChoix();
 
   /**
-   * Returns a new object of class '<em>Condition</em>'.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Condition</em>'.
-   * @generated
-   */
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
   Condition createCondition();
 
   /**
-   * Returns the package supported by this factory.
-   * <!-- begin-user-doc -->
+	 * Returns a new object of class '<em>Condition Personne</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition Personne</em>'.
+	 * @generated
+	 */
+	ConditionPersonne createConditionPersonne();
+
+		/**
+	 * Returns a new object of class '<em>Condition Avantage</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition Avantage</em>'.
+	 * @generated
+	 */
+	ConditionAvantage createConditionAvantage();
+
+		/**
+	 * Returns a new object of class '<em>Condition Chemin</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition Chemin</em>'.
+	 * @generated
+	 */
+	ConditionChemin createConditionChemin();
+
+		/**
+	 * Returns the package supported by this factory.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the package supported by this factory.
-   * @generated
-   */
+	 * @return the package supported by this factory.
+	 * @generated
+	 */
   GamePackage getGamePackage();
 
 } //GameFactory

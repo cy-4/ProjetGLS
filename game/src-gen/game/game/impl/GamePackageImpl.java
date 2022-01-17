@@ -7,6 +7,9 @@ import game.game.Avantage;
 import game.game.Chemin;
 import game.game.Choix;
 import game.game.Condition;
+import game.game.ConditionAvantage;
+import game.game.ConditionChemin;
+import game.game.ConditionPersonne;
 import game.game.Connaissance;
 import game.game.ElementsJeu;
 import game.game.Explorateur;
@@ -39,1056 +42,1213 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 public class GamePackageImpl extends EPackageImpl implements GamePackage
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass jeuEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass elementsJeuEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass placeEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass avantageEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass qteObjetEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass territoireEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass lieuEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass cheminEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass personneEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass explorateurEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass connaissanceEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass objetEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass interactionEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass choixEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EClass conditionEClass = null;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionPersonneEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionAvantageEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conditionCheminEClass = null;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private EEnum natureEEnum = null;
 
   /**
-   * Creates an instance of the model <b>Package</b>, registered with
-   * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
-   * package URI value.
-   * <p>Note: the correct way to create the package is via the static
-   * factory method {@link #init init()}, which also performs
-   * initialization of the package, or returns the registered package,
-   * if one already exists.
-   * <!-- begin-user-doc -->
+	 * Creates an instance of the model <b>Package</b>, registered with
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.eclipse.emf.ecore.EPackage.Registry
-   * @see game.game.GamePackage#eNS_URI
-   * @see #init()
-   * @generated
-   */
+	 * @see org.eclipse.emf.ecore.EPackage.Registry
+	 * @see game.game.GamePackage#eNS_URI
+	 * @see #init()
+	 * @generated
+	 */
   private GamePackageImpl()
   {
-    super(eNS_URI, GameFactory.eINSTANCE);
-  }
+		super(eNS_URI, GameFactory.eINSTANCE);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private static boolean isInited = false;
 
   /**
-   * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   *
-   * <p>This method is used to initialize {@link GamePackage#eINSTANCE} when that field is accessed.
-   * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
-   * <!-- begin-user-doc -->
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 *
+	 * <p>This method is used to initialize {@link GamePackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #eNS_URI
-   * @see #createPackageContents()
-   * @see #initializePackageContents()
-   * @generated
-   */
+	 * @see #eNS_URI
+	 * @see #createPackageContents()
+	 * @see #initializePackageContents()
+	 * @generated
+	 */
   public static GamePackage init()
   {
-    if (isInited) return (GamePackage)EPackage.Registry.INSTANCE.getEPackage(GamePackage.eNS_URI);
+		if (isInited) return (GamePackage)EPackage.Registry.INSTANCE.getEPackage(GamePackage.eNS_URI);
 
-    // Obtain or create and register package
-    Object registeredGamePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-    GamePackageImpl theGamePackage = registeredGamePackage instanceof GamePackageImpl ? (GamePackageImpl)registeredGamePackage : new GamePackageImpl();
+		// Obtain or create and register package
+		Object registeredGamePackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+		GamePackageImpl theGamePackage = registeredGamePackage instanceof GamePackageImpl ? (GamePackageImpl)registeredGamePackage : new GamePackageImpl();
 
-    isInited = true;
+		isInited = true;
 
-    // Create package meta-data objects
-    theGamePackage.createPackageContents();
+		// Create package meta-data objects
+		theGamePackage.createPackageContents();
 
-    // Initialize created meta-data
-    theGamePackage.initializePackageContents();
+		// Initialize created meta-data
+		theGamePackage.initializePackageContents();
 
-    // Mark meta-data to indicate it can't be changed
-    theGamePackage.freeze();
+		// Mark meta-data to indicate it can't be changed
+		theGamePackage.freeze();
 
-    // Update the registry and return the package
-    EPackage.Registry.INSTANCE.put(GamePackage.eNS_URI, theGamePackage);
-    return theGamePackage;
-  }
+		// Update the registry and return the package
+		EPackage.Registry.INSTANCE.put(GamePackage.eNS_URI, theGamePackage);
+		return theGamePackage;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getJeu()
   {
-    return jeuEClass;
-  }
+		return jeuEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getJeu_Name()
   {
-    return (EAttribute)jeuEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)jeuEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getJeu_Territoire()
   {
-    return (EReference)jeuEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)jeuEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getJeu_Explorateur()
   {
-    return (EReference)jeuEClass.getEStructuralFeatures().get(2);
-  }
+		return (EReference)jeuEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getJeu_Elementsjeu()
   {
-    return (EReference)jeuEClass.getEStructuralFeatures().get(3);
-  }
+		return (EReference)jeuEClass.getEStructuralFeatures().get(3);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getElementsJeu()
   {
-    return elementsJeuEClass;
-  }
+		return elementsJeuEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getElementsJeu_Name()
   {
-    return (EAttribute)elementsJeuEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)elementsJeuEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getPlace()
   {
-    return placeEClass;
-  }
+		return placeEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getAvantage()
   {
-    return avantageEClass;
-  }
+		return avantageEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getAvantage_Visible()
   {
-    return (EReference)avantageEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)avantageEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getAvantage_Actif()
   {
-    return (EReference)avantageEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)avantageEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getQteObjet()
   {
-    return qteObjetEClass;
-  }
+		return qteObjetEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getQteObjet_Qte()
   {
-    return (EAttribute)qteObjetEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)qteObjetEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getQteObjet_Objet()
   {
-    return (EReference)qteObjetEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)qteObjetEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getQteObjet_ChoixCons() {
+		return (EReference)qteObjetEClass.getEStructuralFeatures().get(2);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getQteObjet_ChoixDon() {
+		return (EReference)qteObjetEClass.getEStructuralFeatures().get(3);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getTerritoire()
   {
-    return territoireEClass;
-  }
+		return territoireEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getTerritoire_Places()
   {
-    return (EReference)territoireEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)territoireEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getLieu()
   {
-    return lieuEClass;
-  }
+		return lieuEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getLieu_Nature()
   {
-    return (EAttribute)lieuEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)lieuEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getLieu_Personnes() {
+		return (EReference)lieuEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getChemin()
   {
-    return cheminEClass;
-  }
+		return cheminEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getChemin_Pred()
   {
-    return (EReference)cheminEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)cheminEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getChemin_Succ()
   {
-    return (EReference)cheminEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)cheminEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getChemin_Visible()
   {
-    return (EReference)cheminEClass.getEStructuralFeatures().get(2);
-  }
+		return (EReference)cheminEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getChemin_Obligatoire()
   {
-    return (EAttribute)cheminEClass.getEStructuralFeatures().get(3);
-  }
+		return (EAttribute)cheminEClass.getEStructuralFeatures().get(3);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getChemin_Ouvert()
   {
-    return (EReference)cheminEClass.getEStructuralFeatures().get(4);
-  }
+		return (EReference)cheminEClass.getEStructuralFeatures().get(4);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getPersonne()
   {
-    return personneEClass;
-  }
+		return personneEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getPersonne_Place()
   {
-    return (EReference)personneEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)personneEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getPersonne_Visible()
   {
-    return (EReference)personneEClass.getEStructuralFeatures().get(1);
-  }
+		return (EReference)personneEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getPersonne_Actif()
-  {
-    return (EReference)personneEClass.getEStructuralFeatures().get(2);
-  }
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPersonne_Active() {
+		return (EReference)personneEClass.getEStructuralFeatures().get(2);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getPersonne_Obligatoire()
   {
-    return (EAttribute)personneEClass.getEStructuralFeatures().get(3);
-  }
+		return (EAttribute)personneEClass.getEStructuralFeatures().get(3);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getPersonne_Interactions()
   {
-    return (EReference)personneEClass.getEStructuralFeatures().get(4);
-  }
+		return (EReference)personneEClass.getEStructuralFeatures().get(4);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getExplorateur()
   {
-    return explorateurEClass;
-  }
+		return explorateurEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getExplorateur_Place()
   {
-    return (EReference)explorateurEClass.getEStructuralFeatures().get(0);
-  }
+		return (EReference)explorateurEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getExplorateur_TailleDispo()
   {
-    return (EAttribute)explorateurEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)explorateurEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getExplorateur_Objets()
   {
-    return (EReference)explorateurEClass.getEStructuralFeatures().get(2);
-  }
+		return (EReference)explorateurEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getExplorateur_Connaissances()
   {
-    return (EReference)explorateurEClass.getEStructuralFeatures().get(3);
-  }
+		return (EReference)explorateurEClass.getEStructuralFeatures().get(3);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getConnaissance()
   {
-    return connaissanceEClass;
-  }
+		return connaissanceEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConnaissance_Choix() {
+		return (EReference)connaissanceEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getObjet()
   {
-    return objetEClass;
-  }
+		return objetEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getObjet_Qte()
   {
-    return (EAttribute)objetEClass.getEStructuralFeatures().get(0);
-  }
+		return (EAttribute)objetEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getObjet_Taille()
   {
-    return (EAttribute)objetEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)objetEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getObjet_Transformable()
   {
-    return (EAttribute)objetEClass.getEStructuralFeatures().get(2);
-  }
+		return (EAttribute)objetEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getInteraction()
   {
-    return interactionEClass;
-  }
+		return interactionEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getInteraction_Name()
-  {
-    return (EAttribute)interactionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getInteraction_Question()
   {
-    return (EAttribute)interactionEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)interactionEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getInteraction_Personne() {
+		return (EReference)interactionEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getInteraction_Choix()
   {
-    return (EReference)interactionEClass.getEStructuralFeatures().get(2);
-  }
+		return (EReference)interactionEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getChoix()
   {
-    return choixEClass;
-  }
+		return choixEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getChoix_Name()
-  {
-    return (EAttribute)choixEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getChoix_Reponse()
   {
-    return (EAttribute)choixEClass.getEStructuralFeatures().get(1);
-  }
+		return (EAttribute)choixEClass.getEStructuralFeatures().get(0);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EAttribute getChoix_Bonne()
   {
-    return (EAttribute)choixEClass.getEStructuralFeatures().get(2);
-  }
+		return (EAttribute)choixEClass.getEStructuralFeatures().get(1);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getChoix_ObjetCons()
   {
-    return (EReference)choixEClass.getEStructuralFeatures().get(3);
-  }
+		return (EReference)choixEClass.getEStructuralFeatures().get(2);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getChoix_ObjetDon()
   {
-    return (EReference)choixEClass.getEStructuralFeatures().get(4);
-  }
+		return (EReference)choixEClass.getEStructuralFeatures().get(3);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EReference getChoix_ConnaisDon()
   {
-    return (EReference)choixEClass.getEStructuralFeatures().get(5);
-  }
+		return (EReference)choixEClass.getEStructuralFeatures().get(4);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getChoix_Interaction() {
+		return (EReference)choixEClass.getEStructuralFeatures().get(5);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EClass getCondition()
   {
-    return conditionEClass;
-  }
+		return conditionEClass;
+	}
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getCondition_Name()
-  {
-    return (EAttribute)conditionEClass.getEStructuralFeatures().get(0);
-  }
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCondition_ConnaissanceRequise() {
+		return (EReference)conditionEClass.getEStructuralFeatures().get(0);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getCondition_ConnaissancesRequises()
-  {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(1);
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCondition_ConnaissanceInterdite() {
+		return (EReference)conditionEClass.getEStructuralFeatures().get(1);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getCondition_ConnaissancesInterdites()
-  {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(2);
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCondition_ObjetRequis() {
+		return (EReference)conditionEClass.getEStructuralFeatures().get(2);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getCondition_Quantite()
-  {
-    return (EAttribute)conditionEClass.getEStructuralFeatures().get(3);
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getCondition_ObjetInterdit() {
+		return (EReference)conditionEClass.getEStructuralFeatures().get(3);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getCondition_ObjetsRequis()
-  {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(4);
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getConditionPersonne() {
+		return conditionPersonneEClass;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getCondition_ObjetsInterdits()
-  {
-    return (EReference)conditionEClass.getEStructuralFeatures().get(5);
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConditionPersonne_Visible() {
+		return (EReference)conditionPersonneEClass.getEStructuralFeatures().get(0);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConditionPersonne_Active() {
+		return (EReference)conditionPersonneEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getConditionAvantage() {
+		return conditionAvantageEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConditionAvantage_Visible() {
+		return (EReference)conditionAvantageEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConditionAvantage_Actif() {
+		return (EReference)conditionAvantageEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EClass getConditionChemin() {
+		return conditionCheminEClass;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConditionChemin_Visible() {
+		return (EReference)conditionCheminEClass.getEStructuralFeatures().get(0);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getConditionChemin_Ouvert() {
+		return (EReference)conditionCheminEClass.getEStructuralFeatures().get(1);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EEnum getNature()
   {
-    return natureEEnum;
-  }
+		return natureEEnum;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public GameFactory getGameFactory()
   {
-    return (GameFactory)getEFactoryInstance();
-  }
+		return (GameFactory)getEFactoryInstance();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private boolean isCreated = false;
 
   /**
-   * Creates the meta-model objects for the package.  This method is
-   * guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void createPackageContents()
   {
-    if (isCreated) return;
-    isCreated = true;
+		if (isCreated) return;
+		isCreated = true;
 
-    // Create classes and their features
-    jeuEClass = createEClass(JEU);
-    createEAttribute(jeuEClass, JEU__NAME);
-    createEReference(jeuEClass, JEU__TERRITOIRE);
-    createEReference(jeuEClass, JEU__EXPLORATEUR);
-    createEReference(jeuEClass, JEU__ELEMENTSJEU);
+		// Create classes and their features
+		jeuEClass = createEClass(JEU);
+		createEAttribute(jeuEClass, JEU__NAME);
+		createEReference(jeuEClass, JEU__TERRITOIRE);
+		createEReference(jeuEClass, JEU__EXPLORATEUR);
+		createEReference(jeuEClass, JEU__ELEMENTSJEU);
 
-    elementsJeuEClass = createEClass(ELEMENTS_JEU);
-    createEAttribute(elementsJeuEClass, ELEMENTS_JEU__NAME);
+		elementsJeuEClass = createEClass(ELEMENTS_JEU);
+		createEAttribute(elementsJeuEClass, ELEMENTS_JEU__NAME);
 
-    placeEClass = createEClass(PLACE);
+		placeEClass = createEClass(PLACE);
 
-    avantageEClass = createEClass(AVANTAGE);
-    createEReference(avantageEClass, AVANTAGE__VISIBLE);
-    createEReference(avantageEClass, AVANTAGE__ACTIF);
+		avantageEClass = createEClass(AVANTAGE);
+		createEReference(avantageEClass, AVANTAGE__VISIBLE);
+		createEReference(avantageEClass, AVANTAGE__ACTIF);
 
-    qteObjetEClass = createEClass(QTE_OBJET);
-    createEAttribute(qteObjetEClass, QTE_OBJET__QTE);
-    createEReference(qteObjetEClass, QTE_OBJET__OBJET);
+		qteObjetEClass = createEClass(QTE_OBJET);
+		createEAttribute(qteObjetEClass, QTE_OBJET__QTE);
+		createEReference(qteObjetEClass, QTE_OBJET__OBJET);
+		createEReference(qteObjetEClass, QTE_OBJET__CHOIX_CONS);
+		createEReference(qteObjetEClass, QTE_OBJET__CHOIX_DON);
 
-    territoireEClass = createEClass(TERRITOIRE);
-    createEReference(territoireEClass, TERRITOIRE__PLACES);
+		territoireEClass = createEClass(TERRITOIRE);
+		createEReference(territoireEClass, TERRITOIRE__PLACES);
 
-    lieuEClass = createEClass(LIEU);
-    createEAttribute(lieuEClass, LIEU__NATURE);
+		lieuEClass = createEClass(LIEU);
+		createEAttribute(lieuEClass, LIEU__NATURE);
+		createEReference(lieuEClass, LIEU__PERSONNES);
 
-    cheminEClass = createEClass(CHEMIN);
-    createEReference(cheminEClass, CHEMIN__PRED);
-    createEReference(cheminEClass, CHEMIN__SUCC);
-    createEReference(cheminEClass, CHEMIN__VISIBLE);
-    createEAttribute(cheminEClass, CHEMIN__OBLIGATOIRE);
-    createEReference(cheminEClass, CHEMIN__OUVERT);
+		cheminEClass = createEClass(CHEMIN);
+		createEReference(cheminEClass, CHEMIN__PRED);
+		createEReference(cheminEClass, CHEMIN__SUCC);
+		createEReference(cheminEClass, CHEMIN__VISIBLE);
+		createEAttribute(cheminEClass, CHEMIN__OBLIGATOIRE);
+		createEReference(cheminEClass, CHEMIN__OUVERT);
 
-    personneEClass = createEClass(PERSONNE);
-    createEReference(personneEClass, PERSONNE__PLACE);
-    createEReference(personneEClass, PERSONNE__VISIBLE);
-    createEReference(personneEClass, PERSONNE__ACTIF);
-    createEAttribute(personneEClass, PERSONNE__OBLIGATOIRE);
-    createEReference(personneEClass, PERSONNE__INTERACTIONS);
+		personneEClass = createEClass(PERSONNE);
+		createEReference(personneEClass, PERSONNE__PLACE);
+		createEReference(personneEClass, PERSONNE__VISIBLE);
+		createEReference(personneEClass, PERSONNE__ACTIVE);
+		createEAttribute(personneEClass, PERSONNE__OBLIGATOIRE);
+		createEReference(personneEClass, PERSONNE__INTERACTIONS);
 
-    explorateurEClass = createEClass(EXPLORATEUR);
-    createEReference(explorateurEClass, EXPLORATEUR__PLACE);
-    createEAttribute(explorateurEClass, EXPLORATEUR__TAILLE_DISPO);
-    createEReference(explorateurEClass, EXPLORATEUR__OBJETS);
-    createEReference(explorateurEClass, EXPLORATEUR__CONNAISSANCES);
+		explorateurEClass = createEClass(EXPLORATEUR);
+		createEReference(explorateurEClass, EXPLORATEUR__PLACE);
+		createEAttribute(explorateurEClass, EXPLORATEUR__TAILLE_DISPO);
+		createEReference(explorateurEClass, EXPLORATEUR__OBJETS);
+		createEReference(explorateurEClass, EXPLORATEUR__CONNAISSANCES);
 
-    connaissanceEClass = createEClass(CONNAISSANCE);
+		connaissanceEClass = createEClass(CONNAISSANCE);
+		createEReference(connaissanceEClass, CONNAISSANCE__CHOIX);
 
-    objetEClass = createEClass(OBJET);
-    createEAttribute(objetEClass, OBJET__QTE);
-    createEAttribute(objetEClass, OBJET__TAILLE);
-    createEAttribute(objetEClass, OBJET__TRANSFORMABLE);
+		objetEClass = createEClass(OBJET);
+		createEAttribute(objetEClass, OBJET__QTE);
+		createEAttribute(objetEClass, OBJET__TAILLE);
+		createEAttribute(objetEClass, OBJET__TRANSFORMABLE);
 
-    interactionEClass = createEClass(INTERACTION);
-    createEAttribute(interactionEClass, INTERACTION__NAME);
-    createEAttribute(interactionEClass, INTERACTION__QUESTION);
-    createEReference(interactionEClass, INTERACTION__CHOIX);
+		interactionEClass = createEClass(INTERACTION);
+		createEAttribute(interactionEClass, INTERACTION__QUESTION);
+		createEReference(interactionEClass, INTERACTION__PERSONNE);
+		createEReference(interactionEClass, INTERACTION__CHOIX);
 
-    choixEClass = createEClass(CHOIX);
-    createEAttribute(choixEClass, CHOIX__NAME);
-    createEAttribute(choixEClass, CHOIX__REPONSE);
-    createEAttribute(choixEClass, CHOIX__BONNE);
-    createEReference(choixEClass, CHOIX__OBJET_CONS);
-    createEReference(choixEClass, CHOIX__OBJET_DON);
-    createEReference(choixEClass, CHOIX__CONNAIS_DON);
+		choixEClass = createEClass(CHOIX);
+		createEAttribute(choixEClass, CHOIX__REPONSE);
+		createEAttribute(choixEClass, CHOIX__BONNE);
+		createEReference(choixEClass, CHOIX__OBJET_CONS);
+		createEReference(choixEClass, CHOIX__OBJET_DON);
+		createEReference(choixEClass, CHOIX__CONNAIS_DON);
+		createEReference(choixEClass, CHOIX__INTERACTION);
 
-    conditionEClass = createEClass(CONDITION);
-    createEAttribute(conditionEClass, CONDITION__NAME);
-    createEReference(conditionEClass, CONDITION__CONNAISSANCES_REQUISES);
-    createEReference(conditionEClass, CONDITION__CONNAISSANCES_INTERDITES);
-    createEAttribute(conditionEClass, CONDITION__QUANTITE);
-    createEReference(conditionEClass, CONDITION__OBJETS_REQUIS);
-    createEReference(conditionEClass, CONDITION__OBJETS_INTERDITS);
+		conditionEClass = createEClass(CONDITION);
+		createEReference(conditionEClass, CONDITION__CONNAISSANCE_REQUISE);
+		createEReference(conditionEClass, CONDITION__CONNAISSANCE_INTERDITE);
+		createEReference(conditionEClass, CONDITION__OBJET_REQUIS);
+		createEReference(conditionEClass, CONDITION__OBJET_INTERDIT);
 
-    // Create enums
-    natureEEnum = createEEnum(NATURE);
-  }
+		conditionPersonneEClass = createEClass(CONDITION_PERSONNE);
+		createEReference(conditionPersonneEClass, CONDITION_PERSONNE__VISIBLE);
+		createEReference(conditionPersonneEClass, CONDITION_PERSONNE__ACTIVE);
+
+		conditionAvantageEClass = createEClass(CONDITION_AVANTAGE);
+		createEReference(conditionAvantageEClass, CONDITION_AVANTAGE__VISIBLE);
+		createEReference(conditionAvantageEClass, CONDITION_AVANTAGE__ACTIF);
+
+		conditionCheminEClass = createEClass(CONDITION_CHEMIN);
+		createEReference(conditionCheminEClass, CONDITION_CHEMIN__VISIBLE);
+		createEReference(conditionCheminEClass, CONDITION_CHEMIN__OUVERT);
+
+		// Create enums
+		natureEEnum = createEEnum(NATURE);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   private boolean isInitialized = false;
 
   /**
-   * Complete the initialization of the package and its meta-model.  This
-   * method is guarded to have no affect on any invocation but its first.
-   * <!-- begin-user-doc -->
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public void initializePackageContents()
   {
-    if (isInitialized) return;
-    isInitialized = true;
+		if (isInitialized) return;
+		isInitialized = true;
 
-    // Initialize package
-    setName(eNAME);
-    setNsPrefix(eNS_PREFIX);
-    setNsURI(eNS_URI);
+		// Initialize package
+		setName(eNAME);
+		setNsPrefix(eNS_PREFIX);
+		setNsURI(eNS_URI);
 
-    // Create type parameters
+		// Create type parameters
 
-    // Set bounds for type parameters
+		// Set bounds for type parameters
 
-    // Add supertypes to classes
-    placeEClass.getESuperTypes().add(this.getElementsJeu());
-    avantageEClass.getESuperTypes().add(this.getElementsJeu());
-    lieuEClass.getESuperTypes().add(this.getPlace());
-    cheminEClass.getESuperTypes().add(this.getPlace());
-    personneEClass.getESuperTypes().add(this.getElementsJeu());
-    connaissanceEClass.getESuperTypes().add(this.getAvantage());
-    objetEClass.getESuperTypes().add(this.getAvantage());
+		// Add supertypes to classes
+		placeEClass.getESuperTypes().add(this.getElementsJeu());
+		avantageEClass.getESuperTypes().add(this.getElementsJeu());
+		qteObjetEClass.getESuperTypes().add(this.getElementsJeu());
+		lieuEClass.getESuperTypes().add(this.getPlace());
+		cheminEClass.getESuperTypes().add(this.getPlace());
+		personneEClass.getESuperTypes().add(this.getElementsJeu());
+		connaissanceEClass.getESuperTypes().add(this.getAvantage());
+		objetEClass.getESuperTypes().add(this.getAvantage());
+		interactionEClass.getESuperTypes().add(this.getElementsJeu());
+		choixEClass.getESuperTypes().add(this.getElementsJeu());
+		conditionEClass.getESuperTypes().add(this.getElementsJeu());
+		conditionPersonneEClass.getESuperTypes().add(this.getCondition());
+		conditionAvantageEClass.getESuperTypes().add(this.getCondition());
+		conditionCheminEClass.getESuperTypes().add(this.getCondition());
 
-    // Initialize classes and features; add operations and parameters
-    initEClass(jeuEClass, Jeu.class, "Jeu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getJeu_Name(), ecorePackage.getEString(), "name", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJeu_Territoire(), this.getTerritoire(), null, "territoire", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJeu_Explorateur(), this.getExplorateur(), null, "explorateur", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getJeu_Elementsjeu(), this.getElementsJeu(), null, "elementsjeu", null, 0, -1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		// Initialize classes and features; add operations and parameters
+		initEClass(jeuEClass, Jeu.class, "Jeu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getJeu_Name(), ecorePackage.getEString(), "name", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJeu_Territoire(), this.getTerritoire(), null, "territoire", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJeu_Explorateur(), this.getExplorateur(), null, "explorateur", null, 0, 1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getJeu_Elementsjeu(), this.getElementsJeu(), null, "elementsjeu", null, 0, -1, Jeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(elementsJeuEClass, ElementsJeu.class, "ElementsJeu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getElementsJeu_Name(), ecorePackage.getEString(), "name", null, 0, 1, ElementsJeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(elementsJeuEClass, ElementsJeu.class, "ElementsJeu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getElementsJeu_Name(), ecorePackage.getEString(), "name", null, 0, 1, ElementsJeu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(avantageEClass, Avantage.class, "Avantage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAvantage_Visible(), this.getCondition(), null, "visible", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAvantage_Actif(), this.getCondition(), null, "actif", null, 0, 1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(avantageEClass, Avantage.class, "Avantage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAvantage_Visible(), this.getConditionAvantage(), this.getConditionAvantage_Visible(), "visible", null, 0, -1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAvantage_Actif(), this.getConditionAvantage(), this.getConditionAvantage_Actif(), "actif", null, 0, -1, Avantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(qteObjetEClass, QteObjet.class, "QteObjet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getQteObjet_Qte(), ecorePackage.getEInt(), "qte", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getQteObjet_Objet(), this.getObjet(), null, "objet", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(qteObjetEClass, QteObjet.class, "QteObjet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getQteObjet_Qte(), ecorePackage.getEInt(), "qte", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQteObjet_Objet(), this.getObjet(), null, "objet", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQteObjet_ChoixCons(), this.getChoix(), this.getChoix_ObjetCons(), "choixCons", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getQteObjet_ChoixDon(), this.getChoix(), this.getChoix_ObjetDon(), "choixDon", null, 0, 1, QteObjet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(territoireEClass, Territoire.class, "Territoire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTerritoire_Places(), this.getPlace(), null, "places", null, 0, -1, Territoire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(territoireEClass, Territoire.class, "Territoire", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTerritoire_Places(), this.getPlace(), null, "places", null, 0, -1, Territoire.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(lieuEClass, Lieu.class, "Lieu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getLieu_Nature(), this.getNature(), "nature", null, 0, 1, Lieu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(lieuEClass, Lieu.class, "Lieu", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getLieu_Nature(), this.getNature(), "nature", null, 0, 1, Lieu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getLieu_Personnes(), this.getPersonne(), this.getPersonne_Place(), "personnes", null, 0, -1, Lieu.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(cheminEClass, Chemin.class, "Chemin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getChemin_Pred(), this.getLieu(), null, "pred", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChemin_Succ(), this.getLieu(), null, "succ", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChemin_Visible(), this.getCondition(), null, "visible", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChemin_Obligatoire(), ecorePackage.getEBoolean(), "obligatoire", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChemin_Ouvert(), this.getCondition(), null, "ouvert", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(cheminEClass, Chemin.class, "Chemin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getChemin_Pred(), this.getLieu(), null, "pred", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChemin_Succ(), this.getLieu(), null, "succ", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChemin_Visible(), this.getConditionChemin(), this.getConditionChemin_Visible(), "visible", null, 0, -1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChemin_Obligatoire(), ecorePackage.getEBoolean(), "obligatoire", null, 0, 1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChemin_Ouvert(), this.getConditionChemin(), this.getConditionChemin_Ouvert(), "ouvert", null, 0, -1, Chemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(personneEClass, Personne.class, "Personne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getPersonne_Place(), this.getPlace(), null, "place", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPersonne_Visible(), this.getCondition(), null, "visible", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPersonne_Actif(), this.getCondition(), null, "actif", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getPersonne_Obligatoire(), ecorePackage.getEBoolean(), "obligatoire", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getPersonne_Interactions(), this.getInteraction(), null, "interactions", null, 0, -1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(personneEClass, Personne.class, "Personne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPersonne_Place(), this.getLieu(), this.getLieu_Personnes(), "place", null, 1, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersonne_Visible(), this.getConditionPersonne(), this.getConditionPersonne_Visible(), "visible", null, 0, -1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersonne_Active(), this.getConditionPersonne(), this.getConditionPersonne_Active(), "active", null, 0, -1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPersonne_Obligatoire(), ecorePackage.getEBoolean(), "obligatoire", null, 0, 1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPersonne_Interactions(), this.getInteraction(), this.getInteraction_Personne(), "interactions", null, 1, -1, Personne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(explorateurEClass, Explorateur.class, "Explorateur", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getExplorateur_Place(), this.getPlace(), null, "place", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getExplorateur_TailleDispo(), ecorePackage.getEInt(), "tailleDispo", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExplorateur_Objets(), this.getObjet(), null, "objets", null, 0, -1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExplorateur_Connaissances(), this.getConnaissance(), null, "connaissances", null, 0, -1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(explorateurEClass, Explorateur.class, "Explorateur", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getExplorateur_Place(), this.getPlace(), null, "place", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExplorateur_TailleDispo(), ecorePackage.getEInt(), "tailleDispo", null, 0, 1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExplorateur_Objets(), this.getObjet(), null, "objets", null, 0, -1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getExplorateur_Connaissances(), this.getConnaissance(), null, "connaissances", null, 0, -1, Explorateur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(connaissanceEClass, Connaissance.class, "Connaissance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(connaissanceEClass, Connaissance.class, "Connaissance", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConnaissance_Choix(), this.getChoix(), this.getChoix_ConnaisDon(), "choix", null, 0, 1, Connaissance.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(objetEClass, Objet.class, "Objet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getObjet_Qte(), ecorePackage.getEInt(), "qte", null, 0, 1, Objet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getObjet_Taille(), ecorePackage.getEInt(), "taille", null, 0, 1, Objet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getObjet_Transformable(), ecorePackage.getEBoolean(), "transformable", null, 0, 1, Objet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(objetEClass, Objet.class, "Objet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getObjet_Qte(), ecorePackage.getEInt(), "qte", null, 0, 1, Objet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObjet_Taille(), ecorePackage.getEInt(), "taille", null, 0, 1, Objet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObjet_Transformable(), ecorePackage.getEBoolean(), "transformable", null, 0, 1, Objet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(interactionEClass, Interaction.class, "Interaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getInteraction_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getInteraction_Question(), ecorePackage.getEString(), "question", null, 0, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInteraction_Choix(), this.getChoix(), null, "choix", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(interactionEClass, Interaction.class, "Interaction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getInteraction_Question(), ecorePackage.getEString(), "question", null, 0, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInteraction_Personne(), this.getPersonne(), this.getPersonne_Interactions(), "personne", null, 1, 1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInteraction_Choix(), this.getChoix(), this.getChoix_Interaction(), "choix", null, 0, -1, Interaction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(choixEClass, Choix.class, "Choix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getChoix_Name(), ecorePackage.getEString(), "name", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChoix_Reponse(), ecorePackage.getEString(), "reponse", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChoix_Bonne(), ecorePackage.getEBoolean(), "bonne", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChoix_ObjetCons(), this.getQteObjet(), null, "objetCons", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChoix_ObjetDon(), this.getQteObjet(), null, "objetDon", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChoix_ConnaisDon(), this.getConnaissance(), null, "connaisDon", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(choixEClass, Choix.class, "Choix", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getChoix_Reponse(), ecorePackage.getEString(), "reponse", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getChoix_Bonne(), ecorePackage.getEBoolean(), "bonne", null, 0, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChoix_ObjetCons(), this.getQteObjet(), this.getQteObjet_ChoixCons(), "objetCons", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChoix_ObjetDon(), this.getQteObjet(), this.getQteObjet_ChoixDon(), "objetDon", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChoix_ConnaisDon(), this.getConnaissance(), this.getConnaissance_Choix(), "connaisDon", null, 0, -1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChoix_Interaction(), this.getInteraction(), this.getInteraction_Choix(), "interaction", null, 1, 1, Choix.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getCondition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCondition_ConnaissancesRequises(), this.getConnaissance(), null, "connaissancesRequises", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCondition_ConnaissancesInterdites(), this.getConnaissance(), null, "connaissancesInterdites", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getCondition_Quantite(), ecorePackage.getEInt(), "quantite", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCondition_ObjetsRequis(), this.getObjet(), null, "objetsRequis", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getCondition_ObjetsInterdits(), this.getObjet(), null, "objetsInterdits", null, 0, -1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(conditionEClass, Condition.class, "Condition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getCondition_ConnaissanceRequise(), this.getConnaissance(), null, "connaissanceRequise", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondition_ConnaissanceInterdite(), this.getConnaissance(), null, "connaissanceInterdite", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondition_ObjetRequis(), this.getQteObjet(), null, "objetRequis", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCondition_ObjetInterdit(), this.getQteObjet(), null, "objetInterdit", null, 0, 1, Condition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    // Initialize enums and add enum literals
-    initEEnum(natureEEnum, Nature.class, "Nature");
-    addEEnumLiteral(natureEEnum, Nature.DEPART);
-    addEEnumLiteral(natureEEnum, Nature.FIN);
-    addEEnumLiteral(natureEEnum, Nature.INTER);
+		initEClass(conditionPersonneEClass, ConditionPersonne.class, "ConditionPersonne", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConditionPersonne_Visible(), this.getPersonne(), this.getPersonne_Visible(), "visible", null, 0, 1, ConditionPersonne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConditionPersonne_Active(), this.getPersonne(), this.getPersonne_Active(), "active", null, 0, 1, ConditionPersonne.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    // Create resource
-    createResource(eNS_URI);
-  }
+		initEClass(conditionAvantageEClass, ConditionAvantage.class, "ConditionAvantage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConditionAvantage_Visible(), this.getAvantage(), this.getAvantage_Visible(), "visible", null, 0, 1, ConditionAvantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConditionAvantage_Actif(), this.getAvantage(), this.getAvantage_Actif(), "actif", null, 0, 1, ConditionAvantage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(conditionCheminEClass, ConditionChemin.class, "ConditionChemin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConditionChemin_Visible(), this.getChemin(), this.getChemin_Visible(), "visible", null, 0, 1, ConditionChemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConditionChemin_Ouvert(), this.getChemin(), this.getChemin_Ouvert(), "ouvert", null, 0, 1, ConditionChemin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(natureEEnum, Nature.class, "Nature");
+		addEEnumLiteral(natureEEnum, Nature.DEPART);
+		addEEnumLiteral(natureEEnum, Nature.FIN);
+		addEEnumLiteral(natureEEnum, Nature.INTER);
+
+		// Create resource
+		createResource(eNS_URI);
+	}
 
 } //GamePackageImpl

@@ -30,266 +30,262 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ObjetImpl extends AvantageImpl implements Objet
 {
   /**
-   * The default value of the '{@link #getQte() <em>Qte</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getQte() <em>Qte</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQte()
-   * @generated
-   * @ordered
-   */
+	 * @see #getQte()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int QTE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getQte() <em>Qte</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getQte() <em>Qte</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQte()
-   * @generated
-   * @ordered
-   */
+	 * @see #getQte()
+	 * @generated
+	 * @ordered
+	 */
   protected int qte = QTE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getTaille() <em>Taille</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getTaille() <em>Taille</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTaille()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTaille()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int TAILLE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getTaille() <em>Taille</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTaille() <em>Taille</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTaille()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTaille()
+	 * @generated
+	 * @ordered
+	 */
   protected int taille = TAILLE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isTransformable() <em>Transformable</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #isTransformable() <em>Transformable</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isTransformable()
-   * @generated
-   * @ordered
-   */
+	 * @see #isTransformable()
+	 * @generated
+	 * @ordered
+	 */
   protected static final boolean TRANSFORMABLE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isTransformable() <em>Transformable</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #isTransformable() <em>Transformable</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isTransformable()
-   * @generated
-   * @ordered
-   */
+	 * @see #isTransformable()
+	 * @generated
+	 * @ordered
+	 */
   protected boolean transformable = TRANSFORMABLE_EDEFAULT;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ObjetImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.OBJET;
-  }
+		return GamePackage.Literals.OBJET;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public int getQte()
   {
-    return qte;
-  }
+		return qte;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setQte(int newQte)
   {
-    int oldQte = qte;
-    qte = newQte;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.OBJET__QTE, oldQte, qte));
-  }
+		int oldQte = qte;
+		qte = newQte;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.OBJET__QTE, oldQte, qte));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public int getTaille()
   {
-    return taille;
-  }
+		return taille;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setTaille(int newTaille)
   {
-    int oldTaille = taille;
-    taille = newTaille;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.OBJET__TAILLE, oldTaille, taille));
-  }
+		int oldTaille = taille;
+		taille = newTaille;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.OBJET__TAILLE, oldTaille, taille));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean isTransformable()
   {
-    return transformable;
-  }
+		return transformable;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setTransformable(boolean newTransformable)
   {
-    boolean oldTransformable = transformable;
-    transformable = newTransformable;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.OBJET__TRANSFORMABLE, oldTransformable, transformable));
-  }
+		boolean oldTransformable = transformable;
+		transformable = newTransformable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.OBJET__TRANSFORMABLE, oldTransformable, transformable));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.OBJET__QTE:
-        return getQte();
-      case GamePackage.OBJET__TAILLE:
-        return getTaille();
-      case GamePackage.OBJET__TRANSFORMABLE:
-        return isTransformable();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.OBJET__QTE:
+				return getQte();
+			case GamePackage.OBJET__TAILLE:
+				return getTaille();
+			case GamePackage.OBJET__TRANSFORMABLE:
+				return isTransformable();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.OBJET__QTE:
-        setQte((Integer)newValue);
-        return;
-      case GamePackage.OBJET__TAILLE:
-        setTaille((Integer)newValue);
-        return;
-      case GamePackage.OBJET__TRANSFORMABLE:
-        setTransformable((Boolean)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.OBJET__QTE:
+				setQte((Integer)newValue);
+				return;
+			case GamePackage.OBJET__TAILLE:
+				setTaille((Integer)newValue);
+				return;
+			case GamePackage.OBJET__TRANSFORMABLE:
+				setTransformable((Boolean)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.OBJET__QTE:
-        setQte(QTE_EDEFAULT);
-        return;
-      case GamePackage.OBJET__TAILLE:
-        setTaille(TAILLE_EDEFAULT);
-        return;
-      case GamePackage.OBJET__TRANSFORMABLE:
-        setTransformable(TRANSFORMABLE_EDEFAULT);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.OBJET__QTE:
+				setQte(QTE_EDEFAULT);
+				return;
+			case GamePackage.OBJET__TAILLE:
+				setTaille(TAILLE_EDEFAULT);
+				return;
+			case GamePackage.OBJET__TRANSFORMABLE:
+				setTransformable(TRANSFORMABLE_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.OBJET__QTE:
-        return qte != QTE_EDEFAULT;
-      case GamePackage.OBJET__TAILLE:
-        return taille != TAILLE_EDEFAULT;
-      case GamePackage.OBJET__TRANSFORMABLE:
-        return transformable != TRANSFORMABLE_EDEFAULT;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.OBJET__QTE:
+				return qte != QTE_EDEFAULT;
+			case GamePackage.OBJET__TAILLE:
+				return taille != TAILLE_EDEFAULT;
+			case GamePackage.OBJET__TRANSFORMABLE:
+				return transformable != TRANSFORMABLE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (qte: ");
-    result.append(qte);
-    result.append(", taille: ");
-    result.append(taille);
-    result.append(", transformable: ");
-    result.append(transformable);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (qte: ");
+		result.append(qte);
+		result.append(", taille: ");
+		result.append(taille);
+		result.append(", transformable: ");
+		result.append(transformable);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ObjetImpl

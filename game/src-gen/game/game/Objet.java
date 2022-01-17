@@ -25,69 +25,69 @@ package game.game;
 public interface Objet extends Avantage
 {
   /**
-   * Returns the value of the '<em><b>Qte</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Qte</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Qte</em>' attribute.
-   * @see #setQte(int)
-   * @see game.game.GamePackage#getObjet_Qte()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Qte</em>' attribute.
+	 * @see #setQte(int)
+	 * @see game.game.GamePackage#getObjet_Qte()
+	 * @model
+	 * @generated
+	 */
   int getQte();
 
   /**
-   * Sets the value of the '{@link game.game.Objet#getQte <em>Qte</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Objet#getQte <em>Qte</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Qte</em>' attribute.
-   * @see #getQte()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Qte</em>' attribute.
+	 * @see #getQte()
+	 * @generated
+	 */
   void setQte(int value);
 
   /**
-   * Returns the value of the '<em><b>Taille</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Taille</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Taille</em>' attribute.
-   * @see #setTaille(int)
-   * @see game.game.GamePackage#getObjet_Taille()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Taille</em>' attribute.
+	 * @see #setTaille(int)
+	 * @see game.game.GamePackage#getObjet_Taille()
+	 * @model
+	 * @generated
+	 */
   int getTaille();
 
   /**
-   * Sets the value of the '{@link game.game.Objet#getTaille <em>Taille</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Objet#getTaille <em>Taille</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Taille</em>' attribute.
-   * @see #getTaille()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Taille</em>' attribute.
+	 * @see #getTaille()
+	 * @generated
+	 */
   void setTaille(int value);
 
   /**
-   * Returns the value of the '<em><b>Transformable</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Transformable</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Transformable</em>' attribute.
-   * @see #setTransformable(boolean)
-   * @see game.game.GamePackage#getObjet_Transformable()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Transformable</em>' attribute.
+	 * @see #setTransformable(boolean)
+	 * @see game.game.GamePackage#getObjet_Transformable()
+	 * @model
+	 * @generated
+	 */
   boolean isTransformable();
 
   /**
-   * Sets the value of the '{@link game.game.Objet#isTransformable <em>Transformable</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Objet#isTransformable <em>Transformable</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Transformable</em>' attribute.
-   * @see #isTransformable()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Transformable</em>' attribute.
+	 * @see #isTransformable()
+	 * @generated
+	 */
   void setTransformable(boolean value);
 
 } // Objet

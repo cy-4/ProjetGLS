@@ -16,110 +16,104 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link game.game.Condition#getName <em>Name</em>}</li>
- *   <li>{@link game.game.Condition#getConnaissancesRequises <em>Connaissances Requises</em>}</li>
- *   <li>{@link game.game.Condition#getConnaissancesInterdites <em>Connaissances Interdites</em>}</li>
- *   <li>{@link game.game.Condition#getQuantite <em>Quantite</em>}</li>
- *   <li>{@link game.game.Condition#getObjetsRequis <em>Objets Requis</em>}</li>
- *   <li>{@link game.game.Condition#getObjetsInterdits <em>Objets Interdits</em>}</li>
+ *   <li>{@link game.game.Condition#getConnaissanceRequise <em>Connaissance Requise</em>}</li>
+ *   <li>{@link game.game.Condition#getConnaissanceInterdite <em>Connaissance Interdite</em>}</li>
+ *   <li>{@link game.game.Condition#getObjetRequis <em>Objet Requis</em>}</li>
+ *   <li>{@link game.game.Condition#getObjetInterdit <em>Objet Interdit</em>}</li>
  * </ul>
  *
  * @see game.game.GamePackage#getCondition()
  * @model
  * @generated
  */
-public interface Condition extends EObject
+public interface Condition extends ElementsJeu
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see game.game.GamePackage#getCondition_Name()
-   * @model
-   * @generated
-   */
-  String getName();
+	 * Returns the value of the '<em><b>Connaissance Requise</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Connaissance Requise</em>' reference.
+	 * @see #setConnaissanceRequise(Connaissance)
+	 * @see game.game.GamePackage#getCondition_ConnaissanceRequise()
+	 * @model
+	 * @generated
+	 */
+	Connaissance getConnaissanceRequise();
 
-  /**
-   * Sets the value of the '{@link game.game.Condition#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
+	/**
+	 * Sets the value of the '{@link game.game.Condition#getConnaissanceRequise <em>Connaissance Requise</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Connaissance Requise</em>' reference.
+	 * @see #getConnaissanceRequise()
+	 * @generated
+	 */
+	void setConnaissanceRequise(Connaissance value);
 
-  /**
-   * Returns the value of the '<em><b>Connaissances Requises</b></em>' reference list.
-   * The list contents are of type {@link game.game.Connaissance}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Connaissances Requises</em>' reference list.
-   * @see game.game.GamePackage#getCondition_ConnaissancesRequises()
-   * @model
-   * @generated
-   */
-  EList<Connaissance> getConnaissancesRequises();
+	/**
+	 * Returns the value of the '<em><b>Connaissance Interdite</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Connaissance Interdite</em>' reference.
+	 * @see #setConnaissanceInterdite(Connaissance)
+	 * @see game.game.GamePackage#getCondition_ConnaissanceInterdite()
+	 * @model
+	 * @generated
+	 */
+	Connaissance getConnaissanceInterdite();
 
-  /**
-   * Returns the value of the '<em><b>Connaissances Interdites</b></em>' reference list.
-   * The list contents are of type {@link game.game.Connaissance}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Connaissances Interdites</em>' reference list.
-   * @see game.game.GamePackage#getCondition_ConnaissancesInterdites()
-   * @model
-   * @generated
-   */
-  EList<Connaissance> getConnaissancesInterdites();
+	/**
+	 * Sets the value of the '{@link game.game.Condition#getConnaissanceInterdite <em>Connaissance Interdite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Connaissance Interdite</em>' reference.
+	 * @see #getConnaissanceInterdite()
+	 * @generated
+	 */
+	void setConnaissanceInterdite(Connaissance value);
 
-  /**
-   * Returns the value of the '<em><b>Quantite</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Quantite</em>' attribute.
-   * @see #setQuantite(int)
-   * @see game.game.GamePackage#getCondition_Quantite()
-   * @model
-   * @generated
-   */
-  int getQuantite();
+	/**
+	 * Returns the value of the '<em><b>Objet Requis</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Objet Requis</em>' reference.
+	 * @see #setObjetRequis(QteObjet)
+	 * @see game.game.GamePackage#getCondition_ObjetRequis()
+	 * @model
+	 * @generated
+	 */
+	QteObjet getObjetRequis();
 
-  /**
-   * Sets the value of the '{@link game.game.Condition#getQuantite <em>Quantite</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Quantite</em>' attribute.
-   * @see #getQuantite()
-   * @generated
-   */
-  void setQuantite(int value);
+	/**
+	 * Sets the value of the '{@link game.game.Condition#getObjetRequis <em>Objet Requis</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Objet Requis</em>' reference.
+	 * @see #getObjetRequis()
+	 * @generated
+	 */
+	void setObjetRequis(QteObjet value);
 
-  /**
-   * Returns the value of the '<em><b>Objets Requis</b></em>' reference list.
-   * The list contents are of type {@link game.game.Objet}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Objets Requis</em>' reference list.
-   * @see game.game.GamePackage#getCondition_ObjetsRequis()
-   * @model
-   * @generated
-   */
-  EList<Objet> getObjetsRequis();
+	/**
+	 * Returns the value of the '<em><b>Objet Interdit</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Objet Interdit</em>' reference.
+	 * @see #setObjetInterdit(QteObjet)
+	 * @see game.game.GamePackage#getCondition_ObjetInterdit()
+	 * @model
+	 * @generated
+	 */
+	QteObjet getObjetInterdit();
 
-  /**
-   * Returns the value of the '<em><b>Objets Interdits</b></em>' reference list.
-   * The list contents are of type {@link game.game.Objet}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Objets Interdits</em>' reference list.
-   * @see game.game.GamePackage#getCondition_ObjetsInterdits()
-   * @model
-   * @generated
-   */
-  EList<Objet> getObjetsInterdits();
+	/**
+	 * Sets the value of the '{@link game.game.Condition#getObjetInterdit <em>Objet Interdit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Objet Interdit</em>' reference.
+	 * @see #getObjetInterdit()
+	 * @generated
+	 */
+	void setObjetInterdit(QteObjet value);
 
 } // Condition

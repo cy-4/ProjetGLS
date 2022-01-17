@@ -16,15 +16,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ConditionTest extends TestCase {
-
-	/**
-	 * The fixture for this Condition test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Condition fixture = null;
+public class ConditionTest extends ElementsJeuTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -46,23 +38,14 @@ public class ConditionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Condition test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Condition fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Condition test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Condition getFixture() {
-		return fixture;
+		return (Condition)fixture;
 	}
 
 	/**

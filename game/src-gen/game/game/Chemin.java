@@ -3,6 +3,8 @@
  */
 package game.game;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -27,113 +29,97 @@ package game.game;
 public interface Chemin extends Place
 {
   /**
-   * Returns the value of the '<em><b>Pred</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Pred</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Pred</em>' reference.
-   * @see #setPred(Lieu)
-   * @see game.game.GamePackage#getChemin_Pred()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Pred</em>' reference.
+	 * @see #setPred(Lieu)
+	 * @see game.game.GamePackage#getChemin_Pred()
+	 * @model
+	 * @generated
+	 */
   Lieu getPred();
 
   /**
-   * Sets the value of the '{@link game.game.Chemin#getPred <em>Pred</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Chemin#getPred <em>Pred</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Pred</em>' reference.
-   * @see #getPred()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Pred</em>' reference.
+	 * @see #getPred()
+	 * @generated
+	 */
   void setPred(Lieu value);
 
   /**
-   * Returns the value of the '<em><b>Succ</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Succ</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Succ</em>' reference.
-   * @see #setSucc(Lieu)
-   * @see game.game.GamePackage#getChemin_Succ()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Succ</em>' reference.
+	 * @see #setSucc(Lieu)
+	 * @see game.game.GamePackage#getChemin_Succ()
+	 * @model
+	 * @generated
+	 */
   Lieu getSucc();
 
   /**
-   * Sets the value of the '{@link game.game.Chemin#getSucc <em>Succ</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Chemin#getSucc <em>Succ</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Succ</em>' reference.
-   * @see #getSucc()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Succ</em>' reference.
+	 * @see #getSucc()
+	 * @generated
+	 */
   void setSucc(Lieu value);
 
   /**
-   * Returns the value of the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Visible</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.ConditionChemin}.
+	 * It is bidirectional and its opposite is '{@link game.game.ConditionChemin#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Visible</em>' containment reference.
-   * @see #setVisible(Condition)
-   * @see game.game.GamePackage#getChemin_Visible()
-   * @model containment="true"
-   * @generated
-   */
-  Condition getVisible();
+	 * @return the value of the '<em>Visible</em>' containment reference list.
+	 * @see game.game.GamePackage#getChemin_Visible()
+	 * @see game.game.ConditionChemin#getVisible
+	 * @model opposite="visible" containment="true"
+	 * @generated
+	 */
+  EList<ConditionChemin> getVisible();
 
   /**
-   * Sets the value of the '{@link game.game.Chemin#getVisible <em>Visible</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Obligatoire</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Visible</em>' containment reference.
-   * @see #getVisible()
-   * @generated
-   */
-  void setVisible(Condition value);
-
-  /**
-   * Returns the value of the '<em><b>Obligatoire</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Obligatoire</em>' attribute.
-   * @see #setObligatoire(boolean)
-   * @see game.game.GamePackage#getChemin_Obligatoire()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Obligatoire</em>' attribute.
+	 * @see #setObligatoire(boolean)
+	 * @see game.game.GamePackage#getChemin_Obligatoire()
+	 * @model
+	 * @generated
+	 */
   boolean isObligatoire();
 
   /**
-   * Sets the value of the '{@link game.game.Chemin#isObligatoire <em>Obligatoire</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Chemin#isObligatoire <em>Obligatoire</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Obligatoire</em>' attribute.
-   * @see #isObligatoire()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Obligatoire</em>' attribute.
+	 * @see #isObligatoire()
+	 * @generated
+	 */
   void setObligatoire(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Ouvert</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Ouvert</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.ConditionChemin}.
+	 * It is bidirectional and its opposite is '{@link game.game.ConditionChemin#getOuvert <em>Ouvert</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ouvert</em>' containment reference.
-   * @see #setOuvert(Condition)
-   * @see game.game.GamePackage#getChemin_Ouvert()
-   * @model containment="true"
-   * @generated
-   */
-  Condition getOuvert();
-
-  /**
-   * Sets the value of the '{@link game.game.Chemin#getOuvert <em>Ouvert</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Ouvert</em>' containment reference.
-   * @see #getOuvert()
-   * @generated
-   */
-  void setOuvert(Condition value);
+	 * @return the value of the '<em>Ouvert</em>' containment reference list.
+	 * @see game.game.GamePackage#getChemin_Ouvert()
+	 * @see game.game.ConditionChemin#getOuvert
+	 * @model opposite="ouvert" containment="true"
+	 * @generated
+	 */
+  EList<ConditionChemin> getOuvert();
 
 } // Chemin

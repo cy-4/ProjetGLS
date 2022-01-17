@@ -3,39 +3,211 @@
  */
 package game.game.impl;
 
+import game.game.Choix;
 import game.game.Connaissance;
 import game.game.GamePackage;
 
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Connaissance</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link game.game.impl.ConnaissanceImpl#getChoix <em>Choix</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class ConnaissanceImpl extends AvantageImpl implements Connaissance
 {
   /**
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getChoix() <em>Choix</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getChoix()
+	 * @generated
+	 * @ordered
+	 */
+	protected Choix choix;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ConnaissanceImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.CONNAISSANCE;
-  }
+		return GamePackage.Literals.CONNAISSANCE;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Choix getChoix() {
+		if (choix != null && choix.eIsProxy()) {
+			InternalEObject oldChoix = (InternalEObject)choix;
+			choix = (Choix)eResolveProxy(oldChoix);
+			if (choix != oldChoix) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CONNAISSANCE__CHOIX, oldChoix, choix));
+			}
+		}
+		return choix;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Choix basicGetChoix() {
+		return choix;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetChoix(Choix newChoix, NotificationChain msgs) {
+		Choix oldChoix = choix;
+		choix = newChoix;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.CONNAISSANCE__CHOIX, oldChoix, newChoix);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setChoix(Choix newChoix) {
+		if (newChoix != choix) {
+			NotificationChain msgs = null;
+			if (choix != null)
+				msgs = ((InternalEObject)choix).eInverseRemove(this, GamePackage.CHOIX__CONNAIS_DON, Choix.class, msgs);
+			if (newChoix != null)
+				msgs = ((InternalEObject)newChoix).eInverseAdd(this, GamePackage.CHOIX__CONNAIS_DON, Choix.class, msgs);
+			msgs = basicSetChoix(newChoix, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONNAISSANCE__CHOIX, newChoix, newChoix));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.CONNAISSANCE__CHOIX:
+				if (choix != null)
+					msgs = ((InternalEObject)choix).eInverseRemove(this, GamePackage.CHOIX__CONNAIS_DON, Choix.class, msgs);
+				return basicSetChoix((Choix)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.CONNAISSANCE__CHOIX:
+				return basicSetChoix(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case GamePackage.CONNAISSANCE__CHOIX:
+				if (resolve) return getChoix();
+				return basicGetChoix();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case GamePackage.CONNAISSANCE__CHOIX:
+				setChoix((Choix)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case GamePackage.CONNAISSANCE__CHOIX:
+				setChoix((Choix)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case GamePackage.CONNAISSANCE__CHOIX:
+				return choix != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //ConnaissanceImpl

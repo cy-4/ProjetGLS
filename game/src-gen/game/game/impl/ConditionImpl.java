@@ -8,6 +8,7 @@ import game.game.Connaissance;
 import game.game.GamePackage;
 import game.game.Objet;
 
+import game.game.QteObjet;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,6 +17,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -29,367 +31,332 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.ConditionImpl#getName <em>Name</em>}</li>
- *   <li>{@link game.game.impl.ConditionImpl#getConnaissancesRequises <em>Connaissances Requises</em>}</li>
- *   <li>{@link game.game.impl.ConditionImpl#getConnaissancesInterdites <em>Connaissances Interdites</em>}</li>
- *   <li>{@link game.game.impl.ConditionImpl#getQuantite <em>Quantite</em>}</li>
- *   <li>{@link game.game.impl.ConditionImpl#getObjetsRequis <em>Objets Requis</em>}</li>
- *   <li>{@link game.game.impl.ConditionImpl#getObjetsInterdits <em>Objets Interdits</em>}</li>
+ *   <li>{@link game.game.impl.ConditionImpl#getConnaissanceRequise <em>Connaissance Requise</em>}</li>
+ *   <li>{@link game.game.impl.ConditionImpl#getConnaissanceInterdite <em>Connaissance Interdite</em>}</li>
+ *   <li>{@link game.game.impl.ConditionImpl#getObjetRequis <em>Objet Requis</em>}</li>
+ *   <li>{@link game.game.impl.ConditionImpl#getObjetInterdit <em>Objet Interdit</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ConditionImpl extends MinimalEObjectImpl.Container implements Condition
+public class ConditionImpl extends ElementsJeuImpl implements Condition
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
+	 * The cached value of the '{@link #getConnaissanceRequise() <em>Connaissance Requise</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnaissanceRequise()
+	 * @generated
+	 * @ordered
+	 */
+	protected Connaissance connaissanceRequise;
 
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+	/**
+	 * The cached value of the '{@link #getConnaissanceInterdite() <em>Connaissance Interdite</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnaissanceInterdite()
+	 * @generated
+	 * @ordered
+	 */
+	protected Connaissance connaissanceInterdite;
 
-  /**
-   * The cached value of the '{@link #getConnaissancesRequises() <em>Connaissances Requises</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConnaissancesRequises()
-   * @generated
-   * @ordered
-   */
-  protected EList<Connaissance> connaissancesRequises;
+	/**
+	 * The cached value of the '{@link #getObjetRequis() <em>Objet Requis</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObjetRequis()
+	 * @generated
+	 * @ordered
+	 */
+	protected QteObjet objetRequis;
 
-  /**
-   * The cached value of the '{@link #getConnaissancesInterdites() <em>Connaissances Interdites</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConnaissancesInterdites()
-   * @generated
-   * @ordered
-   */
-  protected EList<Connaissance> connaissancesInterdites;
+	/**
+	 * The cached value of the '{@link #getObjetInterdit() <em>Objet Interdit</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getObjetInterdit()
+	 * @generated
+	 * @ordered
+	 */
+	protected QteObjet objetInterdit;
 
-  /**
-   * The default value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
-   * <!-- begin-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQuantite()
-   * @generated
-   * @ordered
-   */
-  protected static final int QUANTITE_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getQuantite() <em>Quantite</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getQuantite()
-   * @generated
-   * @ordered
-   */
-  protected int quantite = QUANTITE_EDEFAULT;
-
-  /**
-   * The cached value of the '{@link #getObjetsRequis() <em>Objets Requis</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getObjetsRequis()
-   * @generated
-   * @ordered
-   */
-  protected EList<Objet> objetsRequis;
-
-  /**
-   * The cached value of the '{@link #getObjetsInterdits() <em>Objets Interdits</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getObjetsInterdits()
-   * @generated
-   * @ordered
-   */
-  protected EList<Objet> objetsInterdits;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ConditionImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.CONDITION;
-  }
+		return GamePackage.Literals.CONDITION;
+	}
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getName()
-  {
-    return name;
-  }
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Connaissance getConnaissanceRequise() {
+		if (connaissanceRequise != null && connaissanceRequise.eIsProxy()) {
+			InternalEObject oldConnaissanceRequise = (InternalEObject)connaissanceRequise;
+			connaissanceRequise = (Connaissance)eResolveProxy(oldConnaissanceRequise);
+			if (connaissanceRequise != oldConnaissanceRequise) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CONDITION__CONNAISSANCE_REQUISE, oldConnaissanceRequise, connaissanceRequise));
+			}
+		}
+		return connaissanceRequise;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__NAME, oldName, name));
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connaissance basicGetConnaissanceRequise() {
+		return connaissanceRequise;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Connaissance> getConnaissancesRequises()
-  {
-    if (connaissancesRequises == null)
-    {
-      connaissancesRequises = new EObjectResolvingEList<Connaissance>(Connaissance.class, this, GamePackage.CONDITION__CONNAISSANCES_REQUISES);
-    }
-    return connaissancesRequises;
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setConnaissanceRequise(Connaissance newConnaissanceRequise) {
+		Connaissance oldConnaissanceRequise = connaissanceRequise;
+		connaissanceRequise = newConnaissanceRequise;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__CONNAISSANCE_REQUISE, oldConnaissanceRequise, connaissanceRequise));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Connaissance> getConnaissancesInterdites()
-  {
-    if (connaissancesInterdites == null)
-    {
-      connaissancesInterdites = new EObjectResolvingEList<Connaissance>(Connaissance.class, this, GamePackage.CONDITION__CONNAISSANCES_INTERDITES);
-    }
-    return connaissancesInterdites;
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Connaissance getConnaissanceInterdite() {
+		if (connaissanceInterdite != null && connaissanceInterdite.eIsProxy()) {
+			InternalEObject oldConnaissanceInterdite = (InternalEObject)connaissanceInterdite;
+			connaissanceInterdite = (Connaissance)eResolveProxy(oldConnaissanceInterdite);
+			if (connaissanceInterdite != oldConnaissanceInterdite) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CONDITION__CONNAISSANCE_INTERDITE, oldConnaissanceInterdite, connaissanceInterdite));
+			}
+		}
+		return connaissanceInterdite;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int getQuantite()
-  {
-    return quantite;
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Connaissance basicGetConnaissanceInterdite() {
+		return connaissanceInterdite;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setQuantite(int newQuantite)
-  {
-    int oldQuantite = quantite;
-    quantite = newQuantite;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__QUANTITE, oldQuantite, quantite));
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setConnaissanceInterdite(Connaissance newConnaissanceInterdite) {
+		Connaissance oldConnaissanceInterdite = connaissanceInterdite;
+		connaissanceInterdite = newConnaissanceInterdite;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__CONNAISSANCE_INTERDITE, oldConnaissanceInterdite, connaissanceInterdite));
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Objet> getObjetsRequis()
-  {
-    if (objetsRequis == null)
-    {
-      objetsRequis = new EObjectResolvingEList<Objet>(Objet.class, this, GamePackage.CONDITION__OBJETS_REQUIS);
-    }
-    return objetsRequis;
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public QteObjet getObjetRequis() {
+		if (objetRequis != null && objetRequis.eIsProxy()) {
+			InternalEObject oldObjetRequis = (InternalEObject)objetRequis;
+			objetRequis = (QteObjet)eResolveProxy(oldObjetRequis);
+			if (objetRequis != oldObjetRequis) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CONDITION__OBJET_REQUIS, oldObjetRequis, objetRequis));
+			}
+		}
+		return objetRequis;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Objet> getObjetsInterdits()
-  {
-    if (objetsInterdits == null)
-    {
-      objetsInterdits = new EObjectResolvingEList<Objet>(Objet.class, this, GamePackage.CONDITION__OBJETS_INTERDITS);
-    }
-    return objetsInterdits;
-  }
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QteObjet basicGetObjetRequis() {
+		return objetRequis;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setObjetRequis(QteObjet newObjetRequis) {
+		QteObjet oldObjetRequis = objetRequis;
+		objetRequis = newObjetRequis;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__OBJET_REQUIS, oldObjetRequis, objetRequis));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public QteObjet getObjetInterdit() {
+		if (objetInterdit != null && objetInterdit.eIsProxy()) {
+			InternalEObject oldObjetInterdit = (InternalEObject)objetInterdit;
+			objetInterdit = (QteObjet)eResolveProxy(oldObjetInterdit);
+			if (objetInterdit != oldObjetInterdit) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CONDITION__OBJET_INTERDIT, oldObjetInterdit, objetInterdit));
+			}
+		}
+		return objetInterdit;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public QteObjet basicGetObjetInterdit() {
+		return objetInterdit;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setObjetInterdit(QteObjet newObjetInterdit) {
+		QteObjet oldObjetInterdit = objetInterdit;
+		objetInterdit = newObjetInterdit;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CONDITION__OBJET_INTERDIT, oldObjetInterdit, objetInterdit));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.CONDITION__NAME:
-        return getName();
-      case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
-        return getConnaissancesRequises();
-      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
-        return getConnaissancesInterdites();
-      case GamePackage.CONDITION__QUANTITE:
-        return getQuantite();
-      case GamePackage.CONDITION__OBJETS_REQUIS:
-        return getObjetsRequis();
-      case GamePackage.CONDITION__OBJETS_INTERDITS:
-        return getObjetsInterdits();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.CONDITION__CONNAISSANCE_REQUISE:
+				if (resolve) return getConnaissanceRequise();
+				return basicGetConnaissanceRequise();
+			case GamePackage.CONDITION__CONNAISSANCE_INTERDITE:
+				if (resolve) return getConnaissanceInterdite();
+				return basicGetConnaissanceInterdite();
+			case GamePackage.CONDITION__OBJET_REQUIS:
+				if (resolve) return getObjetRequis();
+				return basicGetObjetRequis();
+			case GamePackage.CONDITION__OBJET_INTERDIT:
+				if (resolve) return getObjetInterdit();
+				return basicGetObjetInterdit();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.CONDITION__NAME:
-        setName((String)newValue);
-        return;
-      case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
-        getConnaissancesRequises().clear();
-        getConnaissancesRequises().addAll((Collection<? extends Connaissance>)newValue);
-        return;
-      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
-        getConnaissancesInterdites().clear();
-        getConnaissancesInterdites().addAll((Collection<? extends Connaissance>)newValue);
-        return;
-      case GamePackage.CONDITION__QUANTITE:
-        setQuantite((Integer)newValue);
-        return;
-      case GamePackage.CONDITION__OBJETS_REQUIS:
-        getObjetsRequis().clear();
-        getObjetsRequis().addAll((Collection<? extends Objet>)newValue);
-        return;
-      case GamePackage.CONDITION__OBJETS_INTERDITS:
-        getObjetsInterdits().clear();
-        getObjetsInterdits().addAll((Collection<? extends Objet>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.CONDITION__CONNAISSANCE_REQUISE:
+				setConnaissanceRequise((Connaissance)newValue);
+				return;
+			case GamePackage.CONDITION__CONNAISSANCE_INTERDITE:
+				setConnaissanceInterdite((Connaissance)newValue);
+				return;
+			case GamePackage.CONDITION__OBJET_REQUIS:
+				setObjetRequis((QteObjet)newValue);
+				return;
+			case GamePackage.CONDITION__OBJET_INTERDIT:
+				setObjetInterdit((QteObjet)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.CONDITION__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
-        getConnaissancesRequises().clear();
-        return;
-      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
-        getConnaissancesInterdites().clear();
-        return;
-      case GamePackage.CONDITION__QUANTITE:
-        setQuantite(QUANTITE_EDEFAULT);
-        return;
-      case GamePackage.CONDITION__OBJETS_REQUIS:
-        getObjetsRequis().clear();
-        return;
-      case GamePackage.CONDITION__OBJETS_INTERDITS:
-        getObjetsInterdits().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.CONDITION__CONNAISSANCE_REQUISE:
+				setConnaissanceRequise((Connaissance)null);
+				return;
+			case GamePackage.CONDITION__CONNAISSANCE_INTERDITE:
+				setConnaissanceInterdite((Connaissance)null);
+				return;
+			case GamePackage.CONDITION__OBJET_REQUIS:
+				setObjetRequis((QteObjet)null);
+				return;
+			case GamePackage.CONDITION__OBJET_INTERDIT:
+				setObjetInterdit((QteObjet)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.CONDITION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GamePackage.CONDITION__CONNAISSANCES_REQUISES:
-        return connaissancesRequises != null && !connaissancesRequises.isEmpty();
-      case GamePackage.CONDITION__CONNAISSANCES_INTERDITES:
-        return connaissancesInterdites != null && !connaissancesInterdites.isEmpty();
-      case GamePackage.CONDITION__QUANTITE:
-        return quantite != QUANTITE_EDEFAULT;
-      case GamePackage.CONDITION__OBJETS_REQUIS:
-        return objetsRequis != null && !objetsRequis.isEmpty();
-      case GamePackage.CONDITION__OBJETS_INTERDITS:
-        return objetsInterdits != null && !objetsInterdits.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", quantite: ");
-    result.append(quantite);
-    result.append(')');
-    return result.toString();
-  }
+		switch (featureID) {
+			case GamePackage.CONDITION__CONNAISSANCE_REQUISE:
+				return connaissanceRequise != null;
+			case GamePackage.CONDITION__CONNAISSANCE_INTERDITE:
+				return connaissanceInterdite != null;
+			case GamePackage.CONDITION__OBJET_REQUIS:
+				return objetRequis != null;
+			case GamePackage.CONDITION__OBJET_INTERDIT:
+				return objetInterdit != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //ConditionImpl

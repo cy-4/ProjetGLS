@@ -18,24 +18,24 @@ import org.eclipse.emf.ecore.EClass;
 public class PlaceImpl extends ElementsJeuImpl implements Place
 {
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected PlaceImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.PLACE;
-  }
+		return GamePackage.Literals.PLACE;
+	}
 
 } //PlaceImpl

@@ -9,6 +9,12 @@ package game.game;
  * A representation of the model object '<em><b>Connaissance</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link game.game.Connaissance#getChoix <em>Choix</em>}</li>
+ * </ul>
  *
  * @see game.game.GamePackage#getConnaissance()
  * @model
@@ -16,4 +22,28 @@ package game.game;
  */
 public interface Connaissance extends Avantage
 {
+
+	/**
+	 * Returns the value of the '<em><b>Choix</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link game.game.Choix#getConnaisDon <em>Connais Don</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Choix</em>' reference.
+	 * @see #setChoix(Choix)
+	 * @see game.game.GamePackage#getConnaissance_Choix()
+	 * @see game.game.Choix#getConnaisDon
+	 * @model opposite="connaisDon"
+	 * @generated
+	 */
+	Choix getChoix();
+
+	/**
+	 * Sets the value of the '{@link game.game.Connaissance#getChoix <em>Choix</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Choix</em>' reference.
+	 * @see #getChoix()
+	 * @generated
+	 */
+	void setChoix(Choix value);
 } // Connaissance

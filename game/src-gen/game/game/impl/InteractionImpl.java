@@ -7,6 +7,7 @@ import game.game.Choix;
 import game.game.GamePackage;
 import game.game.Interaction;
 
+import game.game.Personne;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -31,272 +33,313 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.InteractionImpl#getName <em>Name</em>}</li>
  *   <li>{@link game.game.impl.InteractionImpl#getQuestion <em>Question</em>}</li>
+ *   <li>{@link game.game.impl.InteractionImpl#getPersonne <em>Personne</em>}</li>
  *   <li>{@link game.game.impl.InteractionImpl#getChoix <em>Choix</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class InteractionImpl extends MinimalEObjectImpl.Container implements Interaction
+public class InteractionImpl extends ElementsJeuImpl implements Interaction
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getQuestion() <em>Question</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getQuestion() <em>Question</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getQuestion()
-   * @generated
-   * @ordered
-   */
+	 * @see #getQuestion()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String QUESTION_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getQuestion() <em>Question</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getQuestion() <em>Question</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQuestion()
-   * @generated
-   * @ordered
-   */
+	 * @see #getQuestion()
+	 * @generated
+	 * @ordered
+	 */
   protected String question = QUESTION_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getChoix() <em>Choix</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPersonne() <em>Personne</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPersonne()
+	 * @generated
+	 * @ordered
+	 */
+	protected Personne personne;
+
+		/**
+	 * The cached value of the '{@link #getChoix() <em>Choix</em>}' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getChoix()
-   * @generated
-   * @ordered
-   */
+	 * @see #getChoix()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Choix> choix;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected InteractionImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.INTERACTION;
-  }
+		return GamePackage.Literals.INTERACTION;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.INTERACTION__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String getQuestion()
   {
-    return question;
-  }
+		return question;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setQuestion(String newQuestion)
   {
-    String oldQuestion = question;
-    question = newQuestion;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.INTERACTION__QUESTION, oldQuestion, question));
-  }
+		String oldQuestion = question;
+		question = newQuestion;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.INTERACTION__QUESTION, oldQuestion, question));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Personne getPersonne() {
+		if (personne != null && personne.eIsProxy()) {
+			InternalEObject oldPersonne = (InternalEObject)personne;
+			personne = (Personne)eResolveProxy(oldPersonne);
+			if (personne != oldPersonne) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.INTERACTION__PERSONNE, oldPersonne, personne));
+			}
+		}
+		return personne;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Personne basicGetPersonne() {
+		return personne;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPersonne(Personne newPersonne, NotificationChain msgs) {
+		Personne oldPersonne = personne;
+		personne = newPersonne;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.INTERACTION__PERSONNE, oldPersonne, newPersonne);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPersonne(Personne newPersonne) {
+		if (newPersonne != personne) {
+			NotificationChain msgs = null;
+			if (personne != null)
+				msgs = ((InternalEObject)personne).eInverseRemove(this, GamePackage.PERSONNE__INTERACTIONS, Personne.class, msgs);
+			if (newPersonne != null)
+				msgs = ((InternalEObject)newPersonne).eInverseAdd(this, GamePackage.PERSONNE__INTERACTIONS, Personne.class, msgs);
+			msgs = basicSetPersonne(newPersonne, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.INTERACTION__PERSONNE, newPersonne, newPersonne));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<Choix> getChoix()
   {
-    if (choix == null)
-    {
-      choix = new EObjectContainmentEList<Choix>(Choix.class, this, GamePackage.INTERACTION__CHOIX);
-    }
-    return choix;
-  }
+		if (choix == null) {
+			choix = new EObjectWithInverseResolvingEList<Choix>(Choix.class, this, GamePackage.INTERACTION__CHOIX, GamePackage.CHOIX__INTERACTION);
+		}
+		return choix;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.INTERACTION__PERSONNE:
+				if (personne != null)
+					msgs = ((InternalEObject)personne).eInverseRemove(this, GamePackage.PERSONNE__INTERACTIONS, Personne.class, msgs);
+				return basicSetPersonne((Personne)otherEnd, msgs);
+			case GamePackage.INTERACTION__CHOIX:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getChoix()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.INTERACTION__CHOIX:
-        return ((InternalEList<?>)getChoix()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.INTERACTION__PERSONNE:
+				return basicSetPersonne(null, msgs);
+			case GamePackage.INTERACTION__CHOIX:
+				return ((InternalEList<?>)getChoix()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.INTERACTION__NAME:
-        return getName();
-      case GamePackage.INTERACTION__QUESTION:
-        return getQuestion();
-      case GamePackage.INTERACTION__CHOIX:
-        return getChoix();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.INTERACTION__QUESTION:
+				return getQuestion();
+			case GamePackage.INTERACTION__PERSONNE:
+				if (resolve) return getPersonne();
+				return basicGetPersonne();
+			case GamePackage.INTERACTION__CHOIX:
+				return getChoix();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.INTERACTION__NAME:
-        setName((String)newValue);
-        return;
-      case GamePackage.INTERACTION__QUESTION:
-        setQuestion((String)newValue);
-        return;
-      case GamePackage.INTERACTION__CHOIX:
-        getChoix().clear();
-        getChoix().addAll((Collection<? extends Choix>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.INTERACTION__QUESTION:
+				setQuestion((String)newValue);
+				return;
+			case GamePackage.INTERACTION__PERSONNE:
+				setPersonne((Personne)newValue);
+				return;
+			case GamePackage.INTERACTION__CHOIX:
+				getChoix().clear();
+				getChoix().addAll((Collection<? extends Choix>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.INTERACTION__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case GamePackage.INTERACTION__QUESTION:
-        setQuestion(QUESTION_EDEFAULT);
-        return;
-      case GamePackage.INTERACTION__CHOIX:
-        getChoix().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.INTERACTION__QUESTION:
+				setQuestion(QUESTION_EDEFAULT);
+				return;
+			case GamePackage.INTERACTION__PERSONNE:
+				setPersonne((Personne)null);
+				return;
+			case GamePackage.INTERACTION__CHOIX:
+				getChoix().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.INTERACTION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GamePackage.INTERACTION__QUESTION:
-        return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
-      case GamePackage.INTERACTION__CHOIX:
-        return choix != null && !choix.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.INTERACTION__QUESTION:
+				return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
+			case GamePackage.INTERACTION__PERSONNE:
+				return personne != null;
+			case GamePackage.INTERACTION__CHOIX:
+				return choix != null && !choix.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", question: ");
-    result.append(question);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (question: ");
+		result.append(question);
+		result.append(')');
+		return result.toString();
+	}
 
 } //InteractionImpl

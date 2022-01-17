@@ -47,6 +47,7 @@ public class LieuItemProvider extends PlaceItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addNaturePropertyDescriptor(object);
+			addPersonnesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,6 +70,28 @@ public class LieuItemProvider extends PlaceItemProvider {
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Personnes feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPersonnesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Lieu_personnes_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Lieu_personnes_feature", "_UI_Lieu_type"),
+				 GamePackage.Literals.LIEU__PERSONNES,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

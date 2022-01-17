@@ -4,8 +4,10 @@
 package game.game.impl;
 
 import game.game.Condition;
+import game.game.ConditionPersonne;
 import game.game.GamePackage;
 import game.game.Interaction;
+import game.game.Lieu;
 import game.game.Personne;
 import game.game.Place;
 
@@ -22,6 +24,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -34,7 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link game.game.impl.PersonneImpl#getPlace <em>Place</em>}</li>
  *   <li>{@link game.game.impl.PersonneImpl#getVisible <em>Visible</em>}</li>
- *   <li>{@link game.game.impl.PersonneImpl#getActif <em>Actif</em>}</li>
+ *   <li>{@link game.game.impl.PersonneImpl#getActive <em>Active</em>}</li>
  *   <li>{@link game.game.impl.PersonneImpl#isObligatoire <em>Obligatoire</em>}</li>
  *   <li>{@link game.game.impl.PersonneImpl#getInteractions <em>Interactions</em>}</li>
  * </ul>
@@ -44,415 +48,382 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class PersonneImpl extends ElementsJeuImpl implements Personne
 {
   /**
-   * The cached value of the '{@link #getPlace() <em>Place</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPlace() <em>Place</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPlace()
-   * @generated
-   * @ordered
-   */
-  protected Place place;
+	 * @see #getPlace()
+	 * @generated
+	 * @ordered
+	 */
+  protected Lieu place;
 
   /**
-   * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVisible()
-   * @generated
-   * @ordered
-   */
-  protected Condition visible;
+	 * @see #getVisible()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<ConditionPersonne> visible;
 
   /**
-   * The cached value of the '{@link #getActif() <em>Actif</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getActif()
-   * @generated
-   * @ordered
-   */
-  protected Condition actif;
+	 * The cached value of the '{@link #getActive() <em>Active</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActive()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ConditionPersonne> active;
 
-  /**
-   * The default value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
-   * <!-- begin-user-doc -->
+		/**
+	 * The default value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isObligatoire()
-   * @generated
-   * @ordered
-   */
+	 * @see #isObligatoire()
+	 * @generated
+	 * @ordered
+	 */
   protected static final boolean OBLIGATOIRE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isObligatoire()
-   * @generated
-   * @ordered
-   */
+	 * @see #isObligatoire()
+	 * @generated
+	 * @ordered
+	 */
   protected boolean obligatoire = OBLIGATOIRE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getInteractions() <em>Interactions</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getInteractions() <em>Interactions</em>}' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInteractions()
-   * @generated
-   * @ordered
-   */
+	 * @see #getInteractions()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Interaction> interactions;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected PersonneImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.PERSONNE;
-  }
+		return GamePackage.Literals.PERSONNE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
-  public Place getPlace()
+  public Lieu getPlace()
   {
-    if (place != null && place.eIsProxy())
-    {
-      InternalEObject oldPlace = (InternalEObject)place;
-      place = (Place)eResolveProxy(oldPlace);
-      if (place != oldPlace)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.PERSONNE__PLACE, oldPlace, place));
-      }
-    }
-    return place;
-  }
+		if (place != null && place.eIsProxy()) {
+			InternalEObject oldPlace = (InternalEObject)place;
+			place = (Lieu)eResolveProxy(oldPlace);
+			if (place != oldPlace) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.PERSONNE__PLACE, oldPlace, place));
+			}
+		}
+		return place;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public Place basicGetPlace()
+	 * @generated
+	 */
+  public Lieu basicGetPlace()
   {
-    return place;
-  }
+		return place;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetPlace(Lieu newPlace, NotificationChain msgs) {
+		Lieu oldPlace = place;
+		place = newPlace;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__PLACE, oldPlace, newPlace);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setPlace(Lieu newPlace) {
+		if (newPlace != place) {
+			NotificationChain msgs = null;
+			if (place != null)
+				msgs = ((InternalEObject)place).eInverseRemove(this, GamePackage.LIEU__PERSONNES, Lieu.class, msgs);
+			if (newPlace != null)
+				msgs = ((InternalEObject)newPlace).eInverseAdd(this, GamePackage.LIEU__PERSONNES, Lieu.class, msgs);
+			msgs = basicSetPlace(newPlace, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__PLACE, newPlace, newPlace));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
-  public void setPlace(Place newPlace)
+  public EList<ConditionPersonne> getVisible()
   {
-    Place oldPlace = place;
-    place = newPlace;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__PLACE, oldPlace, place));
-  }
+		if (visible == null) {
+			visible = new EObjectContainmentWithInverseEList<ConditionPersonne>(ConditionPersonne.class, this, GamePackage.PERSONNE__VISIBLE, GamePackage.CONDITION_PERSONNE__VISIBLE);
+		}
+		return visible;
+	}
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Condition getVisible()
-  {
-    return visible;
-  }
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EList<ConditionPersonne> getActive() {
+		if (active == null) {
+			active = new EObjectContainmentWithInverseEList<ConditionPersonne>(ConditionPersonne.class, this, GamePackage.PERSONNE__ACTIVE, GamePackage.CONDITION_PERSONNE__ACTIVE);
+		}
+		return active;
+	}
 
-  /**
-   * <!-- begin-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetVisible(Condition newVisible, NotificationChain msgs)
-  {
-    Condition oldVisible = visible;
-    visible = newVisible;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__VISIBLE, oldVisible, newVisible);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setVisible(Condition newVisible)
-  {
-    if (newVisible != visible)
-    {
-      NotificationChain msgs = null;
-      if (visible != null)
-        msgs = ((InternalEObject)visible).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__VISIBLE, null, msgs);
-      if (newVisible != null)
-        msgs = ((InternalEObject)newVisible).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__VISIBLE, null, msgs);
-      msgs = basicSetVisible(newVisible, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__VISIBLE, newVisible, newVisible));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Condition getActif()
-  {
-    return actif;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetActif(Condition newActif, NotificationChain msgs)
-  {
-    Condition oldActif = actif;
-    actif = newActif;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__ACTIF, oldActif, newActif);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setActif(Condition newActif)
-  {
-    if (newActif != actif)
-    {
-      NotificationChain msgs = null;
-      if (actif != null)
-        msgs = ((InternalEObject)actif).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__ACTIF, null, msgs);
-      if (newActif != null)
-        msgs = ((InternalEObject)newActif).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.PERSONNE__ACTIF, null, msgs);
-      msgs = basicSetActif(newActif, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__ACTIF, newActif, newActif));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean isObligatoire()
   {
-    return obligatoire;
-  }
+		return obligatoire;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setObligatoire(boolean newObligatoire)
   {
-    boolean oldObligatoire = obligatoire;
-    obligatoire = newObligatoire;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__OBLIGATOIRE, oldObligatoire, obligatoire));
-  }
+		boolean oldObligatoire = obligatoire;
+		obligatoire = newObligatoire;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.PERSONNE__OBLIGATOIRE, oldObligatoire, obligatoire));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<Interaction> getInteractions()
   {
-    if (interactions == null)
-    {
-      interactions = new EObjectContainmentEList<Interaction>(Interaction.class, this, GamePackage.PERSONNE__INTERACTIONS);
-    }
-    return interactions;
-  }
+		if (interactions == null) {
+			interactions = new EObjectWithInverseResolvingEList<Interaction>(Interaction.class, this, GamePackage.PERSONNE__INTERACTIONS, GamePackage.INTERACTION__PERSONNE);
+		}
+		return interactions;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.PERSONNE__PLACE:
+				if (place != null)
+					msgs = ((InternalEObject)place).eInverseRemove(this, GamePackage.LIEU__PERSONNES, Lieu.class, msgs);
+				return basicSetPlace((Lieu)otherEnd, msgs);
+			case GamePackage.PERSONNE__VISIBLE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVisible()).basicAdd(otherEnd, msgs);
+			case GamePackage.PERSONNE__ACTIVE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getActive()).basicAdd(otherEnd, msgs);
+			case GamePackage.PERSONNE__INTERACTIONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInteractions()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.PERSONNE__VISIBLE:
-        return basicSetVisible(null, msgs);
-      case GamePackage.PERSONNE__ACTIF:
-        return basicSetActif(null, msgs);
-      case GamePackage.PERSONNE__INTERACTIONS:
-        return ((InternalEList<?>)getInteractions()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.PERSONNE__PLACE:
+				return basicSetPlace(null, msgs);
+			case GamePackage.PERSONNE__VISIBLE:
+				return ((InternalEList<?>)getVisible()).basicRemove(otherEnd, msgs);
+			case GamePackage.PERSONNE__ACTIVE:
+				return ((InternalEList<?>)getActive()).basicRemove(otherEnd, msgs);
+			case GamePackage.PERSONNE__INTERACTIONS:
+				return ((InternalEList<?>)getInteractions()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.PERSONNE__PLACE:
-        if (resolve) return getPlace();
-        return basicGetPlace();
-      case GamePackage.PERSONNE__VISIBLE:
-        return getVisible();
-      case GamePackage.PERSONNE__ACTIF:
-        return getActif();
-      case GamePackage.PERSONNE__OBLIGATOIRE:
-        return isObligatoire();
-      case GamePackage.PERSONNE__INTERACTIONS:
-        return getInteractions();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.PERSONNE__PLACE:
+				if (resolve) return getPlace();
+				return basicGetPlace();
+			case GamePackage.PERSONNE__VISIBLE:
+				return getVisible();
+			case GamePackage.PERSONNE__ACTIVE:
+				return getActive();
+			case GamePackage.PERSONNE__OBLIGATOIRE:
+				return isObligatoire();
+			case GamePackage.PERSONNE__INTERACTIONS:
+				return getInteractions();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.PERSONNE__PLACE:
-        setPlace((Place)newValue);
-        return;
-      case GamePackage.PERSONNE__VISIBLE:
-        setVisible((Condition)newValue);
-        return;
-      case GamePackage.PERSONNE__ACTIF:
-        setActif((Condition)newValue);
-        return;
-      case GamePackage.PERSONNE__OBLIGATOIRE:
-        setObligatoire((Boolean)newValue);
-        return;
-      case GamePackage.PERSONNE__INTERACTIONS:
-        getInteractions().clear();
-        getInteractions().addAll((Collection<? extends Interaction>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.PERSONNE__PLACE:
+				setPlace((Lieu)newValue);
+				return;
+			case GamePackage.PERSONNE__VISIBLE:
+				getVisible().clear();
+				getVisible().addAll((Collection<? extends ConditionPersonne>)newValue);
+				return;
+			case GamePackage.PERSONNE__ACTIVE:
+				getActive().clear();
+				getActive().addAll((Collection<? extends ConditionPersonne>)newValue);
+				return;
+			case GamePackage.PERSONNE__OBLIGATOIRE:
+				setObligatoire((Boolean)newValue);
+				return;
+			case GamePackage.PERSONNE__INTERACTIONS:
+				getInteractions().clear();
+				getInteractions().addAll((Collection<? extends Interaction>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.PERSONNE__PLACE:
-        setPlace((Place)null);
-        return;
-      case GamePackage.PERSONNE__VISIBLE:
-        setVisible((Condition)null);
-        return;
-      case GamePackage.PERSONNE__ACTIF:
-        setActif((Condition)null);
-        return;
-      case GamePackage.PERSONNE__OBLIGATOIRE:
-        setObligatoire(OBLIGATOIRE_EDEFAULT);
-        return;
-      case GamePackage.PERSONNE__INTERACTIONS:
-        getInteractions().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.PERSONNE__PLACE:
+				setPlace((Lieu)null);
+				return;
+			case GamePackage.PERSONNE__VISIBLE:
+				getVisible().clear();
+				return;
+			case GamePackage.PERSONNE__ACTIVE:
+				getActive().clear();
+				return;
+			case GamePackage.PERSONNE__OBLIGATOIRE:
+				setObligatoire(OBLIGATOIRE_EDEFAULT);
+				return;
+			case GamePackage.PERSONNE__INTERACTIONS:
+				getInteractions().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.PERSONNE__PLACE:
-        return place != null;
-      case GamePackage.PERSONNE__VISIBLE:
-        return visible != null;
-      case GamePackage.PERSONNE__ACTIF:
-        return actif != null;
-      case GamePackage.PERSONNE__OBLIGATOIRE:
-        return obligatoire != OBLIGATOIRE_EDEFAULT;
-      case GamePackage.PERSONNE__INTERACTIONS:
-        return interactions != null && !interactions.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.PERSONNE__PLACE:
+				return place != null;
+			case GamePackage.PERSONNE__VISIBLE:
+				return visible != null && !visible.isEmpty();
+			case GamePackage.PERSONNE__ACTIVE:
+				return active != null && !active.isEmpty();
+			case GamePackage.PERSONNE__OBLIGATOIRE:
+				return obligatoire != OBLIGATOIRE_EDEFAULT;
+			case GamePackage.PERSONNE__INTERACTIONS:
+				return interactions != null && !interactions.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (obligatoire: ");
-    result.append(obligatoire);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (obligatoire: ");
+		result.append(obligatoire);
+		result.append(')');
+		return result.toString();
+	}
 
 } //PersonneImpl

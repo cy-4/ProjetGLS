@@ -37,133 +37,127 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class TerritoireImpl extends MinimalEObjectImpl.Container implements Territoire
 {
   /**
-   * The cached value of the '{@link #getPlaces() <em>Places</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPlaces() <em>Places</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPlaces()
-   * @generated
-   * @ordered
-   */
+	 * @see #getPlaces()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Place> places;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected TerritoireImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.TERRITOIRE;
-  }
+		return GamePackage.Literals.TERRITOIRE;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<Place> getPlaces()
   {
-    if (places == null)
-    {
-      places = new EObjectContainmentEList<Place>(Place.class, this, GamePackage.TERRITOIRE__PLACES);
-    }
-    return places;
-  }
+		if (places == null) {
+			places = new EObjectContainmentEList<Place>(Place.class, this, GamePackage.TERRITOIRE__PLACES);
+		}
+		return places;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.TERRITOIRE__PLACES:
-        return ((InternalEList<?>)getPlaces()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.TERRITOIRE__PLACES:
+				return ((InternalEList<?>)getPlaces()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.TERRITOIRE__PLACES:
-        return getPlaces();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.TERRITOIRE__PLACES:
+				return getPlaces();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.TERRITOIRE__PLACES:
-        getPlaces().clear();
-        getPlaces().addAll((Collection<? extends Place>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.TERRITOIRE__PLACES:
+				getPlaces().clear();
+				getPlaces().addAll((Collection<? extends Place>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.TERRITOIRE__PLACES:
-        getPlaces().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.TERRITOIRE__PLACES:
+				getPlaces().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.TERRITOIRE__PLACES:
-        return places != null && !places.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.TERRITOIRE__PLACES:
+				return places != null && !places.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
 } //TerritoireImpl

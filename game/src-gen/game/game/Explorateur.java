@@ -29,71 +29,71 @@ import org.eclipse.emf.ecore.EObject;
 public interface Explorateur extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Place</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Place</b></em>' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Place</em>' reference.
-   * @see #setPlace(Place)
-   * @see game.game.GamePackage#getExplorateur_Place()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Place</em>' reference.
+	 * @see #setPlace(Place)
+	 * @see game.game.GamePackage#getExplorateur_Place()
+	 * @model
+	 * @generated
+	 */
   Place getPlace();
 
   /**
-   * Sets the value of the '{@link game.game.Explorateur#getPlace <em>Place</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Explorateur#getPlace <em>Place</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Place</em>' reference.
-   * @see #getPlace()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Place</em>' reference.
+	 * @see #getPlace()
+	 * @generated
+	 */
   void setPlace(Place value);
 
   /**
-   * Returns the value of the '<em><b>Taille Dispo</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Taille Dispo</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Taille Dispo</em>' attribute.
-   * @see #setTailleDispo(int)
-   * @see game.game.GamePackage#getExplorateur_TailleDispo()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Taille Dispo</em>' attribute.
+	 * @see #setTailleDispo(int)
+	 * @see game.game.GamePackage#getExplorateur_TailleDispo()
+	 * @model
+	 * @generated
+	 */
   int getTailleDispo();
 
   /**
-   * Sets the value of the '{@link game.game.Explorateur#getTailleDispo <em>Taille Dispo</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Explorateur#getTailleDispo <em>Taille Dispo</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Taille Dispo</em>' attribute.
-   * @see #getTailleDispo()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Taille Dispo</em>' attribute.
+	 * @see #getTailleDispo()
+	 * @generated
+	 */
   void setTailleDispo(int value);
 
   /**
-   * Returns the value of the '<em><b>Objets</b></em>' containment reference list.
-   * The list contents are of type {@link game.game.Objet}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Objets</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.Objet}.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Objets</em>' containment reference list.
-   * @see game.game.GamePackage#getExplorateur_Objets()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Objets</em>' containment reference list.
+	 * @see game.game.GamePackage#getExplorateur_Objets()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Objet> getObjets();
 
   /**
-   * Returns the value of the '<em><b>Connaissances</b></em>' containment reference list.
-   * The list contents are of type {@link game.game.Connaissance}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Connaissances</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.Connaissance}.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Connaissances</em>' containment reference list.
-   * @see game.game.GamePackage#getExplorateur_Connaissances()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Connaissances</em>' containment reference list.
+	 * @see game.game.GamePackage#getExplorateur_Connaissances()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Connaissance> getConnaissances();
 
 } // Explorateur

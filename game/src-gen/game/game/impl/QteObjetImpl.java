@@ -3,17 +3,20 @@
  */
 package game.game.impl;
 
+import game.game.Choix;
 import game.game.GamePackage;
 import game.game.Objet;
 import game.game.QteObjet;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,225 +28,379 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link game.game.impl.QteObjetImpl#getQte <em>Qte</em>}</li>
  *   <li>{@link game.game.impl.QteObjetImpl#getObjet <em>Objet</em>}</li>
+ *   <li>{@link game.game.impl.QteObjetImpl#getChoixCons <em>Choix Cons</em>}</li>
+ *   <li>{@link game.game.impl.QteObjetImpl#getChoixDon <em>Choix Don</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class QteObjetImpl extends MinimalEObjectImpl.Container implements QteObjet
+public class QteObjetImpl extends ElementsJeuImpl implements QteObjet
 {
   /**
-   * The default value of the '{@link #getQte() <em>Qte</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getQte() <em>Qte</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQte()
-   * @generated
-   * @ordered
-   */
+	 * @see #getQte()
+	 * @generated
+	 * @ordered
+	 */
   protected static final int QTE_EDEFAULT = 0;
 
   /**
-   * The cached value of the '{@link #getQte() <em>Qte</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getQte() <em>Qte</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQte()
-   * @generated
-   * @ordered
-   */
+	 * @see #getQte()
+	 * @generated
+	 * @ordered
+	 */
   protected int qte = QTE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getObjet() <em>Objet</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getObjet() <em>Objet</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getObjet()
-   * @generated
-   * @ordered
-   */
+	 * @see #getObjet()
+	 * @generated
+	 * @ordered
+	 */
   protected Objet objet;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected QteObjetImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.QTE_OBJET;
-  }
+		return GamePackage.Literals.QTE_OBJET;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public int getQte()
   {
-    return qte;
-  }
+		return qte;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setQte(int newQte)
   {
-    int oldQte = qte;
-    qte = newQte;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.QTE_OBJET__QTE, oldQte, qte));
-  }
+		int oldQte = qte;
+		qte = newQte;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.QTE_OBJET__QTE, oldQte, qte));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Objet getObjet()
   {
-    if (objet != null && objet.eIsProxy())
-    {
-      InternalEObject oldObjet = (InternalEObject)objet;
-      objet = (Objet)eResolveProxy(oldObjet);
-      if (objet != oldObjet)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.QTE_OBJET__OBJET, oldObjet, objet));
-      }
-    }
-    return objet;
-  }
+		if (objet != null && objet.eIsProxy()) {
+			InternalEObject oldObjet = (InternalEObject)objet;
+			objet = (Objet)eResolveProxy(oldObjet);
+			if (objet != oldObjet) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.QTE_OBJET__OBJET, oldObjet, objet));
+			}
+		}
+		return objet;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Objet basicGetObjet()
   {
-    return objet;
-  }
+		return objet;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setObjet(Objet newObjet)
   {
-    Objet oldObjet = objet;
-    objet = newObjet;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.QTE_OBJET__OBJET, oldObjet, objet));
-  }
+		Objet oldObjet = objet;
+		objet = newObjet;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.QTE_OBJET__OBJET, oldObjet, objet));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Choix getChoixCons() {
+		if (eContainerFeatureID() != GamePackage.QTE_OBJET__CHOIX_CONS) return null;
+		return (Choix)eInternalContainer();
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetChoixCons(Choix newChoixCons, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newChoixCons, GamePackage.QTE_OBJET__CHOIX_CONS, msgs);
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setChoixCons(Choix newChoixCons) {
+		if (newChoixCons != eInternalContainer() || (eContainerFeatureID() != GamePackage.QTE_OBJET__CHOIX_CONS && newChoixCons != null)) {
+			if (EcoreUtil.isAncestor(this, newChoixCons))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newChoixCons != null)
+				msgs = ((InternalEObject)newChoixCons).eInverseAdd(this, GamePackage.CHOIX__OBJET_CONS, Choix.class, msgs);
+			msgs = basicSetChoixCons(newChoixCons, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.QTE_OBJET__CHOIX_CONS, newChoixCons, newChoixCons));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Choix getChoixDon() {
+		if (eContainerFeatureID() != GamePackage.QTE_OBJET__CHOIX_DON) return null;
+		return (Choix)eInternalContainer();
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetChoixDon(Choix newChoixDon, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newChoixDon, GamePackage.QTE_OBJET__CHOIX_DON, msgs);
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setChoixDon(Choix newChoixDon) {
+		if (newChoixDon != eInternalContainer() || (eContainerFeatureID() != GamePackage.QTE_OBJET__CHOIX_DON && newChoixDon != null)) {
+			if (EcoreUtil.isAncestor(this, newChoixDon))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newChoixDon != null)
+				msgs = ((InternalEObject)newChoixDon).eInverseAdd(this, GamePackage.CHOIX__OBJET_DON, Choix.class, msgs);
+			msgs = basicSetChoixDon(newChoixDon, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.QTE_OBJET__CHOIX_DON, newChoixDon, newChoixDon));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.QTE_OBJET__CHOIX_CONS:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetChoixCons((Choix)otherEnd, msgs);
+			case GamePackage.QTE_OBJET__CHOIX_DON:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetChoixDon((Choix)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.QTE_OBJET__CHOIX_CONS:
+				return basicSetChoixCons(null, msgs);
+			case GamePackage.QTE_OBJET__CHOIX_DON:
+				return basicSetChoixDon(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case GamePackage.QTE_OBJET__CHOIX_CONS:
+				return eInternalContainer().eInverseRemove(this, GamePackage.CHOIX__OBJET_CONS, Choix.class, msgs);
+			case GamePackage.QTE_OBJET__CHOIX_DON:
+				return eInternalContainer().eInverseRemove(this, GamePackage.CHOIX__OBJET_DON, Choix.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.QTE_OBJET__QTE:
-        return getQte();
-      case GamePackage.QTE_OBJET__OBJET:
-        if (resolve) return getObjet();
-        return basicGetObjet();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.QTE_OBJET__QTE:
+				return getQte();
+			case GamePackage.QTE_OBJET__OBJET:
+				if (resolve) return getObjet();
+				return basicGetObjet();
+			case GamePackage.QTE_OBJET__CHOIX_CONS:
+				return getChoixCons();
+			case GamePackage.QTE_OBJET__CHOIX_DON:
+				return getChoixDon();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.QTE_OBJET__QTE:
-        setQte((Integer)newValue);
-        return;
-      case GamePackage.QTE_OBJET__OBJET:
-        setObjet((Objet)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.QTE_OBJET__QTE:
+				setQte((Integer)newValue);
+				return;
+			case GamePackage.QTE_OBJET__OBJET:
+				setObjet((Objet)newValue);
+				return;
+			case GamePackage.QTE_OBJET__CHOIX_CONS:
+				setChoixCons((Choix)newValue);
+				return;
+			case GamePackage.QTE_OBJET__CHOIX_DON:
+				setChoixDon((Choix)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.QTE_OBJET__QTE:
-        setQte(QTE_EDEFAULT);
-        return;
-      case GamePackage.QTE_OBJET__OBJET:
-        setObjet((Objet)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.QTE_OBJET__QTE:
+				setQte(QTE_EDEFAULT);
+				return;
+			case GamePackage.QTE_OBJET__OBJET:
+				setObjet((Objet)null);
+				return;
+			case GamePackage.QTE_OBJET__CHOIX_CONS:
+				setChoixCons((Choix)null);
+				return;
+			case GamePackage.QTE_OBJET__CHOIX_DON:
+				setChoixDon((Choix)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.QTE_OBJET__QTE:
-        return qte != QTE_EDEFAULT;
-      case GamePackage.QTE_OBJET__OBJET:
-        return objet != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.QTE_OBJET__QTE:
+				return qte != QTE_EDEFAULT;
+			case GamePackage.QTE_OBJET__OBJET:
+				return objet != null;
+			case GamePackage.QTE_OBJET__CHOIX_CONS:
+				return getChoixCons() != null;
+			case GamePackage.QTE_OBJET__CHOIX_DON:
+				return getChoixDon() != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (qte: ");
-    result.append(qte);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (qte: ");
+		result.append(qte);
+		result.append(')');
+		return result.toString();
+	}
 
 } //QteObjetImpl

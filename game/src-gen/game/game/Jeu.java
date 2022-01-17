@@ -29,81 +29,81 @@ import org.eclipse.emf.ecore.EObject;
 public interface Jeu extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see game.game.GamePackage#getJeu_Name()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see game.game.GamePackage#getJeu_Name()
+	 * @model
+	 * @generated
+	 */
   String getName();
 
   /**
-   * Sets the value of the '{@link game.game.Jeu#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Jeu#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Territoire</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Territoire</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Territoire</em>' containment reference.
-   * @see #setTerritoire(Territoire)
-   * @see game.game.GamePackage#getJeu_Territoire()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Territoire</em>' containment reference.
+	 * @see #setTerritoire(Territoire)
+	 * @see game.game.GamePackage#getJeu_Territoire()
+	 * @model containment="true"
+	 * @generated
+	 */
   Territoire getTerritoire();
 
   /**
-   * Sets the value of the '{@link game.game.Jeu#getTerritoire <em>Territoire</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Jeu#getTerritoire <em>Territoire</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Territoire</em>' containment reference.
-   * @see #getTerritoire()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Territoire</em>' containment reference.
+	 * @see #getTerritoire()
+	 * @generated
+	 */
   void setTerritoire(Territoire value);
 
   /**
-   * Returns the value of the '<em><b>Explorateur</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Explorateur</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Explorateur</em>' containment reference.
-   * @see #setExplorateur(Explorateur)
-   * @see game.game.GamePackage#getJeu_Explorateur()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Explorateur</em>' containment reference.
+	 * @see #setExplorateur(Explorateur)
+	 * @see game.game.GamePackage#getJeu_Explorateur()
+	 * @model containment="true"
+	 * @generated
+	 */
   Explorateur getExplorateur();
 
   /**
-   * Sets the value of the '{@link game.game.Jeu#getExplorateur <em>Explorateur</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Jeu#getExplorateur <em>Explorateur</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Explorateur</em>' containment reference.
-   * @see #getExplorateur()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Explorateur</em>' containment reference.
+	 * @see #getExplorateur()
+	 * @generated
+	 */
   void setExplorateur(Explorateur value);
 
   /**
-   * Returns the value of the '<em><b>Elementsjeu</b></em>' containment reference list.
-   * The list contents are of type {@link game.game.ElementsJeu}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Elementsjeu</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.ElementsJeu}.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Elementsjeu</em>' containment reference list.
-   * @see game.game.GamePackage#getJeu_Elementsjeu()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Elementsjeu</em>' containment reference list.
+	 * @see game.game.GamePackage#getJeu_Elementsjeu()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<ElementsJeu> getElementsjeu();
 
 } // Jeu

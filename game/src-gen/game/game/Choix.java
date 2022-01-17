@@ -16,120 +16,128 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link game.game.Choix#getName <em>Name</em>}</li>
  *   <li>{@link game.game.Choix#getReponse <em>Reponse</em>}</li>
  *   <li>{@link game.game.Choix#isBonne <em>Bonne</em>}</li>
  *   <li>{@link game.game.Choix#getObjetCons <em>Objet Cons</em>}</li>
  *   <li>{@link game.game.Choix#getObjetDon <em>Objet Don</em>}</li>
  *   <li>{@link game.game.Choix#getConnaisDon <em>Connais Don</em>}</li>
+ *   <li>{@link game.game.Choix#getInteraction <em>Interaction</em>}</li>
  * </ul>
  *
  * @see game.game.GamePackage#getChoix()
  * @model
  * @generated
  */
-public interface Choix extends EObject
+public interface Choix extends ElementsJeu
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Reponse</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see game.game.GamePackage#getChoix_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link game.game.Choix#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Reponse</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Reponse</em>' attribute.
-   * @see #setReponse(String)
-   * @see game.game.GamePackage#getChoix_Reponse()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Reponse</em>' attribute.
+	 * @see #setReponse(String)
+	 * @see game.game.GamePackage#getChoix_Reponse()
+	 * @model
+	 * @generated
+	 */
   String getReponse();
 
   /**
-   * Sets the value of the '{@link game.game.Choix#getReponse <em>Reponse</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Choix#getReponse <em>Reponse</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Reponse</em>' attribute.
-   * @see #getReponse()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Reponse</em>' attribute.
+	 * @see #getReponse()
+	 * @generated
+	 */
   void setReponse(String value);
 
   /**
-   * Returns the value of the '<em><b>Bonne</b></em>' attribute.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Bonne</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Bonne</em>' attribute.
-   * @see #setBonne(boolean)
-   * @see game.game.GamePackage#getChoix_Bonne()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Bonne</em>' attribute.
+	 * @see #setBonne(boolean)
+	 * @see game.game.GamePackage#getChoix_Bonne()
+	 * @model
+	 * @generated
+	 */
   boolean isBonne();
 
   /**
-   * Sets the value of the '{@link game.game.Choix#isBonne <em>Bonne</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Choix#isBonne <em>Bonne</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Bonne</em>' attribute.
-   * @see #isBonne()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Bonne</em>' attribute.
+	 * @see #isBonne()
+	 * @generated
+	 */
   void setBonne(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Objet Cons</b></em>' containment reference list.
-   * The list contents are of type {@link game.game.QteObjet}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Objet Cons</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.QteObjet}.
+	 * It is bidirectional and its opposite is '{@link game.game.QteObjet#getChoixCons <em>Choix Cons</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Objet Cons</em>' containment reference list.
-   * @see game.game.GamePackage#getChoix_ObjetCons()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Objet Cons</em>' containment reference list.
+	 * @see game.game.GamePackage#getChoix_ObjetCons()
+	 * @see game.game.QteObjet#getChoixCons
+	 * @model opposite="choixCons" containment="true"
+	 * @generated
+	 */
   EList<QteObjet> getObjetCons();
 
   /**
-   * Returns the value of the '<em><b>Objet Don</b></em>' containment reference list.
-   * The list contents are of type {@link game.game.QteObjet}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Objet Don</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.QteObjet}.
+	 * It is bidirectional and its opposite is '{@link game.game.QteObjet#getChoixDon <em>Choix Don</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Objet Don</em>' containment reference list.
-   * @see game.game.GamePackage#getChoix_ObjetDon()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Objet Don</em>' containment reference list.
+	 * @see game.game.GamePackage#getChoix_ObjetDon()
+	 * @see game.game.QteObjet#getChoixDon
+	 * @model opposite="choixDon" containment="true"
+	 * @generated
+	 */
   EList<QteObjet> getObjetDon();
 
   /**
-   * Returns the value of the '<em><b>Connais Don</b></em>' reference list.
-   * The list contents are of type {@link game.game.Connaissance}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Connais Don</b></em>' reference list.
+	 * The list contents are of type {@link game.game.Connaissance}.
+	 * It is bidirectional and its opposite is '{@link game.game.Connaissance#getChoix <em>Choix</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Connais Don</em>' reference list.
-   * @see game.game.GamePackage#getChoix_ConnaisDon()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Connais Don</em>' reference list.
+	 * @see game.game.GamePackage#getChoix_ConnaisDon()
+	 * @see game.game.Connaissance#getChoix
+	 * @model opposite="choix"
+	 * @generated
+	 */
   EList<Connaissance> getConnaisDon();
+
+		/**
+	 * Returns the value of the '<em><b>Interaction</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link game.game.Interaction#getChoix <em>Choix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interaction</em>' reference.
+	 * @see #setInteraction(Interaction)
+	 * @see game.game.GamePackage#getChoix_Interaction()
+	 * @see game.game.Interaction#getChoix
+	 * @model opposite="choix" required="true"
+	 * @generated
+	 */
+	Interaction getInteraction();
+
+		/**
+	 * Sets the value of the '{@link game.game.Choix#getInteraction <em>Interaction</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Interaction</em>' reference.
+	 * @see #getInteraction()
+	 * @generated
+	 */
+	void setInteraction(Interaction value);
 
 } // Choix

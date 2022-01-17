@@ -26,15 +26,15 @@ import org.eclipse.emf.ecore.EObject;
 public interface Territoire extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Places</b></em>' containment reference list.
-   * The list contents are of type {@link game.game.Place}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Places</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.Place}.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Places</em>' containment reference list.
-   * @see game.game.GamePackage#getTerritoire_Places()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Places</em>' containment reference list.
+	 * @see game.game.GamePackage#getTerritoire_Places()
+	 * @model containment="true"
+	 * @generated
+	 */
   EList<Place> getPlaces();
 
 } // Territoire

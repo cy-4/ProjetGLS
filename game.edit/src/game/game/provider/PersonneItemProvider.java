@@ -51,6 +51,7 @@ public class PersonneItemProvider extends ElementsJeuItemProvider {
 
 			addPlacePropertyDescriptor(object);
 			addObligatoirePropertyDescriptor(object);
+			addInteractionsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -100,6 +101,28 @@ public class PersonneItemProvider extends ElementsJeuItemProvider {
 	}
 
 	/**
+	 * This adds a property descriptor for the Interactions feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInteractionsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Personne_interactions_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Personne_interactions_feature", "_UI_Personne_type"),
+				 GamePackage.Literals.PERSONNE__INTERACTIONS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -112,8 +135,7 @@ public class PersonneItemProvider extends ElementsJeuItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(GamePackage.Literals.PERSONNE__VISIBLE);
-			childrenFeatures.add(GamePackage.Literals.PERSONNE__ACTIF);
-			childrenFeatures.add(GamePackage.Literals.PERSONNE__INTERACTIONS);
+			childrenFeatures.add(GamePackage.Literals.PERSONNE__ACTIVE);
 		}
 		return childrenFeatures;
 	}
@@ -173,8 +195,7 @@ public class PersonneItemProvider extends ElementsJeuItemProvider {
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case GamePackage.PERSONNE__VISIBLE:
-			case GamePackage.PERSONNE__ACTIF:
-			case GamePackage.PERSONNE__INTERACTIONS:
+			case GamePackage.PERSONNE__ACTIVE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -195,17 +216,12 @@ public class PersonneItemProvider extends ElementsJeuItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(GamePackage.Literals.PERSONNE__VISIBLE,
-				 GameFactory.eINSTANCE.createCondition()));
+				 GameFactory.eINSTANCE.createConditionPersonne()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(GamePackage.Literals.PERSONNE__ACTIF,
-				 GameFactory.eINSTANCE.createCondition()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(GamePackage.Literals.PERSONNE__INTERACTIONS,
-				 GameFactory.eINSTANCE.createInteraction()));
+				(GamePackage.Literals.PERSONNE__ACTIVE,
+				 GameFactory.eINSTANCE.createConditionPersonne()));
 	}
 
 	/**
@@ -221,7 +237,7 @@ public class PersonneItemProvider extends ElementsJeuItemProvider {
 
 		boolean qualify =
 			childFeature == GamePackage.Literals.PERSONNE__VISIBLE ||
-			childFeature == GamePackage.Literals.PERSONNE__ACTIF;
+			childFeature == GamePackage.Literals.PERSONNE__ACTIVE;
 
 		if (qualify) {
 			return getString

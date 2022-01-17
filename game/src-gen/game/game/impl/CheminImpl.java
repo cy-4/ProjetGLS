@@ -5,16 +5,21 @@ package game.game.impl;
 
 import game.game.Chemin;
 import game.game.Condition;
+import game.game.ConditionChemin;
 import game.game.GamePackage;
 import game.game.Lieu;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,442 +41,381 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class CheminImpl extends PlaceImpl implements Chemin
 {
   /**
-   * The cached value of the '{@link #getPred() <em>Pred</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getPred() <em>Pred</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPred()
-   * @generated
-   * @ordered
-   */
+	 * @see #getPred()
+	 * @generated
+	 * @ordered
+	 */
   protected Lieu pred;
 
   /**
-   * The cached value of the '{@link #getSucc() <em>Succ</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getSucc() <em>Succ</em>}' reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSucc()
-   * @generated
-   * @ordered
-   */
+	 * @see #getSucc()
+	 * @generated
+	 * @ordered
+	 */
   protected Lieu succ;
 
   /**
-   * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getVisible() <em>Visible</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVisible()
-   * @generated
-   * @ordered
-   */
-  protected Condition visible;
+	 * @see #getVisible()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<ConditionChemin> visible;
 
   /**
-   * The default value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isObligatoire()
-   * @generated
-   * @ordered
-   */
+	 * @see #isObligatoire()
+	 * @generated
+	 * @ordered
+	 */
   protected static final boolean OBLIGATOIRE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #isObligatoire() <em>Obligatoire</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isObligatoire()
-   * @generated
-   * @ordered
-   */
+	 * @see #isObligatoire()
+	 * @generated
+	 * @ordered
+	 */
   protected boolean obligatoire = OBLIGATOIRE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getOuvert() <em>Ouvert</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getOuvert() <em>Ouvert</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getOuvert()
-   * @generated
-   * @ordered
-   */
-  protected Condition ouvert;
+	 * @see #getOuvert()
+	 * @generated
+	 * @ordered
+	 */
+  protected EList<ConditionChemin> ouvert;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected CheminImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.CHEMIN;
-  }
+		return GamePackage.Literals.CHEMIN;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Lieu getPred()
   {
-    if (pred != null && pred.eIsProxy())
-    {
-      InternalEObject oldPred = (InternalEObject)pred;
-      pred = (Lieu)eResolveProxy(oldPred);
-      if (pred != oldPred)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CHEMIN__PRED, oldPred, pred));
-      }
-    }
-    return pred;
-  }
+		if (pred != null && pred.eIsProxy()) {
+			InternalEObject oldPred = (InternalEObject)pred;
+			pred = (Lieu)eResolveProxy(oldPred);
+			if (pred != oldPred) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CHEMIN__PRED, oldPred, pred));
+			}
+		}
+		return pred;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Lieu basicGetPred()
   {
-    return pred;
-  }
+		return pred;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setPred(Lieu newPred)
   {
-    Lieu oldPred = pred;
-    pred = newPred;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__PRED, oldPred, pred));
-  }
+		Lieu oldPred = pred;
+		pred = newPred;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__PRED, oldPred, pred));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Lieu getSucc()
   {
-    if (succ != null && succ.eIsProxy())
-    {
-      InternalEObject oldSucc = (InternalEObject)succ;
-      succ = (Lieu)eResolveProxy(oldSucc);
-      if (succ != oldSucc)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CHEMIN__SUCC, oldSucc, succ));
-      }
-    }
-    return succ;
-  }
+		if (succ != null && succ.eIsProxy()) {
+			InternalEObject oldSucc = (InternalEObject)succ;
+			succ = (Lieu)eResolveProxy(oldSucc);
+			if (succ != oldSucc) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CHEMIN__SUCC, oldSucc, succ));
+			}
+		}
+		return succ;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public Lieu basicGetSucc()
   {
-    return succ;
-  }
+		return succ;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setSucc(Lieu newSucc)
   {
-    Lieu oldSucc = succ;
-    succ = newSucc;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__SUCC, oldSucc, succ));
-  }
+		Lieu oldSucc = succ;
+		succ = newSucc;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__SUCC, oldSucc, succ));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
-  public Condition getVisible()
+  public EList<ConditionChemin> getVisible()
   {
-    return visible;
-  }
+		if (visible == null) {
+			visible = new EObjectContainmentWithInverseEList<ConditionChemin>(ConditionChemin.class, this, GamePackage.CHEMIN__VISIBLE, GamePackage.CONDITION_CHEMIN__VISIBLE);
+		}
+		return visible;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetVisible(Condition newVisible, NotificationChain msgs)
-  {
-    Condition oldVisible = visible;
-    visible = newVisible;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__VISIBLE, oldVisible, newVisible);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setVisible(Condition newVisible)
-  {
-    if (newVisible != visible)
-    {
-      NotificationChain msgs = null;
-      if (visible != null)
-        msgs = ((InternalEObject)visible).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__VISIBLE, null, msgs);
-      if (newVisible != null)
-        msgs = ((InternalEObject)newVisible).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__VISIBLE, null, msgs);
-      msgs = basicSetVisible(newVisible, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__VISIBLE, newVisible, newVisible));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean isObligatoire()
   {
-    return obligatoire;
-  }
+		return obligatoire;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setObligatoire(boolean newObligatoire)
   {
-    boolean oldObligatoire = obligatoire;
-    obligatoire = newObligatoire;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__OBLIGATOIRE, oldObligatoire, obligatoire));
-  }
+		boolean oldObligatoire = obligatoire;
+		obligatoire = newObligatoire;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__OBLIGATOIRE, oldObligatoire, obligatoire));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
-  public Condition getOuvert()
+  public EList<ConditionChemin> getOuvert()
   {
-    return ouvert;
-  }
+		if (ouvert == null) {
+			ouvert = new EObjectContainmentWithInverseEList<ConditionChemin>(ConditionChemin.class, this, GamePackage.CHEMIN__OUVERT, GamePackage.CONDITION_CHEMIN__OUVERT);
+		}
+		return ouvert;
+	}
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetOuvert(Condition newOuvert, NotificationChain msgs)
-  {
-    Condition oldOuvert = ouvert;
-    ouvert = newOuvert;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__OUVERT, oldOuvert, newOuvert);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.CHEMIN__VISIBLE:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getVisible()).basicAdd(otherEnd, msgs);
+			case GamePackage.CHEMIN__OUVERT:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getOuvert()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
 
-  /**
-   * <!-- begin-user-doc -->
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setOuvert(Condition newOuvert)
-  {
-    if (newOuvert != ouvert)
-    {
-      NotificationChain msgs = null;
-      if (ouvert != null)
-        msgs = ((InternalEObject)ouvert).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__OUVERT, null, msgs);
-      if (newOuvert != null)
-        msgs = ((InternalEObject)newOuvert).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.CHEMIN__OUVERT, null, msgs);
-      msgs = basicSetOuvert(newOuvert, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHEMIN__OUVERT, newOuvert, newOuvert));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHEMIN__VISIBLE:
-        return basicSetVisible(null, msgs);
-      case GamePackage.CHEMIN__OUVERT:
-        return basicSetOuvert(null, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.CHEMIN__VISIBLE:
+				return ((InternalEList<?>)getVisible()).basicRemove(otherEnd, msgs);
+			case GamePackage.CHEMIN__OUVERT:
+				return ((InternalEList<?>)getOuvert()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHEMIN__PRED:
-        if (resolve) return getPred();
-        return basicGetPred();
-      case GamePackage.CHEMIN__SUCC:
-        if (resolve) return getSucc();
-        return basicGetSucc();
-      case GamePackage.CHEMIN__VISIBLE:
-        return getVisible();
-      case GamePackage.CHEMIN__OBLIGATOIRE:
-        return isObligatoire();
-      case GamePackage.CHEMIN__OUVERT:
-        return getOuvert();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.CHEMIN__PRED:
+				if (resolve) return getPred();
+				return basicGetPred();
+			case GamePackage.CHEMIN__SUCC:
+				if (resolve) return getSucc();
+				return basicGetSucc();
+			case GamePackage.CHEMIN__VISIBLE:
+				return getVisible();
+			case GamePackage.CHEMIN__OBLIGATOIRE:
+				return isObligatoire();
+			case GamePackage.CHEMIN__OUVERT:
+				return getOuvert();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
+	 * @generated
+	 */
+  @SuppressWarnings("unchecked")
+		@Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHEMIN__PRED:
-        setPred((Lieu)newValue);
-        return;
-      case GamePackage.CHEMIN__SUCC:
-        setSucc((Lieu)newValue);
-        return;
-      case GamePackage.CHEMIN__VISIBLE:
-        setVisible((Condition)newValue);
-        return;
-      case GamePackage.CHEMIN__OBLIGATOIRE:
-        setObligatoire((Boolean)newValue);
-        return;
-      case GamePackage.CHEMIN__OUVERT:
-        setOuvert((Condition)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.CHEMIN__PRED:
+				setPred((Lieu)newValue);
+				return;
+			case GamePackage.CHEMIN__SUCC:
+				setSucc((Lieu)newValue);
+				return;
+			case GamePackage.CHEMIN__VISIBLE:
+				getVisible().clear();
+				getVisible().addAll((Collection<? extends ConditionChemin>)newValue);
+				return;
+			case GamePackage.CHEMIN__OBLIGATOIRE:
+				setObligatoire((Boolean)newValue);
+				return;
+			case GamePackage.CHEMIN__OUVERT:
+				getOuvert().clear();
+				getOuvert().addAll((Collection<? extends ConditionChemin>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHEMIN__PRED:
-        setPred((Lieu)null);
-        return;
-      case GamePackage.CHEMIN__SUCC:
-        setSucc((Lieu)null);
-        return;
-      case GamePackage.CHEMIN__VISIBLE:
-        setVisible((Condition)null);
-        return;
-      case GamePackage.CHEMIN__OBLIGATOIRE:
-        setObligatoire(OBLIGATOIRE_EDEFAULT);
-        return;
-      case GamePackage.CHEMIN__OUVERT:
-        setOuvert((Condition)null);
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.CHEMIN__PRED:
+				setPred((Lieu)null);
+				return;
+			case GamePackage.CHEMIN__SUCC:
+				setSucc((Lieu)null);
+				return;
+			case GamePackage.CHEMIN__VISIBLE:
+				getVisible().clear();
+				return;
+			case GamePackage.CHEMIN__OBLIGATOIRE:
+				setObligatoire(OBLIGATOIRE_EDEFAULT);
+				return;
+			case GamePackage.CHEMIN__OUVERT:
+				getOuvert().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHEMIN__PRED:
-        return pred != null;
-      case GamePackage.CHEMIN__SUCC:
-        return succ != null;
-      case GamePackage.CHEMIN__VISIBLE:
-        return visible != null;
-      case GamePackage.CHEMIN__OBLIGATOIRE:
-        return obligatoire != OBLIGATOIRE_EDEFAULT;
-      case GamePackage.CHEMIN__OUVERT:
-        return ouvert != null;
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.CHEMIN__PRED:
+				return pred != null;
+			case GamePackage.CHEMIN__SUCC:
+				return succ != null;
+			case GamePackage.CHEMIN__VISIBLE:
+				return visible != null && !visible.isEmpty();
+			case GamePackage.CHEMIN__OBLIGATOIRE:
+				return obligatoire != OBLIGATOIRE_EDEFAULT;
+			case GamePackage.CHEMIN__OUVERT:
+				return ouvert != null && !ouvert.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (obligatoire: ");
-    result.append(obligatoire);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (obligatoire: ");
+		result.append(obligatoire);
+		result.append(')');
+		return result.toString();
+	}
 
 } //CheminImpl

@@ -26,7 +26,7 @@
     <visible
         name="sphinxVisible"
         connaissanceInterdite="//@elementsjeu.6"
-        objetRequis="//@elementsjeu.0"/>
+        objetRequis="//@elementsjeu.5/@objetCons.0"/>
   </elementsjeu>
   <elementsjeu
       xsi:type="game:Interaction"
@@ -42,6 +42,7 @@
       connaisDon="//@elementsjeu.6"
       interaction="//@elementsjeu.3">
     <objetCons
+        name="Prend2Tentatives"
         qte="2"
         objet="//@elementsjeu.0"/>
   </elementsjeu>
@@ -51,6 +52,7 @@
       reponse="non"
       interaction="//@elementsjeu.3">
     <objetCons
+        name="PrendTentative"
         qte="1"
         objet="//@elementsjeu.0"/>
   </elementsjeu>

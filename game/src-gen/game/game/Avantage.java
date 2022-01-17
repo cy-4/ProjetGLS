@@ -3,6 +3,8 @@
  */
 package game.game;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -24,47 +26,31 @@ package game.game;
 public interface Avantage extends ElementsJeu
 {
   /**
-   * Returns the value of the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Visible</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.ConditionAvantage}.
+	 * It is bidirectional and its opposite is '{@link game.game.ConditionAvantage#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Visible</em>' containment reference.
-   * @see #setVisible(Condition)
-   * @see game.game.GamePackage#getAvantage_Visible()
-   * @model containment="true"
-   * @generated
-   */
-  Condition getVisible();
+	 * @return the value of the '<em>Visible</em>' containment reference list.
+	 * @see game.game.GamePackage#getAvantage_Visible()
+	 * @see game.game.ConditionAvantage#getVisible
+	 * @model opposite="visible" containment="true"
+	 * @generated
+	 */
+  EList<ConditionAvantage> getVisible();
 
   /**
-   * Sets the value of the '{@link game.game.Avantage#getVisible <em>Visible</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Actif</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.ConditionAvantage}.
+	 * It is bidirectional and its opposite is '{@link game.game.ConditionAvantage#getActif <em>Actif</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Visible</em>' containment reference.
-   * @see #getVisible()
-   * @generated
-   */
-  void setVisible(Condition value);
-
-  /**
-   * Returns the value of the '<em><b>Actif</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Actif</em>' containment reference.
-   * @see #setActif(Condition)
-   * @see game.game.GamePackage#getAvantage_Actif()
-   * @model containment="true"
-   * @generated
-   */
-  Condition getActif();
-
-  /**
-   * Sets the value of the '{@link game.game.Avantage#getActif <em>Actif</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Actif</em>' containment reference.
-   * @see #getActif()
-   * @generated
-   */
-  void setActif(Condition value);
+	 * @return the value of the '<em>Actif</em>' containment reference list.
+	 * @see game.game.GamePackage#getAvantage_Actif()
+	 * @see game.game.ConditionAvantage#getActif
+	 * @model opposite="actif" containment="true"
+	 * @generated
+	 */
+  EList<ConditionAvantage> getActif();
 
 } // Avantage

@@ -16,7 +16,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link game.game.Personne#getPlace <em>Place</em>}</li>
  *   <li>{@link game.game.Personne#getVisible <em>Visible</em>}</li>
- *   <li>{@link game.game.Personne#getActif <em>Actif</em>}</li>
+ *   <li>{@link game.game.Personne#getActive <em>Active</em>}</li>
  *   <li>{@link game.game.Personne#isObligatoire <em>Obligatoire</em>}</li>
  *   <li>{@link game.game.Personne#getInteractions <em>Interactions</em>}</li>
  * </ul>
@@ -28,103 +28,91 @@ import org.eclipse.emf.common.util.EList;
 public interface Personne extends ElementsJeu
 {
   /**
-   * Returns the value of the '<em><b>Place</b></em>' reference.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Place</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link game.game.Lieu#getPersonnes <em>Personnes</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Place</em>' reference.
-   * @see #setPlace(Place)
-   * @see game.game.GamePackage#getPersonne_Place()
-   * @model
-   * @generated
-   */
-  Place getPlace();
+	 * @return the value of the '<em>Place</em>' reference.
+	 * @see #setPlace(Lieu)
+	 * @see game.game.GamePackage#getPersonne_Place()
+	 * @see game.game.Lieu#getPersonnes
+	 * @model opposite="personnes" required="true"
+	 * @generated
+	 */
+  Lieu getPlace();
 
   /**
-   * Sets the value of the '{@link game.game.Personne#getPlace <em>Place</em>}' reference.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Personne#getPlace <em>Place</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Place</em>' reference.
+	 * @see #getPlace()
+	 * @generated
+	 */
+	void setPlace(Lieu value);
+
+		/**
+	 * Returns the value of the '<em><b>Visible</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.ConditionPersonne}.
+	 * It is bidirectional and its opposite is '{@link game.game.ConditionPersonne#getVisible <em>Visible</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Place</em>' reference.
-   * @see #getPlace()
-   * @generated
-   */
-  void setPlace(Place value);
+	 * @return the value of the '<em>Visible</em>' containment reference list.
+	 * @see game.game.GamePackage#getPersonne_Visible()
+	 * @see game.game.ConditionPersonne#getVisible
+	 * @model opposite="visible" containment="true"
+	 * @generated
+	 */
+  EList<ConditionPersonne> getVisible();
 
   /**
-   * Returns the value of the '<em><b>Visible</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Visible</em>' containment reference.
-   * @see #setVisible(Condition)
-   * @see game.game.GamePackage#getPersonne_Visible()
-   * @model containment="true"
-   * @generated
-   */
-  Condition getVisible();
+	 * Returns the value of the '<em><b>Active</b></em>' containment reference list.
+	 * The list contents are of type {@link game.game.ConditionPersonne}.
+	 * It is bidirectional and its opposite is '{@link game.game.ConditionPersonne#getActive <em>Active</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Active</em>' containment reference list.
+	 * @see game.game.GamePackage#getPersonne_Active()
+	 * @see game.game.ConditionPersonne#getActive
+	 * @model opposite="active" containment="true"
+	 * @generated
+	 */
+	EList<ConditionPersonne> getActive();
 
-  /**
-   * Sets the value of the '{@link game.game.Personne#getVisible <em>Visible</em>}' containment reference.
-   * <!-- begin-user-doc -->
+		/**
+	 * Returns the value of the '<em><b>Obligatoire</b></em>' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Visible</em>' containment reference.
-   * @see #getVisible()
-   * @generated
-   */
-  void setVisible(Condition value);
-
-  /**
-   * Returns the value of the '<em><b>Actif</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Actif</em>' containment reference.
-   * @see #setActif(Condition)
-   * @see game.game.GamePackage#getPersonne_Actif()
-   * @model containment="true"
-   * @generated
-   */
-  Condition getActif();
-
-  /**
-   * Sets the value of the '{@link game.game.Personne#getActif <em>Actif</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Actif</em>' containment reference.
-   * @see #getActif()
-   * @generated
-   */
-  void setActif(Condition value);
-
-  /**
-   * Returns the value of the '<em><b>Obligatoire</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Obligatoire</em>' attribute.
-   * @see #setObligatoire(boolean)
-   * @see game.game.GamePackage#getPersonne_Obligatoire()
-   * @model
-   * @generated
-   */
+	 * @return the value of the '<em>Obligatoire</em>' attribute.
+	 * @see #setObligatoire(boolean)
+	 * @see game.game.GamePackage#getPersonne_Obligatoire()
+	 * @model
+	 * @generated
+	 */
   boolean isObligatoire();
 
   /**
-   * Sets the value of the '{@link game.game.Personne#isObligatoire <em>Obligatoire</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * Sets the value of the '{@link game.game.Personne#isObligatoire <em>Obligatoire</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Obligatoire</em>' attribute.
-   * @see #isObligatoire()
-   * @generated
-   */
+	 * @param value the new value of the '<em>Obligatoire</em>' attribute.
+	 * @see #isObligatoire()
+	 * @generated
+	 */
   void setObligatoire(boolean value);
 
   /**
-   * Returns the value of the '<em><b>Interactions</b></em>' containment reference list.
-   * The list contents are of type {@link game.game.Interaction}.
-   * <!-- begin-user-doc -->
+	 * Returns the value of the '<em><b>Interactions</b></em>' reference list.
+	 * The list contents are of type {@link game.game.Interaction}.
+	 * It is bidirectional and its opposite is '{@link game.game.Interaction#getPersonne <em>Personne</em>}'.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Interactions</em>' containment reference list.
-   * @see game.game.GamePackage#getPersonne_Interactions()
-   * @model containment="true"
-   * @generated
-   */
+	 * @return the value of the '<em>Interactions</em>' reference list.
+	 * @see game.game.GamePackage#getPersonne_Interactions()
+	 * @see game.game.Interaction#getPersonne
+	 * @model opposite="personne" required="true"
+	 * @generated
+	 */
   EList<Interaction> getInteractions();
 
 } // Personne

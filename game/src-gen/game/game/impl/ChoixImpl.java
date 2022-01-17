@@ -6,6 +6,7 @@ package game.game.impl;
 import game.game.Choix;
 import game.game.Connaissance;
 import game.game.GamePackage;
+import game.game.Interaction;
 import game.game.QteObjet;
 
 import java.util.Collection;
@@ -22,7 +23,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -33,406 +36,451 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link game.game.impl.ChoixImpl#getName <em>Name</em>}</li>
  *   <li>{@link game.game.impl.ChoixImpl#getReponse <em>Reponse</em>}</li>
  *   <li>{@link game.game.impl.ChoixImpl#isBonne <em>Bonne</em>}</li>
  *   <li>{@link game.game.impl.ChoixImpl#getObjetCons <em>Objet Cons</em>}</li>
  *   <li>{@link game.game.impl.ChoixImpl#getObjetDon <em>Objet Don</em>}</li>
  *   <li>{@link game.game.impl.ChoixImpl#getConnaisDon <em>Connais Don</em>}</li>
+ *   <li>{@link game.game.impl.ChoixImpl#getInteraction <em>Interaction</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ChoixImpl extends MinimalEObjectImpl.Container implements Choix
+public class ChoixImpl extends ElementsJeuImpl implements Choix
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getReponse() <em>Reponse</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getReponse() <em>Reponse</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getReponse()
-   * @generated
-   * @ordered
-   */
+	 * @see #getReponse()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String REPONSE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getReponse() <em>Reponse</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getReponse() <em>Reponse</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getReponse()
-   * @generated
-   * @ordered
-   */
+	 * @see #getReponse()
+	 * @generated
+	 * @ordered
+	 */
   protected String reponse = REPONSE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #isBonne() <em>Bonne</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #isBonne() <em>Bonne</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isBonne()
-   * @generated
-   * @ordered
-   */
+	 * @see #isBonne()
+	 * @generated
+	 * @ordered
+	 */
   protected static final boolean BONNE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #isBonne() <em>Bonne</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #isBonne() <em>Bonne</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #isBonne()
-   * @generated
-   * @ordered
-   */
+	 * @see #isBonne()
+	 * @generated
+	 * @ordered
+	 */
   protected boolean bonne = BONNE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getObjetCons() <em>Objet Cons</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getObjetCons() <em>Objet Cons</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getObjetCons()
-   * @generated
-   * @ordered
-   */
+	 * @see #getObjetCons()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<QteObjet> objetCons;
 
   /**
-   * The cached value of the '{@link #getObjetDon() <em>Objet Don</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getObjetDon() <em>Objet Don</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getObjetDon()
-   * @generated
-   * @ordered
-   */
+	 * @see #getObjetDon()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<QteObjet> objetDon;
 
   /**
-   * The cached value of the '{@link #getConnaisDon() <em>Connais Don</em>}' reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getConnaisDon() <em>Connais Don</em>}' reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConnaisDon()
-   * @generated
-   * @ordered
-   */
+	 * @see #getConnaisDon()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<Connaissance> connaisDon;
 
   /**
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getInteraction() <em>Interaction</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInteraction()
+	 * @generated
+	 * @ordered
+	 */
+	protected Interaction interaction;
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected ChoixImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.CHOIX;
-  }
+		return GamePackage.Literals.CHOIX;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String getReponse()
   {
-    return reponse;
-  }
+		return reponse;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setReponse(String newReponse)
   {
-    String oldReponse = reponse;
-    reponse = newReponse;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__REPONSE, oldReponse, reponse));
-  }
+		String oldReponse = reponse;
+		reponse = newReponse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__REPONSE, oldReponse, reponse));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean isBonne()
   {
-    return bonne;
-  }
+		return bonne;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setBonne(boolean newBonne)
   {
-    boolean oldBonne = bonne;
-    bonne = newBonne;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__BONNE, oldBonne, bonne));
-  }
+		boolean oldBonne = bonne;
+		bonne = newBonne;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__BONNE, oldBonne, bonne));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<QteObjet> getObjetCons()
   {
-    if (objetCons == null)
-    {
-      objetCons = new EObjectContainmentEList<QteObjet>(QteObjet.class, this, GamePackage.CHOIX__OBJET_CONS);
-    }
-    return objetCons;
-  }
+		if (objetCons == null) {
+			objetCons = new EObjectContainmentWithInverseEList<QteObjet>(QteObjet.class, this, GamePackage.CHOIX__OBJET_CONS, GamePackage.QTE_OBJET__CHOIX_CONS);
+		}
+		return objetCons;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<QteObjet> getObjetDon()
   {
-    if (objetDon == null)
-    {
-      objetDon = new EObjectContainmentEList<QteObjet>(QteObjet.class, this, GamePackage.CHOIX__OBJET_DON);
-    }
-    return objetDon;
-  }
+		if (objetDon == null) {
+			objetDon = new EObjectContainmentWithInverseEList<QteObjet>(QteObjet.class, this, GamePackage.CHOIX__OBJET_DON, GamePackage.QTE_OBJET__CHOIX_DON);
+		}
+		return objetDon;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<Connaissance> getConnaisDon()
   {
-    if (connaisDon == null)
-    {
-      connaisDon = new EObjectResolvingEList<Connaissance>(Connaissance.class, this, GamePackage.CHOIX__CONNAIS_DON);
-    }
-    return connaisDon;
-  }
+		if (connaisDon == null) {
+			connaisDon = new EObjectWithInverseResolvingEList<Connaissance>(Connaissance.class, this, GamePackage.CHOIX__CONNAIS_DON, GamePackage.CONNAISSANCE__CHOIX);
+		}
+		return connaisDon;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Interaction getInteraction() {
+		if (interaction != null && interaction.eIsProxy()) {
+			InternalEObject oldInteraction = (InternalEObject)interaction;
+			interaction = (Interaction)eResolveProxy(oldInteraction);
+			if (interaction != oldInteraction) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GamePackage.CHOIX__INTERACTION, oldInteraction, interaction));
+			}
+		}
+		return interaction;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Interaction basicGetInteraction() {
+		return interaction;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetInteraction(Interaction newInteraction, NotificationChain msgs) {
+		Interaction oldInteraction = interaction;
+		interaction = newInteraction;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__INTERACTION, oldInteraction, newInteraction);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setInteraction(Interaction newInteraction) {
+		if (newInteraction != interaction) {
+			NotificationChain msgs = null;
+			if (interaction != null)
+				msgs = ((InternalEObject)interaction).eInverseRemove(this, GamePackage.INTERACTION__CHOIX, Interaction.class, msgs);
+			if (newInteraction != null)
+				msgs = ((InternalEObject)newInteraction).eInverseAdd(this, GamePackage.INTERACTION__CHOIX, Interaction.class, msgs);
+			msgs = basicSetInteraction(newInteraction, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.CHOIX__INTERACTION, newInteraction, newInteraction));
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case GamePackage.CHOIX__OBJET_CONS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getObjetCons()).basicAdd(otherEnd, msgs);
+			case GamePackage.CHOIX__OBJET_DON:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getObjetDon()).basicAdd(otherEnd, msgs);
+			case GamePackage.CHOIX__CONNAIS_DON:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getConnaisDon()).basicAdd(otherEnd, msgs);
+			case GamePackage.CHOIX__INTERACTION:
+				if (interaction != null)
+					msgs = ((InternalEObject)interaction).eInverseRemove(this, GamePackage.INTERACTION__CHOIX, Interaction.class, msgs);
+				return basicSetInteraction((Interaction)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+		/**
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHOIX__OBJET_CONS:
-        return ((InternalEList<?>)getObjetCons()).basicRemove(otherEnd, msgs);
-      case GamePackage.CHOIX__OBJET_DON:
-        return ((InternalEList<?>)getObjetDon()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.CHOIX__OBJET_CONS:
+				return ((InternalEList<?>)getObjetCons()).basicRemove(otherEnd, msgs);
+			case GamePackage.CHOIX__OBJET_DON:
+				return ((InternalEList<?>)getObjetDon()).basicRemove(otherEnd, msgs);
+			case GamePackage.CHOIX__CONNAIS_DON:
+				return ((InternalEList<?>)getConnaisDon()).basicRemove(otherEnd, msgs);
+			case GamePackage.CHOIX__INTERACTION:
+				return basicSetInteraction(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHOIX__NAME:
-        return getName();
-      case GamePackage.CHOIX__REPONSE:
-        return getReponse();
-      case GamePackage.CHOIX__BONNE:
-        return isBonne();
-      case GamePackage.CHOIX__OBJET_CONS:
-        return getObjetCons();
-      case GamePackage.CHOIX__OBJET_DON:
-        return getObjetDon();
-      case GamePackage.CHOIX__CONNAIS_DON:
-        return getConnaisDon();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.CHOIX__REPONSE:
+				return getReponse();
+			case GamePackage.CHOIX__BONNE:
+				return isBonne();
+			case GamePackage.CHOIX__OBJET_CONS:
+				return getObjetCons();
+			case GamePackage.CHOIX__OBJET_DON:
+				return getObjetDon();
+			case GamePackage.CHOIX__CONNAIS_DON:
+				return getConnaisDon();
+			case GamePackage.CHOIX__INTERACTION:
+				if (resolve) return getInteraction();
+				return basicGetInteraction();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHOIX__NAME:
-        setName((String)newValue);
-        return;
-      case GamePackage.CHOIX__REPONSE:
-        setReponse((String)newValue);
-        return;
-      case GamePackage.CHOIX__BONNE:
-        setBonne((Boolean)newValue);
-        return;
-      case GamePackage.CHOIX__OBJET_CONS:
-        getObjetCons().clear();
-        getObjetCons().addAll((Collection<? extends QteObjet>)newValue);
-        return;
-      case GamePackage.CHOIX__OBJET_DON:
-        getObjetDon().clear();
-        getObjetDon().addAll((Collection<? extends QteObjet>)newValue);
-        return;
-      case GamePackage.CHOIX__CONNAIS_DON:
-        getConnaisDon().clear();
-        getConnaisDon().addAll((Collection<? extends Connaissance>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.CHOIX__REPONSE:
+				setReponse((String)newValue);
+				return;
+			case GamePackage.CHOIX__BONNE:
+				setBonne((Boolean)newValue);
+				return;
+			case GamePackage.CHOIX__OBJET_CONS:
+				getObjetCons().clear();
+				getObjetCons().addAll((Collection<? extends QteObjet>)newValue);
+				return;
+			case GamePackage.CHOIX__OBJET_DON:
+				getObjetDon().clear();
+				getObjetDon().addAll((Collection<? extends QteObjet>)newValue);
+				return;
+			case GamePackage.CHOIX__CONNAIS_DON:
+				getConnaisDon().clear();
+				getConnaisDon().addAll((Collection<? extends Connaissance>)newValue);
+				return;
+			case GamePackage.CHOIX__INTERACTION:
+				setInteraction((Interaction)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHOIX__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case GamePackage.CHOIX__REPONSE:
-        setReponse(REPONSE_EDEFAULT);
-        return;
-      case GamePackage.CHOIX__BONNE:
-        setBonne(BONNE_EDEFAULT);
-        return;
-      case GamePackage.CHOIX__OBJET_CONS:
-        getObjetCons().clear();
-        return;
-      case GamePackage.CHOIX__OBJET_DON:
-        getObjetDon().clear();
-        return;
-      case GamePackage.CHOIX__CONNAIS_DON:
-        getConnaisDon().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.CHOIX__REPONSE:
+				setReponse(REPONSE_EDEFAULT);
+				return;
+			case GamePackage.CHOIX__BONNE:
+				setBonne(BONNE_EDEFAULT);
+				return;
+			case GamePackage.CHOIX__OBJET_CONS:
+				getObjetCons().clear();
+				return;
+			case GamePackage.CHOIX__OBJET_DON:
+				getObjetDon().clear();
+				return;
+			case GamePackage.CHOIX__CONNAIS_DON:
+				getConnaisDon().clear();
+				return;
+			case GamePackage.CHOIX__INTERACTION:
+				setInteraction((Interaction)null);
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.CHOIX__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GamePackage.CHOIX__REPONSE:
-        return REPONSE_EDEFAULT == null ? reponse != null : !REPONSE_EDEFAULT.equals(reponse);
-      case GamePackage.CHOIX__BONNE:
-        return bonne != BONNE_EDEFAULT;
-      case GamePackage.CHOIX__OBJET_CONS:
-        return objetCons != null && !objetCons.isEmpty();
-      case GamePackage.CHOIX__OBJET_DON:
-        return objetDon != null && !objetDon.isEmpty();
-      case GamePackage.CHOIX__CONNAIS_DON:
-        return connaisDon != null && !connaisDon.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.CHOIX__REPONSE:
+				return REPONSE_EDEFAULT == null ? reponse != null : !REPONSE_EDEFAULT.equals(reponse);
+			case GamePackage.CHOIX__BONNE:
+				return bonne != BONNE_EDEFAULT;
+			case GamePackage.CHOIX__OBJET_CONS:
+				return objetCons != null && !objetCons.isEmpty();
+			case GamePackage.CHOIX__OBJET_DON:
+				return objetDon != null && !objetDon.isEmpty();
+			case GamePackage.CHOIX__CONNAIS_DON:
+				return connaisDon != null && !connaisDon.isEmpty();
+			case GamePackage.CHOIX__INTERACTION:
+				return interaction != null;
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", reponse: ");
-    result.append(reponse);
-    result.append(", bonne: ");
-    result.append(bonne);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (reponse: ");
+		result.append(reponse);
+		result.append(", bonne: ");
+		result.append(bonne);
+		result.append(')');
+		return result.toString();
+	}
 
 } //ChoixImpl

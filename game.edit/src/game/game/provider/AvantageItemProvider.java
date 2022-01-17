@@ -142,12 +142,12 @@ public class AvantageItemProvider extends ElementsJeuItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(GamePackage.Literals.AVANTAGE__VISIBLE,
-				 GameFactory.eINSTANCE.createCondition()));
+				 GameFactory.eINSTANCE.createConditionAvantage()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(GamePackage.Literals.AVANTAGE__ACTIF,
-				 GameFactory.eINSTANCE.createCondition()));
+				 GameFactory.eINSTANCE.createConditionAvantage()));
 	}
 
 	/**

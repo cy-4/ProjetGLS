@@ -44,349 +44,339 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class JeuImpl extends MinimalEObjectImpl.Container implements Jeu
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected static final String NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getTerritoire() <em>Territoire</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getTerritoire() <em>Territoire</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getTerritoire()
-   * @generated
-   * @ordered
-   */
+	 * @see #getTerritoire()
+	 * @generated
+	 * @ordered
+	 */
   protected Territoire territoire;
 
   /**
-   * The cached value of the '{@link #getExplorateur() <em>Explorateur</em>}' containment reference.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getExplorateur() <em>Explorateur</em>}' containment reference.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getExplorateur()
-   * @generated
-   * @ordered
-   */
+	 * @see #getExplorateur()
+	 * @generated
+	 * @ordered
+	 */
   protected Explorateur explorateur;
 
   /**
-   * The cached value of the '{@link #getElementsjeu() <em>Elementsjeu</em>}' containment reference list.
-   * <!-- begin-user-doc -->
+	 * The cached value of the '{@link #getElementsjeu() <em>Elementsjeu</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElementsjeu()
-   * @generated
-   * @ordered
-   */
+	 * @see #getElementsjeu()
+	 * @generated
+	 * @ordered
+	 */
   protected EList<ElementsJeu> elementsjeu;
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   protected JeuImpl()
   {
-    super();
-  }
+		super();
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   protected EClass eStaticClass()
   {
-    return GamePackage.Literals.JEU;
-  }
+		return GamePackage.Literals.JEU;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String getName()
   {
-    return name;
-  }
+		return name;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setName(String newName)
   {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__NAME, oldName, name));
-  }
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__NAME, oldName, name));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Territoire getTerritoire()
   {
-    return territoire;
-  }
+		return territoire;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public NotificationChain basicSetTerritoire(Territoire newTerritoire, NotificationChain msgs)
   {
-    Territoire oldTerritoire = territoire;
-    territoire = newTerritoire;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.JEU__TERRITOIRE, oldTerritoire, newTerritoire);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+		Territoire oldTerritoire = territoire;
+		territoire = newTerritoire;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.JEU__TERRITOIRE, oldTerritoire, newTerritoire);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setTerritoire(Territoire newTerritoire)
   {
-    if (newTerritoire != territoire)
-    {
-      NotificationChain msgs = null;
-      if (territoire != null)
-        msgs = ((InternalEObject)territoire).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__TERRITOIRE, null, msgs);
-      if (newTerritoire != null)
-        msgs = ((InternalEObject)newTerritoire).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__TERRITOIRE, null, msgs);
-      msgs = basicSetTerritoire(newTerritoire, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__TERRITOIRE, newTerritoire, newTerritoire));
-  }
+		if (newTerritoire != territoire) {
+			NotificationChain msgs = null;
+			if (territoire != null)
+				msgs = ((InternalEObject)territoire).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__TERRITOIRE, null, msgs);
+			if (newTerritoire != null)
+				msgs = ((InternalEObject)newTerritoire).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__TERRITOIRE, null, msgs);
+			msgs = basicSetTerritoire(newTerritoire, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__TERRITOIRE, newTerritoire, newTerritoire));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Explorateur getExplorateur()
   {
-    return explorateur;
-  }
+		return explorateur;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   public NotificationChain basicSetExplorateur(Explorateur newExplorateur, NotificationChain msgs)
   {
-    Explorateur oldExplorateur = explorateur;
-    explorateur = newExplorateur;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.JEU__EXPLORATEUR, oldExplorateur, newExplorateur);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
+		Explorateur oldExplorateur = explorateur;
+		explorateur = newExplorateur;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.JEU__EXPLORATEUR, oldExplorateur, newExplorateur);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void setExplorateur(Explorateur newExplorateur)
   {
-    if (newExplorateur != explorateur)
-    {
-      NotificationChain msgs = null;
-      if (explorateur != null)
-        msgs = ((InternalEObject)explorateur).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__EXPLORATEUR, null, msgs);
-      if (newExplorateur != null)
-        msgs = ((InternalEObject)newExplorateur).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__EXPLORATEUR, null, msgs);
-      msgs = basicSetExplorateur(newExplorateur, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__EXPLORATEUR, newExplorateur, newExplorateur));
-  }
+		if (newExplorateur != explorateur) {
+			NotificationChain msgs = null;
+			if (explorateur != null)
+				msgs = ((InternalEObject)explorateur).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__EXPLORATEUR, null, msgs);
+			if (newExplorateur != null)
+				msgs = ((InternalEObject)newExplorateur).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - GamePackage.JEU__EXPLORATEUR, null, msgs);
+			msgs = basicSetExplorateur(newExplorateur, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.JEU__EXPLORATEUR, newExplorateur, newExplorateur));
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public EList<ElementsJeu> getElementsjeu()
   {
-    if (elementsjeu == null)
-    {
-      elementsjeu = new EObjectContainmentEList<ElementsJeu>(ElementsJeu.class, this, GamePackage.JEU__ELEMENTSJEU);
-    }
-    return elementsjeu;
-  }
+		if (elementsjeu == null) {
+			elementsjeu = new EObjectContainmentEList<ElementsJeu>(ElementsJeu.class, this, GamePackage.JEU__ELEMENTSJEU);
+		}
+		return elementsjeu;
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
-    switch (featureID)
-    {
-      case GamePackage.JEU__TERRITOIRE:
-        return basicSetTerritoire(null, msgs);
-      case GamePackage.JEU__EXPLORATEUR:
-        return basicSetExplorateur(null, msgs);
-      case GamePackage.JEU__ELEMENTSJEU:
-        return ((InternalEList<?>)getElementsjeu()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
-  }
+		switch (featureID) {
+			case GamePackage.JEU__TERRITOIRE:
+				return basicSetTerritoire(null, msgs);
+			case GamePackage.JEU__EXPLORATEUR:
+				return basicSetExplorateur(null, msgs);
+			case GamePackage.JEU__ELEMENTSJEU:
+				return ((InternalEList<?>)getElementsjeu()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
-    switch (featureID)
-    {
-      case GamePackage.JEU__NAME:
-        return getName();
-      case GamePackage.JEU__TERRITOIRE:
-        return getTerritoire();
-      case GamePackage.JEU__EXPLORATEUR:
-        return getExplorateur();
-      case GamePackage.JEU__ELEMENTSJEU:
-        return getElementsjeu();
-    }
-    return super.eGet(featureID, resolve, coreType);
-  }
+		switch (featureID) {
+			case GamePackage.JEU__NAME:
+				return getName();
+			case GamePackage.JEU__TERRITOIRE:
+				return getTerritoire();
+			case GamePackage.JEU__EXPLORATEUR:
+				return getExplorateur();
+			case GamePackage.JEU__ELEMENTSJEU:
+				return getElementsjeu();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
-    switch (featureID)
-    {
-      case GamePackage.JEU__NAME:
-        setName((String)newValue);
-        return;
-      case GamePackage.JEU__TERRITOIRE:
-        setTerritoire((Territoire)newValue);
-        return;
-      case GamePackage.JEU__EXPLORATEUR:
-        setExplorateur((Explorateur)newValue);
-        return;
-      case GamePackage.JEU__ELEMENTSJEU:
-        getElementsjeu().clear();
-        getElementsjeu().addAll((Collection<? extends ElementsJeu>)newValue);
-        return;
-    }
-    super.eSet(featureID, newValue);
-  }
+		switch (featureID) {
+			case GamePackage.JEU__NAME:
+				setName((String)newValue);
+				return;
+			case GamePackage.JEU__TERRITOIRE:
+				setTerritoire((Territoire)newValue);
+				return;
+			case GamePackage.JEU__EXPLORATEUR:
+				setExplorateur((Explorateur)newValue);
+				return;
+			case GamePackage.JEU__ELEMENTSJEU:
+				getElementsjeu().clear();
+				getElementsjeu().addAll((Collection<? extends ElementsJeu>)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public void eUnset(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.JEU__NAME:
-        setName(NAME_EDEFAULT);
-        return;
-      case GamePackage.JEU__TERRITOIRE:
-        setTerritoire((Territoire)null);
-        return;
-      case GamePackage.JEU__EXPLORATEUR:
-        setExplorateur((Explorateur)null);
-        return;
-      case GamePackage.JEU__ELEMENTSJEU:
-        getElementsjeu().clear();
-        return;
-    }
-    super.eUnset(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.JEU__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case GamePackage.JEU__TERRITOIRE:
+				setTerritoire((Territoire)null);
+				return;
+			case GamePackage.JEU__EXPLORATEUR:
+				setExplorateur((Explorateur)null);
+				return;
+			case GamePackage.JEU__ELEMENTSJEU:
+				getElementsjeu().clear();
+				return;
+		}
+		super.eUnset(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public boolean eIsSet(int featureID)
   {
-    switch (featureID)
-    {
-      case GamePackage.JEU__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case GamePackage.JEU__TERRITOIRE:
-        return territoire != null;
-      case GamePackage.JEU__EXPLORATEUR:
-        return explorateur != null;
-      case GamePackage.JEU__ELEMENTSJEU:
-        return elementsjeu != null && !elementsjeu.isEmpty();
-    }
-    return super.eIsSet(featureID);
-  }
+		switch (featureID) {
+			case GamePackage.JEU__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case GamePackage.JEU__TERRITOIRE:
+				return territoire != null;
+			case GamePackage.JEU__EXPLORATEUR:
+				return explorateur != null;
+			case GamePackage.JEU__ELEMENTSJEU:
+				return elementsjeu != null && !elementsjeu.isEmpty();
+		}
+		return super.eIsSet(featureID);
+	}
 
   /**
-   * <!-- begin-user-doc -->
+	 * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @generated
-   */
+	 * @generated
+	 */
   @Override
   public String toString()
   {
-    if (eIsProxy()) return super.toString();
+		if (eIsProxy()) return super.toString();
 
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
 
 } //JeuImpl

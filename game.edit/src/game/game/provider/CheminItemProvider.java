@@ -216,12 +216,12 @@ public class CheminItemProvider extends PlaceItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(GamePackage.Literals.CHEMIN__VISIBLE,
-				 GameFactory.eINSTANCE.createCondition()));
+				 GameFactory.eINSTANCE.createConditionChemin()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(GamePackage.Literals.CHEMIN__OUVERT,
-				 GameFactory.eINSTANCE.createCondition()));
+				 GameFactory.eINSTANCE.createConditionChemin()));
 	}
 
 	/**

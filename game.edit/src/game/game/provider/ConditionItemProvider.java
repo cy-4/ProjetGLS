@@ -33,13 +33,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ConditionItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends ElementsJeuItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -61,52 +55,28 @@ public class ConditionItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addConnaissancesRequisesPropertyDescriptor(object);
-			addConnaissancesInterditesPropertyDescriptor(object);
-			addQuantitePropertyDescriptor(object);
-			addObjetsRequisPropertyDescriptor(object);
-			addObjetsInterditsPropertyDescriptor(object);
+			addConnaissanceRequisePropertyDescriptor(object);
+			addConnaissanceInterditePropertyDescriptor(object);
+			addObjetRequisPropertyDescriptor(object);
+			addObjetInterditPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Connaissance Requise feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addConnaissanceRequisePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Condition_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_name_feature", "_UI_Condition_type"),
-				 GamePackage.Literals.CONDITION__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Connaissances Requises feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addConnaissancesRequisesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Condition_connaissancesRequises_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_connaissancesRequises_feature", "_UI_Condition_type"),
-				 GamePackage.Literals.CONDITION__CONNAISSANCES_REQUISES,
+				 getString("_UI_Condition_connaissanceRequise_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_connaissanceRequise_feature", "_UI_Condition_type"),
+				 GamePackage.Literals.CONDITION__CONNAISSANCE_REQUISE,
 				 true,
 				 false,
 				 true,
@@ -116,19 +86,19 @@ public class ConditionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Connaissances Interdites feature.
+	 * This adds a property descriptor for the Connaissance Interdite feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addConnaissancesInterditesPropertyDescriptor(Object object) {
+	protected void addConnaissanceInterditePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Condition_connaissancesInterdites_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_connaissancesInterdites_feature", "_UI_Condition_type"),
-				 GamePackage.Literals.CONDITION__CONNAISSANCES_INTERDITES,
+				 getString("_UI_Condition_connaissanceInterdite_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_connaissanceInterdite_feature", "_UI_Condition_type"),
+				 GamePackage.Literals.CONDITION__CONNAISSANCE_INTERDITE,
 				 true,
 				 false,
 				 true,
@@ -138,41 +108,19 @@ public class ConditionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Quantite feature.
+	 * This adds a property descriptor for the Objet Requis feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addQuantitePropertyDescriptor(Object object) {
+	protected void addObjetRequisPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Condition_quantite_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_quantite_feature", "_UI_Condition_type"),
-				 GamePackage.Literals.CONDITION__QUANTITE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Objets Requis feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addObjetsRequisPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Condition_objetsRequis_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_objetsRequis_feature", "_UI_Condition_type"),
-				 GamePackage.Literals.CONDITION__OBJETS_REQUIS,
+				 getString("_UI_Condition_objetRequis_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_objetRequis_feature", "_UI_Condition_type"),
+				 GamePackage.Literals.CONDITION__OBJET_REQUIS,
 				 true,
 				 false,
 				 true,
@@ -182,19 +130,19 @@ public class ConditionItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Objets Interdits feature.
+	 * This adds a property descriptor for the Objet Interdit feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addObjetsInterditsPropertyDescriptor(Object object) {
+	protected void addObjetInterditPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Condition_objetsInterdits_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_objetsInterdits_feature", "_UI_Condition_type"),
-				 GamePackage.Literals.CONDITION__OBJETS_INTERDITS,
+				 getString("_UI_Condition_objetInterdit_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Condition_objetInterdit_feature", "_UI_Condition_type"),
+				 GamePackage.Literals.CONDITION__OBJET_INTERDIT,
 				 true,
 				 false,
 				 true,
@@ -239,13 +187,6 @@ public class ConditionItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Condition.class)) {
-			case GamePackage.CONDITION__NAME:
-			case GamePackage.CONDITION__QUANTITE:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
@@ -259,17 +200,6 @@ public class ConditionItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return GameEditPlugin.INSTANCE;
 	}
 
 }

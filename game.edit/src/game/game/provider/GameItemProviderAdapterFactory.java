@@ -165,6 +165,29 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link game.game.QteObjet} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected QteObjetItemProvider qteObjetItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link game.game.QteObjet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createQteObjetAdapter() {
+		if (qteObjetItemProvider == null) {
+			qteObjetItemProvider = new QteObjetItemProvider(this);
+		}
+
+		return qteObjetItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link game.game.Territoire} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -395,6 +418,75 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory implement
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link game.game.ConditionPersonne} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConditionPersonneItemProvider conditionPersonneItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link game.game.ConditionPersonne}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConditionPersonneAdapter() {
+		if (conditionPersonneItemProvider == null) {
+			conditionPersonneItemProvider = new ConditionPersonneItemProvider(this);
+		}
+
+		return conditionPersonneItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link game.game.ConditionAvantage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConditionAvantageItemProvider conditionAvantageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link game.game.ConditionAvantage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConditionAvantageAdapter() {
+		if (conditionAvantageItemProvider == null) {
+			conditionAvantageItemProvider = new ConditionAvantageItemProvider(this);
+		}
+
+		return conditionAvantageItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link game.game.ConditionChemin} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConditionCheminItemProvider conditionCheminItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link game.game.ConditionChemin}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConditionCheminAdapter() {
+		if (conditionCheminItemProvider == null) {
+			conditionCheminItemProvider = new ConditionCheminItemProvider(this);
+		}
+
+		return conditionCheminItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -503,6 +595,7 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory implement
 		if (elementsJeuItemProvider != null) elementsJeuItemProvider.dispose();
 		if (placeItemProvider != null) placeItemProvider.dispose();
 		if (avantageItemProvider != null) avantageItemProvider.dispose();
+		if (qteObjetItemProvider != null) qteObjetItemProvider.dispose();
 		if (territoireItemProvider != null) territoireItemProvider.dispose();
 		if (lieuItemProvider != null) lieuItemProvider.dispose();
 		if (cheminItemProvider != null) cheminItemProvider.dispose();
@@ -513,6 +606,9 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory implement
 		if (interactionItemProvider != null) interactionItemProvider.dispose();
 		if (choixItemProvider != null) choixItemProvider.dispose();
 		if (conditionItemProvider != null) conditionItemProvider.dispose();
+		if (conditionPersonneItemProvider != null) conditionPersonneItemProvider.dispose();
+		if (conditionAvantageItemProvider != null) conditionAvantageItemProvider.dispose();
+		if (conditionCheminItemProvider != null) conditionCheminItemProvider.dispose();
 	}
 
 }
