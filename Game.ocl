@@ -8,7 +8,7 @@ inv withMessage('Explicit message in game ' + self.name + ' (withMessage)'): fal
 inv errorSeverity: null
 
 /* Le nom d'un Explorateur doit commencer par une majuscule.
- * Il doit etre compose d'au moins deux caracteres. */
+ * Il doit être composé d'au moins deux caracteres. */
 context Explorateur
 inv validName('Invalid name: ' + self.name):
 	self.name.matches('[A-Z][A-Za-z0-9_]+')
@@ -24,6 +24,12 @@ context Personne
 inv validName('Invalid name: ' + self.name):
 	self.name.matches('[A-Z][A-Za-z0-9_]+')
 	
+/* Deux personnes doivent necessairement avoir deux noms differents */
+context Personne
+inv uniqueName('Not unique name: ' + self.name):
+	Personne.allInstances()->forAll(p1,p2 | p1 <> p2 implies p1.name <> p2.name)
+
+	
 /* Deux lieux et/ou chemins doivent necessairement avoir deux noms differents */
 context Place
 inv uniqueName('Not unique name: ' + self.name):
@@ -31,10 +37,10 @@ inv uniqueName('Not unique name: ' + self.name):
 
 /* Il n'y a qu'un Lieu de nature Start */
 context Lieu
-inv uniqueStart('Not unique start: ' + self.name): let Bool unique = false in 
+inv uniqueStart('Not unique start: ' + self.name):
 	Lieu.allInstances()
-	->select(l1 | if (l1.nature == Nature::Depart and unique = false) then unique = true else l1.nature <> Nature::Depart endif)
-	/* ->forAll(l1| if (l1.nature == Nature::Depart and unique = false) then unique = true else l1.nature <> Nature::Depart endif) */
+	->select(e|e.nature=Nature::depart)
+	->size() = 1
 
 /* Un chemin ne peut pas etre reflexive */
 context Chemin
@@ -50,5 +56,10 @@ inv qtePositive:
 context Objet
 inv taillePositive:
 	self.taille > 0
+	
+/* Une condition commence par une miniscule et a au moins deux caracteres.*/
+context Condition
+inv validName('Invalid name: ' + self.name):
+	self.name.matches('[a-z][A-Za-z0-9_]+')
 
 endpackage
