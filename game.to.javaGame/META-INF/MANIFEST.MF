@@ -20,4 +20,5 @@ Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Eclipse-LazyStart: true
 Export-Package: game.to.javaGame.main
+Import-Package: game.game
 

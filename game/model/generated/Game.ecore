@@ -106,7 +106,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="objetRequis" unique="false"
         eType="#//QteObjet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="objetInterdit" unique="false"
-        eType="#//Objet"/>
+        eType="#//QteObjet"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConditionPersonne" eSuperTypes="#//Condition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="visible" eType="#//Personne"

@@ -4,13 +4,19 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:game="http://www.Game.game"
     xsi:schemaLocation="http://www.Game.game Game.ecore"
-    name="Enigme">
+    name="JeuEnigme">
   <territoire/>
   <explorateur
-      tailleDispo="4"/>
+      place="//@elementsjeu.1"
+      tailleDispo="4">
+    <objets
+        name="tentative"
+        qte="3"
+        taille="1"/>
+  </explorateur>
   <elementsjeu
       xsi:type="game:Objet"
-      name="Tentative"
+      name="tentative"
       qte="3"
       taille="1"/>
   <elementsjeu
@@ -42,7 +48,7 @@
       connaisDon="//@elementsjeu.6"
       interaction="//@elementsjeu.3">
     <objetCons
-        name="Prend2Tentatives"
+        name="prend2Tentatives"
         qte="2"
         objet="//@elementsjeu.0"/>
   </elementsjeu>
@@ -52,7 +58,7 @@
       reponse="non"
       interaction="//@elementsjeu.3">
     <objetCons
-        name="PrendTentative"
+        name="prendTentative"
         qte="1"
         objet="//@elementsjeu.0"/>
   </elementsjeu>
@@ -66,27 +72,32 @@
       nature="fin"/>
   <elementsjeu
       xsi:type="game:Chemin"
-      name="Victoire"
+      name="victoire"
       pred="//@elementsjeu.1"
       succ="//@elementsjeu.7"
       obligatoire="true">
     <visible
-        name="VicVisible"
+        name="vicVisible"
         connaissanceRequise="//@elementsjeu.6"/>
   </elementsjeu>
   <elementsjeu
       xsi:type="game:Chemin"
-      name="Defaite"
+      name="defaite"
       pred="//@elementsjeu.1"
       succ="//@elementsjeu.10"
       obligatoire="true">
     <visible
         name="defVisible"
         connaissanceInterdite="//@elementsjeu.6"
-        objetInterdit="//@elementsjeu.0"/>
+        objetInterdit="//@elementsjeu.11"/>
   </elementsjeu>
   <elementsjeu
       xsi:type="game:Lieu"
       name="Echec"
       nature="fin"/>
+  <elementsjeu
+      xsi:type="game:QteObjet"
+      name="tentative1"
+      qte="1"
+      objet="//@elementsjeu.0"/>
 </game:Jeu>

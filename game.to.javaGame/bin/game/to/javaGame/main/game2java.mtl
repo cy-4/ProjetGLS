@@ -31,9 +31,25 @@ public class [aJeu.name/] {
 [/let]
 [let personnes : OrderedSet(Personne) = aJeu.getPersonnes()]
 [for (p : Personne | personnes)]
-		[p.visible.getCondition()/]
-		[p.actif.getCondition()/]
-		Personne [p.name/] = new Personne("[p.name/]", [p.place.name/], [p.visible.name/], [p.actif.name/], [p.obligatoire/]);
+		HashMap<String, Connaissance> [p.name/]_cr_visible = new HashMap<>();
+		HashMap<String, Connaissance> [p.name/]_ci_visible = new HashMap<>();
+		HashMap<String, Objet> [p.name/]_or_visible = new HashMap<>();
+		HashMap<String, Objet> [p.name/]_oi_visible = new HashMap<>();
+	[for (personneVisible : ConditionPersonne | p.visible)]
+		[personneVisible.getConditionPersonneVisible()/]
+	[/for]
+		Condition [p.name/]_visible = new Condition([p.name/]_or_visible, [p.name/]_cr_visible, [p.name/]_oi_visible, [p.name/]_ci_visible);
+		
+		HashMap<String, Connaissance> [p.name/]_cr_active = new HashMap<>();
+		HashMap<String, Connaissance> [p.name/]_ci_active = new HashMap<>();
+		HashMap<String, Objet> [p.name/]_or_active = new HashMap<>();
+		HashMap<String, Objet> [p.name/]_oi_active = new HashMap<>();
+	[for (personneActive : ConditionPersonne | p.active)]
+		[personneActive.getConditionPersonneActive()/]
+	[/for]
+		Condition [p.name/]_active = new Condition([p.name/]_or_active, [p.name/]_cr_active, [p.name/]_oi_active, [p.name/]_ci_active);
+
+		Personne [p.name/] = new Personne("[p.name/]", [p.place.name/], [p.name/]_visible, [p.name/]_active, [p.obligatoire/]);
 		lieux.get("[p.place.name/]").addPersonne([p.name/]);
 	[for (i : Interaction | p.interactions)]
 		Interaction [i.name/] = new Interaction("[i.question/]");
@@ -41,22 +57,16 @@ public class [aJeu.name/] {
 		[for (c : Choix | i.choix)]
 		ArrayList<Objet> [c.name/]_cons = new ArrayList<>();
 			[for (qo : QteObjet | c.objetCons)]
-		[qo.objet.visible.getCondition()/]
-		[qo.objet.actif.getCondition()/]
-		Objet [c.name/]_[qo.objet.name/] = new Objet("[qo.objet.name/]", [qo.objet.taille/], [qo.qte/], [qo.objet.transformable/], [qo.objet.visible.name/], [qo.objet.actif.name/]);
+		Objet [c.name/]_[qo.objet.name/] = new Objet("[qo.objet.name/]", [qo.objet.taille/], [qo.qte/], [qo.objet.transformable/], vide, vide);
 		[c.name/]_cons.add([c.name/]_[qo.objet.name/]);
 			[/for]
 		ArrayList<Avantage> [c.name/]_don = new ArrayList<>();
 			[for (qo : QteObjet | c.objetDon)]
-		[qo.objet.visible.getCondition()/]
-		[qo.objet.actif.getCondition()/]
-		Objet [c.name/]_[qo.objet.name/] = new Objet("[qo.objet.name/]", [qo.objet.taille/], [qo.qte/], [qo.objet.transformable/], [qo.objet.visible.name/], [qo.objet.actif.name/]);
+		Objet [c.name/]_[qo.objet.name/] = new Objet("[qo.objet.name/]", [qo.objet.taille/], [qo.qte/], [qo.objet.transformable/], vide, vide);
 		[c.name/]_don.add([c.name/]_[qo.objet.name/]);
 			[/for]
 			[for (con : Connaissance | c.connaisDon)]
-		[con.visible.getCondition()/]
-		[con.actif.getCondition()/]
-		Connaissance [c.name/]_[con.name/] = new Connaissance("[con.name/]", [con.visible.name/], [con.actif.name/]);
+		Connaissance [c.name/]_[con.name/] = new Connaissance("[con.name/]", vide, vide);
 		[c.name/]_don.add([c.name/]_[con.name/]);
 			[/for]
 		Choix [c.name/]_[n/] = new Choix("[c.name/]", "[c.reponse/]", [c.name/]_cons, [c.name/]_don, [c.bonne/]);
@@ -69,9 +79,25 @@ public class [aJeu.name/] {
 [/let]
 [let chemins : OrderedSet(Chemin) = aJeu.getChemins()]
 [for (ch : Chemin | chemins)]
-		[ch.visible.getCondition()/]
-		[ch.ouvert.getCondition()/]
-		Chemin [ch.name/] = new Chemin("[ch.name/]", [ch.pred.name/], [ch.succ.name/], [ch.visible.name/], [ch.obligatoire/], [ch.ouvert.name/]);
+		HashMap<String, Connaissance> [ch.name/]_cr_visible = new HashMap<>();
+		HashMap<String, Connaissance> [ch.name/]_ci_visible = new HashMap<>();
+		HashMap<String, Objet> [ch.name/]_or_visible = new HashMap<>();
+		HashMap<String, Objet> [ch.name/]_oi_visible = new HashMap<>();
+	[for (cheminVisible : ConditionChemin | ch.visible)]
+		[cheminVisible.getConditionCheminVisible()/]
+	[/for]
+		Condition [ch.name/]_visible = new Condition([ch.name/]_or_visible, [ch.name/]_cr_visible, [ch.name/]_oi_visible, [ch.name/]_ci_visible);
+		
+		HashMap<String, Connaissance> [ch.name/]_cr_ouvert = new HashMap<>();
+		HashMap<String, Connaissance> [ch.name/]_ci_ouvert = new HashMap<>();
+		HashMap<String, Objet> [ch.name/]_or_ouvert = new HashMap<>();
+		HashMap<String, Objet> [ch.name/]_oi_ouvert = new HashMap<>();
+	[for (cheminOuvert : ConditionChemin | ch.ouvert)]
+		[cheminOuvert.getConditionCheminOuvert()/]
+	[/for]
+		Condition [ch.name/]_ouvert = new Condition([ch.name/]_or_ouvert, [ch.name/]_cr_ouvert, [ch.name/]_oi_ouvert, [ch.name/]_ci_ouvert);
+
+		Chemin [ch.name/] = new Chemin("[ch.name/]", [ch.pred.name/], [ch.succ.name/], [ch.name/]_visible, [ch.obligatoire/], [ch.name/]_ouvert);
 		chemins.put("[ch.name/]", [ch.name/]);
 		lieux.get("[ch.pred.name/]").addChemin([ch.name/]);
 [/for]
@@ -80,16 +106,12 @@ public class [aJeu.name/] {
 [let expl : Explorateur = aJeu.explorateur]
 		HashMap<String, Objet> objetsExpl = new HashMap<>();
 [for (o : Objet | expl.objets)]
-		[o.visible.getCondition()/]
-		[o.actif.getCondition()/]
-		Objet [o.name/]_expl = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], [o.visible.name/], [o.actif.name/]);
+		Objet [o.name/]_expl = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
 		objetsExpl.put("[o.name/]",[o.name/]_expl);
 [/for]
 		HashMap<String, Connaissance> connaisExpl = new HashMap<>();
 [for (c : Connaissance | expl.connaissances)]
-		[c.visible.getCondition()/]
-		[c.actif.getCondition()/]
-		Connaissance [c.name/]_expl = new Connaissance("[c.name/]", [c.visible.name/], [c.actif.name/]);
+		Connaissance [c.name/]_expl = new Connaissance("[c.name/]", vide, vide);
 		connaisExpl.put("[c.name/]",[c.name/]_expl);
 [/for]
 		Explorateur explorateur = new Explorateur([expl.place.name/], [expl.tailleDispo/], objetsExpl, connaisExpl);
@@ -132,148 +154,82 @@ public class [aJeu.name/] {
 	endif
 /]
 
-[template private getCondition(cond : Condition)]
-[if (cond = null)]
-[elseif (cond = true)]
-Condition [cond.name/] = vide;
-[elseif (cond = false)]
-Condition [cond.name/] = imposs;
-[else]
-//template
-	[if ((cond.connaissancesRequises->size()).oclIsUndefined() = true)]
-		[if ((cond.connaissancesInterdites->size()).oclIsUndefined() = true)]
-			[if ((cond.objetsRequis->size()).oclIsUndefined() = true)]
-				[if ((cond.objetsInterdits->size()).oclIsUndefined() = false)]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition(new HashMap<>(), new HashMap<>(), [cond.name/]_oi, new HashMap<>());
-				[/if]
-			[else]
-HashMap<String, Objet> [cond.name/]_or = new HashMap<>();
-				[for (o : Objet | cond.objetsRequis)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_or.put("[o.name/]", [cond.name/]_[o.name/]);
-				[/for]
-				[if (cond.objetsInterdits->size() = 0)]
-Condition [cond.name/] = new Condition([cond.name/]_or, new HashMap<>(), new HashMap<>(), new HashMap<>());
-				[else]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition([cond.name/]_or, new HashMap<>(), [cond.name/]_oi, new HashMap<>());
-				[/if]
-			[/if]
-		[else]
-HashMap<String, Connaissance> [cond.name/]_ci = new HashMap<>();
-			[for (c : Connaissance | cond.connaissancesInterdites)]
-Connaissance [cond.name/]_[c.name/] = new Connaissance("[c.name/]", [c.visible.name/], [c.actif.name/]);
-[cond.name/]_ci.put("[c.name/]", [cond.name/]_[c.name/]);
-			[/for]
-			[if ((cond.objetsRequis->size()).oclIsUndefined() = true)]
-				[if (cond.objetsInterdits->size() = 0)]
-Condition [cond.name/] = new Condition(new HashMap<>(), new HashMap<>(), new HashMap<>(), [cond.name/]_ci);
-				[else]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition(new HashMap<>(), new HashMap<>(), [cond.name/]_oi, [cond.name/]_ci);
-				[/if]
-			[else]
-HashMap<String, Objet> [cond.name/]_or = new HashMap<>();
-				[for (o : Objet | cond.objetsRequis)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_or.put("[o.name/]", [cond.name/]_[o.name/]);
-				[/for]
-				[if ((cond.objetsInterdits->size()).oclIsUndefined() = true)]
-Condition [cond.name/] = new Condition([cond.name/]_or, new HashMap<>(), new HashMap<>(), [cond.name/]_ci);
-				[else]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition([cond.name/]_or, new HashMap<>(), [cond.name/]_oi, [cond.name/]_ci);
-				[/if]
-			[/if]
-		[/if]
-	[else]
-HashMap<String, Connaissance> [cond.name/]_cr = new HashMap<>();
-		[for (c : Connaissance | cond.connaissancesRequises)]
-Connaissance [cond.name/]_[c.name/] = new Connaissance("[c.name/]", [c.visible.name/], [c.actif.name/]);
-[cond.name/]_cr.put("[c.name/]", [cond.name/]_[c.name/]);
-		[/for]
-		[if ((cond.connaissancesInterdites->size()).oclIsUndefined() = true)]
-			[if ((cond.objetsRequis->size()).oclIsUndefined() = true)]
-				[if ((cond.objetsInterdits->size()).oclIsUndefined() = true)]
-Condition [cond.name/] = new Condition(new HashMap<>(), [cond.name/]_cr, new HashMap<>(), new HashMap<>());
-				[else]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition(new HashMap<>(), [cond.name/]_cr, [cond.name/]_oi, new HashMap<>());
-				[/if]
-			[else]
-HashMap<String, Objet> [cond.name/]_or = new HashMap<>();
-				[for (o : Objet | cond.objetsRequis)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_or.put("[o.name/]", [cond.name/]_[o.name/]);
-				[/for]
-				[if ((cond.objetsInterdits->size()).oclIsUndefined() = true)]
-Condition [cond.name/] = new Condition([cond.name/]_or, [cond.name/]_cr, new HashMap<>(), new HashMap<>());
-				[else]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition([cond.name/]_or, [cond.name/]_cr, [cond.name/]_oi, new HashMap<>());
-				[/if]
-			[/if]
-		[else]
-HashMap<String, Connaissance> [cond.name/]_ci = new HashMap<>();
-			[for (c : Connaissance | cond.connaissancesInterdites)]
-Connaissance [cond.name/]_[c.name/] = new Connaissance("[c.name/]", [c.visible.name/], [c.actif.name/]);
-[cond.name/]_ci.put("[c.name/]", [cond.name/]_[c.name/]);
-			[/for]
-			[if (cond.objetsRequis->size() = 0)]
-				[if ((cond.objetsInterdits->size()).oclIsUndefined() = true)]
-Condition [cond.name/] = new Condition(new HashMap<>(), [cond.name/]_cr, new HashMap<>(), [cond.name/]_ci);
-				[else]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition(new HashMap<>(), [cond.name/]_cr, [cond.name/]_oi, [cond.name/]_ci);
-				[/if]
-			[else]
-HashMap<String, Objet> [cond.name/]_or = new HashMap<>();
-				[for (o : Objet | cond.objetsRequis)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_or.put("[o.name/]", [cond.name/]_[o.name/]);
-				[/for]
-				[if ((cond.objetsInterdits->size()).oclIsUndefined() = true)]
-Condition [cond.name/] = new Condition([cond.name/]_or, [cond.name/]_cr, new HashMap<>(), [cond.name/]_ci);
-				[else]
-HashMap<String, Objet> [cond.name/]_oi = new HashMap<>();
-					[for (o : Objet | cond.objetsInterdits)]
-Objet [cond.name/]_[o.name/] = new Objet("[o.name/]", [o.taille/], [o.qte/], [o.transformable/], vide, vide);
-[cond.name/]_oi.put("[o.name/]", [cond.name/]_[o.name/]);
-					[/for]
-Condition [cond.name/] = new Condition([cond.name/]_or, [cond.name/]_cr, [cond.name/]_oi, [cond.name/]_ci);
-				[/if]
-			[/if]
-		[/if]
-	[/if]	
+
+[template private getConditionPersonneVisible(c : ConditionPersonne)]
+[if (not c.connaissanceRequise.oclIsUndefined())]
+Connaissance [c.connaissanceRequise.name/]_[c.name/] = new Connaissance("[c.connaissanceRequise.name/]", vide, vide);
+[c.visible.name/]_cr_visible.put("[c.connaissanceRequise.name/]", [c.connaissanceRequise.name/]_[c.name/]);
 [/if]
-//end template
+[if (not c.connaissanceInterdite.oclIsUndefined())]
+Connaissance [c.connaissanceInterdite.name/]_[c.name/] = new Connaissance("[c.connaissanceInterdite.name/]", vide, vide);
+[c.visible.name/]_ci_visible.put("[c.connaissanceInterdite.name/]", [c.connaissanceInterdite.name/]_[c.name/]);
+[/if]
+[if (not c.objetRequis.oclIsUndefined())]
+Objet [c.objetRequis.objet.name/]_[c.name/] = new Objet("[c.objetRequis.objet.name/]", [c.objetRequis.objet.taille/], [c.objetRequis.qte/], [c.objetRequis.objet.transformable/], vide, vide);
+[c.visible.name/]_or_visible.put("[c.objetRequis.objet.name/]", [c.objetRequis.objet.name/]_[c.name/]);
+[/if]
+[if (not c.objetInterdit.oclIsUndefined())]
+Objet [c.objetInterdit.objet.name/]_[c.name/] = new Objet("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.taille/], [c.objetInterdit.qte/], [c.objetRequis.objet.transformable/], vide, vide);
+[c.visible.name/]_oi_visible.put("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.name/]_[c.name/]);
+[/if]
+[/template]
+
+
+[template private getConditionPersonneActive(c : ConditionPersonne)]
+[if (not c.connaissanceRequise.oclIsUndefined())]
+Connaissance [c.connaissanceRequise.name/]_[c.name/] = new Connaissance("[c.connaissanceRequise.name/]", vide, vide);
+[c.active.name/]_cr_active.put("[c.connaissanceRequise.name/]", [c.connaissanceRequise.name/]_[c.name/]);
+[/if]
+[if (not c.connaissanceInterdite.oclIsUndefined())]
+Connaissance [c.connaissanceInterdite.name/]_[c.name/] = new Connaissance("[c.connaissanceInterdite.name/]", vide, vide);
+[c.active.name/]_ci_active.put("[c.connaissanceInterdite.name/]", [c.connaissanceInterdite.name/]_[c.name/]);
+[/if]
+[if (not c.objetRequis.oclIsUndefined())]
+Objet [c.objetRequis.objet.name/]_[c.name/] = new Objet("[c.objetRequis.objet.name/]", [c.objetRequis.objet.taille/], [c.objetRequis.qte/], [c.objetRequis.objet.transformable/], vide, vide);
+[c.active.name/]_or_active.put("[c.objetRequis.objet.name/]", [c.objetRequis.objet.name/]_[c.name/]);
+[/if]
+[if (not c.objetInterdit.oclIsUndefined())]
+Objet [c.objetInterdit.objet.name/]_[c.name/] = new Objet("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.taille/], [c.objetInterdit.qte/], [c.objetRequis.objet.transformable/], vide, vide);
+[c.active.name/]_oi_active.put("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.name/]_[c.name/]);
+[/if]
+[/template]
+
+
+[template private getConditionCheminVisible(c : ConditionChemin)]
+[if (not c.connaissanceRequise.oclIsUndefined())]
+Connaissance [c.connaissanceRequise.name/]_[c.name/] = new Connaissance("[c.connaissanceRequise.name/]", vide, vide);
+[c.visible.name/]_cr_visible.put("[c.connaissanceRequise.name/]", [c.connaissanceRequise.name/]_[c.name/]);
+[/if]
+[if (not c.connaissanceInterdite.oclIsUndefined())]
+Connaissance [c.connaissanceInterdite.name/]_[c.name/] = new Connaissance("[c.connaissanceInterdite.name/]", vide, vide);
+[c.visible.name/]_ci_visible.put("[c.connaissanceInterdite.name/]", [c.connaissanceInterdite.name/]_[c.name/]);
+[/if]
+[if (not c.objetRequis.oclIsUndefined())]
+Objet [c.objetRequis.objet.name/]_[c.name/] = new Objet("[c.objetRequis.objet.name/]", [c.objetRequis.objet.taille/], [c.objetRequis.qte/], false, vide, vide);
+[c.visible.name/]_or_visible.put("[c.objetRequis.objet.name/]", [c.objetRequis.objet.name/]_[c.name/]);
+[/if]
+[if (not c.objetInterdit.oclIsUndefined())]
+Objet [c.objetInterdit.objet.name/]_[c.name/] = new Objet("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.taille/], [c.objetInterdit.qte/], false, vide, vide);
+[c.visible.name/]_oi_visible.put("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.name/]_[c.name/]);
+[/if]
+[/template]
+
+
+[template private getConditionCheminOuvert(c : ConditionChemin)]
+[if (not c.connaissanceRequise.oclIsUndefined())]
+Connaissance [c.connaissanceRequise.name/]_[c.name/] = new Connaissance("[c.connaissanceRequise.name/]", vide, vide);
+[c.ouvert.name/]_cr_ouvert.put("[c.connaissanceRequise.name/]", [c.connaissanceRequise.name/]_[c.name/]);
+[/if]
+[if (not c.connaissanceInterdite.oclIsUndefined())]
+Connaissance [c.connaissanceInterdite.name/]_[c.name/] = new Connaissance("[c.connaissanceInterdite.name/]", vide, vide);
+[c.ouvert.name/]_ci_ouvert.put("[c.connaissanceInterdite.name/]", [c.connaissanceInterdite.name/]_[c.name/]);
+[/if]
+[if (not c.objetRequis.oclIsUndefined())]
+Objet [c.objetRequis.objet.name/]_[c.name/] = new Objet("[c.objetRequis.objet.name/]", [c.objetRequis.objet.taille/], [c.objetRequis.qte/], false, vide, vide);
+[c.ouvert.name/]_or_ouvert.put("[c.objetRequis.objet.name/]", [c.objetRequis.objet.name/]_[c.name/]);
+[/if]
+[if (not c.objetInterdit.oclIsUndefined())]
+Objet [c.objetInterdit.objet.name/]_[c.name/] = new Objet("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.taille/], [c.objetInterdit.qte/], false, vide, vide);
+[c.ouvert.name/]_oi_ouvert.put("[c.objetInterdit.objet.name/]", [c.objetInterdit.objet.name/]_[c.name/]);
+[/if]
 [/template]

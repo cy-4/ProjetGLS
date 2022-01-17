@@ -22,76 +22,85 @@ public class JeuEnigme {
 		lieux.put("Succes", Succes);
 		Lieu Echec = new Lieu(Nature.ARRIVEE, "Echec", new HashMap<>(), new HashMap<>());
 		lieux.put("Echec", Echec);
-		//template
-		HashMap<String, Connaissance> SphinxVisible_cr = new HashMap<>();
-		HashMap<String, Connaissance> SphinxVisible_ci = new HashMap<>();
-		Connaissance SphinxVisible_Reussite = new Connaissance("Reussite", invalid, invalid);
-		SphinxVisible_ci.put("Reussite", SphinxVisible_Reussite);
-		HashMap<String, Objet> SphinxVisible_or = new HashMap<>();
-		Objet SphinxVisible_Tentative = new Objet("Tentative", 1, 1, false, vide, vide);
-		SphinxVisible_or.put("Tentative", SphinxVisible_Tentative);
-		HashMap<String, Objet> SphinxVisible_oi = new HashMap<>();
-		Condition SphinxVisible = new Condition(SphinxVisible_or, SphinxVisible_cr, SphinxVisible_oi, SphinxVisible_ci);
-		//end template
-		//end template
-		Personne Sphinx = new Personne("Sphinx", Enigme, SphinxVisible, invalid, true);
+		HashMap<String, Connaissance> Sphinx_cr_visible = new HashMap<>();
+		HashMap<String, Connaissance> Sphinx_ci_visible = new HashMap<>();
+		HashMap<String, Objet> Sphinx_or_visible = new HashMap<>();
+		HashMap<String, Objet> Sphinx_oi_visible = new HashMap<>();
+		Connaissance Reussite_sphinxVisible = new Connaissance("Reussite", vide, vide);
+		Sphinx_ci_visible.put("Reussite", Reussite_sphinxVisible);
+		Objet tentative_sphinxVisible = new Objet("tentative", 1, 1, false, vide, vide);
+		Sphinx_or_visible.put("tentative", tentative_sphinxVisible);
+		
+		Condition Sphinx_visible = new Condition(Sphinx_or_visible, Sphinx_cr_visible, Sphinx_oi_visible, Sphinx_ci_visible);
+		
+		HashMap<String, Connaissance> Sphinx_cr_active = new HashMap<>();
+		HashMap<String, Connaissance> Sphinx_ci_active = new HashMap<>();
+		HashMap<String, Objet> Sphinx_or_active = new HashMap<>();
+		HashMap<String, Objet> Sphinx_oi_active = new HashMap<>();
+		Condition Sphinx_active = new Condition(Sphinx_or_active, Sphinx_cr_active, Sphinx_oi_active, Sphinx_ci_active);
+
+		Personne Sphinx = new Personne("Sphinx", Enigme, Sphinx_visible, Sphinx_active, true);
 		lieux.get("Enigme").addPersonne(Sphinx);
-		Interaction Question = new Interaction("[Question...]");
-		ArrayList<Objet> Bonne_cons = new ArrayList<>();
-		//end template
-		//end template
-		Objet Bonne_Tentative = new Objet("Tentative", 1, 1, false, invalid, invalid);
-		Bonne_cons.add(Bonne_Tentative);
-		ArrayList<Avantage> Bonne_don = new ArrayList<>();
-		//end template
-		//end template
-		Connaissance Bonne_Reussite = new Connaissance("Reussite", invalid, invalid);
-		Bonne_don.add(Bonne_Reussite);
-		Choix Bonne_Question = new Choix("Bonne", "oui", Bonne_cons, Bonne_don, true);
-		Question.addChoix(Bonne_Question);
-		ArrayList<Objet> Mauvaise_cons = new ArrayList<>();
-		//end template
-		//end template
-		Objet Mauvaise_Tentative = new Objet("Tentative", 1, 1, false, invalid, invalid);
-		Mauvaise_cons.add(Mauvaise_Tentative);
-		ArrayList<Avantage> Mauvaise_don = new ArrayList<>();
-		Choix Mauvaise_Question = new Choix("Mauvaise", "non", Mauvaise_cons, Mauvaise_don, false);
-		Question.addChoix(Mauvaise_Question);
+		Interaction Question = new Interaction("Gagner");
+		ArrayList<Objet> vrai_cons = new ArrayList<>();
+		Objet vrai_tentative = new Objet("tentative", 1, 2, false, vide, vide);
+		vrai_cons.add(vrai_tentative);
+		ArrayList<Avantage> vrai_don = new ArrayList<>();
+		Connaissance vrai_Reussite = new Connaissance("Reussite", vide, vide);
+		vrai_don.add(vrai_Reussite);
+		Choix vrai_Question = new Choix("vrai", "oui", vrai_cons, vrai_don, true);
+		Question.addChoix(vrai_Question);
+		ArrayList<Objet> faux_cons = new ArrayList<>();
+		Objet faux_tentative = new Objet("tentative", 1, 1, false, vide, vide);
+		faux_cons.add(faux_tentative);
+		ArrayList<Avantage> faux_don = new ArrayList<>();
+		Choix faux_Question = new Choix("faux", "non", faux_cons, faux_don, false);
+		Question.addChoix(faux_Question);
 		Sphinx.addInteraction(Question);
-		//template
-		HashMap<String, Connaissance> ReussiteObtenue_cr = new HashMap<>();
-		Connaissance ReussiteObtenue_Reussite = new Connaissance("Reussite", invalid, invalid);
-		ReussiteObtenue_cr.put("Reussite", ReussiteObtenue_Reussite);
-		HashMap<String, Connaissance> ReussiteObtenue_ci = new HashMap<>();
-		HashMap<String, Objet> ReussiteObtenue_oi = new HashMap<>();
-		Condition ReussiteObtenue = new Condition(new HashMap<>(), ReussiteObtenue_cr, ReussiteObtenue_oi, ReussiteObtenue_ci);
-		//end template
-		//end template
-		Chemin Victoire = new Chemin("Victoire", Enigme, Succes, ReussiteObtenue, true, invalid);
-		chemins.put("Victoire", Victoire);
-		lieux.get("Enigme").addChemin(Victoire);
-		//template
-		HashMap<String, Connaissance> PlusDeTentatives_cr = new HashMap<>();
-		HashMap<String, Connaissance> PlusDeTentatives_ci = new HashMap<>();
-		Connaissance PlusDeTentatives_Reussite = new Connaissance("Reussite", invalid, invalid);
-		PlusDeTentatives_ci.put("Reussite", PlusDeTentatives_Reussite);
-		HashMap<String, Objet> PlusDeTentatives_oi = new HashMap<>();
-		Objet PlusDeTentatives_Tentative = new Objet("Tentative", 1, 1, false, vide, vide);
-		PlusDeTentatives_oi.put("Tentative", PlusDeTentatives_Tentative);
-		Condition PlusDeTentatives = new Condition(new HashMap<>(), PlusDeTentatives_cr, PlusDeTentatives_oi, PlusDeTentatives_ci);
-		//end template
-		//end template
-		Chemin Defaite = new Chemin("Defaite", Enigme, Echec, PlusDeTentatives, true, invalid);
-		chemins.put("Defaite", Defaite);
-		lieux.get("Enigme").addChemin(Defaite);
+		HashMap<String, Connaissance> victoire_cr_visible = new HashMap<>();
+		HashMap<String, Connaissance> victoire_ci_visible = new HashMap<>();
+		HashMap<String, Objet> victoire_or_visible = new HashMap<>();
+		HashMap<String, Objet> victoire_oi_visible = new HashMap<>();
+		Connaissance Reussite_vicVisible = new Connaissance("Reussite", vide, vide);
+		victoire_cr_visible.put("Reussite", Reussite_vicVisible);
+		
+		Condition victoire_visible = new Condition(victoire_or_visible, victoire_cr_visible, victoire_oi_visible, victoire_ci_visible);
+		
+		HashMap<String, Connaissance> victoire_cr_ouvert = new HashMap<>();
+		HashMap<String, Connaissance> victoire_ci_ouvert = new HashMap<>();
+		HashMap<String, Objet> victoire_or_ouvert = new HashMap<>();
+		HashMap<String, Objet> victoire_oi_ouvert = new HashMap<>();
+		Condition victoire_ouvert = new Condition(victoire_or_ouvert, victoire_cr_ouvert, victoire_oi_ouvert, victoire_ci_ouvert);
+
+		Chemin victoire = new Chemin("victoire", Enigme, Succes, victoire_visible, true, victoire_ouvert);
+		chemins.put("victoire", victoire);
+		lieux.get("Enigme").addChemin(victoire);
+		HashMap<String, Connaissance> defaite_cr_visible = new HashMap<>();
+		HashMap<String, Connaissance> defaite_ci_visible = new HashMap<>();
+		HashMap<String, Objet> defaite_or_visible = new HashMap<>();
+		HashMap<String, Objet> defaite_oi_visible = new HashMap<>();
+		Connaissance Reussite_defVisible = new Connaissance("Reussite", vide, vide);
+		defaite_ci_visible.put("Reussite", Reussite_defVisible);
+		Objet tentative_defVisible = new Objet("tentative", 1, 1, false, vide, vide);
+		defaite_oi_visible.put("tentative", tentative_defVisible);
+		
+		Condition defaite_visible = new Condition(defaite_or_visible, defaite_cr_visible, defaite_oi_visible, defaite_ci_visible);
+		
+		HashMap<String, Connaissance> defaite_cr_ouvert = new HashMap<>();
+		HashMap<String, Connaissance> defaite_ci_ouvert = new HashMap<>();
+		HashMap<String, Objet> defaite_or_ouvert = new HashMap<>();
+		HashMap<String, Objet> defaite_oi_ouvert = new HashMap<>();
+		Condition defaite_ouvert = new Condition(defaite_or_ouvert, defaite_cr_ouvert, defaite_oi_ouvert, defaite_ci_ouvert);
+
+		Chemin defaite = new Chemin("defaite", Enigme, Echec, defaite_visible, true, defaite_ouvert);
+		chemins.put("defaite", defaite);
+		lieux.get("Enigme").addChemin(defaite);
 		Territoire terrain = new Territoire(lieux, chemins);
 		HashMap<String, Objet> objetsExpl = new HashMap<>();
-		//end template
-		//end template
-		Objet Tentative_expl = new Objet("Tentative", 1, 3, false, invalid, invalid);
-		objetsExpl.put("Tentative",Tentative_expl);
+		Objet tentative_expl = new Objet("tentative", 1, 3, false, vide, vide);
+		objetsExpl.put("tentative",tentative_expl);
 		HashMap<String, Connaissance> connaisExpl = new HashMap<>();
-		Explorateur explorateur = new Explorateur(Enigme, 1, objetsExpl, connaisExpl);
+		Explorateur explorateur = new Explorateur(Enigme, 4, objetsExpl, connaisExpl);
 		Jeu JeuEnigme = new Jeu(terrain, explorateur);
 		JeuEnigme.jouer();
 	}

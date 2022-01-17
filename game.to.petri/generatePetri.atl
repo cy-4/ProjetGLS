@@ -4,6 +4,7 @@
 module generatePetri;
 create OUT : petri from IN : game;
 
+
 -- Récupérer le jeu qui contient cet élément de jeu
 helper context game!ElementsJeu
 def: getJeu(): game!Jeu =
@@ -11,18 +12,52 @@ def: getJeu(): game!Jeu =
 		->select(p | p.elementsjeu->includes(self))
 		->asSequence()->first();
 
--- Récupérer la personne qui contient cette condition
+
+-- Récupérer la personne qui contient cette condition visible
 helper context game!ElementsJeu
 def: getPersonne(): game!Personne =
 	game!Personne.allInstances()
 		->select(p | p.visible->includes(self))
 		->asSequence()->first();
 
--- Récupérer le chemin qui contient cette condition
+
+-- Récupérer le chemin qui contient cette condition visible
 helper context game!ElementsJeu
 def: getChemin(): game!Chemin =
 	game!Chemin.allInstances()
 		->select(c | c.visible->includes(self))
+		->asSequence()->first();
+
+
+-- Récupérer l'avantage qui contient cette condition visible
+helper context game!ElementsJeu
+def: getAvantage(): game!Avantage =
+	game!Avantage.allInstances()
+		->select(a | a.visible->includes(self))
+		->asSequence()->first();
+
+
+-- Récupérer la personne qui contient cette condition active
+helper context game!ElementsJeu
+def: getPersonne2(): game!Personne =
+	game!Personne.allInstances()
+		->select(p | p.active->includes(self))
+		->asSequence()->first();
+
+
+-- Récupérer le chemin qui contient cette condition ouvert
+helper context game!ElementsJeu
+def: getChemin2(): game!Chemin =
+	game!Chemin.allInstances()
+		->select(c | c.ouvert->includes(self))
+		->asSequence()->first();
+
+
+-- Récupérer l'avantage qui contient cette condition actif
+helper context game!ElementsJeu
+def: getAvantage2(): game!Avantage =
+	game!Avantage.allInstances()
+		->select(a | a.actif->includes(self))
 		->asSequence()->first();
 
 
@@ -58,6 +93,7 @@ rule Jeu2PetriNet {
 			petrinet <- pn)
 }
 
+
 -- Traduire un Lieu final
 rule LieuFinal2PetriNet {
 	from l: game!Lieu(l.nature=#fin)
@@ -66,6 +102,7 @@ rule LieuFinal2PetriNet {
 			currentToken <- 0,
 			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn'))
 }
+
 
 -- Traduire un Lieu de départ
 rule LieuInitial2PetriNet {
@@ -101,6 +138,7 @@ rule LieuInitial2PetriNet {
 			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn'))
 }
 
+
 -- Traduire un Lieu intermédiaire
 rule LieuInter2PetriNet {
 	from l: game!Lieu(l.nature=#inter)
@@ -126,6 +164,7 @@ rule LieuInter2PetriNet {
 			transition <- t_inter,
 			petrinet <- thisModule.resolveTemp(l.getJeu(), 'pn'))
 }
+
 
 -- Traduire un Chemin
 rule Chemin2PetriNet {
@@ -235,8 +274,9 @@ rule Chemin2PetriNet {
 			petrinet <- thisModule.resolveTemp(ch.getJeu(), 'pn'))
 }
 
+
 -- Traduire une Personne obligatoire
-rule Personne2PetriNet {
+rule PersonneObligatoire2PetriNet {
 	from pers: game!Personne(pers.obligatoire)
 	to 	t_initVisible: petri!Transition(
 			name <- 'init_' + pers.name + '_visible',
@@ -302,7 +342,60 @@ rule Personne2PetriNet {
 			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn'))
 }
 
---TODO : pers non obligatoire
+
+-- Traduire une personne non obligatoire
+rule PersonneNonObligatoire2PetriNet {
+	from pers: game!Personne(not pers.obligatoire)
+	to 	t_initVisible: petri!Transition(
+			name <- 'init_' + pers.name + '_visible',
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
+		
+		a_visPred: petri!Arc(
+			linkType <- #read,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- thisModule.resolveTemp(pers.place, 'p_init'),
+			transition <- t_initVisible,
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
+			
+		t_initActive: petri!Transition(
+			name <- 'init_' + pers.name + '_active',
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
+		
+		a_activePred: petri!Arc(
+			linkType <- #read,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- thisModule.resolveTemp(pers.place, 'p_init'),
+			transition <- t_initActive,
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
+			
+		p_visible: petri!Place(
+			name <- pers.name + '_visible',
+			currentToken <- 0,
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
+		
+		p_active: petri!Place(
+			name <- pers.name + '_active',
+			currentToken <- 0,
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
+		
+		a_vis: petri!Arc(
+			linkType <- #take,
+			weight <- 1,
+			placeToTrans <- false,
+			place <- p_visible,
+			transition <- t_initVisible,
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn')),
+		
+		a_active: petri!Arc(
+			linkType <- #take,
+			weight <- 1,
+			placeToTrans <- false,
+			place <- p_active,
+			transition <- t_initActive,
+			petrinet <- thisModule.resolveTemp(pers.getJeu(), 'pn'))
+}
 
 
 -- Traduire une Interaction
@@ -350,6 +443,7 @@ rule Interaction2PetriNet {
 			petrinet <- thisModule.resolveTemp(i.getJeu(), 'pn'))
 }
 
+
 -- Traduire un Choix d'une personne obligatoire
 rule ChoixOblig2PetriNet {
 	from c: game!Choix(c.interaction.personne.obligatoire)
@@ -382,6 +476,7 @@ rule ChoixOblig2PetriNet {
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
 
+
 -- Traduire un Choix d'une personne non obligatoire
 rule Choix2PetriNet {
 	from c: game!Choix(not c.interaction.personne.obligatoire)
@@ -405,6 +500,7 @@ rule Choix2PetriNet {
 			transition <- t,
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
+
 
 -- Traduire un Objet
 rule Object2PetriNet {
@@ -435,6 +531,7 @@ rule Object2PetriNet {
 			petrinet <- thisModule.resolveTemp(o.getJeu(), 'pn'))
 }
 
+
 -- Traduire une QteObjet
 rule QteObjet2PetriNet {
 	from qo: game!QteObjet(not qo.objet.oclIsUndefined())
@@ -447,6 +544,7 @@ rule QteObjet2PetriNet {
 		petrinet <- thisModule.resolveTemp(qo.getJeu(), 'pn'))
 }
 
+
 -- Traduire une Condition personne, visible
 rule ConditionPersonneVisible2PetriNet {
 	from c: game!ConditionPersonne(not c.visible.oclIsUndefined())
@@ -457,9 +555,9 @@ rule ConditionPersonneVisible2PetriNet {
 		
 		aOR: petri!Arc(
 			linkType <- if not c.objetRequis.oclIsUndefined() then #read else #stopwatch endif,
-			weight <- 1,
+			weight <- if not c.objetRequis.oclIsUndefined() then c.objetRequis.qte else 1 endif,
 			placeToTrans <- true,
-			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis, 'p_objet') else p_def endif,
+			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getPersonne(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -487,6 +585,7 @@ rule ConditionPersonneVisible2PetriNet {
 			transition <- thisModule.resolveTemp(c.getPersonne(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
+
 
 -- Traduire une Condition chemin, visible
 rule ConditionCheminVisible2PetriNet {
@@ -500,7 +599,7 @@ rule ConditionCheminVisible2PetriNet {
 			linkType <- if not c.objetRequis.oclIsUndefined() then #read else #stopwatch endif,
 			weight <- if not c.objetRequis.oclIsUndefined() then c.objetRequis.qte else 1 endif,
 			placeToTrans <- true,
-			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis, 'p_objet') else p_def endif,
+			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getChemin(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -530,7 +629,172 @@ rule ConditionCheminVisible2PetriNet {
 }
 
 
---TODO : conditions pour visible sur avantage et toutes conditions pour actif / ouvert
+-- Traduire une Condition avantage, visible
+rule ConditionAvantageVisible2PetriNet {
+	from c: game!ConditionAvantage(not c.visible.oclIsUndefined())
+	to	p_def: petri!Place(
+			name <- c.name + '_def',
+			currentToken <- 1,
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+		
+		aOR: petri!Arc(
+			linkType <- if not c.objetRequis.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- if not c.objetRequis.oclIsUndefined() then c.objetRequis.qte else 1 endif,
+			placeToTrans <- true,
+			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis.objet, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCR: petri!Arc(
+			linkType <- if not c.connaissanceRequise.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceRequise.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceRequise, 'p_presente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aOI: petri!Arc(
+			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCI: petri!Arc(
+			linkType <- if not c.connaissanceInterdite.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceInterdite.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceInterdite, 'p_absente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
+}
+
+
+-- Traduire une Condition personne, active
+rule ConditionPersonneActive2PetriNet {
+	from c: game!ConditionPersonne(not c.active.oclIsUndefined())
+	to	p_def: petri!Place(
+			name <- c.name + '_def',
+			currentToken <- 1,
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+		
+		aOR: petri!Arc(
+			linkType <- if not c.objetRequis.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- if not c.objetRequis.oclIsUndefined() then c.objetRequis.qte else 1 endif,
+			placeToTrans <- true,
+			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis.objet, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getPersonne2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCR: petri!Arc(
+			linkType <- if not c.connaissanceRequise.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceRequise.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceRequise, 'p_presente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getPersonne2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aOI: petri!Arc(
+			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getPersonne2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCI: petri!Arc(
+			linkType <- if not c.connaissanceInterdite.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceInterdite.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceInterdite, 'p_absente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getPersonne2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
+}
+
+
+-- Traduire une Condition chemin, ouvert
+rule ConditionCheminOuvert2PetriNet {
+	from c: game!ConditionChemin(not c.ouvert.oclIsUndefined())
+	to	p_def: petri!Place(
+			name <- c.name + '_def',
+			currentToken <- 1,
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+		
+		aOR: petri!Arc(
+			linkType <- if not c.objetRequis.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- if not c.objetRequis.oclIsUndefined() then c.objetRequis.qte else 1 endif,
+			placeToTrans <- true,
+			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis.objet, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getChemin2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCR: petri!Arc(
+			linkType <- if not c.connaissanceRequise.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceRequise.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceRequise, 'p_presente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getChemin2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aOI: petri!Arc(
+			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getChemin2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCI: petri!Arc(
+			linkType <- if not c.connaissanceInterdite.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceInterdite.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceInterdite, 'p_absente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getChemin2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
+}
+
+
+-- Traduire une Condition avantage, actif
+rule ConditionAvantageActif2PetriNet {
+	from c: game!ConditionAvantage(not c.actif.oclIsUndefined())
+	to	p_def: petri!Place(
+			name <- c.name + '_def',
+			currentToken <- 1,
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+		
+		aOR: petri!Arc(
+			linkType <- if not c.objetRequis.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- if not c.objetRequis.oclIsUndefined() then c.objetRequis.qte else 1 endif,
+			placeToTrans <- true,
+			place <- if not c.objetRequis.oclIsUndefined() then thisModule.resolveTemp(c.objetRequis.objet, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCR: petri!Arc(
+			linkType <- if not c.connaissanceRequise.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceRequise.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceRequise, 'p_presente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aOI: petri!Arc(
+			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
+			
+		aCI: petri!Arc(
+			linkType <- if not c.connaissanceInterdite.oclIsUndefined() then #read else #stopwatch endif,
+			weight <- 1,
+			placeToTrans <- true,
+			place <- if not c.connaissanceInterdite.oclIsUndefined() then thisModule.resolveTemp(c.connaissanceInterdite, 'p_absente') else p_def endif,
+			transition <- thisModule.resolveTemp(c.getAvantage2(), 't_initVisible'),
+			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
+}
 
 
 -- Traduire une Connaissance
@@ -572,6 +836,7 @@ rule Connaissance2PetriNet {
 			transition <- if not c.choix.oclIsUndefined() then thisModule.resolveTemp(c.choix, 't') else thisModule.resolveTemp(c.getJeu(), 't_def') endif,
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
+
 
 --TODO : boucle for sur les objets et connaissances de l'explorateur pour 
 -- changer les tokens des places correspondantes
