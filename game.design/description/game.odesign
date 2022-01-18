@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="game" version="12.0.0.2017041100">
+  <ownedViewpoints name="gameViewpoint" modelFileExtension="game">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="GameDiagram" domainClass="game::Jeu" enablePopupBars="true">
+      <metamodel href="http://www.Game.game#/"/>
+      <defaultLayer name="Complet">
+        <nodeMappings name="LieuNode" domainClass="game::Lieu">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="16" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PersonneNode" domainClass="game::Personne">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="14" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="CheminEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']" targetFinderExpression="feature:succ" sourceFinderExpression="feature:pred" domainClass="game::Chemin" useDomainElement="true">
+          <style targetArrow="InputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="PersonneEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']" targetFinderExpression="feature:place">
+          <style lineStyle="dash" targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="NodesTools" label="Outils Principaux">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="LieuCreation" label="Créer Lieu" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Lieu" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="PersonneCreation" label="Créer Personne" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Personne" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CheminCreation" label="Créer Chemin" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Chemin" referenceName="elementsjeu">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="pred" valueExpression="[source/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="succ" valueExpression="[target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="PersonneEdgeCreation" label="Ajouter Personne" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='PersonneEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="place" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Interactions">
+        <nodeMappings name="InteractionNode" domainClass="game::Interaction">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ChoixNode" domainClass="game::Choix">
+          <style xsi:type="style:EllipseNodeDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="feature:reponse" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="InteractionEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']" targetFinderExpression="feature:personne">
+          <style targetArrow="FillDiamond" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ChoixEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']" targetFinderExpression="feature:interaction">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="InteractionsTools" label="Outils Interactions">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InteractionCreation" label="Créer Interaction" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Interaction" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ChoixNodeCreation" label="Créer Choix" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Choix" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InteractionEdgeCreation" label="Ajouter Interaction" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='InteractionEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="personne" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ChoixEdgeCreation" label="Ajouter Choix" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ChoixEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="interaction" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Avantages">
+        <nodeMappings name="ObjetNode" domainClass="game::Objet">
+          <style xsi:type="style:DotDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ConnaissanceNode" domainClass="game::Connaissance">
+          <style xsi:type="style:DotDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="QteObjetNode" domainClass="game::QteObjet">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="10" showIcon="false" labelExpression="[objet.name + ' : ' + qte/]" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <labelFormat>italic</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="ObjetConsEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']" targetFinderExpression="feature:objetCons">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="AvantagesTools" label="Outils Avantages">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ObjetCreation" label="Créer Objet" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ObjetNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Objet" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ConnaissanceCreation" label="Créer Connaissance" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Connaissance" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="QteObjetCreation" label="Créer Quantité Objet" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::QteObjet" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Explorateur" activeByDefault="true">
+        <edgeMappings name="ExplorateurEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']" targetFinderExpression="feature:place">
+          <style lineStyle="dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="ExplorateurContainer" domainClass="game::Explorateur">
+          <subNodeMappings name="ObjetExplorateurNode" semanticCandidatesExpression="feature:eAllContents" domainClass="game::Objet">
+            <style xsi:type="style:DotDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            </style>
+          </subNodeMappings>
+          <subNodeMappings name="ConnaissanceExplorateurNode" semanticCandidatesExpression="feature:eAllContents" domainClass="game::Connaissance">
+            <style xsi:type="style:DotDescription" labelSize="10" showIcon="false" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:ShapeContainerStyleDescription" arcWidth="20" arcHeight="20" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Explorateur">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="ExplorateurTools" label="Outils Explorateur">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="ExplorateurCreation" label="Créer Explorateur" containerMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Explorateur" referenceName="explorateur"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ObjetExplorateurCreation" label="Créer Objet Explorateur" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']/@subNodeMappings[name='ObjetExplorateurNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Objet" referenceName="objets"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ConnaissanceExplorateurCreation" label="Créer Connaissance Explorateur" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']/@subNodeMappings[name='ConnaissanceExplorateurNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="game::Connaissance" referenceName="connaissances"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ExplorateurEdgeCreation" label="Ajouter Explorateur" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@edgeMappings[name='ExplorateurEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer().jeu.explorateur/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="place" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="game.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

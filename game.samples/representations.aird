@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:game="http://www.Game.game" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_0VX6AHfIEeyqLZlrAEw_xw" selectedViews="_nH2L8HfMEeyEc6ZjoaYgBg" version="14.3.1.202003261200">
+    <semanticResources>JeuEnigme.game</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_nH2L8HfMEeyEc6ZjoaYgBg">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_p23W8HfMEeyEc6ZjoaYgBg" name="enigme" repPath="#_p2Zc4HfMEeyEc6ZjoaYgBg" changeId="493a3584-c321-448c-92a3-42a9b1ee0179">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']"/>
+        <target xmi:type="game:Jeu" href="JeuEnigme.game#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_p2Zc4HfMEeyEc6ZjoaYgBg">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_p4MzsHfMEeyEc6ZjoaYgBg" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_p4MzsXfMEeyEc6ZjoaYgBg" type="Sirius" element="_p2Zc4HfMEeyEc6ZjoaYgBg" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_tbgs8HfNEeyEc6ZjoaYgBg" type="2001" element="_tY4PsHfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_tb35UHfNEeyEc6ZjoaYgBg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tb35UXfNEeyEc6ZjoaYgBg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tcJmIHfNEeyEc6ZjoaYgBg" type="3003" element="_tZLxsHfNEeyEc6ZjoaYgBg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_tcJmIXfNEeyEc6ZjoaYgBg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tcJmInfNEeyEc6ZjoaYgBg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tbgs8XfNEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tbgs8nfNEeyEc6ZjoaYgBg" x="420" y="175" width="241" height="96"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tb5HcHfNEeyEc6ZjoaYgBg" type="2001" element="_tZesoHfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_tb_1IHfNEeyEc6ZjoaYgBg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tb_1IXfNEeyEc6ZjoaYgBg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tcKNMHfNEeyEc6ZjoaYgBg" type="3003" element="_tZfTsHfNEeyEc6ZjoaYgBg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_tcKNMXfNEeyEc6ZjoaYgBg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tcKNMnfNEeyEc6ZjoaYgBg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tb5HcXfNEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tb5HcnfNEeyEc6ZjoaYgBg" x="200" y="455" width="136" height="76"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_tb_1InfNEeyEc6ZjoaYgBg" type="2001" element="_tZfTsnfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_tcI_EHfNEeyEc6ZjoaYgBg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_tcI_EXfNEeyEc6ZjoaYgBg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_tcN3kHfNEeyEc6ZjoaYgBg" type="3003" element="_tZfTs3fNEeyEc6ZjoaYgBg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_tcN3kXfNEeyEc6ZjoaYgBg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tcN3knfNEeyEc6ZjoaYgBg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_tb_1I3fNEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_tb_1JHfNEeyEc6ZjoaYgBg" x="840" y="455" width="156" height="96"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_09O8gHfOEeyEc6ZjoaYgBg" type="2001" element="_09LSIHfOEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_09WRQHfOEeyEc6ZjoaYgBg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_09WRQXfOEeyEc6ZjoaYgBg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_09W4UHfOEeyEc6ZjoaYgBg" type="3016" element="_09L5MHfOEeyEc6ZjoaYgBg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_09W4UXfOEeyEc6ZjoaYgBg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09W4UnfOEeyEc6ZjoaYgBg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_09O8gXfOEeyEc6ZjoaYgBg" fontColor="16777215" fontName="Ubuntu" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_09O8gnfOEeyEc6ZjoaYgBg" x="130" y="175" width="186" height="50"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_QPdu4HfgEeyEc6ZjoaYgBg" type="2001" element="_QPXBMHfgEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_QPdu43fgEeyEc6ZjoaYgBg" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_QPdu5HfgEeyEc6ZjoaYgBg" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_QPeV8HfgEeyEc6ZjoaYgBg" type="3003" element="_QPXBMXfgEeyEc6ZjoaYgBg">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_QPeV8XfgEeyEc6ZjoaYgBg" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QPeV8nfgEeyEc6ZjoaYgBg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_QPdu4XfgEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="16" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QPdu4nfgEeyEc6ZjoaYgBg" x="875" y="280" width="186" height="81"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__brMsHhPEeylgf1kw7BydA" type="2001" element="__aN0IHhPEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="__brzwHhPEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="__brzwXhPEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__btB4nhPEeylgf1kw7BydA" type="3002" element="__aN0IXhPEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__btB43hPEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__btB5HhPEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__brMsXhPEeylgf1kw7BydA" fontColor="789660" fontName="Ubuntu" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__brMsnhPEeylgf1kw7BydA" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__brzwnhPEeylgf1kw7BydA" type="2001" element="__aPCQXhPEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="__brzxXhPEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="__brzxnhPEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__bto8HhPEeylgf1kw7BydA" type="3016" element="__aruMHhPEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__bto8XhPEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__bto8nhPEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__brzw3hPEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__brzxHhPEeylgf1kw7BydA" x="90" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__bsa0HhPEeylgf1kw7BydA" type="2001" element="__asVQXhPEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="__bsa03hPEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="__bsa1HhPEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__bto83hPEeylgf1kw7BydA" type="3016" element="__as8UHhPEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__bto9HhPEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__bto9XhPEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__bsa0XhPEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__bsa0nhPEeylgf1kw7BydA" x="180" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="__bsa1XhPEeylgf1kw7BydA" type="2001" element="__as8UnhPEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="__btB4HhPEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="__btB4XhPEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="__bto9nhPEeylgf1kw7BydA" type="3016" element="__atjYHhPEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="__bto93hPEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="__bto-HhPEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="__bsa1nhPEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="__bsa13hPEeylgf1kw7BydA" x="270" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AT5OIHhQEeylgf1kw7BydA" type="2001" element="_ASQ2cHhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_AT5OI3hQEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AT5OJHhQEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUAi4HhQEeylgf1kw7BydA" type="3003" element="_ASQ2cXhQEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_AUAi4XhQEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUAi4nhQEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AT5OIXhQEeylgf1kw7BydA" fontColor="9031421" fontName="Ubuntu" fontHeight="12" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AT5OInhQEeylgf1kw7BydA" x="224" y="290" width="92" height="51"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AT51MHhQEeylgf1kw7BydA" type="2001" element="_ASRdgXhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_AT6cQHhQEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AT6cQXhQEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUAi43hQEeylgf1kw7BydA" type="3003" element="_ASRdgnhQEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_AUAi5HhQEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUAi5XhQEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AT51MXhQEeylgf1kw7BydA" fontColor="9031421" fontName="Ubuntu" fontHeight="12" italic="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AT51MnhQEeylgf1kw7BydA" x="119" y="325" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AT8RcHhQEeylgf1kw7BydA" type="2001" element="_ASSEkXhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_AT_UwHhQEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AT_UwXhQEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUAi5nhQEeylgf1kw7BydA" type="3016" element="_ASSEknhQEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_AUAi53hQEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUAi6HhQEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AT8RcXhQEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AT8RcnhQEeylgf1kw7BydA" x="224" y="365" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AT_UwnhQEeylgf1kw7BydA" type="2001" element="_ASTSsXhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_AT_UxXhQEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AT_UxnhQEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUBJ8HhQEeylgf1kw7BydA" type="3016" element="_ASTSsnhQEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_AUBJ8XhQEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUBJ8nhQEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AT_Uw3hQEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AT_UxHhQEeylgf1kw7BydA" x="340" y="296" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_AT_70HhQEeylgf1kw7BydA" type="2001" element="_AST5wHhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_AT_703hQEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_AT_71HhQEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUBJ83hQEeylgf1kw7BydA" type="3016" element="_AST5wXhQEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_AUBJ9HhQEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUBJ9XhQEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_AT_70XhQEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AT_70nhQEeylgf1kw7BydA" x="-10" y="350" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_dg0l4HhREeylgf1kw7BydA" type="2002" element="_dgi5EHhREeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_dg1M8HhREeylgf1kw7BydA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_dg1M8XhREeylgf1kw7BydA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_C6EM4HhVEeylgf1kw7BydA" type="3007" element="_C5-tUHhVEeylgf1kw7BydA">
+              <children xmi:type="notation:Node" xmi:id="_C6EM43hVEeylgf1kw7BydA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_C6EM5HhVEeylgf1kw7BydA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_C6EM5XhVEeylgf1kw7BydA" type="3002" element="_C5-tUXhVEeylgf1kw7BydA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_C6EM5nhVEeylgf1kw7BydA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C6EM53hVEeylgf1kw7BydA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_C6EM4XhVEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C6EM4nhVEeylgf1kw7BydA" x="25" y="39" width="36" height="26"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_am_8QHhVEeylgf1kw7BydA" type="3007" element="_amxSwHhVEeylgf1kw7BydA">
+              <children xmi:type="notation:Node" xmi:id="_am_8Q3hVEeylgf1kw7BydA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_am_8RHhVEeylgf1kw7BydA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_am_8RXhVEeylgf1kw7BydA" type="3002" element="_amxSwXhVEeylgf1kw7BydA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_am_8RnhVEeylgf1kw7BydA" fontName="Ubuntu"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_am_8R3hVEeylgf1kw7BydA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_am_8QXhVEeylgf1kw7BydA" fontColor="789660" fontName="Ubuntu" fontHeight="10"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_am_8QnhVEeylgf1kw7BydA" x="80" y="34" width="46" height="36"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_dg1M8nhREeylgf1kw7BydA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_dg1M83hREeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_dg0l4XhREeylgf1kw7BydA" fontColor="5237244" fontName="Ubuntu" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dg0l4nhREeylgf1kw7BydA" x="690" width="176" height="96"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_C6Dl0HhVEeylgf1kw7BydA" type="2001" element="_C6AiinhVEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_C6Dl03hVEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_C6Dl1HhVEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_C6EM6HhVEeylgf1kw7BydA" type="3002" element="_C6Aii3hVEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_C6EM6XhVEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C6EM6nhVEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_C6Dl0XhVEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_C6Dl0nhVEeylgf1kw7BydA" x="690" y="223" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_am-uIHhVEeylgf1kw7BydA" type="2001" element="_amzvDHhVEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_am_VMHhVEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_am_VMXhVEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_anAjUHhVEeylgf1kw7BydA" type="3002" element="_amzvDXhVEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_anAjUXhVEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_anAjUnhVEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_am-uIXhVEeylgf1kw7BydA" fontColor="789660" fontName="Ubuntu" fontHeight="10"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_am-uInhVEeylgf1kw7BydA" x="750" y="238" width="30" height="30"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_f8dlEHhVEeylgf1kw7BydA" type="2001" element="_f8T0EHhVEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_f8eMIHhVEeylgf1kw7BydA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_f8eMIXhVEeylgf1kw7BydA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_f8eMInhVEeylgf1kw7BydA" type="3016" element="_f8T0EXhVEeylgf1kw7BydA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_f8eMI3hVEeylgf1kw7BydA" fontName="Ubuntu"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f8eMJHhVEeylgf1kw7BydA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_f8dlEXhVEeylgf1kw7BydA" fontColor="16777215" fontName="Ubuntu" fontHeight="14" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_f8dlEnhVEeylgf1kw7BydA" x="1030" y="140" width="146" height="71"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_p4MzsnfMEeyEc6ZjoaYgBg"/>
+        <edges xmi:type="notation:Edge" xmi:id="_LGkAkHfOEeyEc6ZjoaYgBg" type="4001" element="_LF8VgHfOEeyEc6ZjoaYgBg" source="_tbgs8HfNEeyEc6ZjoaYgBg" target="_tb5HcHfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_LGquQHfOEeyEc6ZjoaYgBg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LGquQXfOEeyEc6ZjoaYgBg" x="136" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_LGrVUHfOEeyEc6ZjoaYgBg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LGrVUXfOEeyEc6ZjoaYgBg" x="7" y="-7"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_LGz4MHfOEeyEc6ZjoaYgBg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LGz4MXfOEeyEc6ZjoaYgBg" x="-153" y="7"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_LGknoHfOEeyEc6ZjoaYgBg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_LGknoXfOEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LGknonfOEeyEc6ZjoaYgBg" points="[-49, 48, 223, -222]$[-234, 232, 38, -38]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LHHaMHfOEeyEc6ZjoaYgBg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LHHaMXfOEeyEc6ZjoaYgBg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_LHHaMnfOEeyEc6ZjoaYgBg" type="4001" element="_LGIiwHfOEeyEc6ZjoaYgBg" source="_tbgs8HfNEeyEc6ZjoaYgBg" target="_tb_1InfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_LHIoUHfOEeyEc6ZjoaYgBg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LHIoUXfOEeyEc6ZjoaYgBg" x="-6" y="-8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_LHIoUnfOEeyEc6ZjoaYgBg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LHIoU3fOEeyEc6ZjoaYgBg" x="6" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_LHIoVHfOEeyEc6ZjoaYgBg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LHIoVXfOEeyEc6ZjoaYgBg" x="6" y="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_LHHaM3fOEeyEc6ZjoaYgBg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_LHHaNHfOEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LHHaNXfOEeyEc6ZjoaYgBg" points="[64, 48, -314, -232]$[313, 232, -65, -48]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LHJPYHfOEeyEc6ZjoaYgBg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LHJPYXfOEeyEc6ZjoaYgBg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_PV22EHfPEeyEc6ZjoaYgBg" type="4001" element="_PT01wHfPEeyEc6ZjoaYgBg" source="_09O8gHfOEeyEc6ZjoaYgBg" target="_tbgs8HfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_PV22FHfPEeyEc6ZjoaYgBg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PV22FXfPEeyEc6ZjoaYgBg" x="7" y="-5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_PV22FnfPEeyEc6ZjoaYgBg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PV22F3fPEeyEc6ZjoaYgBg" x="-11" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_PV22GHfPEeyEc6ZjoaYgBg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PV22GXfPEeyEc6ZjoaYgBg" x="-12" y="5"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_PV22EXfPEeyEc6ZjoaYgBg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_PV22EnfPEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_PV22E3fPEeyEc6ZjoaYgBg" points="[93, 6, -224, -17]$[197, 14, -120, -9]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PV3dIHfPEeyEc6ZjoaYgBg" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_PV3dIXfPEeyEc6ZjoaYgBg" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_Rx9cYHfgEeyEc6ZjoaYgBg" type="4001" element="_RxrvmHfgEeyEc6ZjoaYgBg" source="_tbgs8HfNEeyEc6ZjoaYgBg" target="_QPdu4HfgEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_Rx-qgHfgEeyEc6ZjoaYgBg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rx-qgXfgEeyEc6ZjoaYgBg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Rx-qgnfgEeyEc6ZjoaYgBg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rx-qg3fgEeyEc6ZjoaYgBg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Rx-qhHfgEeyEc6ZjoaYgBg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Rx-qhXfgEeyEc6ZjoaYgBg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_Rx9cYXfgEeyEc6ZjoaYgBg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_Rx9cYnfgEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Rx9cY3fgEeyEc6ZjoaYgBg" points="[0, 0, -214, -60]$[214, 60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Rx-qhnfgEeyEc6ZjoaYgBg" id="(1.0,0.78125)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Rx-qh3fgEeyEc6ZjoaYgBg" id="(0.0,0.37037037037037035)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_ZgJIsHfjEeyEc6ZjoaYgBg" type="4001" element="_ZgCbC3fjEeyEc6ZjoaYgBg" source="_QPdu4HfgEeyEc6ZjoaYgBg" target="_tb_1InfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_ZgJvwHfjEeyEc6ZjoaYgBg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZgJvwXfjEeyEc6ZjoaYgBg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZgJvwnfjEeyEc6ZjoaYgBg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZgJvw3fjEeyEc6ZjoaYgBg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ZgJvxHfjEeyEc6ZjoaYgBg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZgJvxXfjEeyEc6ZjoaYgBg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_ZgJIsXfjEeyEc6ZjoaYgBg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_ZgJIsnfjEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_ZgJIs3fjEeyEc6ZjoaYgBg" points="[0, 0, 30, -94]$[-30, 94, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZgJvxnfjEeyEc6ZjoaYgBg" id="(0.5376344086021505,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ZgJvx3fjEeyEc6ZjoaYgBg" id="(0.6730769230769231,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_cUkYIHfjEeyEc6ZjoaYgBg" type="4001" element="_cUe4oHfjEeyEc6ZjoaYgBg" source="_QPdu4HfgEeyEc6ZjoaYgBg" target="_tbgs8HfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_cUk_MHfjEeyEc6ZjoaYgBg" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cUk_MXfjEeyEc6ZjoaYgBg" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cUk_MnfjEeyEc6ZjoaYgBg" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cUk_M3fjEeyEc6ZjoaYgBg" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_cUk_NHfjEeyEc6ZjoaYgBg" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_cUk_NXfjEeyEc6ZjoaYgBg" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_cUkYIXfjEeyEc6ZjoaYgBg"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_cUkYInfjEeyEc6ZjoaYgBg" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cUkYI3fjEeyEc6ZjoaYgBg" points="[0, 0, 324, 60]$[-324, -60, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cUk_NnfjEeyEc6ZjoaYgBg" id="(0.5913978494623656,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_cUk_N3fjEeyEc6ZjoaYgBg" id="(1.0,0.46875)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_AUBJ9nhQEeylgf1kw7BydA" type="4001" element="_ASandHhQEeylgf1kw7BydA" source="_AT5OIHhQEeylgf1kw7BydA" target="_09O8gHfOEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_AUBxAHhQEeylgf1kw7BydA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUBxAXhQEeylgf1kw7BydA" x="2" y="8"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUBxAnhQEeylgf1kw7BydA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUBxA3hQEeylgf1kw7BydA" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUBxBHhQEeylgf1kw7BydA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUBxBXhQEeylgf1kw7BydA" x="1" y="-9"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_AUBJ93hQEeylgf1kw7BydA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_AUBJ-HhQEeylgf1kw7BydA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AUBJ-XhQEeylgf1kw7BydA" points="[0, 0, 16, 65]$[-16, -65, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUGpgHhQEeylgf1kw7BydA" id="(0.16304347826086957,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUGpgXhQEeylgf1kw7BydA" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_AUGpgnhQEeylgf1kw7BydA" type="4001" element="_ASdqwnhQEeylgf1kw7BydA" source="_AT51MHhQEeylgf1kw7BydA" target="_09O8gHfOEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_AUGphnhQEeylgf1kw7BydA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUGph3hQEeylgf1kw7BydA" x="11"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUGpiHhQEeylgf1kw7BydA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUGpiXhQEeylgf1kw7BydA" x="-8" y="-2"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUGpinhQEeylgf1kw7BydA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUGpi3hQEeylgf1kw7BydA" x="-8" y="-2"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_AUGpg3hQEeylgf1kw7BydA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_AUGphHhQEeylgf1kw7BydA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AUGphXhQEeylgf1kw7BydA" points="[0, 0, -89, 100]$[89, -100, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUHQkHhQEeylgf1kw7BydA" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUHQkXhQEeylgf1kw7BydA" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_AUHQknhQEeylgf1kw7BydA" type="4001" element="_ASeR0HhQEeylgf1kw7BydA" source="_AT8RcHhQEeylgf1kw7BydA" target="_AT5OIHhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_AUHQlnhQEeylgf1kw7BydA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUHQl3hQEeylgf1kw7BydA" x="6" y="3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUHQmHhQEeylgf1kw7BydA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUHQmXhQEeylgf1kw7BydA" x="-3" y="-3"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUHQmnhQEeylgf1kw7BydA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUHQm3hQEeylgf1kw7BydA" x="-4" y="-3"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_AUHQk3hQEeylgf1kw7BydA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_AUHQlHhQEeylgf1kw7BydA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AUHQlXhQEeylgf1kw7BydA" points="[0, 0, 0, 45]$[0, -45, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUHQnHhQEeylgf1kw7BydA" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUHQnXhQEeylgf1kw7BydA" id="(0.16304347826086957,0.5882352941176471)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_AUH3qHhQEeylgf1kw7BydA" type="4001" element="_ASe44HhQEeylgf1kw7BydA" source="_AT_70HhQEeylgf1kw7BydA" target="_AT51MHhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_AUH3rHhQEeylgf1kw7BydA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUH3rXhQEeylgf1kw7BydA" x="-9" y="4"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUH3rnhQEeylgf1kw7BydA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUH3r3hQEeylgf1kw7BydA" x="8" y="-6"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_AUH3sHhQEeylgf1kw7BydA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AUH3sXhQEeylgf1kw7BydA" x="9" y="-4"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_AUH3qXhQEeylgf1kw7BydA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_AUH3qnhQEeylgf1kw7BydA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AUH3q3hQEeylgf1kw7BydA" points="[15, 0, -114, -5]$[129, 5, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUIesHhQEeylgf1kw7BydA" id="(0.5,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_AUIesXhQEeylgf1kw7BydA" id="(0.5,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_XoYWYHhSEeylgf1kw7BydA" type="4001" element="_XoN-WHhSEeylgf1kw7BydA" source="_AT_UwnhQEeylgf1kw7BydA" target="_AT5OIHhQEeylgf1kw7BydA">
+          <children xmi:type="notation:Node" xmi:id="_XoYWZHhSEeylgf1kw7BydA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XoYWZXhSEeylgf1kw7BydA" x="6" y="1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XoYWZnhSEeylgf1kw7BydA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XoYWZ3hSEeylgf1kw7BydA" x="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XoYWaHhSEeylgf1kw7BydA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XoYWaXhSEeylgf1kw7BydA" x="-1" y="1"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XoYWYXhSEeylgf1kw7BydA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XoYWYnhSEeylgf1kw7BydA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XoYWY3hSEeylgf1kw7BydA" points="[0, 0, 86, 11]$[-86, -11, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XoYWanhSEeylgf1kw7BydA" id="(0.0,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XoYWa3hSEeylgf1kw7BydA" id="(0.32608695652173914,0.19607843137254902)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_S-YP8HhTEeylgf1kw7BydA" type="4001" element="_S-SwYHhTEeylgf1kw7BydA" source="_dg0l4HhREeylgf1kw7BydA" target="_tbgs8HfNEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_S-Y3AHhTEeylgf1kw7BydA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S-Y3AXhTEeylgf1kw7BydA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S-Y3AnhTEeylgf1kw7BydA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S-Y3A3hTEeylgf1kw7BydA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_S-Y3BHhTEeylgf1kw7BydA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_S-Y3BXhTEeylgf1kw7BydA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_S-YP8XhTEeylgf1kw7BydA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_S-YP8nhTEeylgf1kw7BydA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S-YP83hTEeylgf1kw7BydA" points="[0, 0, 100, -81]$[-100, 81, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S-Y3BnhTEeylgf1kw7BydA" id="(0.20114942528735633,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_S-Y3B3hTEeylgf1kw7BydA" id="(0.8506224066390041,0.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_jOSswHhWEeylgf1kw7BydA" type="4001" element="_jOLYAHhWEeylgf1kw7BydA" source="_f8dlEHhVEeylgf1kw7BydA" target="_QPdu4HfgEeyEc6ZjoaYgBg">
+          <children xmi:type="notation:Node" xmi:id="_jOTT0HhWEeylgf1kw7BydA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jOTT0XhWEeylgf1kw7BydA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_jOTT0nhWEeylgf1kw7BydA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jOTT03hWEeylgf1kw7BydA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_jOTT1HhWEeylgf1kw7BydA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jOTT1XhWEeylgf1kw7BydA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_jOSswXhWEeylgf1kw7BydA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_jOSswnhWEeylgf1kw7BydA" fontName="Ubuntu" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_jOSsw3hWEeylgf1kw7BydA" points="[0, 0, 35, -69]$[-35, 69, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jOTT1nhWEeylgf1kw7BydA" id="(0.2054794520547945,1.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_jOTT13hWEeylgf1kw7BydA" id="(0.8064516129032258,0.0)"/>
+        </edges>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_p4UvgHfMEeyEc6ZjoaYgBg" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_p4VWkHfMEeyEc6ZjoaYgBg"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tY4PsHfNEeyEc6ZjoaYgBg" name="Enigme" outgoingEdges="_LF8VgHfOEeyEc6ZjoaYgBg _LGIiwHfOEeyEc6ZjoaYgBg _RxrvmHfgEeyEc6ZjoaYgBg" incomingEdges="_PT01wHfPEeyEc6ZjoaYgBg _cUe4oHfjEeyEc6ZjoaYgBg _S-SwYHhTEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.0"/>
+      <semanticElements xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_tZLxsHfNEeyEc6ZjoaYgBg" labelSize="16" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="253,206,137">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tZesoHfNEeyEc6ZjoaYgBg" name="Succes" incomingEdges="_LF8VgHfOEeyEc6ZjoaYgBg" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.6"/>
+      <semanticElements xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.6"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_tZfTsHfNEeyEc6ZjoaYgBg" labelSize="16" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="253,206,137">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_tZfTsnfNEeyEc6ZjoaYgBg" name="Echec" incomingEdges="_LGIiwHfOEeyEc6ZjoaYgBg _ZgCbC3fjEeyEc6ZjoaYgBg" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.9"/>
+      <semanticElements xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.9"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_tZfTs3fNEeyEc6ZjoaYgBg" labelSize="16" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="253,206,137">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_QPXBMHfgEeyEc6ZjoaYgBg" name="Bjr" outgoingEdges="_ZgCbC3fjEeyEc6ZjoaYgBg _cUe4oHfjEeyEc6ZjoaYgBg" incomingEdges="_RxrvmHfgEeyEc6ZjoaYgBg _jOLYAHhWEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.12"/>
+      <semanticElements xmi:type="game:Lieu" href="JeuEnigme.game#//@elementsjeu.12"/>
+      <ownedStyle xmi:type="diagram:Square" uid="_QPXBMXfgEeyEc6ZjoaYgBg" labelSize="16" showIcon="false" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="253,206,137">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='LieuNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_LF8VgHfOEeyEc6ZjoaYgBg" sourceNode="_tY4PsHfNEeyEc6ZjoaYgBg" targetNode="_tZesoHfNEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.7"/>
+      <semanticElements xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.7"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_LGGGgHfOEeyEc6ZjoaYgBg" targetArrow="InputFillClosedArrow" size="2" strokeColor="156,12,12">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_LGGGgXfOEeyEc6ZjoaYgBg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_LGIiwHfOEeyEc6ZjoaYgBg" sourceNode="_tY4PsHfNEeyEc6ZjoaYgBg" targetNode="_tZfTsnfNEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.8"/>
+      <semanticElements xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.8"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_LGIiwXfOEeyEc6ZjoaYgBg" targetArrow="InputFillClosedArrow" size="2" strokeColor="156,12,12">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_LGIiwnfOEeyEc6ZjoaYgBg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_09LSIHfOEeyEc6ZjoaYgBg" name="Sphinx" outgoingEdges="_PT01wHfPEeyEc6ZjoaYgBg" incomingEdges="_ASandHhQEeylgf1kw7BydA _ASdqwnhQEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Personne" href="JeuEnigme.game#//@elementsjeu.1"/>
+      <semanticElements xmi:type="game:Personne" href="JeuEnigme.game#//@elementsjeu.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_09L5MHfOEeyEc6ZjoaYgBg" labelSize="14" showIcon="false" labelColor="255,255,255" borderColor="255,255,255" labelPosition="node" color="39,76,114">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_f8T0EHhVEeylgf1kw7BydA" outgoingEdges="_jOLYAHhWEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Personne" href="JeuEnigme.game#//@elementsjeu.17"/>
+      <semanticElements xmi:type="game:Personne" href="JeuEnigme.game#//@elementsjeu.17"/>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_f8T0EXhVEeylgf1kw7BydA" labelSize="14" showIcon="false" labelColor="255,255,255" borderColor="255,255,255" labelPosition="node" color="39,76,114">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_PT01wHfPEeyEc6ZjoaYgBg" sourceNode="_09LSIHfOEeyEc6ZjoaYgBg" targetNode="_tY4PsHfNEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Personne" href="JeuEnigme.game#//@elementsjeu.1"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_PT01wXfPEeyEc6ZjoaYgBg" lineStyle="dash" targetArrow="InputClosedArrow" size="2" strokeColor="252,175,62">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='PersonneEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_PT01wnfPEeyEc6ZjoaYgBg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='PersonneEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_RxrvmHfgEeyEc6ZjoaYgBg" sourceNode="_tY4PsHfNEeyEc6ZjoaYgBg" targetNode="_QPXBMHfgEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.13"/>
+      <semanticElements xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.13"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_RxsWoHfgEeyEc6ZjoaYgBg" targetArrow="InputFillClosedArrow" size="2" strokeColor="156,12,12">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_RxsWoXfgEeyEc6ZjoaYgBg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ZgCbC3fjEeyEc6ZjoaYgBg" sourceNode="_QPXBMHfgEeyEc6ZjoaYgBg" targetNode="_tZfTsnfNEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.15"/>
+      <semanticElements xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.15"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ZgDpIHfjEeyEc6ZjoaYgBg" targetArrow="InputFillClosedArrow" size="2" strokeColor="156,12,12">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ZgDpIXfjEeyEc6ZjoaYgBg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_cUe4oHfjEeyEc6ZjoaYgBg" sourceNode="_QPXBMHfgEeyEc6ZjoaYgBg" targetNode="_tY4PsHfNEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.16"/>
+      <semanticElements xmi:type="game:Chemin" href="JeuEnigme.game#//@elementsjeu.16"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_cUffoHfjEeyEc6ZjoaYgBg" targetArrow="InputFillClosedArrow" size="2" strokeColor="156,12,12">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_cUffoXfjEeyEc6ZjoaYgBg" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_amzvDHhVEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Connaissance" href="JeuEnigme.game#//@explorateur/@connaissances.0"/>
+      <semanticElements xmi:type="game:Connaissance" href="JeuEnigme.game#//@explorateur/@connaissances.0"/>
+      <ownedStyle xmi:type="diagram:Dot" uid="_amzvDXhVEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="156,12,12" borderSize="1" borderSizeComputationExpression="1" borderColor="156,12,12" labelPosition="node" backgroundColor="209,209,209">
+        <description xmi:type="style:DotDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="__aN0IHhPEeylgf1kw7BydA" name="Reussite" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Connaissance" href="JeuEnigme.game#//@elementsjeu.5"/>
+      <semanticElements xmi:type="game:Connaissance" href="JeuEnigme.game#//@elementsjeu.5"/>
+      <ownedStyle xmi:type="diagram:Dot" uid="__aN0IXhPEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="156,12,12" borderSize="1" borderSizeComputationExpression="1" borderColor="156,12,12" labelPosition="node" backgroundColor="209,209,209">
+        <description xmi:type="style:DotDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="__aPCQXhPEeylgf1kw7BydA" name="invalid : 2" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:QteObjet" href="JeuEnigme.game#//@elementsjeu.3/@objetCons.0"/>
+      <semanticElements xmi:type="game:QteObjet" href="JeuEnigme.game#//@elementsjeu.3/@objetCons.0"/>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="__aruMHhPEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderColor="255,255,255" labelPosition="node" color="239,41,41">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="__asVQXhPEeylgf1kw7BydA" name="invalid : 1" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:QteObjet" href="JeuEnigme.game#//@elementsjeu.4/@objetCons.0"/>
+      <semanticElements xmi:type="game:QteObjet" href="JeuEnigme.game#//@elementsjeu.4/@objetCons.0"/>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="__as8UHhPEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderColor="255,255,255" labelPosition="node" color="239,41,41">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="__as8UnhPEeylgf1kw7BydA" name="invalid : 1" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:QteObjet" href="JeuEnigme.game#//@elementsjeu.10"/>
+      <semanticElements xmi:type="game:QteObjet" href="JeuEnigme.game#//@elementsjeu.10"/>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="__atjYHhPEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderColor="255,255,255" labelPosition="node" color="239,41,41">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ASQ2cHhQEeylgf1kw7BydA" name="Question" outgoingEdges="_ASandHhQEeylgf1kw7BydA" incomingEdges="_ASeR0HhQEeylgf1kw7BydA _XoN-WHhSEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Interaction" href="JeuEnigme.game#//@elementsjeu.2"/>
+      <semanticElements xmi:type="game:Interaction" href="JeuEnigme.game#//@elementsjeu.2"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_ASQ2cXhQEeylgf1kw7BydA" labelSize="12" showIcon="false" labelColor="253,206,137" borderColor="253,206,137" labelPosition="node" color="154,103,23">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ASRdgXhQEeylgf1kw7BydA" name="Q2" outgoingEdges="_ASdqwnhQEeylgf1kw7BydA" incomingEdges="_ASe44HhQEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Interaction" href="JeuEnigme.game#//@elementsjeu.11"/>
+      <semanticElements xmi:type="game:Interaction" href="JeuEnigme.game#//@elementsjeu.11"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_ASRdgnhQEeylgf1kw7BydA" labelSize="12" showIcon="false" labelColor="253,206,137" borderColor="253,206,137" labelPosition="node" color="154,103,23">
+        <labelFormat>italic</labelFormat>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ASSEkXhQEeylgf1kw7BydA" name="oui" outgoingEdges="_ASeR0HhQEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.3"/>
+      <semanticElements xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.3"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_ASSEknhQEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="77,137,20">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_ASTSsXhQEeylgf1kw7BydA" name="non" outgoingEdges="_XoN-WHhSEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.4"/>
+      <semanticElements xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.4"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_ASTSsnhQEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="77,137,20">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_AST5wHhQEeylgf1kw7BydA" name="Ja" outgoingEdges="_ASe44HhQEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.14"/>
+      <semanticElements xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.14"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Ellipse" uid="_AST5wXhQEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" color="77,137,20">
+        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ASandHhQEeylgf1kw7BydA" sourceNode="_ASQ2cHhQEeylgf1kw7BydA" targetNode="_09LSIHfOEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Interaction" href="JeuEnigme.game#//@elementsjeu.2"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ASandXhQEeylgf1kw7BydA" targetArrow="FillDiamond" size="2" strokeColor="253,206,137">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='InteractionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ASandnhQEeylgf1kw7BydA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='InteractionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ASdqwnhQEeylgf1kw7BydA" sourceNode="_ASRdgXhQEeylgf1kw7BydA" targetNode="_09LSIHfOEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Interaction" href="JeuEnigme.game#//@elementsjeu.11"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ASdqw3hQEeylgf1kw7BydA" targetArrow="FillDiamond" size="2" strokeColor="253,206,137">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='InteractionEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ASdqxHhQEeylgf1kw7BydA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='InteractionEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ASeR0HhQEeylgf1kw7BydA" sourceNode="_ASSEkXhQEeylgf1kw7BydA" targetNode="_ASQ2cHhQEeylgf1kw7BydA">
+      <target xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.3"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ASeR0XhQEeylgf1kw7BydA" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ChoixEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ASeR0nhQEeylgf1kw7BydA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ChoixEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_ASe44HhQEeylgf1kw7BydA" sourceNode="_AST5wHhQEeylgf1kw7BydA" targetNode="_ASRdgXhQEeylgf1kw7BydA">
+      <target xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.14"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_ASe44XhQEeylgf1kw7BydA" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ChoixEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_ASe44nhQEeylgf1kw7BydA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ChoixEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_dgi5EHhREeylgf1kw7BydA" name="Explorateur" outgoingEdges="_S-SwYHhTEeylgf1kw7BydA">
+      <target xmi:type="game:Explorateur" href="JeuEnigme.game#//@explorateur"/>
+      <semanticElements xmi:type="game:Explorateur" href="JeuEnigme.game#//@explorateur"/>
+      <ownedStyle xmi:type="diagram:ShapeContainerStyle" uid="_dgi5EXhREeylgf1kw7BydA" labelSize="12" showIcon="false" labelColor="252,233,79" borderSize="1" borderSizeComputationExpression="1" borderColor="252,233,79" backgroundColor="114,73,110">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:ShapeContainerStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_C5-tUHhVEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="game:Objet" href="JeuEnigme.game#//@explorateur/@objets.0"/>
+        <semanticElements xmi:type="game:Objet" href="JeuEnigme.game#//@explorateur/@objets.0"/>
+        <ownedStyle xmi:type="diagram:Dot" uid="_C5-tUXhVEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" backgroundColor="156,12,12">
+          <description xmi:type="style:DotDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']/@subNodeMappings[name='ObjetExplorateurNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']/@subNodeMappings[name='ObjetExplorateurNode']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_amxSwHhVEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="game:Connaissance" href="JeuEnigme.game#//@explorateur/@connaissances.0"/>
+        <semanticElements xmi:type="game:Connaissance" href="JeuEnigme.game#//@explorateur/@connaissances.0"/>
+        <ownedStyle xmi:type="diagram:Dot" uid="_amxSwXhVEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="156,12,12" borderColor="156,12,12" labelPosition="node" backgroundColor="209,209,209">
+          <description xmi:type="style:DotDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']/@subNodeMappings[name='ConnaissanceExplorateurNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@containerMappings[name='ExplorateurContainer']/@subNodeMappings[name='ConnaissanceExplorateurNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_XoN-WHhSEeylgf1kw7BydA" sourceNode="_ASTSsXhQEeylgf1kw7BydA" targetNode="_ASQ2cHhQEeylgf1kw7BydA">
+      <target xmi:type="game:Choix" href="JeuEnigme.game#//@elementsjeu.4"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_XoOlYHhSEeylgf1kw7BydA" strokeColor="0,0,0">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ChoixEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_XoOlYXhSEeylgf1kw7BydA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ChoixEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_S-SwYHhTEeylgf1kw7BydA" sourceNode="_dgi5EHhREeylgf1kw7BydA" targetNode="_tY4PsHfNEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Explorateur" href="JeuEnigme.game#//@explorateur"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_S-TXcHhTEeylgf1kw7BydA" lineStyle="dot" size="2" strokeColor="114,73,110">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@edgeMappings[name='ExplorateurEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_S-TXcXhTEeylgf1kw7BydA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']/@edgeMappings[name='ExplorateurEdge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_C6AiinhVEeylgf1kw7BydA" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="game:Objet" href="JeuEnigme.game#//@explorateur/@objets.0"/>
+      <semanticElements xmi:type="game:Objet" href="JeuEnigme.game#//@explorateur/@objets.0"/>
+      <ownedStyle xmi:type="diagram:Dot" uid="_C6Aii3hVEeylgf1kw7BydA" labelSize="10" showIcon="false" labelColor="255,255,255" borderSize="1" borderSizeComputationExpression="1" labelPosition="node" backgroundColor="156,12,12">
+        <description xmi:type="style:DotDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ObjetNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ObjetNode']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_jOLYAHhWEeylgf1kw7BydA" sourceNode="_f8T0EHhVEeylgf1kw7BydA" targetNode="_QPXBMHfgEeyEc6ZjoaYgBg">
+      <target xmi:type="game:Personne" href="JeuEnigme.game#//@elementsjeu.17"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_jOLYAXhWEeylgf1kw7BydA" lineStyle="dash" targetArrow="InputClosedArrow" size="2" strokeColor="252,175,62">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='PersonneEdge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_jOLYAnhWEeylgf1kw7BydA" labelSize="12"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='PersonneEdge']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_p2lqIHfMEeyEc6ZjoaYgBg"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Explorateur']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']"/>
+    <activatedLayers xmi:type="description_1:AdditionalLayer" href="platform:/resource/game.design/description/game.odesign#//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']"/>
+    <target xmi:type="game:Jeu" href="JeuEnigme.game#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
