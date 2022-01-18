@@ -1,0 +1,12 @@
+op zero = 0;
+op finis  =  Succes \/ Echec \/ 0;
+[] (finis => dead); # Si on a finis, on peut plus rien faire
+
+[] ( 0 + Succes + Echec <= 1); # On ne peut pas etre à plus d'une place fin en meme temps
+
+# Toutes les places correspondant au chemins et commençant par init sont <=1
+[] (Victoire_first <=1);
+[] (Defaite_first <=1);
+
+
+

@@ -1,0 +1,53 @@
+[comment encoding = UTF-8 /]
+[module toLTL('http://www.Game.game')]
+
+
+[template public jeutoLTL(aJeu : Jeu)]
+[comment @main/]
+[file (aJeu.name + 'genere.ltl', false, 'UTF-8')]
+['['/]] <> dead ; # Il y a toujours un arret du jeu
+
+[let places : OrderedSet(Lieu) = aJeu.getLieux()]
+op finis  = [for (lieu : Lieu | places)][if (lieu.nature.getNature()='Nature.ARRIVEE')][lieu.name/] \/[/if] [/for] 0 ;
+['['/]] (dead => finis); # Si on ne peut plus rien faire, on est dans un lieu final
+
+['['/]] ( 0[for (lieu : Lieu | places)]
+[if (lieu.nature.getNature()='Nature.ARRIVEE')] + [lieu.name/][/if][/for] <= 1); # On ne peut pas etre à plus d'une place fin en meme temps
+
+# Toutes les places correspondant au chemins et commençant par init sont <=1
+[/let]
+[let cheminsliste : OrderedSet(Chemin) = aJeu.getChemins()]
+[for (chemin : Chemin | cheminsliste)]
+['['/]] ([chemin.name/]_first <=1);
+[/for]
+[/let]
+[/file]
+[/template]
+
+[query public getLieux(j: Jeu) : OrderedSet(Lieu) =
+	j.elementsjeu->select(e | e.oclIsTypeOf(Lieu))
+		->collect(e | e.oclAsType(Lieu))
+		->asOrderedSet()
+/]
+[query public getChemins(j: Jeu) : OrderedSet(Chemin) =
+	j.elementsjeu->select(e | e.oclIsTypeOf(Chemin))
+		->collect(e | e.oclAsType(Chemin))
+		->asOrderedSet()
+/]
+
+[query public getPersonnes(j: Jeu) : OrderedSet(Personne) =
+	j.elementsjeu->select(e | e.oclIsTypeOf(Personne))
+		->collect(e | e.oclAsType(Personne))
+		->asOrderedSet()
+/]
+
+[query public getNature(n: Nature) : String =
+	if n = Nature::depart then
+		'Nature.DEPART'
+    else if n = Nature::fin then
+		'Nature.ARRIVEE'
+	else
+		'Nature.INTERMEDIAIRE'
+	endif
+	endif
+/]

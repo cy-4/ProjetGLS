@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:mtl="http://www.eclipse.org/acceleo/mtl/3.0" xmlns:ocl.ecore="http://www.eclipse.org/ocl/1.1.0/Ecore">
+  <mtl:Module name="toLTL" nsURI="game2ltl::main::toLTL" startHeaderPosition="29" endHeaderPosition="123">
+    <input>
+      <takesTypesFrom href="http://www.Game.game#/"/>
+    </input>
+    <ownedModuleElement xsi:type="mtl:Template" name="jeutoLTL" visibility="Public" main="true">
+      <body xsi:type="mtl:FileBlock" openMode="OverWrite">
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </body>
+        <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="] &lt;> dead ; # Il y a toujours un arret du jeu&#xA;&#xA;"/>
+        <body xsi:type="mtl:LetBlock">
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="op finis  = "/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="lieu" referredVariable="/0/jeutoLTL/%/%.2/%.1/lieu">
+                  <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.Game.game#//ElementsJeu/name"/>
+              </body>
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" \/"/>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="mtl:QueryInvocation" definition="/0/getNature">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="lieu" referredVariable="/0/jeutoLTL/%/%.2/%.1/lieu">
+                      <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.Game.game#//Lieu/nature"/>
+                  </argument>
+                </source>
+                <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Nature.ARRIVEE">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+              </ifExpr>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" "/>
+            <loopVariable name="lieu">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:VariableExp" name="places" eType="/3/OrderedSet(Lieu)" referredVariable="/0/jeutoLTL/%/%.2/places"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" 0 ;&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="] (dead => finis); # Si on ne peut plus rien faire, on est dans un lieu final&#xA;&#xA;"/>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="] ( 0"/>
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="mtl:IfBlock">
+              <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" + "/>
+              <body xsi:type="ocl.ecore:PropertyCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                <source xsi:type="ocl.ecore:VariableExp" name="lieu" referredVariable="/0/jeutoLTL/%/%.2/%.7/lieu">
+                  <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+                </source>
+                <referredProperty xsi:type="ecore:EAttribute" href="http://www.Game.game#//ElementsJeu/name"/>
+              </body>
+              <ifExpr xsi:type="ocl.ecore:OperationCallExp">
+                <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+                <source xsi:type="mtl:QueryInvocation" definition="/0/getNature">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                  <argument xsi:type="ocl.ecore:PropertyCallExp">
+                    <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+                    <source xsi:type="ocl.ecore:VariableExp" name="lieu" referredVariable="/0/jeutoLTL/%/%.2/%.7/lieu">
+                      <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+                    </source>
+                    <referredProperty xsi:type="ecore:EAttribute" href="http://www.Game.game#//Lieu/nature"/>
+                  </argument>
+                </source>
+                <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Nature.ARRIVEE">
+                  <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+                </argument>
+                <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String_Class/="/>
+              </ifExpr>
+            </body>
+            <loopVariable name="lieu">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:VariableExp" name="places" eType="/3/OrderedSet(Lieu)" referredVariable="/0/jeutoLTL/%/%.2/places"/>
+          </body>
+          <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol=" &lt;= 1); # On ne peut pas etre à plus d'une place fin en meme temps&#xA;&#xA;# Toutes les places correspondant au chemins et commençant par init sont &lt;=1&#xA;"/>
+          <letVariable name="places" eType="/3/OrderedSet(Lieu)">
+            <initExpression xsi:type="mtl:QueryInvocation" eType="/3/OrderedSet(Lieu)" definition="/0/getLieux">
+              <argument xsi:type="ocl.ecore:VariableExp" name="aJeu" referredVariable="/0/jeutoLTL/aJeu">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+              </argument>
+            </initExpression>
+          </letVariable>
+        </body>
+        <body xsi:type="mtl:LetBlock">
+          <body xsi:type="mtl:ForBlock">
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="[">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="] ("/>
+            <body xsi:type="ocl.ecore:PropertyCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="chemin" referredVariable="/0/jeutoLTL/%/%.3/%/chemin">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+              </source>
+              <referredProperty xsi:type="ecore:EAttribute" href="http://www.Game.game#//ElementsJeu/name"/>
+            </body>
+            <body xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="_first &lt;=1);&#xA;"/>
+            <loopVariable name="chemin">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+            </loopVariable>
+            <iterSet xsi:type="ocl.ecore:VariableExp" name="cheminsliste" eType="/3/OrderedSet(Chemin)" referredVariable="/0/jeutoLTL/%/%.3/cheminsliste"/>
+          </body>
+          <letVariable name="cheminsliste" eType="/3/OrderedSet(Chemin)">
+            <initExpression xsi:type="mtl:QueryInvocation" eType="/3/OrderedSet(Chemin)" definition="/0/getChemins">
+              <argument xsi:type="ocl.ecore:VariableExp" name="aJeu" referredVariable="/0/jeutoLTL/aJeu">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+              </argument>
+            </initExpression>
+          </letVariable>
+        </body>
+        <fileUrl xsi:type="ocl.ecore:OperationCallExp" referredOperation="/1/oclstdlib_String_Class/+">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <source xsi:type="ocl.ecore:PropertyCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="aJeu" referredVariable="/0/jeutoLTL/aJeu">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+            </source>
+            <referredProperty xsi:type="ecore:EAttribute" href="http://www.Game.game#//Jeu/name"/>
+          </source>
+          <argument xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="genere.ltl">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </argument>
+        </fileUrl>
+        <charset xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="UTF-8">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </charset>
+      </body>
+      <parameter name="aJeu">
+        <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+      </parameter>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getLieux" visibility="Public" type="/3/OrderedSet(Lieu)">
+      <parameter name="j">
+        <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/OrderedSet(Lieu)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(Lieu)">
+          <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/OrderedSet(ElementsJeu)">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(ElementsJeu)">
+              <source xsi:type="ocl.ecore:VariableExp" name="j" referredVariable="/0/getLieux/j">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.Game.game#//Jeu/elementsjeu"/>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getLieux/%/collect/select/e">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/34/Lieu">
+                <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="e">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+            </iterator>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getLieux/%/collect/e">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/34/Lieu">
+              <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="e">
+            <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+          </iterator>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/asOrderedSet"/>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getChemins" visibility="Public" type="/3/OrderedSet(Chemin)">
+      <parameter name="j">
+        <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/OrderedSet(Chemin)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(Chemin)">
+          <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/OrderedSet(ElementsJeu)">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(ElementsJeu)">
+              <source xsi:type="ocl.ecore:VariableExp" name="j" referredVariable="/0/getChemins/j">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.Game.game#//Jeu/elementsjeu"/>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getChemins/%/collect/select/e">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/34/Chemin">
+                <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="e">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+            </iterator>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getChemins/%/collect/e">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/34/Chemin">
+              <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="e">
+            <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+          </iterator>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/asOrderedSet"/>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getPersonnes" visibility="Public" type="/3/OrderedSet(Personne)">
+      <parameter name="j">
+        <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:OperationCallExp" eType="/3/OrderedSet(Personne)">
+        <source xsi:type="ocl.ecore:IteratorExp" name="collect" eType="/3/Sequence(Personne)">
+          <source xsi:type="ocl.ecore:IteratorExp" name="select" eType="/3/OrderedSet(ElementsJeu)">
+            <source xsi:type="ocl.ecore:PropertyCallExp" eType="/3/OrderedSet(ElementsJeu)">
+              <source xsi:type="ocl.ecore:VariableExp" name="j" referredVariable="/0/getPersonnes/j">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+              </source>
+              <referredProperty xsi:type="ecore:EReference" href="http://www.Game.game#//Jeu/elementsjeu"/>
+            </source>
+            <body xsi:type="ocl.ecore:OperationCallExp">
+              <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+              <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getPersonnes/%/collect/select/e">
+                <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+              </source>
+              <argument xsi:type="ocl.ecore:TypeExp" eType="/34/Personne">
+                <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Personne"/>
+              </argument>
+              <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclIsTypeOf"/>
+            </body>
+            <iterator xsi:type="ocl.ecore:Variable" name="e">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+            </iterator>
+          </source>
+          <body xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Personne"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="e" referredVariable="/0/getPersonnes/%/collect/e">
+              <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+            </source>
+            <argument xsi:type="ocl.ecore:TypeExp" eType="/34/Personne">
+              <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Personne"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/oclAsType"/>
+          </body>
+          <iterator xsi:type="ocl.ecore:Variable" name="e">
+            <eType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+          </iterator>
+        </source>
+        <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)_Class/asOrderedSet"/>
+      </expression>
+    </ownedModuleElement>
+    <ownedModuleElement xsi:type="mtl:Query" name="getNature" visibility="Public">
+      <parameter name="n">
+        <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+      </parameter>
+      <expression xsi:type="ocl.ecore:IfExp">
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <condition xsi:type="ocl.ecore:OperationCallExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+          <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/getNature/n">
+            <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+          </source>
+          <argument xsi:type="ocl.ecore:EnumLiteralExp">
+            <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+            <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.Game.game#//Nature/depart"/>
+          </argument>
+          <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+        </condition>
+        <thenExpression xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Nature.DEPART">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        </thenExpression>
+        <elseExpression xsi:type="ocl.ecore:IfExp">
+          <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          <condition xsi:type="ocl.ecore:OperationCallExp">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Boolean"/>
+            <source xsi:type="ocl.ecore:VariableExp" name="n" referredVariable="/0/getNature/n">
+              <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+            </source>
+            <argument xsi:type="ocl.ecore:EnumLiteralExp">
+              <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+              <referredEnumLiteral xsi:type="ecore:EEnumLiteral" href="http://www.Game.game#//Nature/fin"/>
+            </argument>
+            <referredOperation xsi:type="ecore:EOperation" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny_Class/="/>
+          </condition>
+          <thenExpression xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Nature.ARRIVEE">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </thenExpression>
+          <elseExpression xsi:type="ocl.ecore:StringLiteralExp" stringSymbol="Nature.INTERMEDIAIRE">
+            <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+          </elseExpression>
+        </elseExpression>
+      </expression>
+      <type xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+    </ownedModuleElement>
+  </mtl:Module>
+  <ecore:EPackage name="additions">
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_String_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+      </eAnnotations>
+      <eOperations name="+">
+        <eAnnotations source="MTL non-standard"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="other">
+          <eType xsi:type="ocl.ecore:AnyType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Integer_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Real_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Real"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ecore_EObject_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+      </eAnnotations>
+      <eOperations name="jeutoLTL">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/jeutoLTL"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="aJeu">
+          <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getLieux" eType="/3/OrderedSet(Lieu)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getLieux"/>
+        <eParameters name="j">
+          <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getChemins" eType="/3/OrderedSet(Chemin)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getChemins"/>
+        <eParameters name="j">
+          <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getPersonnes" eType="/3/OrderedSet(Personne)">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getPersonnes"/>
+        <eParameters name="j">
+          <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+        </eParameters>
+      </eOperations>
+      <eOperations name="getNature">
+        <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+          <contents xsi:type="ocl.ecore:Constraint"/>
+        </eAnnotations>
+        <eAnnotations source="MTL" references="/0/getNature"/>
+        <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+        <eParameters name="n">
+          <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+        </eParameters>
+      </eOperations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OclAny_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OclAny"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Collection(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Collection(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_Sequence(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Sequence(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="oclstdlib_OrderedSet(T)_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/OrderedSet(T)"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="game_Jeu_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.Game.game#//Jeu"/>
+      </eAnnotations>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="game_Nature_Class">
+      <eAnnotations source="http://www.eclipse.org/ocl/1.1.0/OCL">
+        <references href="http://www.Game.game#//Nature"/>
+      </eAnnotations>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="collections">
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Lieu)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Chemin)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(Personne)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.Game.game#//Personne"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:OrderedSetType" name="OrderedSet(ElementsJeu)" instanceClassName="java.util.LinkedHashSet">
+      <elementType xsi:type="ecore:EClass" href="http://www.Game.game#//ElementsJeu"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Lieu)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Chemin)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:SequenceType" name="Sequence(Personne)" instanceClassName="java.util.List">
+      <elementType xsi:type="ecore:EClass" href="http://www.Game.game#//Personne"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/String"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="i">
+    <eType xsi:type="ocl.ecore:PrimitiveType" href="http://www.eclipse.org/ocl/1.1.0/oclstdlib.ecore#/0/Integer"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ecore:EPackage name="types">
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Lieu">
+      <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Lieu"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Chemin">
+      <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Chemin"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ocl.ecore:TypeType" name="Personne">
+      <referredType xsi:type="ecore:EClass" href="http://www.Game.game#//Personne"/>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.Game.game#//Jeu"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EEnum" href="http://www.Game.game#//Nature"/>
+  </ocl.ecore:Variable>
+  <ocl.ecore:Variable name="self">
+    <eType xsi:type="ecore:EClass" href="http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+  </ocl.ecore:Variable>
+  <ecore:EAnnotation source="positions">
+    <eAnnotations source="positions.0" references="/0/jeutoLTL">
+      <details key="start" value="70"/>
+      <details key="end" value="916"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.1" references="/0/jeutoLTL/%">
+      <details key="start" value="126"/>
+      <details key="end" value="904"/>
+      <details key="line" value="7"/>
+    </eAnnotations>
+    <eAnnotations source="positions.2" references="/0/jeutoLTL/%/%">
+      <details key="start" value="177"/>
+      <details key="end" value="180"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.3" references="/0/jeutoLTL/%/%.1">
+      <details key="start" value="182"/>
+      <details key="end" value="229"/>
+      <details key="line" value="8"/>
+    </eAnnotations>
+    <eAnnotations source="positions.4" references="/0/jeutoLTL/%/%.2">
+      <details key="start" value="229"/>
+      <details key="end" value="747"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.5" references="/0/jeutoLTL/%/%.2/%">
+      <details key="start" value="279"/>
+      <details key="end" value="291"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.6" references="/0/jeutoLTL/%/%.2/%.1">
+      <details key="start" value="291"/>
+      <details key="end" value="393"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.7" references="/0/jeutoLTL/%/%.2/%.1/%">
+      <details key="start" value="319"/>
+      <details key="end" value="386"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.8" references="/0/jeutoLTL/%/%.2/%.1/%/%">
+      <details key="start" value="367"/>
+      <details key="end" value="376"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.9" references="/0/jeutoLTL/%/%.2/%.1/%/%/lieu">
+      <details key="start" value="367"/>
+      <details key="end" value="371"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.10" references="/0/jeutoLTL/%/%.2/%.1/%/%.1">
+      <details key="start" value="378"/>
+      <details key="end" value="381"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.11" references="/0/jeutoLTL/%/%.2/%.1/%/%.2">
+      <details key="start" value="323"/>
+      <details key="end" value="365"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.12" references="/0/jeutoLTL/%/%.2/%.1/%/%.2/%">
+      <details key="start" value="324"/>
+      <details key="end" value="347"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.13" references="/0/jeutoLTL/%/%.2/%.1/%/%.2/%/%">
+      <details key="start" value="324"/>
+      <details key="end" value="335"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.14" references="/0/jeutoLTL/%/%.2/%.1/%/%.2/%/%/lieu">
+      <details key="start" value="324"/>
+      <details key="end" value="328"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.15" references="/0/jeutoLTL/%/%.2/%.1/%/%.2/%.1">
+      <details key="start" value="348"/>
+      <details key="end" value="364"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.16" references="/0/jeutoLTL/%/%.2/%.1/%.1">
+      <details key="start" value="386"/>
+      <details key="end" value="387"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.17" references="/0/jeutoLTL/%/%.2/%.1/lieu">
+      <details key="start" value="297"/>
+      <details key="end" value="308"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.18" references="/0/jeutoLTL/%/%.2/%.1/places">
+      <details key="start" value="311"/>
+      <details key="end" value="317"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.19" references="/0/jeutoLTL/%/%.2/%.2">
+      <details key="start" value="393"/>
+      <details key="end" value="398"/>
+      <details key="line" value="11"/>
+    </eAnnotations>
+    <eAnnotations source="positions.20" references="/0/jeutoLTL/%/%.2/%.3">
+      <details key="start" value="399"/>
+      <details key="end" value="402"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.21" references="/0/jeutoLTL/%/%.2/%.4">
+      <details key="start" value="404"/>
+      <details key="end" value="483"/>
+      <details key="line" value="12"/>
+    </eAnnotations>
+    <eAnnotations source="positions.22" references="/0/jeutoLTL/%/%.2/%.5">
+      <details key="start" value="484"/>
+      <details key="end" value="487"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.23" references="/0/jeutoLTL/%/%.2/%.6">
+      <details key="start" value="489"/>
+      <details key="end" value="494"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.24" references="/0/jeutoLTL/%/%.2/%.7">
+      <details key="start" value="494"/>
+      <details key="end" value="596"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.25" references="/0/jeutoLTL/%/%.2/%.7/%">
+      <details key="start" value="523"/>
+      <details key="end" value="590"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.26" references="/0/jeutoLTL/%/%.2/%.7/%/%">
+      <details key="start" value="570"/>
+      <details key="end" value="573"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.27" references="/0/jeutoLTL/%/%.2/%.7/%/%.1">
+      <details key="start" value="574"/>
+      <details key="end" value="583"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.28" references="/0/jeutoLTL/%/%.2/%.7/%/%.1/lieu">
+      <details key="start" value="574"/>
+      <details key="end" value="578"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.29" references="/0/jeutoLTL/%/%.2/%.7/%/%.2">
+      <details key="start" value="527"/>
+      <details key="end" value="569"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.30" references="/0/jeutoLTL/%/%.2/%.7/%/%.2/%">
+      <details key="start" value="528"/>
+      <details key="end" value="551"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.31" references="/0/jeutoLTL/%/%.2/%.7/%/%.2/%/%">
+      <details key="start" value="528"/>
+      <details key="end" value="539"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.32" references="/0/jeutoLTL/%/%.2/%.7/%/%.2/%/%/lieu">
+      <details key="start" value="528"/>
+      <details key="end" value="532"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.33" references="/0/jeutoLTL/%/%.2/%.7/%/%.2/%.1">
+      <details key="start" value="552"/>
+      <details key="end" value="568"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.34" references="/0/jeutoLTL/%/%.2/%.7/lieu">
+      <details key="start" value="500"/>
+      <details key="end" value="511"/>
+      <details key="line" value="14"/>
+    </eAnnotations>
+    <eAnnotations source="positions.35" references="/0/jeutoLTL/%/%.2/%.7/places">
+      <details key="start" value="514"/>
+      <details key="end" value="520"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.36" references="/0/jeutoLTL/%/%.2/%.8">
+      <details key="start" value="596"/>
+      <details key="end" value="741"/>
+      <details key="line" value="15"/>
+    </eAnnotations>
+    <eAnnotations source="positions.37" references="/0/jeutoLTL/%/%.2/places">
+      <details key="start" value="234"/>
+      <details key="end" value="277"/>
+      <details key="line" value="10"/>
+    </eAnnotations>
+    <eAnnotations source="positions.38" references="/0/jeutoLTL/%/%.2/places/%">
+      <details key="start" value="263"/>
+      <details key="end" value="278"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.39" references="/0/jeutoLTL/%/%.2/places/%/aJeu">
+      <details key="start" value="263"/>
+      <details key="end" value="267"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.40" references="/0/jeutoLTL/%/%.3">
+      <details key="start" value="748"/>
+      <details key="end" value="896"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.41" references="/0/jeutoLTL/%/%.3/%">
+      <details key="start" value="808"/>
+      <details key="end" value="889"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.42" references="/0/jeutoLTL/%/%.3/%/%">
+      <details key="start" value="848"/>
+      <details key="end" value="851"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.43" references="/0/jeutoLTL/%/%.3/%/%.1">
+      <details key="start" value="853"/>
+      <details key="end" value="856"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.44" references="/0/jeutoLTL/%/%.3/%/%.2">
+      <details key="start" value="857"/>
+      <details key="end" value="868"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.45" references="/0/jeutoLTL/%/%.3/%/%.2/chemin">
+      <details key="start" value="857"/>
+      <details key="end" value="863"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.46" references="/0/jeutoLTL/%/%.3/%/%.3">
+      <details key="start" value="870"/>
+      <details key="end" value="883"/>
+      <details key="line" value="21"/>
+    </eAnnotations>
+    <eAnnotations source="positions.47" references="/0/jeutoLTL/%/%.3/%/chemin">
+      <details key="start" value="814"/>
+      <details key="end" value="829"/>
+      <details key="line" value="20"/>
+    </eAnnotations>
+    <eAnnotations source="positions.48" references="/0/jeutoLTL/%/%.3/%/cheminsliste">
+      <details key="start" value="832"/>
+      <details key="end" value="844"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.49" references="/0/jeutoLTL/%/%.3/cheminsliste">
+      <details key="start" value="753"/>
+      <details key="end" value="806"/>
+      <details key="line" value="19"/>
+    </eAnnotations>
+    <eAnnotations source="positions.50" references="/0/jeutoLTL/%/%.3/cheminsliste/%">
+      <details key="start" value="790"/>
+      <details key="end" value="807"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.51" references="/0/jeutoLTL/%/%.3/cheminsliste/%/aJeu">
+      <details key="start" value="790"/>
+      <details key="end" value="794"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.52" references="/0/jeutoLTL/%/%.4">
+      <details key="start" value="133"/>
+      <details key="end" value="157"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.53" references="/0/jeutoLTL/%/%.4/%">
+      <details key="start" value="133"/>
+      <details key="end" value="142"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.54" references="/0/jeutoLTL/%/%.4/%/aJeu">
+      <details key="start" value="133"/>
+      <details key="end" value="137"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.55" references="/0/jeutoLTL/%/%.4/%.1">
+      <details key="start" value="145"/>
+      <details key="end" value="157"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.56" references="/0/jeutoLTL/%/%.5">
+      <details key="start" value="166"/>
+      <details key="end" value="173"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.57" references="/0/jeutoLTL/aJeu">
+      <details key="start" value="96"/>
+      <details key="end" value="106"/>
+      <details key="line" value="5"/>
+    </eAnnotations>
+    <eAnnotations source="positions.58" references="/0/getLieux">
+      <details key="start" value="918"/>
+      <details key="end" value="1074"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.59" references="/0/getLieux/j">
+      <details key="start" value="941"/>
+      <details key="end" value="947"/>
+      <details key="line" value="27"/>
+    </eAnnotations>
+    <eAnnotations source="positions.60" references="/0/getLieux/%">
+      <details key="start" value="971"/>
+      <details key="end" value="1071"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.61" references="/0/getLieux/%/collect">
+      <details key="start" value="971"/>
+      <details key="end" value="1052"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.62" references="/0/getLieux/%/collect/select">
+      <details key="start" value="971"/>
+      <details key="end" value="1017"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.63" references="/0/getLieux/%/collect/select/%">
+      <details key="start" value="971"/>
+      <details key="end" value="984"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.64" references="/0/getLieux/%/collect/select/%/j">
+      <details key="start" value="971"/>
+      <details key="end" value="972"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.65" references="/0/getLieux/%/collect/select/%.1">
+      <details key="start" value="997"/>
+      <details key="end" value="1016"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.66" references="/0/getLieux/%/collect/select/%.1/e">
+      <details key="start" value="997"/>
+      <details key="end" value="998"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.67" references="/0/getLieux/%/collect/select/%.1/%">
+      <details key="start" value="1011"/>
+      <details key="end" value="1015"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.68" references="/0/getLieux/%/collect/select/e">
+      <details key="start" value="993"/>
+      <details key="end" value="994"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.69" references="/0/getLieux/%/collect/%">
+      <details key="start" value="1034"/>
+      <details key="end" value="1051"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.70" references="/0/getLieux/%/collect/%/e">
+      <details key="start" value="1034"/>
+      <details key="end" value="1035"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.71" references="/0/getLieux/%/collect/%/%">
+      <details key="start" value="1046"/>
+      <details key="end" value="1050"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.72" references="/0/getLieux/%/collect/e">
+      <details key="start" value="1030"/>
+      <details key="end" value="1031"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.73" references="/0/getChemins">
+      <details key="start" value="1075"/>
+      <details key="end" value="1239"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.74" references="/0/getChemins/j">
+      <details key="start" value="1100"/>
+      <details key="end" value="1106"/>
+      <details key="line" value="32"/>
+    </eAnnotations>
+    <eAnnotations source="positions.75" references="/0/getChemins/%">
+      <details key="start" value="1132"/>
+      <details key="end" value="1236"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.76" references="/0/getChemins/%/collect">
+      <details key="start" value="1132"/>
+      <details key="end" value="1217"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.77" references="/0/getChemins/%/collect/select">
+      <details key="start" value="1132"/>
+      <details key="end" value="1180"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.78" references="/0/getChemins/%/collect/select/%">
+      <details key="start" value="1132"/>
+      <details key="end" value="1145"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.79" references="/0/getChemins/%/collect/select/%/j">
+      <details key="start" value="1132"/>
+      <details key="end" value="1133"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.80" references="/0/getChemins/%/collect/select/%.1">
+      <details key="start" value="1158"/>
+      <details key="end" value="1179"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.81" references="/0/getChemins/%/collect/select/%.1/e">
+      <details key="start" value="1158"/>
+      <details key="end" value="1159"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.82" references="/0/getChemins/%/collect/select/%.1/%">
+      <details key="start" value="1172"/>
+      <details key="end" value="1178"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.83" references="/0/getChemins/%/collect/select/e">
+      <details key="start" value="1154"/>
+      <details key="end" value="1155"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.84" references="/0/getChemins/%/collect/%">
+      <details key="start" value="1197"/>
+      <details key="end" value="1216"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.85" references="/0/getChemins/%/collect/%/e">
+      <details key="start" value="1197"/>
+      <details key="end" value="1198"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.86" references="/0/getChemins/%/collect/%/%">
+      <details key="start" value="1209"/>
+      <details key="end" value="1215"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.87" references="/0/getChemins/%/collect/e">
+      <details key="start" value="1193"/>
+      <details key="end" value="1194"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.88" references="/0/getPersonnes">
+      <details key="start" value="1241"/>
+      <details key="end" value="1413"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.89" references="/0/getPersonnes/j">
+      <details key="start" value="1268"/>
+      <details key="end" value="1274"/>
+      <details key="line" value="38"/>
+    </eAnnotations>
+    <eAnnotations source="positions.90" references="/0/getPersonnes/%">
+      <details key="start" value="1302"/>
+      <details key="end" value="1410"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.91" references="/0/getPersonnes/%/collect">
+      <details key="start" value="1302"/>
+      <details key="end" value="1391"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.92" references="/0/getPersonnes/%/collect/select">
+      <details key="start" value="1302"/>
+      <details key="end" value="1352"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.93" references="/0/getPersonnes/%/collect/select/%">
+      <details key="start" value="1302"/>
+      <details key="end" value="1315"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.94" references="/0/getPersonnes/%/collect/select/%/j">
+      <details key="start" value="1302"/>
+      <details key="end" value="1303"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.95" references="/0/getPersonnes/%/collect/select/%.1">
+      <details key="start" value="1328"/>
+      <details key="end" value="1351"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.96" references="/0/getPersonnes/%/collect/select/%.1/e">
+      <details key="start" value="1328"/>
+      <details key="end" value="1329"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.97" references="/0/getPersonnes/%/collect/select/%.1/%">
+      <details key="start" value="1342"/>
+      <details key="end" value="1350"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.98" references="/0/getPersonnes/%/collect/select/e">
+      <details key="start" value="1324"/>
+      <details key="end" value="1325"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.99" references="/0/getPersonnes/%/collect/%">
+      <details key="start" value="1369"/>
+      <details key="end" value="1390"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.100" references="/0/getPersonnes/%/collect/%/e">
+      <details key="start" value="1369"/>
+      <details key="end" value="1370"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.101" references="/0/getPersonnes/%/collect/%/%">
+      <details key="start" value="1381"/>
+      <details key="end" value="1389"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.102" references="/0/getPersonnes/%/collect/e">
+      <details key="start" value="1365"/>
+      <details key="end" value="1366"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.103" references="/0/getNature">
+      <details key="start" value="1415"/>
+      <details key="end" value="1606"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.104" references="/0/getNature/n">
+      <details key="start" value="1439"/>
+      <details key="end" value="1448"/>
+      <details key="line" value="44"/>
+    </eAnnotations>
+    <eAnnotations source="positions.105" references="/0/getNature/%">
+      <details key="start" value="1462"/>
+      <details key="end" value="1603"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.106" references="/0/getNature/%/%">
+      <details key="start" value="1465"/>
+      <details key="end" value="1483"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.107" references="/0/getNature/%/%/n">
+      <details key="start" value="1465"/>
+      <details key="end" value="1466"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.108" references="/0/getNature/%/%/%">
+      <details key="start" value="1469"/>
+      <details key="end" value="1483"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.109" references="/0/getNature/%/%.1">
+      <details key="start" value="1491"/>
+      <details key="end" value="1506"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.110" references="/0/getNature/%/%.2">
+      <details key="start" value="1516"/>
+      <details key="end" value="1596"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.111" references="/0/getNature/%/%.2/%">
+      <details key="start" value="1519"/>
+      <details key="end" value="1534"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.112" references="/0/getNature/%/%.2/%/n">
+      <details key="start" value="1519"/>
+      <details key="end" value="1520"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.113" references="/0/getNature/%/%.2/%/%">
+      <details key="start" value="1523"/>
+      <details key="end" value="1534"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.114" references="/0/getNature/%/%.2/%.1">
+      <details key="start" value="1542"/>
+      <details key="end" value="1558"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+    <eAnnotations source="positions.115" references="/0/getNature/%/%.2/%.2">
+      <details key="start" value="1567"/>
+      <details key="end" value="1589"/>
+      <details key="line" value="0"/>
+    </eAnnotations>
+  </ecore:EAnnotation>
+</xmi:XMI>

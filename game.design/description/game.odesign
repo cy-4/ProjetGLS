@@ -3,7 +3,7 @@
   <ownedViewpoints name="gameViewpoint" modelFileExtension="game">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="GameDiagram" domainClass="game::Jeu" enablePopupBars="true">
       <metamodel href="http://www.Game.game#/"/>
-      <defaultLayer name="Complet">
+      <defaultLayer name="Principal">
         <nodeMappings name="LieuNode" domainClass="game::Lieu">
           <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="16" showIcon="false" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -112,6 +112,30 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="ObjetConsEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']" targetFinderExpression="feature:choixCons">
+          <style lineStyle="dot" targetArrow="InputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ObjetDonEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']" targetFinderExpression="feature:choixDon">
+          <style lineStyle="dot" targetArrow="OutputClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ConnDonEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']" targetFinderExpression="feature:choix">
+          <style lineStyle="dash" targetArrow="OutputFillClosedArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <toolSections name="InteractionsTools" label="Outils Interactions">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="InteractionCreation" label="Créer Interaction" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='InteractionNode']">
             <variable name="container"/>
@@ -149,6 +173,33 @@
               <firstModelOperations xsi:type="tool_1:SetValue" featureName="interaction" valueExpression="[target/]"/>
             </initialOperation>
           </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ObjetConsCreation" label="Ajouter Objet Consommé" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ObjetConsEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="choixCons" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ObjetDonCreation" label="Ajouter Objet Donné" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ObjetDonEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="choixDon" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="ConDonCreation" label="Ajouter Connaissance Donnée" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@edgeMappings[name='ConnDonEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="choix" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
         </toolSections>
       </additionalLayers>
       <additionalLayers name="Avantages">
@@ -174,14 +225,6 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
           </style>
         </nodeMappings>
-        <edgeMappings name="ObjetConsEdge" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='QteObjetNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Interactions']/@nodeMappings[name='ChoixNode']" targetFinderExpression="feature:objetCons">
-          <style sizeComputationExpression="2">
-            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
-            <centerLabelStyleDescription labelSize="12">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            </centerLabelStyleDescription>
-          </style>
-        </edgeMappings>
         <toolSections name="AvantagesTools" label="Outils Avantages">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="ObjetCreation" label="Créer Objet" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ObjetNode']">
             <variable name="container"/>
@@ -276,6 +319,194 @@
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer().jeu.explorateur/]">
                 <subModelOperations xsi:type="tool_1:SetValue" featureName="place" valueExpression="[target/]"/>
               </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+      <additionalLayers name="Conditions">
+        <nodeMappings name="ConditionCheminNode" domainClass="game::ConditionChemin">
+          <style xsi:type="style:NoteDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ConditionPersonneNode" domainClass="game::ConditionPersonne">
+          <style xsi:type="style:NoteDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ConditionAvantageNode" domainClass="game::ConditionAvantage">
+          <style xsi:type="style:NoteDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="CondCheminEdgeVisible" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionCheminNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']" targetFinderExpression="[visible/]">
+          <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CondCheminEdgeOuvert" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionCheminNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@edgeMappings[name='CheminEdge']" targetFinderExpression="[ouvert/]">
+          <style lineStyle="dot" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CondPersEdgeVisible" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionPersonneNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']" targetFinderExpression="[visible/]">
+          <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CondPersEdgeActive" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionPersonneNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@defaultLayer/@nodeMappings[name='PersonneNode']" targetFinderExpression="[active/]">
+          <style lineStyle="dot" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CondAvEdgeVisibleObj" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionAvantageNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ObjetNode']" targetFinderExpression="[visible/]">
+          <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CondAvEdgeVisibleCon" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionAvantageNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']" targetFinderExpression="[visible/]">
+          <style lineStyle="dash" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CondAvEdgeActifObj" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionAvantageNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ObjetNode']" targetFinderExpression="[actif/]">
+          <style lineStyle="dot" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CondAvEdgeActifCon" sourceMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionAvantageNode']" targetMapping="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Avantages']/@nodeMappings[name='ConnaissanceNode']" targetFinderExpression="[actif/]">
+          <style lineStyle="dot" sourceArrow="InputArrow" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_chocolate']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="ConditionsTools" label="Outils Conditions">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="ConditionCheminNodeCreation" label="Créer Condition Chemin" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionCheminNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::ConditionChemin" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondChemVisibleCreation" label="Ajouter Condition Chemin Visible" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondCheminEdgeVisible']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="visible" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondChemOuvertCreation" label="Ajouter Condition Chemin Ouvert" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondCheminEdgeOuvert']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="ouvert" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CondPersNodeCreation" label="Créer Condition Personne" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionPersonneNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::ConditionPersonne" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondPersVisibleCreation" label="Ajouter Condition Personne Visible" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondPersEdgeVisible']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="visible" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondPersActCreation" label="Ajouter Condition Personne Active" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondPersEdgeActive']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="active" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="CondAvNodeCreation" label="Créer Condition Avantage" nodeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@nodeMappings[name='ConditionAvantageNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="game::ConditionAvantage" referenceName="elementsjeu"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondAvVisObjCreation" label="Ajouter Condition Objet Visible" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondAvEdgeVisibleObj']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="visible" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondAvConVisCreation" label="Ajouter Condition Connaissance Visible" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondAvEdgeVisibleCon']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="visible" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondAvActObjCreation" label="Ajouter Condition Objet Actif" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondAvEdgeActifObj']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="actif" valueExpression="[target/]"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="CondAvActConCreation" label="Ajouter Condition Connaissance Active" edgeMappings="//@ownedViewpoints[name='gameViewpoint']/@ownedRepresentations[name='GameDiagram']/@additionalLayers[name='Conditions']/@edgeMappings[name='CondAvEdgeActifCon']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="actif" valueExpression="[target/]"/>
             </initialOperation>
           </ownedTools>
         </toolSections>
