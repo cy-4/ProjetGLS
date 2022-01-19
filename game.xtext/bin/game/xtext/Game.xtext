@@ -17,7 +17,7 @@ enum Nature returns Nature:
 				depart = 'depart' | fin = 'fin' | inter = 'inter';
 
 ElementsJeu returns ElementsJeu:
-	 Place | QteObjet | Lieu | Chemin | Personne | Connaissance | Objet | Interaction | Choix |  ConditionPersonne | ConditionAvantage | ConditionChemin;
+	 Place | QteObjet | Personne | Connaissance | Objet | Interaction | Choix |  ConditionPersonne | ConditionAvantage | ConditionChemin;
 
 Place returns Place:
 	  Lieu | Chemin;
@@ -25,16 +25,16 @@ Place returns Place:
 
 Territoire returns Territoire:
 	{Territoire}
-	'Territoire'
+	'Territoire' 
 	'{'
-		'places' '{' places+=Place ( "," places+=Place)* '}'
+		'places'  places+=Place ( "," places+=Place)* 
 	'}';
 
 Explorateur returns Explorateur:
 	{Explorateur}
 	'Explorateur'
 	'{'
-		'taille' 'inventaire' tailleDispo=EInt
+		'taille' tailleDispo=EInt
 		'localisation' place=[Place]
 		('objets'  objets+=Objet ( "," objets+=Objet)*  )?
 		('connaissances'  connaissances+=Connaissance ( "," connaissances+=Connaissance)*  )?
@@ -72,7 +72,7 @@ Personne returns Personne:
 	'{'
 		'place' place=[Lieu]
 		'interactions' interactions+=[Interaction] ( "," interactions+=[Interaction])*  
-		('visible' visible+=ConditionPersonne( "," visible+=ConditionPersonne)* )?
+		('visible' visible+=ConditionPersonne ( "," visible+=ConditionPersonne)* )?
 		('active' active+=ConditionPersonne ( "," active+=ConditionPersonne)* )?
 	'}';
 
@@ -96,7 +96,7 @@ Interaction returns Interaction:
 	'{'
 		('question' question=STRING)?
 		'personne' personne=[Personne]
-		'choix' choix+=[Choix] ( "," choix+=[Choix])* 
+		('choix' choix+=[Choix] ( "," choix+=[Choix])* )?
 	'}';
 
 Connaissance returns Connaissance:
@@ -133,7 +133,7 @@ ConditionAvantage returns ConditionAvantage:
 	'}';
 
 Choix returns Choix:
-	(bonne?='bon')?
+	(bonne?='bonne')?
 	'Choix'
 	name=ID
 	'{'

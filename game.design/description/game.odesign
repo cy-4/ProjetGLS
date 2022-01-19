@@ -82,7 +82,7 @@
       </defaultLayer>
       <additionalLayers name="Interactions">
         <nodeMappings name="InteractionNode" domainClass="game::Interaction">
-          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:question" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
             <labelFormat>italic</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
@@ -218,7 +218,7 @@
           </style>
         </nodeMappings>
         <nodeMappings name="QteObjetNode" domainClass="game::QteObjet">
-          <style xsi:type="style:EllipseNodeDescription" labelSize="10" showIcon="false" labelExpression="[objet.name + ' : ' + qte/]" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:EllipseNodeDescription" labelSize="10" showIcon="false" labelExpression="feature:qte" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <labelFormat>italic</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>

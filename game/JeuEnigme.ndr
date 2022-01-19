@@ -1,0 +1,92 @@
+t 65.0 85.0 Start_JeuEnigme 0 w n
+t 120.0 30.0 t_def 0 w n
+t 285.0 515.0 finish_Enigme 0 w n
+t 425.0 735.0 victoire 0 w n
+t 445.0 625.0 init_victoire_visible 0 w n
+t 340.0 625.0 init_victoire_ouvert 0 w n
+t 235.0 735.0 defaite 0 w n
+t 170.0 625.0 init_defaite_visible 0 w n
+t 270.0 625.0 init_defaite_ouvert 0 w n
+t 140.0 195.0 init_Sphinx_visible 0 w n
+t 55.0 195.0 init_Sphinx_active 0 w n
+t 115.0 300.0 start_Question 0 w n
+t 285.0 410.0 oui 0 w n
+t 215.0 410.0 non 0 w n
+p 65.0 30.0 Init 1 n
+p 305.0 465.0 Default 1 n
+p 425.0 785.0 Succes 0 n
+p 235.0 785.0 Echec 0 n
+p 65.0 140.0 Enigme_init 0 n
+p 315.0 570.0 Enigme_end 0 n
+p 365.0 680.0 victoire_open 0 n
+p 445.0 680.0 victoire_visible 0 n
+p 170.0 30.0 victoire_obligatoire 1 n
+p 500.0 680.0 victoire_first 1 n
+p 255.0 680.0 defaite_open 0 n
+p 170.0 680.0 defaite_visible 0 n
+p 225.0 30.0 defaite_obligatoire 1 n
+p 310.0 680.0 defaite_first 1 n
+p 140.0 245.0 Sphinx_visible 0 n
+p 55.0 245.0 Sphinx_active 0 n
+p 245.0 465.0 Sphinx_oblig 0 n
+p 210.0 355.0 Gagner 0 n
+p 280.0 30.0 Reussite_visible 0 n
+p 335.0 30.0 Reussite_active 0 n
+p 395.0 515.0 Reussite_presente 0 n
+p 445.0 570.0 vicVisible_def 0 n
+p 210.0 570.0 defVisible_def 0 n
+p 260.0 570.0 invalid 0 n
+p 345.0 140.0 tentative 0 n
+p 125.0 140.0 sphinxVisible_def 0 n
+p 195.0 110.0 Reussite_absente 1 n
+e non Enigme_init 1 n
+e non Sphinx_oblig 1 n
+e Gagner non 1 n
+e tentative non 1 n
+e oui Default 1 n
+e oui Sphinx_oblig 1 n
+e oui Reussite_presente 1 n
+e Gagner oui 1 n
+e tentative oui 2 n
+e Reussite_absente oui 1 n
+e start_Question Gagner 1 n
+e Enigme_init start_Question ?1 n
+e Sphinx_visible start_Question 1 n
+e Sphinx_active start_Question 1 n
+e init_Sphinx_active Sphinx_active 1 n
+e Enigme_init init_Sphinx_active ?1 n
+e init_Sphinx_visible Sphinx_visible 1 n
+e sphinxVisible_def init_Sphinx_visible !1 n
+e Enigme_init init_Sphinx_visible ?1 n
+e tentative init_Sphinx_visible ?1 n
+e Reussite_absente init_Sphinx_visible ?1 n
+e init_defaite_ouvert defaite_open 1 n
+e Enigme_end init_defaite_ouvert ?1 n
+e init_defaite_visible defaite_visible 1 n
+e defVisible_def init_defaite_visible !1 n
+e invalid init_defaite_visible ?-1 n
+e Enigme_end init_defaite_visible ?1 n
+e Reussite_absente init_defaite_visible ?1 n
+e defaite Echec 1 n
+e defaite_first defaite 1 n
+e defaite_visible defaite 1 n
+e defaite_open defaite 1 n
+e Enigme_end defaite 1 n
+e init_victoire_ouvert victoire_open 1 n
+e Enigme_end init_victoire_ouvert ?1 n
+e init_victoire_visible victoire_visible 1 n
+e vicVisible_def init_victoire_visible !1 n
+e Enigme_end init_victoire_visible ?1 n
+e Reussite_presente init_victoire_visible ?1 n
+e victoire Succes 1 n
+e victoire_first victoire 1 n
+e victoire_visible victoire 1 n
+e victoire_open victoire 1 n
+e Enigme_end victoire 1 n
+e finish_Enigme Enigme_end 1 n
+e Sphinx_oblig finish_Enigme 1 n
+e Start_JeuEnigme Enigme_init 1 n
+e Init Start_JeuEnigme 1 n
+h JeuEnigme small
+
+

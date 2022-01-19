@@ -571,9 +571,9 @@ rule ConditionPersonneVisible2PetriNet {
 			
 		aOI: petri!Arc(
 			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
-			weight <- 1,
+			weight <- if not c.objetInterdit.oclIsUndefined() then c.objetInterdit.qte else 1 endif,
 			placeToTrans <- true,
-			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getPersonne(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -613,9 +613,9 @@ rule ConditionCheminVisible2PetriNet {
 			
 		aOI: petri!Arc(
 			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
-			weight <- 1,
+			weight <- if not c.objetInterdit.oclIsUndefined() then c.objetInterdit.qte else 1 endif,
 			placeToTrans <- true,
-			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getChemin(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -656,8 +656,8 @@ rule ConditionAvantageVisible2PetriNet {
 		aOI: petri!Arc(
 			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
 			weight <- 1,
-			placeToTrans <- true,
-			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			placeToTrans <- if not c.objetInterdit.oclIsUndefined() then c.objetInterdit.qte else 1 endif,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getAvantage(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -697,9 +697,9 @@ rule ConditionPersonneActive2PetriNet {
 			
 		aOI: petri!Arc(
 			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
-			weight <- 1,
+			weight <- if not c.objetInterdit.oclIsUndefined() then c.objetInterdit.qte else 1 endif,
 			placeToTrans <- true,
-			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getPersonne2(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -739,9 +739,9 @@ rule ConditionCheminOuvert2PetriNet {
 			
 		aOI: petri!Arc(
 			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
-			weight <- 1,
+			weight <- if not c.objetInterdit.oclIsUndefined() then c.objetInterdit.qte else 1 endif,
 			placeToTrans <- true,
-			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getChemin2(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -781,9 +781,9 @@ rule ConditionAvantageActif2PetriNet {
 			
 		aOI: petri!Arc(
 			linkType <- if not c.objetInterdit.oclIsUndefined() then #inhibitor else #stopwatch endif,
-			weight <- 1,
+			weight <- if not c.objetInterdit.oclIsUndefined() then c.objetInterdit.qte else 1 endif,
 			placeToTrans <- true,
-			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit, 'p_objet') else p_def endif,
+			place <- if not c.objetInterdit.oclIsUndefined() then thisModule.resolveTemp(c.objetInterdit.objet, 'p_objet') else p_def endif,
 			transition <- thisModule.resolveTemp(c.getAvantage2(), 't_initVisible'),
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn')),
 			
@@ -837,11 +837,3 @@ rule Connaissance2PetriNet {
 			petrinet <- thisModule.resolveTemp(c.getJeu(), 'pn'))
 }
 
-
---TODO : boucle for sur les objets et connaissances de l'explorateur pour 
--- changer les tokens des places correspondantes
--- Traduire un explorateur
-rule Explorateur2PetriNet {
-	from e: game!Explorateur
-	to	
-}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/game.feature_1.0.0.202201172028.jar" id="game.feature" version="1.0.0.202201172028">
+   <feature url="features/game.feature_1.0.0.202201190313.jar" id="game.feature" version="1.0.0.202201190313">
       <category name="game_plugin"/>
    </feature>
    <category-def name="game_plugin" label="game_plugin"/>

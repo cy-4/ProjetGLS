@@ -3,7 +3,6 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:game="http://www.Game.game"
-    xsi:schemaLocation="http://www.Game.game Game.ecore"
     name="JeuEnigme">
   <territoire/>
   <explorateur
@@ -45,7 +44,7 @@
     <objetCons
         name="prend2Tentatives"
         qte="2"
-        objet="//@explorateur/@objets.0"/>
+        objet="//@elementsjeu.11"/>
   </elementsjeu>
   <elementsjeu
       xsi:type="game:Choix"
@@ -55,7 +54,7 @@
     <objetCons
         name="prendTentative"
         qte="1"
-        objet="//@explorateur/@objets.0"/>
+        objet="//@elementsjeu.11"/>
   </elementsjeu>
   <elementsjeu
       xsi:type="game:Connaissance"
@@ -93,5 +92,10 @@
   <elementsjeu
       xsi:type="game:QteObjet"
       name="tentative1"
-      qte="1"/>
+      qte="1"
+      objet="//@elementsjeu.11"/>
+  <elementsjeu
+      xsi:type="game:Objet"
+      name="tentative"
+      qte="3"/>
 </game:Jeu>

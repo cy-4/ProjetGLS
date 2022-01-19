@@ -28,7 +28,7 @@ public class JeuEnigme {
 		HashMap<String, Objet> Sphinx_oi_visible = new HashMap<>();
 		Connaissance Reussite_sphinxVisible = new Connaissance("Reussite", vide, vide);
 		Sphinx_ci_visible.put("Reussite", Reussite_sphinxVisible);
-		Objet tentative_sphinxVisible = new Objet("tentative", 1, 1, false, vide, vide);
+		Objet tentative_sphinxVisible = new Objet("tentative", 0, 1, false, vide, vide);
 		Sphinx_or_visible.put("tentative", tentative_sphinxVisible);
 		
 		Condition Sphinx_visible = new Condition(Sphinx_or_visible, Sphinx_cr_visible, Sphinx_oi_visible, Sphinx_ci_visible);
@@ -43,7 +43,7 @@ public class JeuEnigme {
 		lieux.get("Enigme").addPersonne(Sphinx);
 		Interaction Question = new Interaction("Gagner");
 		ArrayList<Objet> vrai_cons = new ArrayList<>();
-		Objet vrai_tentative = new Objet("tentative", 1, 2, false, vide, vide);
+		Objet vrai_tentative = new Objet("tentative", 0, 2, false, vide, vide);
 		vrai_cons.add(vrai_tentative);
 		ArrayList<Avantage> vrai_don = new ArrayList<>();
 		Connaissance vrai_Reussite = new Connaissance("Reussite", vide, vide);
@@ -51,7 +51,7 @@ public class JeuEnigme {
 		Choix vrai_Question = new Choix("vrai", "oui", vrai_cons, vrai_don, true);
 		Question.addChoix(vrai_Question);
 		ArrayList<Objet> faux_cons = new ArrayList<>();
-		Objet faux_tentative = new Objet("tentative", 1, 1, false, vide, vide);
+		Objet faux_tentative = new Objet("tentative", 0, 1, false, vide, vide);
 		faux_cons.add(faux_tentative);
 		ArrayList<Avantage> faux_don = new ArrayList<>();
 		Choix faux_Question = new Choix("faux", "non", faux_cons, faux_don, false);
@@ -81,7 +81,7 @@ public class JeuEnigme {
 		HashMap<String, Objet> defaite_oi_visible = new HashMap<>();
 		Connaissance Reussite_defVisible = new Connaissance("Reussite", vide, vide);
 		defaite_ci_visible.put("Reussite", Reussite_defVisible);
-		Objet tentative_defVisible = new Objet("tentative", 1, 1, false, vide, vide);
+		Objet tentative_defVisible = new Objet("tentative", 0, 1, false, vide, vide);
 		defaite_oi_visible.put("tentative", tentative_defVisible);
 		
 		Condition defaite_visible = new Condition(defaite_or_visible, defaite_cr_visible, defaite_oi_visible, defaite_ci_visible);

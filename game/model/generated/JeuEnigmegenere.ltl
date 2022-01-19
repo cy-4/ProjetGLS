@@ -1,0 +1,10 @@
+[] <> dead ; # Il y a toujours un arret du jeu
+
+op finis  =  Succes \/ Echec \/  0 ;
+[] (dead => finis); # Si on ne peut plus rien faire, on est dans un lieu final
+
+[] ( 0 + Succes + Echec <= 1); # On ne peut pas etre à plus d'une place fin en meme temps
+
+# Toutes les places correspondant au chemins et commençant par init sont <=1
+[] (victoire_first <=1);
+[] (defaite_first <=1);
